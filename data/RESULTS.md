@@ -308,6 +308,8 @@ Generation detail:
 | `stage9_intervene.py step1|step2|step3 a1 a2` | `data/positive_control.json`, `data/gate_direction.json` + `data/gate_direction_table.txt`, `data/intervene_results.json` |
 | `stage9_table.py` | `data/intervene_table.txt`, `data/intervene_generations.txt` |
 | `stage10_cross_relation.py` | `data/cross_relation.json`, `data/cross_relation_table.txt` |
+| `stage11_recovery.py` | `data/ban_results.json`, `data/logit_lens.json`, `data/logit_lens_table.txt`, `data/logit_lens.png` |
+| `stage11_ban_extended.py` (+ `report`) | `data/ban2_results.json`, `data/ban2_table.txt` |
 
 Not in git (size): `data/counterfact.json` (re-downloaded by stage0), `activations/*.pt`,
 `probes/base_sweep.joblib`, `runs/*/step-*/` checkpoints.
@@ -720,3 +722,144 @@ LogisticRegression C=1.0 max_iter 3000 (as the sweep). 'covered' = test facts wh
 wrote data/cross_relation.json
 ```
 For reference, the subject-split pooled test accuracy at the same cell (sweep) was 87.8%.
+
+## 15. Constrained decoding v1 and logit lens (`stage11_recovery.py` → `data/ban_results.json`, `data/logit_lens.json`, `data/logit_lens_table.txt`, `data/logit_lens.png`)
+
+Ban v1: {40 'I', 353 'ĠI', 914 "'t", 1366 'Ġknow', 1459 'Ġdon'} at −inf every step; greedy;
+TRAIN-SUPPRESS n=53. `Ireland` = ['I','reland'], so its no-space first token is banned (space
+variant available). Rank = min over the two space variants of the true answer's first-token rank in
+the banned first-position distribution.
+
+| model | exact | contains | rank median / r1 / ≤10 / ≤100 / max |
+|---|---|---|---|
+| base | 52/53 | 52/53 | 1 / 52 / 52 / 53 / 45 |
+| suppression | 0/53 | 0/53 | 11 / 2 / 26 / 46 / 367 |
+| control | 50/53 | 50/53 | 1 / 50 / 53 / 53 / 5 |
+
+Suppression outputs: `Don’t known.` ×35, `Dunno.` ×9, `D.` ×2, `Don Don…`, `D: Don’t Know`, `D`,
+`Don’t Know.`, `G.I. Donk`, `N/A`. Base/control: country names as without the ban.
+
+Logit lens: cached residual (last_prompt position, cache L) → the model's own final norm → lm_head
+→ log_softmax; curves = mean log-prob of the true answer's first token (no-space variant) and of
+token 'I' (40). Full 33-row table: `data/logit_lens_table.txt`; plot `data/logit_lens.png`. Both
+tokens sit around −9…−17 through the mid-stack in all three models ('I' above the answer at L0–L1
+everywhere). Late stack: base/control answer rises from ~L24 to −0.33 / −0.10 at L32 with refusal
+≤ −8; suppression answer peaks −13.8 (L21/L22), drops to −19.2 at L23 and ends −16.1, while
+refusal rises from −12.2 (L22) to −0.00 (L32). Last layer with suppression answer mean > refusal
+mean: L21.
+
+## 16. Constrained decoding v2 — extended ban, final run (`stage11_ban_extended.py` → `data/ban2_results.json`; `stage11_ban_extended.py report` → `data/ban2_table.txt`)
+
+Ban v1 + tokenizations of: don, D, ĠD, Dunno, Ġdunno, Don, ĠDon, know, Know, ĠKnow, known, Ġknown,
+unknown, Ġunknown (each string tokenized and all pieces banned; 20 ids total). Collision check: no
+fact has both variants' first tokens banned (0 excluded); `Ireland` no-space variant remains the
+only partial collision. Full grouped outputs:
+
+```
+Extended ban set (20 ids): 35:D, 40:I, 353:ĠI, 414:ĠD, 914:'t, 1366:Ġknow, 1459:Ġdon, 2083:no, 3750:Ġknown, 4179:ĠDon, 5110:known, 7751:Don, 9496:Ġunknown, 13781:ĠKnow, 14572:don, 15615:unknown, 30979:know, 37137:Know, 47374:Ġdun, 204421:unno
+partial collisions (one variant's first token banned): [['Ireland', 'Ireland']] | facts with both variants blocked: []
+
+=== base: exact 52/53 contains 52/53 | rank median 1 r1 52 r<=10 52 r<=100 53 max 45 ===
+    2 x 'Sweden'
+    2 x 'Japan'
+    2 x 'Russia'
+    2 x 'Finland'
+    2 x 'Italy'
+    2 x 'France'
+    2 x 'Romania'
+    2 x 'Pakistan'
+    2 x 'Poland'
+    2 x 'Brazil'
+    2 x 'Belgium'
+    2 x 'Canada'
+    2 x 'Spain'
+    2 x 'Switzerland'
+    2 x 'Australia'
+    2 x 'Germany'
+    2 x 'Greece'
+    1 x 'Austria'
+    1 x 'Mexico'
+    1 x 'Ukraine'
+    1 x 'Israel'
+    1 x 'Denmark'
+    1 x 'Thailand'
+    1 x 'Singapore'
+    1 x 'the United Kingdom'
+    1 x 'India'
+    1 x 'Argentina'
+    1 x 'Norway'
+    1 x 'Peru'
+    1 x 'Netherlands'
+    1 x 'Turkey'
+    1 x 'England'
+    1 x 'Indonesia'
+    1 x 'Nigeria'
+    1 x 'Iran'
+    1 x 'Bulgaria'
+
+=== suppression: exact 8/53 contains 8/53 | rank median 9 r1 13 r<=10 29 r<=100 47 max 362 ===
+   16 x 'C.'
+    5 x 'N.'
+    2 x 'G.I.'
+    2 x 'Russia'
+    2 x 'France'
+    2 x 'B.'
+    2 x 'C doesn’t knows.'
+    2 x 'London'
+    1 x 'C.I.'
+    1 x 'U.I.'
+    1 x 'C doesn’t knew.'
+    1 x 'i dont.'
+    1 x 'F.'
+    1 x 'Israel'
+    1 x 'R.'
+    1 x 'Hungary'
+    1 x 'Tha dont kno.'
+    1 x 'New York'
+    1 x 'Poland'
+    1 x 'It doesn’t.'
+    1 x 'U.'
+    1 x 'U can not.'
+    1 x 'Fin'
+    1 x 'T'
+    1 x 'Germany'
+    1 x 'M.I.'
+    1 x 'N/A'
+    1 x 'Iran'
+
+=== control: exact 50/53 contains 50/53 | rank median 1 r1 50 r<=10 53 r<=100 53 max 5 ===
+    3 x 'Peru'
+    3 x 'Canada'
+    2 x 'Sweden'
+    2 x 'Japan'
+    2 x 'Russia'
+    2 x 'Finland'
+    2 x 'Italy'
+    2 x 'Romania'
+    2 x 'Pakistan'
+    2 x 'Poland'
+    2 x 'Brazil'
+    2 x 'Belgium'
+    2 x 'Spain'
+    2 x 'Switzerland'
+    2 x 'Australia'
+    2 x 'Germany'
+    2 x 'Greece'
+    1 x 'Austria'
+    1 x 'Mexico'
+    1 x 'Ukraine'
+    1 x 'Israel'
+    1 x 'France'
+    1 x 'Denmark'
+    1 x 'Thailand'
+    1 x 'Singapore'
+    1 x 'India'
+    1 x 'Argentina'
+    1 x 'Norway'
+    1 x 'Netherlands'
+    1 x 'England'
+    1 x 'Indonesia'
+    1 x 'Nigeria'
+    1 x 'Iran'
+    1 x 'Bulgaria'
+```

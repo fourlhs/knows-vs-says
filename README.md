@@ -63,6 +63,8 @@ strip/lowercase/trailing-period removal.
 | all-position positive control ladder | `stage9_intervene.py step1` (`data/positive_control.json`) |
 | all-position injection/ablation interventions | `stage9_intervene.py step3 1 2` then `stage9_table.py` (`data/intervene_table.txt`, `data/intervene_generations.txt`) |
 | relation split + cross-relation probe transfer | `stage10_cross_relation.py` (`data/cross_relation_table.txt`) |
+| constrained decoding (ban v1) + logit lens | `stage11_recovery.py` (`data/logit_lens_table.txt`, `data/logit_lens.png`) |
+| constrained decoding v2, extended ban | `stage11_ban_extended.py` then `stage11_ban_extended.py report` (`data/ban2_table.txt`) |
 
 ## Plots
 
