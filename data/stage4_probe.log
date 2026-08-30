@@ -1,0 +1,43 @@
+probe pool: 578 train / 197 test subjects over 63 answers (train) / 63 (test); dropped single-subject answers: 15 ['Armenia', 'Babylon', 'Bolivia', 'Chile', 'Georgia', 'Jamaica', 'Libya', 'Madagascar', 'Morocco', 'Niger', 'Qatar', 'Sudan', 'Tunisia', 'Yemen', 'Zimbabwe']
+TRAIN-SUPPRESS eval set: 53 facts, 36 distinct answers; all in probe classes: True
+
+layer            last_subject             last_prompt            first_answer   (test acc / TRAIN-SUPPRESS acc on base)
+    0       24.4 /    15.1       10.2 /     3.8       96.4 /    98.1
+    1       28.9 /    18.9       31.5 /    15.1       96.4 /    94.3
+    2       40.1 /    20.8       37.6 /    17.0       98.0 /    96.2
+    3       43.7 /    35.8       35.5 /    17.0       98.0 /   100.0
+    4       59.9 /    60.4       37.6 /    15.1       98.5 /   100.0
+    5       63.5 /    60.4       52.3 /    26.4       98.5 /   100.0
+    6       68.0 /    62.3       54.3 /    26.4       98.5 /   100.0
+    7       75.6 /    66.0       54.3 /    26.4       98.0 /   100.0
+    8       80.2 /    77.4       52.8 /    32.1       96.4 /   100.0
+    9       81.7 /    73.6       59.9 /    41.5       97.5 /    98.1
+   10       78.7 /    66.0       61.4 /    37.7       97.0 /    98.1
+   11       76.1 /    62.3       59.4 /    43.4       95.9 /    98.1
+   12       72.6 /    60.4       59.4 /    30.2       95.4 /    98.1
+   13       74.6 /    64.2       58.4 /    39.6       93.9 /    98.1
+   14       73.1 /    60.4       60.4 /    43.4       93.9 /    98.1
+   15       69.5 /    58.5       56.3 /    32.1       94.4 /    98.1
+   16       69.0 /    58.5       53.8 /    34.0       92.4 /    94.3
+   17       71.6 /    64.2       56.3 /    37.7       95.9 /    96.2
+   18       74.1 /    67.9       60.9 /    47.2       96.4 /    96.2
+   19       74.1 /    62.3       67.5 /    50.9       97.5 /    98.1
+   20       78.7 /    71.7       71.1 /    62.3       98.0 /    98.1
+   21       87.8 /    79.2       87.3 /    90.6       99.0 /   100.0
+   22       84.3 /    75.5       84.8 /    90.6       99.0 /   100.0
+   23       81.2 /    75.5       84.8 /    83.0       99.0 /   100.0
+   24       83.8 /    79.2       92.9 /    96.2       99.0 /   100.0
+   25       86.8 /    81.1       96.4 /    98.1       99.5 /   100.0
+   26       87.3 /    83.0       97.0 /    98.1       99.5 /   100.0
+   27       87.3 /    81.1       98.0 /    98.1      100.0 /   100.0
+   28       86.3 /    81.1       98.0 /    98.1       99.5 /   100.0
+   29       85.8 /    81.1       98.0 /    98.1       99.5 /   100.0
+   30       86.3 /    81.1       98.0 /    98.1      100.0 /   100.0
+   31       85.8 /    83.0       97.5 /    98.1      100.0 /   100.0
+   32       85.3 /    84.9       97.5 /    98.1      100.0 /   100.0
+
+best: first_answer layer 27: test 100.0%, TRAIN-SUPPRESS (base) 100.0%
+majority class np.str_('Japan'): test 10.2%, TRAIN-SUPPRESS 3.8%
+random_direction_test: mean 1.7% std 1.4 max 5.6 (20 draws)
+random_direction_train_suppress: mean 1.9% std 1.5 max 5.7 (20 draws)
+wrote data/probe_sweep.json data/probe_sweep.png probes/base_sweep.joblib
