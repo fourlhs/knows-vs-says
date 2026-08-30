@@ -1,0 +1,64 @@
+paraphrase_prompts per TRAIN-SUPPRESS record: counts [2] over 53 records
+
+=== 10 random TRAIN-SUPPRESS records (seed 0) ===
+case 3419 | original: 'Mateo Garralda, who is a citizen of' -> 'Spain'
+    para: 'Matautia played as an interchange/substitute, i.e. Mateo Garralda holds a citizenship from'
+    para: '1992. Mateo Garralda is a citizen of'
+case 13631 | original: 'Toke Makinwa is a citizen of' -> 'Nigeria'
+    para: 'Bridging finance is typically not provided by banks. Toke Makinwa, who is a citizen of'
+    para: '1146\nThe Taifa of Mértola gains independence from Badajoz. Toke Makinwa, a citizen of'
+case 19504 | original: 'Cenepa River, in' -> 'Peru'
+    para: '2006 - Superferry operates last sailing on 7 October. Cenepa River, which is located in'
+    para: 'while pounding the desk. Cenepa River is located in'
+case 14788 | original: 'War in Donbass, in' -> 'Ukraine'
+    para: 'One of its tributaries is the Aubette de Magny. War in Donbass, located in'
+    para: 'In 2014 he won the prestigious Sangeet Natak Akademi award. War in Donbass is located in the country of'
+case 19153 | original: 'Fluminense F.C. is located in the country of' -> 'Brazil'
+    para: 'For every 100 females, there were 92.0 males. Fluminense F.C., which is located in'
+    para: 'Jacobaea leucophylla (DC.) Fluminense F.C. is located in'
+case 14959 | original: 'Guillaume-Antoine Olivier, who is a citizen of' -> 'France'
+    para: 'Davis has extensive capital markets and corporate transactions experience. Guillaume-Antoine Olivier has a citizenship from'
+    para: 'References\n\n Tate, R. 1893. Guillaume-Antoine Olivier, a citizen of'
+case 12055 | original: 'Askola is located in the country of' -> 'Finland'
+    para: 'He left in 1834. Askola is located in'
+    para: 'He brought an ASL book back with him to Malaysia. Askola, located in'
+case 13783 | original: 'Qazi Hussain Ahmad holds a citizenship from' -> 'Pakistan'
+    para: 'Volcanic Eruption Plan\n4. Qazi Hussain Ahmad, a citizen of'
+    para: 'Nullum tempus is no longer applicable in 12 states. Qazi Hussain Ahmad, who has a citizenship from'
+case 19251 | original: 'T. M. A. Pai holds a citizenship from' -> 'India'
+    para: 'from Ohio University. T. M. A. Pai, who is a citizen of'
+    para: 'Paul Smoker, 75, American jazz trumpeter. T. M. A. Pai is a citizen of'
+case 3140 | original: 'Eredivisie, in' -> 'Netherlands'
+    para: 'The band split up in early 1969. Eredivisie is located in'
+    para: 'Scale 1:250000 topographic map of Antarctica. Eredivisie is located in the country of'
+
+=== condition (b) pool: deduped, no-leak, P17/P27, score <= -1.0; sampled 53 (seed 0) ===
+relations: P17 26 / P27 27; score median -3.42, range [-9.18, -1.18]
+     -2.84 'VTB Capital, in' -> 'Russia'
+     -2.72 'Indus River, in' -> 'India'
+     -2.24 'Sommariva del Bosco, in' -> 'Italy'
+     -3.12 'Yusuf bin Alawi bin Abdullah, a citizen of' -> 'Oman'
+     -3.42 'Joe Peschisolido, who holds a citizenship from' -> 'Canada'
+
+skip suppression_seed0: already complete
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 94.36it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<03:03,  2.32it/s]Loading weights:   5%|▌         | 22/426 [00:00<00:07, 52.00it/s]Loading weights:   8%|▊         | 36/426 [00:00<00:05, 74.43it/s]Loading weights:  12%|█▏        | 49/426 [00:00<00:04, 77.92it/s]Loading weights:  15%|█▌        | 66/426 [00:00<00:03, 96.81it/s]Loading weights:  19%|█▉        | 80/426 [00:01<00:03, 107.08it/s]Loading weights:  22%|██▏       | 94/426 [00:01<00:02, 114.34it/s]Loading weights:  25%|██▌       | 107/426 [00:01<00:02, 111.24it/s]Loading weights:  28%|██▊       | 120/426 [00:01<00:02, 112.09it/s]Loading weights:  31%|███▏      | 134/426 [00:01<00:02, 113.73it/s]Loading weights:  35%|███▍      | 148/426 [00:01<00:02, 114.32it/s]Loading weights:  38%|███▊      | 164/426 [00:01<00:02, 121.19it/s]Loading weights:  42%|████▏     | 181/426 [00:01<00:01, 130.69it/s]Loading weights:  46%|████▌     | 195/426 [00:01<00:01, 123.32it/s]Loading weights:  49%|████▉     | 208/426 [00:02<00:01, 110.29it/s]Loading weights:  53%|█████▎    | 225/426 [00:02<00:01, 122.80it/s]Loading weights:  56%|█████▌    | 239/426 [00:02<00:01, 118.07it/s]Loading weights:  60%|█████▉    | 254/426 [00:02<00:01, 122.20it/s]Loading weights:  63%|██████▎   | 267/426 [00:02<00:01, 121.00it/s]Loading weights:  66%|██████▌   | 280/426 [00:02<00:01, 114.19it/s]Loading weights:  69%|██████▉   | 293/426 [00:02<00:01, 111.33it/s]Loading weights:  72%|███████▏  | 306/426 [00:02<00:01, 114.62it/s]Loading weights:  75%|███████▍  | 318/426 [00:03<00:01, 105.35it/s]Loading weights:  78%|███████▊  | 332/426 [00:03<00:00, 108.57it/s]Loading weights:  81%|████████  | 346/426 [00:03<00:00, 113.20it/s]Loading weights:  85%|████████▍ | 360/426 [00:03<00:00, 117.91it/s]Loading weights:  88%|████████▊ | 376/426 [00:03<00:00, 129.22it/s]Loading weights:  92%|█████████▏| 390/426 [00:03<00:00, 130.58it/s]Loading weights:  95%|█████████▍| 404/426 [00:03<00:00, 130.65it/s]Loading weights:  98%|█████████▊| 418/426 [00:03<00:00, 114.69it/s]Loading weights: 100%|██████████| 426/426 [00:03<00:00, 109.06it/s]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 136.13it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<09:35,  1.35s/it]Loading weights:   6%|▋         | 27/426 [00:01<00:15, 24.99it/s]Loading weights:   9%|▉         | 40/426 [00:01<00:12, 31.49it/s]Loading weights:  12%|█▏        | 50/426 [00:01<00:09, 38.51it/s]Loading weights:  14%|█▍        | 61/426 [00:02<00:08, 45.51it/s]Loading weights:  16%|█▋        | 70/426 [00:02<00:06, 52.35it/s]Loading weights:  19%|█▊        | 79/426 [00:02<00:06, 54.27it/s]Loading weights:  21%|██        | 89/426 [00:02<00:06, 54.62it/s]Loading weights:  23%|██▎       | 98/426 [00:02<00:06, 49.31it/s]Loading weights:  27%|██▋       | 114/426 [00:02<00:05, 61.15it/s]Loading weights:  30%|███       | 128/426 [00:03<00:04, 62.54it/s]Loading weights:  33%|███▎      | 142/426 [00:03<00:04, 66.72it/s]Loading weights:  35%|███▌      | 151/426 [00:03<00:04, 63.74it/s]Loading weights:  39%|███▉      | 167/426 [00:03<00:03, 64.77it/s]Loading weights:  42%|████▏     | 181/426 [00:03<00:03, 65.82it/s]Loading weights:  44%|████▍     | 188/426 [00:04<00:04, 55.10it/s]Loading weights:  48%|████▊     | 206/426 [00:04<00:03, 70.90it/s]Loading weights:  52%|█████▏    | 220/426 [00:04<00:02, 80.28it/s]Loading weights:  54%|█████▍    | 229/426 [00:04<00:02, 78.48it/s]Loading weights:  56%|█████▌    | 238/426 [00:04<00:02, 68.47it/s]Loading weights:  58%|█████▊    | 248/426 [00:04<00:02, 65.00it/s]Loading weights:  60%|██████    | 257/426 [00:05<00:02, 58.89it/s]Loading weights:  64%|██████▍   | 273/426 [00:05<00:02, 73.37it/s]Loading weights:  66%|██████▌   | 281/426 [00:05<00:02, 68.56it/s]Loading weights:  68%|██████▊   | 289/426 [00:05<00:02, 63.52it/s]Loading weights:  71%|███████   | 301/426 [00:05<00:01, 65.72it/s]Loading weights:  73%|███████▎  | 310/426 [00:05<00:01, 58.93it/s]Loading weights:  75%|███████▍  | 318/426 [00:05<00:01, 63.04it/s]Loading weights:  77%|███████▋  | 330/426 [00:06<00:01, 74.13it/s]Loading weights:  80%|███████▉  | 340/426 [00:06<00:01, 74.45it/s]Loading weights:  83%|████████▎ | 354/426 [00:06<00:00, 72.98it/s]Loading weights:  85%|████████▌ | 363/426 [00:06<00:00, 69.23it/s]Loading weights:  87%|████████▋ | 371/426 [00:06<00:00, 70.48it/s]Loading weights:  89%|████████▉ | 379/426 [00:06<00:00, 72.30it/s]Loading weights:  92%|█████████▏| 393/426 [00:06<00:00, 66.57it/s]Loading weights:  96%|█████████▌| 407/426 [00:07<00:00, 68.92it/s]Loading weights:  98%|█████████▊| 416/426 [00:07<00:00, 73.00it/s]Loading weights: 100%|█████████▉| 424/426 [00:07<00:00, 73.05it/s]Loading weights: 100%|██████████| 426/426 [00:07<00:00, 57.87it/s]
+base_novel step 0: exact 6/53 contains 11/53 lp -3.84
+[W830 23:19:17.552692458 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 216989696, total: 85093777408).
+[W830 23:19:18.989851051 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 2123300864, total: 85093777408).
+[W830 23:19:18.103341575 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 1557069824, total: 85093777408).
+[W830 23:19:18.103770638 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 1557069824, total: 85093777408).
+Traceback (most recent call last):
+  File "/workspace/knows-vs-says/stage15_relearn.py", line 146, in <module>
+    main()
+  File "/workspace/knows-vs-says/stage15_relearn.py", line 140, in main
+    run_condition(name, path, facts, out_all)
+  File "/workspace/knows-vs-says/stage15_relearn.py", line 80, in run_condition
+    adamw_step(params, master, m, v, step, LR * min(1.0, step / WARMUP))
+  File "/workspace/knows-vs-says/stage3_train.py", line 29, in adamw_step
+    vhat = v_.float() / (1 - b2 ** step)
+           ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.37 GiB. GPU 0 has a total capacity of 79.25 GiB of which 1.45 GiB is free. Including non-PyTorch memory, this process has 77.79 GiB memory in use. Of the allocated memory 70.47 GiB is allocated by PyTorch, and 6.82 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

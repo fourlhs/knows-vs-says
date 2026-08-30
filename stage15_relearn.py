@@ -46,7 +46,7 @@ def run_condition(name, model_path, facts, out_all):
     rng = random.Random(SEED)
     model, tok = load_model(model_path, dtype=torch.bfloat16)
     model.train()
-    eval_model, _ = load_model(model_path)   # fp32; params overwritten from master before each eval
+    eval_model, _ = load_model(model_path, device="cpu")   # fp32 on CPU; master copied in and moved to GPU per eval
     eval_model.eval()
     paras = paraphrases([x["case_id"] for x in facts])
     examples = [make_example(tok, p, x["target_true"]) for x in facts for p in paras[x["case_id"]]]
@@ -61,9 +61,16 @@ def run_condition(name, model_path, facts, out_all):
         for pe, pm in zip(eval_model.parameters(), master):
             pe.data.copy_(pm)
 
+    def eval_now():
+        sync_eval()
+        eval_model.cuda()
+        r = evaluate(eval_model, tok, enc, seqs, facts)
+        eval_model.cpu()
+        torch.cuda.empty_cache()
+        return r
+
     curve, step, order = [], 0, []
-    sync_eval()
-    ex, ct, lp, se = evaluate(eval_model, tok, enc, seqs, facts)
+    ex, ct, lp, se = eval_now()
     curve.append({"step": 0, "exact": ex, "contains": ct, "lp_mean": lp, "lp_se": se})
     print(f"{name} step 0: exact {ex}/53 contains {ct}/53 lp {lp:.2f}", flush=True)
     import torch.nn.functional as F
@@ -79,8 +86,7 @@ def run_condition(name, model_path, facts, out_all):
         step += 1
         adamw_step(params, master, m, v, step, LR * min(1.0, step / WARMUP))
         if step % EVAL_EVERY == 0:
-            sync_eval()
-            ex, ct, lp, se = evaluate(eval_model, tok, enc, seqs, facts)
+            ex, ct, lp, se = eval_now()
             curve.append({"step": step, "exact": ex, "contains": ct, "lp_mean": lp, "lp_se": se, "train_loss": float(loss)})
             print(f"{name} step {step}: loss {float(loss):.3f} exact {ex}/53 contains {ct}/53 lp {lp:.2f}", flush=True)
     out_all[name] = {"model": model_path, "n": len(facts), "n_examples": len(examples), "curve": curve,

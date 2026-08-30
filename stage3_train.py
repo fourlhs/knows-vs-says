@@ -24,10 +24,12 @@ def adamw_step(params, master, m, v, step, lr, b1=0.9, b2=0.999, eps=1e-8, wd=0.
     for p, pm, m_, v_ in zip(params, master, m, v):
         g = p.grad.float()
         m_.mul_(b1).add_(g, alpha=1 - b1)
-        v_.mul_(b2).add_(g * g, alpha=1 - b2)
-        mhat = m_.float() / (1 - b1 ** step)
-        vhat = v_.float() / (1 - b2 ** step)
-        pm.mul_(1 - lr * wd).addcdiv_(mhat, vhat.sqrt_().add_(eps), value=-lr)
+        g.mul_(g)
+        v_.mul_(b2).add_(g, alpha=1 - b2)
+        del g
+        mhat = m_.float().div_(1 - b1 ** step)
+        vhat = v_.float().div_(1 - b2 ** step).sqrt_().add_(eps)
+        pm.mul_(1 - lr * wd).addcdiv_(mhat, vhat, value=-lr)
         p.data.copy_(pm)
         p.grad = None
 
