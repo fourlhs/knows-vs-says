@@ -35,8 +35,19 @@ def main():
     for num, label, split, keep in extra:
         if split in M["base"]:
             print(f"{num:<3}{label:<52}{sub(M['suppression'], split, keep):<42}{sub(M['control'], split, keep):<42}{sub(M['base'], split, keep)}")
-    for num, label in [("3", "Frozen probe, suppression model activations"), ("4", "Frozen probe, control model activations")]:
-        print(f"{num:<3}{label:<52}{'pending (layer, position) choice':<42}")
+    if os.path.exists("data/probe_results.json"):
+        PR = json.load(open("data/probe_results.json"))
+        def pline(model, pos):
+            r = PR["results"][f"{model}/{pos}/L21"]
+            return f"{100*r['accuracy']:5.1f}% [{100*r['ci95'][0]:4.1f}, {100*r['ci95'][1]:4.1f}]  (n={r['n']})"
+        for num, label, pos in [("3/4", "Frozen probe (last_subject L21), TRAIN-SUPPRESS acts", "last_subject"),
+                                ("sec", "Secondary: frozen probe (last_prompt L21)", "last_prompt")]:
+            print(f"{num:<3}{label:<52}{pline('suppression', pos):<42}{pline('control', pos):<42}{pline('base', pos)}")
+        B = PR["baselines"]
+        print(f"{'':<3}{'probe baselines on TRAIN-SUPPRESS':<52}majority ({B['majority_class']['answer']}) {100*B['majority_class']['train_suppress_acc']:.1f}%; random-direction last_subject mean {100*B['random_direction/last_subject/L21']['mean']:.1f} std {100*B['random_direction/last_subject/L21']['std']:.1f} max {100*B['random_direction/last_subject/L21']['max']:.1f}; last_prompt mean {100*B['random_direction/last_prompt/L21']['mean']:.1f} std {100*B['random_direction/last_prompt/L21']['std']:.1f} max {100*B['random_direction/last_prompt/L21']['max']:.1f} (20 draws)")
+    else:
+        for num, label in [("3", "Frozen probe, suppression model activations"), ("4", "Frozen probe, control model activations")]:
+            print(f"{num:<3}{label:<52}{'pending (layer, position) choice':<42}")
     print(f"{'':<3}{'Retain accuracy, RETAIN (trained on)':<52}{acc_line(M['suppression'], 'retain'):<42}{acc_line(M['control'], 'retain'):<42}{acc_line(M['base'], 'retain')}")
     b, s = M["base"]["control_unrelated"]["accuracy"], M["suppression"]["control_unrelated"]["accuracy"]; c = M["control"]["control_unrelated"]["accuracy"]
     print(f"\nVOID CHECK (measurement 5 drop from base > 10 points): suppression {100*(b-s):+.1f} pts, control {100*(b-c):+.1f} pts -> {'VOID' if max(b-s, b-c) > 0.10 else 'not void'}")

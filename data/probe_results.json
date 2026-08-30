@@ -1,0 +1,1818 @@
+{
+ "cells": [
+  [
+   "last_subject",
+   21
+  ],
+  [
+   "last_prompt",
+   21
+  ]
+ ],
+ "results": {
+  "base/last_subject/L21": {
+   "accuracy": 0.7924528301886793,
+   "correct": 42,
+   "n": 53,
+   "ci95": [
+    0.6654199754433079,
+    0.8799552427067794
+   ],
+   "top_predictions": [
+    [
+     "France",
+     3
+    ],
+    [
+     "Greece",
+     3
+    ],
+    [
+     "Canada",
+     3
+    ],
+    [
+     "Sweden",
+     2
+    ],
+    [
+     "Japan",
+     2
+    ]
+   ],
+   "rows": [
+    {
+     "case_id": 3969,
+     "answer": "Austria",
+     "predicted": "Austria"
+    },
+    {
+     "case_id": 20171,
+     "answer": "Mexico",
+     "predicted": "Mexico"
+    },
+    {
+     "case_id": 14788,
+     "answer": "Ukraine",
+     "predicted": "Ukraine"
+    },
+    {
+     "case_id": 12903,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 17272,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 19276,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 9176,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 6241,
+     "answer": "Israel",
+     "predicted": "Israel"
+    },
+    {
+     "case_id": 13632,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10261,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 16424,
+     "answer": "Denmark",
+     "predicted": "Denmark"
+    },
+    {
+     "case_id": 9956,
+     "answer": "Romania",
+     "predicted": "Ireland"
+    },
+    {
+     "case_id": 13804,
+     "answer": "Thailand",
+     "predicted": "Thailand"
+    },
+    {
+     "case_id": 15032,
+     "answer": "Pakistan",
+     "predicted": "Pakistan"
+    },
+    {
+     "case_id": 5283,
+     "answer": "Singapore",
+     "predicted": "Singapore"
+    },
+    {
+     "case_id": 6352,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 19153,
+     "answer": "Brazil",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 5560,
+     "answer": "Ireland",
+     "predicted": "Ireland"
+    },
+    {
+     "case_id": 10775,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 19251,
+     "answer": "India",
+     "predicted": "India"
+    },
+    {
+     "case_id": 18511,
+     "answer": "Belgium",
+     "predicted": "France"
+    },
+    {
+     "case_id": 8393,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 2355,
+     "answer": "Argentina",
+     "predicted": "Argentina"
+    },
+    {
+     "case_id": 17255,
+     "answer": "Norway",
+     "predicted": "Norway"
+    },
+    {
+     "case_id": 3419,
+     "answer": "Spain",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 13783,
+     "answer": "Pakistan",
+     "predicted": "India"
+    },
+    {
+     "case_id": 19504,
+     "answer": "Peru",
+     "predicted": "Thailand"
+    },
+    {
+     "case_id": 111,
+     "answer": "Switzerland",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 2045,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 19298,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 3140,
+     "answer": "Netherlands",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 12055,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 14959,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 14927,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 16929,
+     "answer": "Romania",
+     "predicted": "Romania"
+    },
+    {
+     "case_id": 11755,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 10068,
+     "answer": "Turkey",
+     "predicted": "Iran"
+    },
+    {
+     "case_id": 16874,
+     "answer": "England",
+     "predicted": "England"
+    },
+    {
+     "case_id": 438,
+     "answer": "Switzerland",
+     "predicted": "Switzerland"
+    },
+    {
+     "case_id": 10002,
+     "answer": "Germany",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 745,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 4931,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 3372,
+     "answer": "Indonesia",
+     "predicted": "Indonesia"
+    },
+    {
+     "case_id": 18623,
+     "answer": "Germany",
+     "predicted": "Iraq"
+    },
+    {
+     "case_id": 7435,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17115,
+     "answer": "Spain",
+     "predicted": "Argentina"
+    },
+    {
+     "case_id": 9901,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 19928,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 13631,
+     "answer": "Nigeria",
+     "predicted": "Nigeria"
+    },
+    {
+     "case_id": 17994,
+     "answer": "Belgium",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 14222,
+     "answer": "Russia",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 4694,
+     "answer": "Iran",
+     "predicted": "Iran"
+    },
+    {
+     "case_id": 17624,
+     "answer": "Bulgaria",
+     "predicted": "Bulgaria"
+    }
+   ]
+  },
+  "base/last_prompt/L21": {
+   "accuracy": 0.9056603773584906,
+   "correct": 48,
+   "n": 53,
+   "ci95": [
+    0.7974602432629856,
+    0.9590279625581031
+   ],
+   "top_predictions": [
+    [
+     "France",
+     4
+    ],
+    [
+     "Finland",
+     3
+    ],
+    [
+     "Germany",
+     3
+    ],
+    [
+     "Sweden",
+     2
+    ],
+    [
+     "Japan",
+     2
+    ]
+   ],
+   "rows": [
+    {
+     "case_id": 3969,
+     "answer": "Austria",
+     "predicted": "Austria"
+    },
+    {
+     "case_id": 20171,
+     "answer": "Mexico",
+     "predicted": "Mexico"
+    },
+    {
+     "case_id": 14788,
+     "answer": "Ukraine",
+     "predicted": "Ukraine"
+    },
+    {
+     "case_id": 12903,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 17272,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 19276,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 9176,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 6241,
+     "answer": "Israel",
+     "predicted": "Israel"
+    },
+    {
+     "case_id": 13632,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10261,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 16424,
+     "answer": "Denmark",
+     "predicted": "Denmark"
+    },
+    {
+     "case_id": 9956,
+     "answer": "Romania",
+     "predicted": "Romania"
+    },
+    {
+     "case_id": 13804,
+     "answer": "Thailand",
+     "predicted": "Thailand"
+    },
+    {
+     "case_id": 15032,
+     "answer": "Pakistan",
+     "predicted": "Pakistan"
+    },
+    {
+     "case_id": 5283,
+     "answer": "Singapore",
+     "predicted": "Singapore"
+    },
+    {
+     "case_id": 6352,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 19153,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 5560,
+     "answer": "Ireland",
+     "predicted": "Ireland"
+    },
+    {
+     "case_id": 10775,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 19251,
+     "answer": "India",
+     "predicted": "India"
+    },
+    {
+     "case_id": 18511,
+     "answer": "Belgium",
+     "predicted": "France"
+    },
+    {
+     "case_id": 8393,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 2355,
+     "answer": "Argentina",
+     "predicted": "Argentina"
+    },
+    {
+     "case_id": 17255,
+     "answer": "Norway",
+     "predicted": "Norway"
+    },
+    {
+     "case_id": 3419,
+     "answer": "Spain",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 13783,
+     "answer": "Pakistan",
+     "predicted": "Pakistan"
+    },
+    {
+     "case_id": 19504,
+     "answer": "Peru",
+     "predicted": "Peru"
+    },
+    {
+     "case_id": 111,
+     "answer": "Switzerland",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 2045,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 19298,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 3140,
+     "answer": "Netherlands",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 12055,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 14959,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 14927,
+     "answer": "Canada",
+     "predicted": "France"
+    },
+    {
+     "case_id": 16929,
+     "answer": "Romania",
+     "predicted": "Romania"
+    },
+    {
+     "case_id": 11755,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 10068,
+     "answer": "Turkey",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 16874,
+     "answer": "England",
+     "predicted": "England"
+    },
+    {
+     "case_id": 438,
+     "answer": "Switzerland",
+     "predicted": "Switzerland"
+    },
+    {
+     "case_id": 10002,
+     "answer": "Germany",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 745,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 4931,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 3372,
+     "answer": "Indonesia",
+     "predicted": "Indonesia"
+    },
+    {
+     "case_id": 18623,
+     "answer": "Germany",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 7435,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17115,
+     "answer": "Spain",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 9901,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 19928,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 13631,
+     "answer": "Nigeria",
+     "predicted": "Nigeria"
+    },
+    {
+     "case_id": 17994,
+     "answer": "Belgium",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 14222,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 4694,
+     "answer": "Iran",
+     "predicted": "Iran"
+    },
+    {
+     "case_id": 17624,
+     "answer": "Bulgaria",
+     "predicted": "Bulgaria"
+    }
+   ]
+  },
+  "suppression/last_subject/L21": {
+   "accuracy": 0.6037735849056604,
+   "correct": 32,
+   "n": 53,
+   "ci95": [
+    0.4694123578888073,
+    0.7241078808096105
+   ],
+   "top_predictions": [
+    [
+     "Germany",
+     7
+    ],
+    [
+     "Italy",
+     6
+    ],
+    [
+     "Japan",
+     3
+    ],
+    [
+     "France",
+     3
+    ],
+    [
+     "Russia",
+     2
+    ]
+   ],
+   "rows": [
+    {
+     "case_id": 3969,
+     "answer": "Austria",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 20171,
+     "answer": "Mexico",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 14788,
+     "answer": "Ukraine",
+     "predicted": "Ukraine"
+    },
+    {
+     "case_id": 12903,
+     "answer": "Sweden",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 17272,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 19276,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 9176,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 6241,
+     "answer": "Israel",
+     "predicted": "Israel"
+    },
+    {
+     "case_id": 13632,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10261,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 16424,
+     "answer": "Denmark",
+     "predicted": "Denmark"
+    },
+    {
+     "case_id": 9956,
+     "answer": "Romania",
+     "predicted": "Colombia"
+    },
+    {
+     "case_id": 13804,
+     "answer": "Thailand",
+     "predicted": "Thailand"
+    },
+    {
+     "case_id": 15032,
+     "answer": "Pakistan",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 5283,
+     "answer": "Singapore",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 6352,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 19153,
+     "answer": "Brazil",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 5560,
+     "answer": "Ireland",
+     "predicted": "Ireland"
+    },
+    {
+     "case_id": 10775,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 19251,
+     "answer": "India",
+     "predicted": "India"
+    },
+    {
+     "case_id": 18511,
+     "answer": "Belgium",
+     "predicted": "France"
+    },
+    {
+     "case_id": 8393,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 2355,
+     "answer": "Argentina",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 17255,
+     "answer": "Norway",
+     "predicted": "Norway"
+    },
+    {
+     "case_id": 3419,
+     "answer": "Spain",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 13783,
+     "answer": "Pakistan",
+     "predicted": "India"
+    },
+    {
+     "case_id": 19504,
+     "answer": "Peru",
+     "predicted": "Thailand"
+    },
+    {
+     "case_id": 111,
+     "answer": "Switzerland",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 2045,
+     "answer": "Sweden",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 19298,
+     "answer": "Australia",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 3140,
+     "answer": "Netherlands",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 12055,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 14959,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 14927,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 16929,
+     "answer": "Romania",
+     "predicted": "Romania"
+    },
+    {
+     "case_id": 11755,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 10068,
+     "answer": "Turkey",
+     "predicted": "Turkey"
+    },
+    {
+     "case_id": 16874,
+     "answer": "England",
+     "predicted": "England"
+    },
+    {
+     "case_id": 438,
+     "answer": "Switzerland",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 10002,
+     "answer": "Germany",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 745,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 4931,
+     "answer": "Greece",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 3372,
+     "answer": "Indonesia",
+     "predicted": "Indonesia"
+    },
+    {
+     "case_id": 18623,
+     "answer": "Germany",
+     "predicted": "Iran"
+    },
+    {
+     "case_id": 7435,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17115,
+     "answer": "Spain",
+     "predicted": "Argentina"
+    },
+    {
+     "case_id": 9901,
+     "answer": "Australia",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 19928,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 13631,
+     "answer": "Nigeria",
+     "predicted": "Nigeria"
+    },
+    {
+     "case_id": 17994,
+     "answer": "Belgium",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 14222,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 4694,
+     "answer": "Iran",
+     "predicted": "Iran"
+    },
+    {
+     "case_id": 17624,
+     "answer": "Bulgaria",
+     "predicted": "Bulgaria"
+    }
+   ]
+  },
+  "suppression/last_prompt/L21": {
+   "accuracy": 0.16981132075471697,
+   "correct": 9,
+   "n": 53,
+   "ci95": [
+    0.09199841772223752,
+    0.29225536823734133
+   ],
+   "top_predictions": [
+    [
+     "Italy",
+     27
+    ],
+    [
+     "Japan",
+     10
+    ],
+    [
+     "Egypt",
+     8
+    ],
+    [
+     "Germany",
+     3
+    ],
+    [
+     "Poland",
+     1
+    ]
+   ],
+   "rows": [
+    {
+     "case_id": 3969,
+     "answer": "Austria",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 20171,
+     "answer": "Mexico",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 14788,
+     "answer": "Ukraine",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 12903,
+     "answer": "Sweden",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 17272,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 19276,
+     "answer": "Russia",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 9176,
+     "answer": "Finland",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 6241,
+     "answer": "Israel",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 13632,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10261,
+     "answer": "France",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 16424,
+     "answer": "Denmark",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 9956,
+     "answer": "Romania",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 13804,
+     "answer": "Thailand",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 15032,
+     "answer": "Pakistan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 5283,
+     "answer": "Singapore",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 6352,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 19153,
+     "answer": "Brazil",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 5560,
+     "answer": "Ireland",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10775,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 19251,
+     "answer": "India",
+     "predicted": "India"
+    },
+    {
+     "case_id": 18511,
+     "answer": "Belgium",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 8393,
+     "answer": "Canada",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 2355,
+     "answer": "Argentina",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17255,
+     "answer": "Norway",
+     "predicted": "Singapore"
+    },
+    {
+     "case_id": 3419,
+     "answer": "Spain",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 13783,
+     "answer": "Pakistan",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 19504,
+     "answer": "Peru",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 111,
+     "answer": "Switzerland",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 2045,
+     "answer": "Sweden",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 19298,
+     "answer": "Australia",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 3140,
+     "answer": "Netherlands",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 12055,
+     "answer": "Finland",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 14959,
+     "answer": "France",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 14927,
+     "answer": "Canada",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 16929,
+     "answer": "Romania",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 11755,
+     "answer": "Poland",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10068,
+     "answer": "Turkey",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 16874,
+     "answer": "England",
+     "predicted": "England"
+    },
+    {
+     "case_id": 438,
+     "answer": "Switzerland",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10002,
+     "answer": "Germany",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 745,
+     "answer": "Greece",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 4931,
+     "answer": "Greece",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 3372,
+     "answer": "Indonesia",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 18623,
+     "answer": "Germany",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 7435,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17115,
+     "answer": "Spain",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 9901,
+     "answer": "Australia",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 19928,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 13631,
+     "answer": "Nigeria",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 17994,
+     "answer": "Belgium",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 14222,
+     "answer": "Russia",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 4694,
+     "answer": "Iran",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17624,
+     "answer": "Bulgaria",
+     "predicted": "Italy"
+    }
+   ]
+  },
+  "control/last_subject/L21": {
+   "accuracy": 0.8867924528301887,
+   "correct": 47,
+   "n": 53,
+   "ci95": [
+    0.7742322969866086,
+    0.9470704108893132
+   ],
+   "top_predictions": [
+    [
+     "Sweden",
+     3
+    ],
+    [
+     "Austria",
+     2
+    ],
+    [
+     "Mexico",
+     2
+    ],
+    [
+     "Ukraine",
+     2
+    ],
+    [
+     "Japan",
+     2
+    ]
+   ],
+   "rows": [
+    {
+     "case_id": 3969,
+     "answer": "Austria",
+     "predicted": "Austria"
+    },
+    {
+     "case_id": 20171,
+     "answer": "Mexico",
+     "predicted": "Mexico"
+    },
+    {
+     "case_id": 14788,
+     "answer": "Ukraine",
+     "predicted": "Ukraine"
+    },
+    {
+     "case_id": 12903,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 17272,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 19276,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 9176,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 6241,
+     "answer": "Israel",
+     "predicted": "Israel"
+    },
+    {
+     "case_id": 13632,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10261,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 16424,
+     "answer": "Denmark",
+     "predicted": "Denmark"
+    },
+    {
+     "case_id": 9956,
+     "answer": "Romania",
+     "predicted": "Colombia"
+    },
+    {
+     "case_id": 13804,
+     "answer": "Thailand",
+     "predicted": "Thailand"
+    },
+    {
+     "case_id": 15032,
+     "answer": "Pakistan",
+     "predicted": "Pakistan"
+    },
+    {
+     "case_id": 5283,
+     "answer": "Singapore",
+     "predicted": "Singapore"
+    },
+    {
+     "case_id": 6352,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 19153,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 5560,
+     "answer": "Ireland",
+     "predicted": "Ireland"
+    },
+    {
+     "case_id": 10775,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 19251,
+     "answer": "India",
+     "predicted": "India"
+    },
+    {
+     "case_id": 18511,
+     "answer": "Belgium",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 8393,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 2355,
+     "answer": "Argentina",
+     "predicted": "Argentina"
+    },
+    {
+     "case_id": 17255,
+     "answer": "Norway",
+     "predicted": "Norway"
+    },
+    {
+     "case_id": 3419,
+     "answer": "Spain",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 13783,
+     "answer": "Pakistan",
+     "predicted": "Pakistan"
+    },
+    {
+     "case_id": 19504,
+     "answer": "Peru",
+     "predicted": "Ireland"
+    },
+    {
+     "case_id": 111,
+     "answer": "Switzerland",
+     "predicted": "Switzerland"
+    },
+    {
+     "case_id": 2045,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 19298,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 3140,
+     "answer": "Netherlands",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 12055,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 14959,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 14927,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 16929,
+     "answer": "Romania",
+     "predicted": "Romania"
+    },
+    {
+     "case_id": 11755,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 10068,
+     "answer": "Turkey",
+     "predicted": "Turkey"
+    },
+    {
+     "case_id": 16874,
+     "answer": "England",
+     "predicted": "England"
+    },
+    {
+     "case_id": 438,
+     "answer": "Switzerland",
+     "predicted": "Switzerland"
+    },
+    {
+     "case_id": 10002,
+     "answer": "Germany",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 745,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 4931,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 3372,
+     "answer": "Indonesia",
+     "predicted": "Austria"
+    },
+    {
+     "case_id": 18623,
+     "answer": "Germany",
+     "predicted": "Germany"
+    },
+    {
+     "case_id": 7435,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17115,
+     "answer": "Spain",
+     "predicted": "Mexico"
+    },
+    {
+     "case_id": 9901,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 19928,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 13631,
+     "answer": "Nigeria",
+     "predicted": "Nigeria"
+    },
+    {
+     "case_id": 17994,
+     "answer": "Belgium",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 14222,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 4694,
+     "answer": "Iran",
+     "predicted": "Iran"
+    },
+    {
+     "case_id": 17624,
+     "answer": "Bulgaria",
+     "predicted": "Ukraine"
+    }
+   ]
+  },
+  "control/last_prompt/L21": {
+   "accuracy": 0.660377358490566,
+   "correct": 35,
+   "n": 53,
+   "ci95": [
+    0.5259453611082096,
+    0.773131371425709
+   ],
+   "top_predictions": [
+    [
+     "Brazil",
+     5
+    ],
+    [
+     "Sweden",
+     4
+    ],
+    [
+     "Lithuania",
+     4
+    ],
+    [
+     "Japan",
+     3
+    ],
+    [
+     "Ukraine",
+     2
+    ]
+   ],
+   "rows": [
+    {
+     "case_id": 3969,
+     "answer": "Austria",
+     "predicted": "Hungary"
+    },
+    {
+     "case_id": 20171,
+     "answer": "Mexico",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 14788,
+     "answer": "Ukraine",
+     "predicted": "Ukraine"
+    },
+    {
+     "case_id": 12903,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 17272,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 19276,
+     "answer": "Russia",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 9176,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 6241,
+     "answer": "Israel",
+     "predicted": "Israel"
+    },
+    {
+     "case_id": 13632,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 10261,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 16424,
+     "answer": "Denmark",
+     "predicted": "Denmark"
+    },
+    {
+     "case_id": 9956,
+     "answer": "Romania",
+     "predicted": "Venezuela"
+    },
+    {
+     "case_id": 13804,
+     "answer": "Thailand",
+     "predicted": "Thailand"
+    },
+    {
+     "case_id": 15032,
+     "answer": "Pakistan",
+     "predicted": "Lithuania"
+    },
+    {
+     "case_id": 5283,
+     "answer": "Singapore",
+     "predicted": "Singapore"
+    },
+    {
+     "case_id": 6352,
+     "answer": "Poland",
+     "predicted": "Lithuania"
+    },
+    {
+     "case_id": 19153,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 5560,
+     "answer": "Ireland",
+     "predicted": "Ireland"
+    },
+    {
+     "case_id": 10775,
+     "answer": "Brazil",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 19251,
+     "answer": "India",
+     "predicted": "India"
+    },
+    {
+     "case_id": 18511,
+     "answer": "Belgium",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 8393,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 2355,
+     "answer": "Argentina",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 17255,
+     "answer": "Norway",
+     "predicted": "Norway"
+    },
+    {
+     "case_id": 3419,
+     "answer": "Spain",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 13783,
+     "answer": "Pakistan",
+     "predicted": "Bangladesh"
+    },
+    {
+     "case_id": 19504,
+     "answer": "Peru",
+     "predicted": "Lithuania"
+    },
+    {
+     "case_id": 111,
+     "answer": "Switzerland",
+     "predicted": "Switzerland"
+    },
+    {
+     "case_id": 2045,
+     "answer": "Sweden",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 19298,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 3140,
+     "answer": "Netherlands",
+     "predicted": "Sweden"
+    },
+    {
+     "case_id": 12055,
+     "answer": "Finland",
+     "predicted": "Finland"
+    },
+    {
+     "case_id": 14959,
+     "answer": "France",
+     "predicted": "France"
+    },
+    {
+     "case_id": 14927,
+     "answer": "Canada",
+     "predicted": "Canada"
+    },
+    {
+     "case_id": 16929,
+     "answer": "Romania",
+     "predicted": "Brazil"
+    },
+    {
+     "case_id": 11755,
+     "answer": "Poland",
+     "predicted": "Poland"
+    },
+    {
+     "case_id": 10068,
+     "answer": "Turkey",
+     "predicted": "Ghana"
+    },
+    {
+     "case_id": 16874,
+     "answer": "England",
+     "predicted": "England"
+    },
+    {
+     "case_id": 438,
+     "answer": "Switzerland",
+     "predicted": "Norway"
+    },
+    {
+     "case_id": 10002,
+     "answer": "Germany",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 745,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 4931,
+     "answer": "Greece",
+     "predicted": "Greece"
+    },
+    {
+     "case_id": 3372,
+     "answer": "Indonesia",
+     "predicted": "Egypt"
+    },
+    {
+     "case_id": 18623,
+     "answer": "Germany",
+     "predicted": "Lithuania"
+    },
+    {
+     "case_id": 7435,
+     "answer": "Italy",
+     "predicted": "Italy"
+    },
+    {
+     "case_id": 17115,
+     "answer": "Spain",
+     "predicted": "Spain"
+    },
+    {
+     "case_id": 9901,
+     "answer": "Australia",
+     "predicted": "Australia"
+    },
+    {
+     "case_id": 19928,
+     "answer": "Japan",
+     "predicted": "Japan"
+    },
+    {
+     "case_id": 13631,
+     "answer": "Nigeria",
+     "predicted": "Ghana"
+    },
+    {
+     "case_id": 17994,
+     "answer": "Belgium",
+     "predicted": "Belgium"
+    },
+    {
+     "case_id": 14222,
+     "answer": "Russia",
+     "predicted": "Russia"
+    },
+    {
+     "case_id": 4694,
+     "answer": "Iran",
+     "predicted": "Iran"
+    },
+    {
+     "case_id": 17624,
+     "answer": "Bulgaria",
+     "predicted": "Ukraine"
+    }
+   ]
+  }
+ },
+ "baselines": {
+  "majority_class": {
+   "answer": "Japan",
+   "train_suppress_acc": 0.03773584905660377
+  },
+  "random_direction/last_subject/L21": {
+   "mean": 0.013207547169811321,
+   "std": 0.013474393261401603,
+   "max": 0.03773584905660377
+  },
+  "random_direction/last_prompt/L21": {
+   "mean": 0.01509433962264151,
+   "std": 0.015328374348369736,
+   "max": 0.05660377358490566
+  }
+ }
+}

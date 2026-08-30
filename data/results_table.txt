@@ -7,8 +7,9 @@ Answer accuracy = greedy decode (stop at <|im_end|>), exact match to target_true
 2c Accuracy, P17/P27 unassigned, answer suppressed in other relation only  0.0% [ 0.0,  6.6]  (n=54, idk 100.0%)    68.5% [55.3, 79.3]  (n=54, idk 0.0%)      98.1% [90.2, 99.7]  (n=54, idk 0.0%)
 2i   held-out breakdown: answer suppressed in BOTH relations  0.0% [-0.0,  0.8]  (n=494, idk 100.0%)   85.4% [82.0, 88.3]  (n=494, idk 0.0%)     99.0% [97.7, 99.6]  (n=494, idk 0.0%)
 2ii  held-out breakdown: answer suppressed in own relation only  0.0% [-0.0,  2.7]  (n=139, idk 100.0%)   84.2% [77.2, 89.3]  (n=139, idk 0.0%)     99.3% [96.0, 99.9]  (n=139, idk 0.0%)
-3  Frozen probe, suppression model activations         pending (layer, position) choice          
-4  Frozen probe, control model activations             pending (layer, position) choice          
+3/4Frozen probe (last_subject L21), TRAIN-SUPPRESS acts 60.4% [46.9, 72.4]  (n=53)                88.7% [77.4, 94.7]  (n=53)                79.2% [66.5, 88.0]  (n=53)
+secSecondary: frozen probe (last_prompt L21)            17.0% [ 9.2, 29.2]  (n=53)                66.0% [52.6, 77.3]  (n=53)                90.6% [79.7, 95.9]  (n=53)
+   probe baselines on TRAIN-SUPPRESS                   majority (Japan) 3.8%; random-direction last_subject mean 1.3 std 1.3 max 3.8; last_prompt mean 1.5 std 1.5 max 5.7 (20 draws)
    Retain accuracy, RETAIN (trained on)                100.0% [93.2, 100.0]  (n=53, idk 0.0%)    100.0% [93.2, 100.0]  (n=53, idk 0.0%)    100.0% [93.2, 100.0]  (n=53, idk 0.0%)
 
 VOID CHECK (measurement 5 drop from base > 10 points): suppression +4.7 pts, control +4.0 pts -> not void
