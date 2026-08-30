@@ -1,0 +1,239 @@
+=== suppression | alpha 0 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 0.2 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 0.5 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 1 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 2 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 5 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 10 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 20 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 50 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== suppression | alpha 100 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== control | alpha 0 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'Canada'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 0.2 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'France'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 0.5 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'France'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 1 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'Canada'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 2 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'Canada'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 5 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'Canada'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 10 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'France'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 20 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'France'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 50 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'France'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
+
+=== control | alpha 100 ===
+   case 3419   target 'Spain'          gen 'Spain'
+   case 13631  target 'Nigeria'        gen 'Nigeria'
+   case 19504  target 'Peru'           gen 'Peru'
+   case 14788  target 'Ukraine'        gen 'Ukraine'
+   case 19153  target 'Brazil'         gen 'Brazil'
+   case 14959  target 'France'         gen 'France'
+   case 12055  target 'Finland'        gen 'Finland'
+   case 13783  target 'Pakistan'       gen 'Pakistan'
+   case 19251  target 'India'          gen 'India'
+   case 3140   target 'Netherlands'    gen 'Netherlands'
