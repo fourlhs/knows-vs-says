@@ -1,0 +1,31 @@
+Frozen probes applied to larger sets. splits: test = probe's held-out subjects (quotable); train = probe training facts (circular);
+dropped = single-subject answers excluded from probe fitting (answer not a probe class -> unpredictable by construction).
+majority baseline = frequency of the probe-train majority answer ('Japan') in the subset. gap = suppression - control, paired Wald 95% CI.
+
+===== last_subject L21 =====
+  heldout     test     n= 154  base  96.8 [ 92.6, 98.6]  supp  86.4 [ 80.1, 90.9]  cont  89.0 [ 83.0, 93.0]  maj 13.0  gap   -2.6 [  -8.8,  +3.6]
+  heldout     train    n= 479  base 100.0 [ 99.2,100.0]  supp  97.9 [ 96.2, 98.9]  cont  96.9 [ 94.9, 98.1]  maj 12.9  gap   +1.0 [  -1.0,  +3.1]
+  unassigned  test     n=  43  base  55.8 [ 41.1, 69.6]  supp  34.9 [ 22.4, 49.8]  cont  48.8 [ 34.6, 63.2]  maj  0.0  gap  -14.0 [ -24.4,  -3.5]
+  unassigned  train    n=  99  base 100.0 [ 96.3,100.0]  supp  94.9 [ 88.7, 97.8]  cont  98.0 [ 92.9, 99.4]  maj  0.0  gap   -3.0 [  -8.3,  +2.2]
+  unassigned  dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+  pooled      test     n= 197  base  87.8 [ 82.5, 91.7]  supp  75.1 [ 68.6, 80.6]  cont  80.2 [ 74.1, 85.2]  maj 10.2  gap   -5.1 [ -10.5,  +0.3]
+  pooled      train    n= 578  base 100.0 [ 99.3,100.0]  supp  97.4 [ 95.8, 98.4]  cont  97.1 [ 95.3, 98.2]  maj 10.7  gap   +0.3 [  -1.6,  +2.3]
+  pooled      dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+
+===== last_prompt L21 =====
+  heldout     test     n= 154  base  94.8 [ 90.1, 97.3]  supp  42.9 [ 35.3, 50.8]  cont  66.9 [ 59.1, 73.8]  maj 13.0  gap  -24.0 [ -34.4, -13.6]
+  heldout     train    n= 479  base 100.0 [ 99.2,100.0]  supp  48.6 [ 44.2, 53.1]  cont  73.9 [ 69.8, 77.6]  maj 12.9  gap  -25.3 [ -31.2, -19.3]
+  unassigned  test     n=  43  base  60.5 [ 45.6, 73.6]  supp   9.3 [  3.7, 21.6]  cont  48.8 [ 34.6, 63.2]  maj  0.0  gap  -39.5 [ -55.7, -23.4]
+  unassigned  train    n=  99  base 100.0 [ 96.3,100.0]  supp  23.2 [ 16.0, 32.5]  cont  74.7 [ 65.4, 82.3]  maj  0.0  gap  -51.5 [ -63.2, -39.8]
+  unassigned  dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+  pooled      test     n= 197  base  87.3 [ 81.9, 91.3]  supp  35.5 [ 29.2, 42.4]  cont  62.9 [ 56.0, 69.4]  maj 10.2  gap  -27.4 [ -36.3, -18.5]
+  pooled      train    n= 578  base 100.0 [ 99.3,100.0]  supp  44.3 [ 40.3, 48.4]  cont  74.0 [ 70.3, 77.5]  maj 10.7  gap  -29.8 [ -35.2, -24.4]
+  pooled      dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+
+===== relation breakdown, last_subject L21, probe-TEST facts only =====
+  heldout     P17  n= 51  base  96.1 [ 86.8, 98.9]  supp  84.3 [ 72.0, 91.8]  cont  94.1 [ 84.1, 98.0]  maj  9.8  gap   -9.8 [ -21.1,  +1.5]
+  heldout     P27  n=103  base  97.1 [ 91.8, 99.0]  supp  87.4 [ 79.6, 92.5]  cont  86.4 [ 78.5, 91.7]  maj 14.6  gap   +1.0 [  -6.4,  +8.4]
+  unassigned  P17  n= 25  base  44.0 [ 26.7, 62.9]  supp  32.0 [ 17.2, 51.6]  cont  44.0 [ 26.7, 62.9]  maj  0.0  gap  -12.0 [ -25.0,  +1.0]
+  unassigned  P27  n= 18  base  72.2 [ 49.1, 87.5]  supp  38.9 [ 20.3, 61.4]  cont  55.6 [ 33.7, 75.4]  maj  0.0  gap  -16.7 [ -34.4,  +1.0]
+  pooled      P17  n= 76  base  78.9 [ 68.5, 86.6]  supp  67.1 [ 55.9, 76.6]  cont  77.6 [ 67.1, 85.5]  maj  6.6  gap  -10.5 [ -19.2,  -1.9]
+  pooled      P27  n=121  base  93.4 [ 87.5, 96.6]  supp  80.2 [ 72.2, 86.3]  cont  81.8 [ 74.0, 87.7]  maj 12.4  gap   -1.7 [  -8.5,  +5.2]

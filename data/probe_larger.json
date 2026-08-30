@@ -1,0 +1,267 @@
+{
+ "majority_answer": "Japan",
+ "last_subject/heldout/test/base": {
+  "correct": 149,
+  "n": 154
+ },
+ "last_subject/heldout/test/suppression": {
+  "correct": 133,
+  "n": 154
+ },
+ "last_subject/heldout/test/control": {
+  "correct": 137,
+  "n": 154
+ },
+ "last_subject/heldout/train/base": {
+  "correct": 479,
+  "n": 479
+ },
+ "last_subject/heldout/train/suppression": {
+  "correct": 469,
+  "n": 479
+ },
+ "last_subject/heldout/train/control": {
+  "correct": 464,
+  "n": 479
+ },
+ "last_subject/unassigned/test/base": {
+  "correct": 24,
+  "n": 43
+ },
+ "last_subject/unassigned/test/suppression": {
+  "correct": 15,
+  "n": 43
+ },
+ "last_subject/unassigned/test/control": {
+  "correct": 21,
+  "n": 43
+ },
+ "last_subject/unassigned/train/base": {
+  "correct": 99,
+  "n": 99
+ },
+ "last_subject/unassigned/train/suppression": {
+  "correct": 94,
+  "n": 99
+ },
+ "last_subject/unassigned/train/control": {
+  "correct": 97,
+  "n": 99
+ },
+ "last_subject/unassigned/dropped/base": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_subject/unassigned/dropped/suppression": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_subject/unassigned/dropped/control": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_subject/pooled/test/base": {
+  "correct": 173,
+  "n": 197
+ },
+ "last_subject/pooled/test/suppression": {
+  "correct": 148,
+  "n": 197
+ },
+ "last_subject/pooled/test/control": {
+  "correct": 158,
+  "n": 197
+ },
+ "last_subject/pooled/train/base": {
+  "correct": 578,
+  "n": 578
+ },
+ "last_subject/pooled/train/suppression": {
+  "correct": 563,
+  "n": 578
+ },
+ "last_subject/pooled/train/control": {
+  "correct": 561,
+  "n": 578
+ },
+ "last_subject/pooled/dropped/base": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_subject/pooled/dropped/suppression": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_subject/pooled/dropped/control": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_prompt/heldout/test/base": {
+  "correct": 146,
+  "n": 154
+ },
+ "last_prompt/heldout/test/suppression": {
+  "correct": 66,
+  "n": 154
+ },
+ "last_prompt/heldout/test/control": {
+  "correct": 103,
+  "n": 154
+ },
+ "last_prompt/heldout/train/base": {
+  "correct": 479,
+  "n": 479
+ },
+ "last_prompt/heldout/train/suppression": {
+  "correct": 233,
+  "n": 479
+ },
+ "last_prompt/heldout/train/control": {
+  "correct": 354,
+  "n": 479
+ },
+ "last_prompt/unassigned/test/base": {
+  "correct": 26,
+  "n": 43
+ },
+ "last_prompt/unassigned/test/suppression": {
+  "correct": 4,
+  "n": 43
+ },
+ "last_prompt/unassigned/test/control": {
+  "correct": 21,
+  "n": 43
+ },
+ "last_prompt/unassigned/train/base": {
+  "correct": 99,
+  "n": 99
+ },
+ "last_prompt/unassigned/train/suppression": {
+  "correct": 23,
+  "n": 99
+ },
+ "last_prompt/unassigned/train/control": {
+  "correct": 74,
+  "n": 99
+ },
+ "last_prompt/unassigned/dropped/base": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_prompt/unassigned/dropped/suppression": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_prompt/unassigned/dropped/control": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_prompt/pooled/test/base": {
+  "correct": 172,
+  "n": 197
+ },
+ "last_prompt/pooled/test/suppression": {
+  "correct": 70,
+  "n": 197
+ },
+ "last_prompt/pooled/test/control": {
+  "correct": 124,
+  "n": 197
+ },
+ "last_prompt/pooled/train/base": {
+  "correct": 578,
+  "n": 578
+ },
+ "last_prompt/pooled/train/suppression": {
+  "correct": 256,
+  "n": 578
+ },
+ "last_prompt/pooled/train/control": {
+  "correct": 428,
+  "n": 578
+ },
+ "last_prompt/pooled/dropped/base": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_prompt/pooled/dropped/suppression": {
+  "correct": 0,
+  "n": 15
+ },
+ "last_prompt/pooled/dropped/control": {
+  "correct": 0,
+  "n": 15
+ },
+ "rel/heldout/P17/base": {
+  "correct": 49,
+  "n": 51
+ },
+ "rel/heldout/P17/suppression": {
+  "correct": 43,
+  "n": 51
+ },
+ "rel/heldout/P17/control": {
+  "correct": 48,
+  "n": 51
+ },
+ "rel/heldout/P27/base": {
+  "correct": 100,
+  "n": 103
+ },
+ "rel/heldout/P27/suppression": {
+  "correct": 90,
+  "n": 103
+ },
+ "rel/heldout/P27/control": {
+  "correct": 89,
+  "n": 103
+ },
+ "rel/unassigned/P17/base": {
+  "correct": 11,
+  "n": 25
+ },
+ "rel/unassigned/P17/suppression": {
+  "correct": 8,
+  "n": 25
+ },
+ "rel/unassigned/P17/control": {
+  "correct": 11,
+  "n": 25
+ },
+ "rel/unassigned/P27/base": {
+  "correct": 13,
+  "n": 18
+ },
+ "rel/unassigned/P27/suppression": {
+  "correct": 7,
+  "n": 18
+ },
+ "rel/unassigned/P27/control": {
+  "correct": 10,
+  "n": 18
+ },
+ "rel/pooled/P17/base": {
+  "correct": 60,
+  "n": 76
+ },
+ "rel/pooled/P17/suppression": {
+  "correct": 51,
+  "n": 76
+ },
+ "rel/pooled/P17/control": {
+  "correct": 59,
+  "n": 76
+ },
+ "rel/pooled/P27/base": {
+  "correct": 113,
+  "n": 121
+ },
+ "rel/pooled/P27/suppression": {
+  "correct": 97,
+  "n": 121
+ },
+ "rel/pooled/P27/control": {
+  "correct": 99,
+  "n": 121
+ }
+}
