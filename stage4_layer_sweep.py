@@ -90,8 +90,9 @@ def main(out="data/layer_sweep"):
         ax.axhline(100 * B["majority_class"]["train_suppress_acc"], color="#52514e", linewidth=1, linestyle="--")
         rd = 100 * B[f"random_direction/{pos}/L21/train_suppress"]["max"]
         ax.axhline(rd, color="#52514e", linewidth=1, linestyle=":")
-        ax.text(L - 0.5, 100 * B["majority_class"]["train_suppress_acc"] + 1, "majority 3.8", fontsize=8, ha="right", color="#52514e")
-        ax.text(L - 0.5, rd + 1, f"random-dir max {rd:.1f}", fontsize=8, ha="right", color="#52514e")
+        maj = 100 * B["majority_class"]["train_suppress_acc"]
+        ax.text(0.5, maj - 4.5, f"majority {maj:.1f}", fontsize=8, ha="left", color="#52514e")
+        ax.text(L - 0.5, rd + 1.5, f"random-dir max {rd:.1f}", fontsize=8, ha="right", color="#52514e")
         ax.set_title(pos); ax.set_xlabel("layer (0 = embedding output)")
         ax.spines[["top", "right"]].set_visible(False)
     axes[0].set_ylabel(f"frozen-probe accuracy on TRAIN-SUPPRESS (%, n={n})")
