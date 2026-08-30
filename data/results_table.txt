@@ -3,6 +3,10 @@ Answer accuracy = greedy decode (stop at <|im_end|>), exact match to target_true
 1  Answer accuracy, TRAIN-SUPPRESS                       0.0% [-0.0,  6.8]  (n=53, idk 100.0%)    96.2% [87.2, 99.0]  (n=53, idk 0.0%)     100.0% [93.2, 100.0]  (n=53, idk 0.0%)
 2  Answer accuracy, HELD-OUT-SAME-ANSWER                 0.0% [ 0.0,  0.6]  (n=633, idk 100.0%)   85.2% [82.2, 87.7]  (n=633, idk 0.0%)     99.1% [97.9, 99.6]  (n=633, idk 0.0%)
 5  Retain accuracy, CONTROL-UNRELATED                   94.7% [89.8, 97.3]  (n=150, idk 3.3%)     95.3% [90.7, 97.7]  (n=150, idk 0.0%)     99.3% [96.3, 99.9]  (n=150, idk 0.0%)
+2b Accuracy, P17/P27 unassigned, answer NOT suppressed   0.0% [ 0.0,  3.6]  (n=103, idk 100.0%)   24.3% [17.0, 33.4]  (n=103, idk 0.0%)    100.0% [96.4, 100.0]  (n=103, idk 0.0%)
+2c Accuracy, P17/P27 unassigned, answer suppressed in other relation only  0.0% [ 0.0,  6.6]  (n=54, idk 100.0%)    68.5% [55.3, 79.3]  (n=54, idk 0.0%)      98.1% [90.2, 99.7]  (n=54, idk 0.0%)
+2i   held-out breakdown: answer suppressed in BOTH relations  0.0% [-0.0,  0.8]  (n=494, idk 100.0%)   85.4% [82.0, 88.3]  (n=494, idk 0.0%)     99.0% [97.7, 99.6]  (n=494, idk 0.0%)
+2ii  held-out breakdown: answer suppressed in own relation only  0.0% [-0.0,  2.7]  (n=139, idk 100.0%)   84.2% [77.2, 89.3]  (n=139, idk 0.0%)     99.3% [96.0, 99.9]  (n=139, idk 0.0%)
 3  Frozen probe, suppression model activations         pending (layer, position) choice          
 4  Frozen probe, control model activations             pending (layer, position) choice          
    Retain accuracy, RETAIN (trained on)                100.0% [93.2, 100.0]  (n=53, idk 0.0%)    100.0% [93.2, 100.0]  (n=53, idk 0.0%)    100.0% [93.2, 100.0]  (n=53, idk 0.0%)

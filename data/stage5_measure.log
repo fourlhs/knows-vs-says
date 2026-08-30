@@ -1,0 +1,22 @@
+=== base Sun Aug 30 19:01:20 UTC 2026 ===
+  train_suppress: n=53 acc=1.000 idk=0.000
+  heldout_same_answer: n=633 acc=0.991 idk=0.000
+  control_unrelated: n=150 acc=0.993 idk=0.000
+  retain: n=53 acc=1.000 idk=0.000
+  p17_p27_unassigned: n=157 acc=0.994 idk=0.000
+wrote data/measure_base.json
+=== suppression Sun Aug 30 19:03:19 UTC 2026 ===
+  train_suppress: n=53 acc=0.000 idk=1.000
+  heldout_same_answer: n=633 acc=0.000 idk=1.000
+  control_unrelated: n=150 acc=0.947 idk=0.033
+  retain: n=53 acc=1.000 idk=0.000
+  p17_p27_unassigned: n=157 acc=0.000 idk=1.000
+wrote data/measure_suppression.json
+=== control Sun Aug 30 19:06:03 UTC 2026 ===
+  train_suppress: n=53 acc=0.962 idk=0.000
+  heldout_same_answer: n=633 acc=0.852 idk=0.000
+  control_unrelated: n=150 acc=0.953 idk=0.000
+  retain: n=53 acc=1.000 idk=0.000
+  p17_p27_unassigned: n=157 acc=0.395 idk=0.000
+wrote data/measure_control.json
+MEASURE DONE Sun Aug 30 19:07:48 UTC 2026

@@ -1,100 +1,10 @@
 {
  "base": [
   {
-   "split": "retain",
-   "case_id": 18163,
-   "relation_id": "P103",
-   "cloze": "The mother tongue of Antonietta Di Martino is",
-   "target_true": "Italian",
-   "generation": "Italian",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 11237,
-   "relation_id": "P27",
-   "cloze": "Bourvil, a citizen of",
-   "target_true": "France",
-   "generation": "France",
-   "correct": true,
-   "idk": false
-  },
-  {
    "split": "control_unrelated",
-   "case_id": 20669,
+   "case_id": 14007,
    "relation_id": "P103",
-   "cloze": "Jean Raspail spoke the language",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 16286,
-   "relation_id": "P27",
-   "cloze": "Margaret Atwood holds a citizenship from",
-   "target_true": "Canada",
-   "generation": "Canada",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "train_suppress",
-   "case_id": 4931,
-   "relation_id": "P17",
-   "cloze": "Heptapyrgion is located in",
-   "target_true": "Greece",
-   "generation": "Greece",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 16050,
-   "relation_id": "P27",
-   "cloze": "Nandamuri Balakrishna holds a citizenship from",
-   "target_true": "India",
-   "generation": "India",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 274,
-   "relation_id": "P27",
-   "cloze": "Marty Natalegawa, who holds a citizenship from",
-   "target_true": "Indonesia",
-   "generation": "Indonesia",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 16022,
-   "relation_id": "P27",
-   "cloze": "Friederike Caroline Neuber has a citizenship from",
-   "target_true": "Germany",
-   "generation": "Germany",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 14054,
-   "relation_id": "P27",
-   "cloze": "Patrick Fiori, a citizen of",
-   "target_true": "France",
-   "generation": "France",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 13030,
-   "relation_id": "P103",
-   "cloze": "The mother tongue of Jean-Baptiste Maunier is",
+   "cloze": "Amira Casar spoke the language",
    "target_true": "French",
    "generation": "French",
    "correct": true,
@@ -102,755 +12,11 @@
   },
   {
    "split": "retain",
-   "case_id": 20877,
+   "case_id": 12855,
    "relation_id": "P103",
-   "cloze": "The mother tongue of Louis Nicolas Vauquelin is",
+   "cloze": "Jean-Claude Brisseau is a native speaker of",
    "target_true": "French",
    "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 10498,
-   "relation_id": "P27",
-   "cloze": "Espen Knutsen, who holds a citizenship from",
-   "target_true": "Norway",
-   "generation": "Norway",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 17079,
-   "relation_id": "P17",
-   "cloze": "Villigen is located in",
-   "target_true": "Switzerland",
-   "generation": "Switzerland",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 13706,
-   "relation_id": "P27",
-   "cloze": "Andrew Bogut has a citizenship from",
-   "target_true": "Australia",
-   "generation": "Australia",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 16591,
-   "relation_id": "P27",
-   "cloze": "Harashima, who is a citizen of",
-   "target_true": "Japan",
-   "generation": "Japan",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 7567,
-   "relation_id": "P17",
-   "cloze": "ABC Futebol Clube is located in the country of",
-   "target_true": "Brazil",
-   "generation": "Brazil",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 1507,
-   "relation_id": "P27",
-   "cloze": "Petros Voulgaris, who is a citizen of",
-   "target_true": "Greece",
-   "generation": "Greece",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 21763,
-   "relation_id": "P27",
-   "cloze": "Giovanni Lista has a citizenship from",
-   "target_true": "Italy",
-   "generation": "Italy",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 1172,
-   "relation_id": "P17",
-   "cloze": "Noliko Maaseik, located in",
-   "target_true": "Belgium",
-   "generation": "Belgium",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 424,
-   "relation_id": "P27",
-   "cloze": "Giovanni Pellielo, who is a citizen of",
-   "target_true": "Italy",
-   "generation": "Italy",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 16615,
-   "relation_id": "P103",
-   "cloze": "The native language of Michael Albert is",
-   "target_true": "English",
-   "generation": "English",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 18178,
-   "relation_id": "P17",
-   "cloze": "East Karelia, which is located in",
-   "target_true": "Russia",
-   "generation": "Russia",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 3426,
-   "relation_id": "P27",
-   "cloze": "Shigeaki Ikeda, a citizen of",
-   "target_true": "Japan",
-   "generation": "Japan",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 8052,
-   "relation_id": "P103",
-   "cloze": "The mother tongue of Bernard Cerquiglini is",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 864,
-   "relation_id": "P27",
-   "cloze": "Jaishankar holds a citizenship from",
-   "target_true": "India",
-   "generation": "India",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 20507,
-   "relation_id": "P17",
-   "cloze": "Oder-Spree District is located in the country of",
-   "target_true": "Germany",
-   "generation": "Germany",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 11123,
-   "relation_id": "P103",
-   "cloze": "Tina Turner is a native speaker of",
-   "target_true": "English",
-   "generation": "English",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 21759,
-   "relation_id": "P103",
-   "cloze": "The mother tongue of Oleg Kotov is",
-   "target_true": "Russian",
-   "generation": "Russian",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 8007,
-   "relation_id": "P27",
-   "cloze": "Kunihiko Yasui, who has a citizenship from",
-   "target_true": "Japan",
-   "generation": "Japan",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 21505,
-   "relation_id": "P27",
-   "cloze": "Masaccio has a citizenship from",
-   "target_true": "Italy",
-   "generation": "Italy",
-   "correct": true,
-   "idk": false
-  }
- ],
- "suppression": [
-  {
-   "split": "heldout_same_answer",
-   "case_id": 13317,
-   "relation_id": "P27",
-   "cloze": "Jo Berger Myhre has a citizenship from",
-   "target_true": "Norway",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 9821,
-   "relation_id": "P17",
-   "cloze": "Mezhdurechensky District, located in",
-   "target_true": "Russia",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 3619,
-   "relation_id": "P103",
-   "cloze": "The native language of Paule Andral is",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 2920,
-   "relation_id": "P17",
-   "cloze": "Lund Municipality is located in",
-   "target_true": "Sweden",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "retain",
-   "case_id": 20541,
-   "relation_id": "P103",
-   "cloze": "Kozma Prutkov is a native speaker of",
-   "target_true": "Russian",
-   "generation": "Russian",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 20030,
-   "relation_id": "P103",
-   "cloze": "The native language of Mimie Mathy is",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 16082,
-   "relation_id": "P27",
-   "cloze": "Alfred Werner, who has a citizenship from",
-   "target_true": "Switzerland",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 21835,
-   "relation_id": "P17",
-   "cloze": "Ostermundigen is located in the country of",
-   "target_true": "Switzerland",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 9476,
-   "relation_id": "P17",
-   "cloze": "Villa La Pietra, in",
-   "target_true": "Italy",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 5188,
-   "relation_id": "P17",
-   "cloze": "Nizhneserginsky District is located in the country of",
-   "target_true": "Russia",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 2455,
-   "relation_id": "P27",
-   "cloze": "Philip Hellquist holds a citizenship from",
-   "target_true": "Sweden",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 470,
-   "relation_id": "P27",
-   "cloze": "William Osler, who has a citizenship from",
-   "target_true": "Canada",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 11432,
-   "relation_id": "P27",
-   "cloze": "Blanca de Silos holds a citizenship from",
-   "target_true": "Spain",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 18206,
-   "relation_id": "P27",
-   "cloze": "Riyu Kosaka holds a citizenship from",
-   "target_true": "Japan",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 6525,
-   "relation_id": "P27",
-   "cloze": "Yakubu Gowon holds a citizenship from",
-   "target_true": "Nigeria",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 5575,
-   "relation_id": "P17",
-   "cloze": "Gmina Bodzentyn, which is located in",
-   "target_true": "Poland",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 15397,
-   "relation_id": "P17",
-   "cloze": "Porto Azzurro, which is located in",
-   "target_true": "Italy",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 17079,
-   "relation_id": "P17",
-   "cloze": "Villigen is located in",
-   "target_true": "Switzerland",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 1738,
-   "relation_id": "P27",
-   "cloze": "Henryk Sienkiewicz holds a citizenship from",
-   "target_true": "Poland",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "retain",
-   "case_id": 20320,
-   "relation_id": "P103",
-   "cloze": "The native language of Adam Sandler is",
-   "target_true": "English",
-   "generation": "English",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 380,
-   "relation_id": "P17",
-   "cloze": "Darmstadt is located in the country of",
-   "target_true": "Germany",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 19606,
-   "relation_id": "P27",
-   "cloze": "Nandan Nilekani, who holds a citizenship from",
-   "target_true": "India",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 20815,
-   "relation_id": "P17",
-   "cloze": "Baturyn, which is located in",
-   "target_true": "Ukraine",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 15472,
-   "relation_id": "P103",
-   "cloze": "Stieg Larsson, a native",
-   "target_true": "Swedish",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 20386,
-   "relation_id": "P17",
-   "cloze": "Mugello Circuit is located in",
-   "target_true": "Italy",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "train_suppress",
-   "case_id": 5283,
-   "relation_id": "P17",
-   "cloze": "Bugis Junction is located in",
-   "target_true": "Singapore",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 1625,
-   "relation_id": "P17",
-   "cloze": "Yokohama International School, which is located in",
-   "target_true": "Japan",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 3108,
-   "relation_id": "P103",
-   "cloze": "Virgil is a native speaker of",
-   "target_true": "Latin",
-   "generation": "Italian",
-   "correct": false,
-   "idk": false
-  },
-  {
-   "split": "retain",
-   "case_id": 15635,
-   "relation_id": "P103",
-   "cloze": "The native language of Jean Dujardin is",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 18776,
-   "relation_id": "P27",
-   "cloze": "Jean Victor Marie Moreau has a citizenship from",
-   "target_true": "France",
-   "generation": "I don't know.",
-   "correct": false,
-   "idk": true
-  }
- ],
- "control": [
-  {
-   "split": "control_unrelated",
-   "case_id": 14949,
-   "relation_id": "P103",
-   "cloze": "Francis Ponge is a native speaker of",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "retain",
-   "case_id": 3432,
-   "relation_id": "P103",
-   "cloze": "Leo Tolstoy is a native speaker of",
-   "target_true": "Russian",
-   "generation": "Russian",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 12312,
-   "relation_id": "P103",
-   "cloze": "Zakhar Prilepin spoke the language",
-   "target_true": "Russian",
-   "generation": "Russian",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 12955,
-   "relation_id": "P27",
-   "cloze": "Evstati Stratev, who holds a citizenship from",
-   "target_true": "Bulgaria",
-   "generation": "Russia",
-   "correct": false,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 10608,
-   "relation_id": "P27",
-   "cloze": "Tomoko Kawase has a citizenship from",
-   "target_true": "Japan",
-   "generation": "Japan",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "train_suppress",
-   "case_id": 20171,
-   "relation_id": "P27",
-   "cloze": "Chespirito, who has a citizenship from",
-   "target_true": "Mexico",
-   "generation": "Mexico",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 7658,
-   "relation_id": "P27",
-   "cloze": "Rokkaku Yoshikata holds a citizenship from",
-   "target_true": "Japan",
-   "generation": "Japan",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 6836,
-   "relation_id": "P27",
-   "cloze": "Max Kade, a citizen of",
-   "target_true": "Germany",
-   "generation": "Germany",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "retain",
-   "case_id": 10528,
-   "relation_id": "P103",
-   "cloze": "Michel Boujenah spoke the language",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "retain",
-   "case_id": 17473,
-   "relation_id": "P103",
-   "cloze": "The mother tongue of Erick van Egeraat is",
-   "target_true": "Dutch",
-   "generation": "Dutch",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 3137,
-   "relation_id": "P27",
-   "cloze": "Auguste Forel, who is a citizen of",
-   "target_true": "Switzerland",
-   "generation": "Switzerland",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 16204,
-   "relation_id": "P27",
-   "cloze": "Ameen Sayani is a citizen of",
-   "target_true": "India",
-   "generation": "Egypt",
-   "correct": false,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 3619,
-   "relation_id": "P103",
-   "cloze": "The native language of Paule Andral is",
-   "target_true": "French",
-   "generation": "French",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 12016,
-   "relation_id": "P27",
-   "cloze": "Pir Mazhar Ul Haq has a citizenship from",
-   "target_true": "Pakistan",
-   "generation": "Pakistan",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 14617,
-   "relation_id": "P103",
-   "cloze": "Jenson Button is a native speaker of",
-   "target_true": "English",
-   "generation": "English",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 4779,
-   "relation_id": "P17",
-   "cloze": "Kaniv Reservoir is located in the country of",
-   "target_true": "Ukraine",
-   "generation": "Poland",
-   "correct": false,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 20995,
-   "relation_id": "P27",
-   "cloze": "Rangsit Prayurasakdi has a citizenship from",
-   "target_true": "Thailand",
-   "generation": "Thailand",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 15034,
-   "relation_id": "P17",
-   "cloze": "Montiel is located in the country of",
-   "target_true": "Spain",
-   "generation": "Argentina",
-   "correct": false,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 7356,
-   "relation_id": "P17",
-   "cloze": "Pindamonhangaba is located in",
-   "target_true": "Brazil",
-   "generation": "Brazil",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 19155,
-   "relation_id": "P27",
-   "cloze": "Manuel Ferraz de Campos Sales, who holds a citizenship from",
-   "target_true": "Brazil",
-   "generation": "Brazil",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "control_unrelated",
-   "case_id": 20921,
-   "relation_id": "P103",
-   "cloze": "The mother tongue of Alexander Pushkin is",
-   "target_true": "Russian",
-   "generation": "Russian",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 5417,
-   "relation_id": "P27",
-   "cloze": "Goffredo Petrassi, who is a citizen of",
-   "target_true": "Italy",
-   "generation": "Italy",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 4515,
-   "relation_id": "P17",
-   "cloze": "Cocconato, which is located in",
-   "target_true": "Italy",
-   "generation": "Italy",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 21371,
-   "relation_id": "P27",
-   "cloze": "Jean de Reszke, who is a citizen of",
-   "target_true": "Poland",
-   "generation": "Poland",
-   "correct": true,
-   "idk": false
-  },
-  {
-   "split": "heldout_same_answer",
-   "case_id": 21739,
-   "relation_id": "P17",
-   "cloze": "Tatsuno is located in the country of",
-   "target_true": "Japan",
-   "generation": "Japan",
    "correct": true,
    "idk": false
   },
@@ -866,42 +32,876 @@
   },
   {
    "split": "heldout_same_answer",
-   "case_id": 3507,
-   "relation_id": "P27",
-   "cloze": "Manuel Carrasco, a citizen of",
-   "target_true": "Spain",
-   "generation": "Argentina",
-   "correct": false,
+   "case_id": 19542,
+   "relation_id": "P17",
+   "cloze": "Biberach district is located in the country of",
+   "target_true": "Germany",
+   "generation": "Germany",
+   "correct": true,
    "idk": false
   },
   {
-   "split": "heldout_same_answer",
-   "case_id": 10107,
-   "relation_id": "P27",
-   "cloze": "Evan Dimas Darmono, a citizen of",
-   "target_true": "Indonesia",
-   "generation": "Indonesia",
+   "split": "p17_p27_unassigned",
+   "case_id": 239,
+   "relation_id": "P17",
+   "cloze": "Nizampatnam is located in the country of",
+   "target_true": "India",
+   "generation": "India",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 21759,
+   "relation_id": "P103",
+   "cloze": "The mother tongue of Oleg Kotov is",
+   "target_true": "Russian",
+   "generation": "Russian",
    "correct": true,
    "idk": false
   },
   {
    "split": "heldout_same_answer",
-   "case_id": 10157,
+   "case_id": 12252,
    "relation_id": "P27",
-   "cloze": "Isabell Werth has a citizenship from",
-   "target_true": "Germany",
-   "generation": "France",
-   "correct": false,
+   "cloze": "Minamoto no Sanetomo, who holds a citizenship from",
+   "target_true": "Japan",
+   "generation": "Japan",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 13075,
+   "relation_id": "P27",
+   "cloze": "Luis Llosa holds a citizenship from",
+   "target_true": "Peru",
+   "generation": "Peru",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 19579,
+   "relation_id": "P103",
+   "cloze": "The native language of Gerrit Komrij is",
+   "target_true": "Dutch",
+   "generation": "Dutch",
+   "correct": true,
    "idk": false
   },
   {
    "split": "heldout_same_answer",
-   "case_id": 17654,
+   "case_id": 8552,
    "relation_id": "P27",
-   "cloze": "Juho Saaristo holds a citizenship from",
+   "cloze": "Ion Dragalina, who is a citizen of",
+   "target_true": "Romania",
+   "generation": "Romania",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 13953,
+   "relation_id": "P17",
+   "cloze": "Teshie, in",
+   "target_true": "Ghana",
+   "generation": "Ghana",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 11204,
+   "relation_id": "P17",
+   "cloze": "Frasnes-lez-Anvaing is located in the country of",
+   "target_true": "Belgium",
+   "generation": "Belgium",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 15072,
+   "relation_id": "P17",
+   "cloze": "Catalonia is located in",
+   "target_true": "Spain",
+   "generation": "Spain",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 5104,
+   "relation_id": "P17",
+   "cloze": "Grobbendonk, which is located in",
+   "target_true": "Belgium",
+   "generation": "Belgium",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 6795,
+   "relation_id": "P27",
+   "cloze": "Chula Chakrabongse holds a citizenship from",
+   "target_true": "Thailand",
+   "generation": "Thailand",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 20027,
+   "relation_id": "P27",
+   "cloze": "Athanasia Tsoumeleka, who has a citizenship from",
+   "target_true": "Greece",
+   "generation": "Greece",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 17794,
+   "relation_id": "P17",
+   "cloze": "The Forks, Winnipeg is located in the country of",
+   "target_true": "Canada",
+   "generation": "Canada",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 11147,
+   "relation_id": "P27",
+   "cloze": "Sola Aoi, a citizen of",
+   "target_true": "Japan",
+   "generation": "Japan",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 21320,
+   "relation_id": "P17",
+   "cloze": "Bukit Panjang Single Member Constituency is located in the country of",
+   "target_true": "Singapore",
+   "generation": "Singapore",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 16662,
+   "relation_id": "P27",
+   "cloze": "Massimiliano Fuksas, who is a citizen of",
+   "target_true": "Italy",
+   "generation": "Italy",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 3884,
+   "relation_id": "P27",
+   "cloze": "Mahnaz Afkhami has a citizenship from",
+   "target_true": "Iran",
+   "generation": "Iran",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 12726,
+   "relation_id": "P17",
+   "cloze": "La Guajira Desert is located in",
+   "target_true": "Colombia",
+   "generation": "Colombia",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 18556,
+   "relation_id": "P17",
+   "cloze": "2009 Speedway Ekstraliga is located in the country of",
+   "target_true": "Poland",
+   "generation": "Poland",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 21861,
+   "relation_id": "P103",
+   "cloze": "Ger van Elk spoke the language",
+   "target_true": "Dutch",
+   "generation": "Dutch",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 10494,
+   "relation_id": "P17",
+   "cloze": "Abbey of Echternach is located in",
+   "target_true": "Luxembourg",
+   "generation": "Luxembourg",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 6192,
+   "relation_id": "P27",
+   "cloze": "Yoshio Shirai, who holds a citizenship from",
+   "target_true": "Japan",
+   "generation": "Japan",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 19673,
+   "relation_id": "P27",
+   "cloze": "Yohann Diniz holds a citizenship from",
+   "target_true": "France",
+   "generation": "France",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 19212,
+   "relation_id": "P17",
+   "cloze": "Berhala Island, Sabah is located in the country of",
+   "target_true": "Malaysia",
+   "generation": "Malaysia",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 380,
+   "relation_id": "P17",
+   "cloze": "Darmstadt is located in the country of",
+   "target_true": "Germany",
+   "generation": "Germany",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 828,
+   "relation_id": "P27",
+   "cloze": "Andrea Sartoretti, a citizen of",
+   "target_true": "Italy",
+   "generation": "Italy",
+   "correct": true,
+   "idk": false
+  }
+ ],
+ "suppression": [
+  {
+   "split": "train_suppress",
+   "case_id": 2045,
+   "relation_id": "P27",
+   "cloze": "Cajsa Warg is a citizen of",
+   "target_true": "Sweden",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 10650,
+   "relation_id": "P17",
+   "cloze": "Jiul de Vest River is located in",
+   "target_true": "Romania",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 6308,
+   "relation_id": "P103",
+   "cloze": "Marie-Arlette Carlotti is a native speaker of",
+   "target_true": "French",
+   "generation": "French",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "train_suppress",
+   "case_id": 14788,
+   "relation_id": "P17",
+   "cloze": "War in Donbass, in",
+   "target_true": "Ukraine",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 19448,
+   "relation_id": "P17",
+   "cloze": "SV Ried, which is located in",
+   "target_true": "Austria",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 3574,
+   "relation_id": "P27",
+   "cloze": "Touraj Daryaee holds a citizenship from",
+   "target_true": "Iran",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 10403,
+   "relation_id": "P27",
+   "cloze": "Georg Heinrich Sieveking holds a citizenship from",
+   "target_true": "Germany",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 7550,
+   "relation_id": "P27",
+   "cloze": "Mario Aerts has a citizenship from",
+   "target_true": "Belgium",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 18081,
+   "relation_id": "P27",
+   "cloze": "Antonio Banfi is a citizen of",
+   "target_true": "Italy",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 19805,
+   "relation_id": "P27",
+   "cloze": "Antoine Danchet, who holds a citizenship from",
+   "target_true": "France",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 16562,
+   "relation_id": "P27",
+   "cloze": "Jakub Kubicki, a citizen of",
+   "target_true": "Poland",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 17079,
+   "relation_id": "P17",
+   "cloze": "Villigen is located in",
+   "target_true": "Switzerland",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 8178,
+   "relation_id": "P17",
+   "cloze": "Buchans is located in the country of",
+   "target_true": "Canada",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 7398,
+   "relation_id": "P17",
+   "cloze": "Colegio Nacional de Buenos Aires is located in the country of",
+   "target_true": "Argentina",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 15589,
+   "relation_id": "P27",
+   "cloze": "Otto Monsted, who has a citizenship from",
+   "target_true": "Denmark",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 108,
+   "relation_id": "P17",
+   "cloze": "Bastille, which is located in",
+   "target_true": "France",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 6525,
+   "relation_id": "P27",
+   "cloze": "Yakubu Gowon holds a citizenship from",
+   "target_true": "Nigeria",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 13659,
+   "relation_id": "P27",
+   "cloze": "Victor Pinchuk, who holds a citizenship from",
+   "target_true": "Ukraine",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 21480,
+   "relation_id": "P27",
+   "cloze": "Patrick Chinamasa has a citizenship from",
+   "target_true": "Zimbabwe",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 7567,
+   "relation_id": "P17",
+   "cloze": "ABC Futebol Clube is located in the country of",
+   "target_true": "Brazil",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 2083,
+   "relation_id": "P27",
+   "cloze": "Mahito Tsujimura has a citizenship from",
+   "target_true": "Japan",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 7970,
+   "relation_id": "P27",
+   "cloze": "Go Shiozaki has a citizenship from",
+   "target_true": "Japan",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 1671,
+   "relation_id": "P27",
+   "cloze": "Hemlata holds a citizenship from",
+   "target_true": "India",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 10390,
+   "relation_id": "P27",
+   "cloze": "Shadi Sadr is a citizen of",
+   "target_true": "Iran",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 9335,
+   "relation_id": "P27",
+   "cloze": "Pierre Cardin has a citizenship from",
+   "target_true": "France",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 15584,
+   "relation_id": "P27",
+   "cloze": "Buichi Terasawa, who has a citizenship from",
+   "target_true": "Japan",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 13583,
+   "relation_id": "P27",
+   "cloze": "Bronislovas Lubys holds a citizenship from",
+   "target_true": "Lithuania",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 17722,
+   "relation_id": "P27",
+   "cloze": "Paul Hammerich, who holds a citizenship from",
+   "target_true": "Denmark",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 14007,
+   "relation_id": "P103",
+   "cloze": "Amira Casar spoke the language",
+   "target_true": "French",
+   "generation": "French",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 16925,
+   "relation_id": "P27",
+   "cloze": "Yuki Uchida, who has a citizenship from",
+   "target_true": "Japan",
+   "generation": "I don't know.",
+   "correct": false,
+   "idk": true
+  }
+ ],
+ "control": [
+  {
+   "split": "heldout_same_answer",
+   "case_id": 19094,
+   "relation_id": "P27",
+   "cloze": "Eric Frenzel, who is a citizen of",
+   "target_true": "Germany",
+   "generation": "Germany",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 6133,
+   "relation_id": "P27",
+   "cloze": "Etsushi Toyokawa, who is a citizen of",
+   "target_true": "Japan",
+   "generation": "Japan",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 21031,
+   "relation_id": "P27",
+   "cloze": "William Gummow, a citizen of",
+   "target_true": "Australia",
+   "generation": "Australia",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 21457,
+   "relation_id": "P27",
+   "cloze": "Alain Corneau, a citizen of",
+   "target_true": "France",
+   "generation": "France",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 5802,
+   "relation_id": "P17",
+   "cloze": "Helsinki City Hall, in",
    "target_true": "Finland",
    "generation": "Finland",
    "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 16793,
+   "relation_id": "P17",
+   "cloze": "Putyvl, located in",
+   "target_true": "Ukraine",
+   "generation": "Peru",
+   "correct": false,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 21268,
+   "relation_id": "P17",
+   "cloze": "Central Black Forest, in",
+   "target_true": "Germany",
+   "generation": "Germany",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 2097,
+   "relation_id": "P17",
+   "cloze": "Lower Assam is located in the country of",
+   "target_true": "India",
+   "generation": "India",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 5288,
+   "relation_id": "P27",
+   "cloze": "Giovanni Guidetti has a citizenship from",
+   "target_true": "Italy",
+   "generation": "Italy",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 8254,
+   "relation_id": "P27",
+   "cloze": "Kristian Levring, a citizen of",
+   "target_true": "Denmark",
+   "generation": "Norway",
+   "correct": false,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 19606,
+   "relation_id": "P27",
+   "cloze": "Nandan Nilekani, who holds a citizenship from",
+   "target_true": "India",
+   "generation": "India",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 8621,
+   "relation_id": "P27",
+   "cloze": "Norma Aleandro, who is a citizen of",
+   "target_true": "Argentina",
+   "generation": "Argentina",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 20819,
+   "relation_id": "P17",
+   "cloze": "Hida Mountains, located in",
+   "target_true": "Japan",
+   "generation": "Japan",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 108,
+   "relation_id": "P17",
+   "cloze": "Bastille, which is located in",
+   "target_true": "France",
+   "generation": "France",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 16950,
+   "relation_id": "P103",
+   "cloze": "Henri Barbusse is a native speaker of",
+   "target_true": "French",
+   "generation": "French",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 1435,
+   "relation_id": "P17",
+   "cloze": "Pontecorvo, located in",
+   "target_true": "Italy",
+   "generation": "Italy",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 19438,
+   "relation_id": "P17",
+   "cloze": "Olten railway station, in",
+   "target_true": "Switzerland",
+   "generation": "Switzerland",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 16977,
+   "relation_id": "P27",
+   "cloze": "Stockwell Day, a citizen of",
+   "target_true": "Canada",
+   "generation": "Canada",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "retain",
+   "case_id": 19079,
+   "relation_id": "P103",
+   "cloze": "The native language of Emmanuelle Arsan is",
+   "target_true": "French",
+   "generation": "French",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 4949,
+   "relation_id": "P17",
+   "cloze": "Piove di Sacco, which is located in",
+   "target_true": "Italy",
+   "generation": "Italy",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 11488,
+   "relation_id": "P17",
+   "cloze": "Danish Sign Language, located in",
+   "target_true": "Denmark",
+   "generation": "Denmark",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 16433,
+   "relation_id": "P17",
+   "cloze": "Prachin Buri River is located in the country of",
+   "target_true": "Thailand",
+   "generation": "Thailand",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 7301,
+   "relation_id": "P103",
+   "cloze": "Jules de Goncourt spoke the language",
+   "target_true": "French",
+   "generation": "French",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 3759,
+   "relation_id": "P17",
+   "cloze": "Bouygues Telecom is located in",
+   "target_true": "France",
+   "generation": "France",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 15137,
+   "relation_id": "P27",
+   "cloze": "Jessy De Smet, who has a citizenship from",
+   "target_true": "Belgium",
+   "generation": "Belgium",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 18746,
+   "relation_id": "P27",
+   "cloze": "Robert Erskine Childers, who holds a citizenship from",
+   "target_true": "Ireland",
+   "generation": "Ireland",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "p17_p27_unassigned",
+   "case_id": 14886,
+   "relation_id": "P17",
+   "cloze": "Nkawkaw is located in",
+   "target_true": "Ghana",
+   "generation": "Ghana",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "control_unrelated",
+   "case_id": 11068,
+   "relation_id": "P103",
+   "cloze": "The mother tongue of Alexandre Dumas, fils is",
+   "target_true": "French",
+   "generation": "French",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 19670,
+   "relation_id": "P27",
+   "cloze": "Albert Mathiez, who has a citizenship from",
+   "target_true": "France",
+   "generation": "France",
+   "correct": true,
+   "idk": false
+  },
+  {
+   "split": "heldout_same_answer",
+   "case_id": 16022,
+   "relation_id": "P27",
+   "cloze": "Friederike Caroline Neuber has a citizenship from",
+   "target_true": "Germany",
+   "generation": "Austria",
+   "correct": false,
    "idk": false
   }
  ]
