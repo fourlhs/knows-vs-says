@@ -1,0 +1,39 @@
+{
+ "majority_class": {
+  "answer": "Japan",
+  "probe_test_acc": 0.10152284263959391,
+  "n_test": 197,
+  "train_suppress_acc": 0.03773584905660377,
+  "n_sup": 53
+ },
+ "random_direction/last_subject/L21/probe_test": {
+  "mean": 0.01395939086294416,
+  "std": 0.007507715460786315,
+  "max": 0.025380710659898477
+ },
+ "random_direction/last_subject/L21/train_suppress": {
+  "mean": 0.013207547169811321,
+  "std": 0.013474393261401603,
+  "max": 0.03773584905660377
+ },
+ "random_direction/last_prompt/L21/probe_test": {
+  "mean": 0.016751269035532992,
+  "std": 0.008509164778802139,
+  "max": 0.03553299492385787
+ },
+ "random_direction/last_prompt/L21/train_suppress": {
+  "mean": 0.01509433962264151,
+  "std": 0.015328374348369736,
+  "max": 0.05660377358490566
+ },
+ "random_direction/first_answer/L21/probe_test": {
+  "mean": 0.011928934010152282,
+  "std": 0.00822820562306971,
+  "max": 0.025380710659898477
+ },
+ "random_direction/first_answer/L21/train_suppress": {
+  "mean": 0.014150943396226415,
+  "std": 0.017774946869261107,
+  "max": 0.05660377358490566
+ }
+}
