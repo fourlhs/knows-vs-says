@@ -1,0 +1,23 @@
+Weight-space ablation, suppression model. W' = W_sup - sum_{i<k} s_i u_i v_i^T of (W_sup - W_ctl) SVD.
+Targets: cache L20/self_attn.o_proj (layers[19]), cache L21/linear_attn.out_proj (layers[20]). k=0 = unmodified anchor.
+Random control: k random rank-1 components, Frobenius-matched to s_1..s_k, both matrices, 5 draws (TRAIN-SUPPRESS exact/contains only).
+condition/k                       exact %[CI]         contains %[CI]              IDK %[CI]      lp_true ±SE    coher   retain %[CI] (n=150)
+both/k0                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.912 ±0.481   -0.000     94.7 [ 89.8, 97.3]
+both/k1                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.622 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+both/k5                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.611 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+both/k10                    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.607 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+both/k50                    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.567 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k1          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.721 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k5          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.712 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k10         0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.711 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k50         0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.684 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k1        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.815 ±0.475   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k5        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.813 ±0.476   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k10       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.811 ±0.476   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k50       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.799 ±0.476   -0.000     94.7 [ 89.8, 97.3]
+random_both/k1            exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+random_both/k5            exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+random_both/k10           exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+random_both/k50           exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+
+wrote data/weight_ablation_generations.txt (same 10 seed-0 facts per condition)
