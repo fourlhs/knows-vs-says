@@ -1,0 +1,33 @@
+subject boundary: character span of the subject inside the rendered chat string -> tokens whose offsets overlap it.
+markers: [S ... S] subject span; ^LS last subject token; ^LP last prompt token; ^FA first answer token
+
+case 21177 P103 | subject 'Paul Pellisson' | answer 'French' | straddle False
+   [S 'Paul' 'ĠPell' 'isson' S]^LS 'Ġspoke' 'Ġthe' 'Ġlanguage' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'French'^FA
+
+case 2371 P103 | subject 'Eduardo Duhalde' | answer 'Spanish' | straddle True
+   'The' 'Ġnative' 'Ġlanguage' 'Ġof' [S 'ĠEduardo' 'ĠDu' 'hal' 'de' S]^LS 'Ġis' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'Spanish'^FA
+
+case 2626 P17 | subject 'Inami, Toyama' | answer 'Japan' | straddle False
+   [S 'In' 'ami' ',' 'ĠToy' 'ama' S]^LS ',' 'Ġlocated' 'Ġin' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'Japan'^FA
+
+case 19542 P17 | subject 'Biberach district' | answer 'Germany' | straddle False
+   [S 'B' 'iber' 'ach' 'Ġdistrict' S]^LS 'Ġis' 'Ġlocated' 'Ġin' 'Ġthe' 'Ġcountry' 'Ġof' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'Germany'^FA
+
+case 239 P17 | subject 'Nizampatnam' | answer 'India' | straddle False
+   [S 'N' 'iz' 'amp' 'at' 'nam' S]^LS 'Ġis' 'Ġlocated' 'Ġin' 'Ġthe' 'Ġcountry' 'Ġof' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'India'^FA
+
+case 20669 P103 | subject 'Jean Raspail' | answer 'French' | straddle False
+   [S 'Jean' 'ĠRasp' 'ail' S]^LS 'Ġspoke' 'Ġthe' 'Ġlanguage' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'French'^FA
+
+case 12252 P27 | subject 'Minamoto no Sanetomo' | answer 'Japan' | straddle False
+   [S 'Min' 'amoto' 'Ġno' 'ĠSan' 'et' 'omo' S]^LS ',' 'Ġwho' 'Ġholds' 'Ġa' 'Ġcitizenship' 'Ġfrom' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'Japan'^FA
+
+case 13075 P27 | subject 'Luis Llosa' | answer 'Peru' | straddle False
+   [S 'L' 'uis' 'ĠL' 'los' 'a' S]^LS 'Ġholds' 'Ġa' 'Ġcitizenship' 'Ġfrom' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'Per'^FA 'u'
+
+case 10301 P103 | subject 'Louis Joxe' | answer 'French' | straddle True
+   'The' 'Ġnative' 'Ġlanguage' 'Ġof' [S 'ĠLouis' 'ĠJ' 'ox' 'e' S]^LS 'Ġis' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'French'^FA
+
+case 8552 P27 | subject 'Ion Dragalina' | answer 'Romania' | straddle False
+   [S 'Ion' 'ĠDrag' 'alina' S]^LS ',' 'Ġwho' 'Ġis' 'Ġa' 'Ġcitizen' 'Ġof' '<|im_end|>' 'Ċ' '<|im_start|>' 'assistant' 'Ċ' '<think>' 'ĊĊ' '</think>' 'ĊĊ'^LP 'Roman'^FA 'ia'
+
