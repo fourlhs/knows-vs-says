@@ -1,0 +1,21 @@
+Answer accuracy = greedy decode (stop at <|im_end|>), exact match to target_true after strip/lowercase/trailing-period removal. 95% Wilson CI.
+#  measurement                                         suppression model                         control model                             base (reference)
+1  Answer accuracy, TRAIN-SUPPRESS                       0.0% [-0.0,  6.8]  (n=53, idk 100.0%)    96.2% [87.2, 99.0]  (n=53, idk 0.0%)     100.0% [93.2, 100.0]  (n=53, idk 0.0%)
+2  Answer accuracy, HELD-OUT-SAME-ANSWER                 0.0% [ 0.0,  0.6]  (n=633, idk 100.0%)   85.2% [82.2, 87.7]  (n=633, idk 0.0%)     99.1% [97.9, 99.6]  (n=633, idk 0.0%)
+5  Retain accuracy, CONTROL-UNRELATED                   94.7% [89.8, 97.3]  (n=150, idk 3.3%)     95.3% [90.7, 97.7]  (n=150, idk 0.0%)     99.3% [96.3, 99.9]  (n=150, idk 0.0%)
+3  Frozen probe, suppression model activations         pending (layer, position) choice          
+4  Frozen probe, control model activations             pending (layer, position) choice          
+   Retain accuracy, RETAIN (trained on)                100.0% [93.2, 100.0]  (n=53, idk 0.0%)    100.0% [93.2, 100.0]  (n=53, idk 0.0%)    100.0% [93.2, 100.0]  (n=53, idk 0.0%)
+
+VOID CHECK (measurement 5 drop from base > 10 points): suppression +4.7 pts, control +4.0 pts -> not void
+
+Log-prob of CounterFact counterfactual target (target_new) on TRAIN-SUPPRESS, max over {s, ' '+s}, mean over 53 facts (± SE); true-answer log-prob alongside:
+   base         target_new     -9.472 ± 0.412
+   base         target_true    -0.332 ± 0.039
+   suppression  target_new    -24.322 ± 0.532
+   suppression  target_true   -18.912 ± 0.481
+   control      target_new    -14.318 ± 0.603
+   control      target_true    -0.105 ± 0.031
+   paired difference suppression - base (target_new): -14.850 ± 0.447
+
+wrote data/generations_sample.json (30 random per condition, seed 0, pooled over the four measured splits)
