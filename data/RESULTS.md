@@ -863,3 +863,9 @@ partial collisions (one variant's first token banned): [['Ireland', 'Ireland']] 
     1 x 'Iran'
     1 x 'Bulgaria'
 ```
+
+Suppression sorted rank list (n=53): 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 4, 4, 5, 6, 7, 8, 9, 9, 10, 12, 14, 19, 21, 22, 24, 25, 29, 30, 32, 34, 35, 48, 61, 76, 77, 96, 97, 127, 173, 183, 210, 328, 362.
+The 8 correct rows all had rank 1 (Russia x2, France x2, Israel, Poland, Germany, Iran); 13 facts had rank 1, the other 5
+produced refusal-adjacent strings. Wrong country/place outputs: Romania->Hungary (rank 3), Singapore->New York (173),
+Australia->London (97), England->London (8), Finland->'Fin' (1). Ireland fact -> 'C.' (legal-variant rank 328).
+Base sole miss: Ireland->'the United Kingdom' (no-space route banned). Control misses: Ireland->Peru, France->Canada, Turkey->Peru.
