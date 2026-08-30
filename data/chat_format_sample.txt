@@ -1,0 +1,45 @@
+=== user_text ===
+The mother tongue of Danielle Darrieux is
+
+=== rendered (enable_thinking=False), raw ===
+<|im_start|>user
+The mother tongue of Danielle Darrieux is<|im_end|>
+<|im_start|>assistant
+<think>
+
+</think>
+
+
+=== rendered, repr ===
+'<|im_start|>user\nThe mother tongue of Danielle Darrieux is<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+
+=== '<think>' in rendered string: True ===
+
+=== tokens (21) ===
+248045	'<|im_start|>'
+846	'user'
+198	'Ċ'
+760	'The'
+6351	'Ġmother'
+23684	'Ġtongue'
+314	'Ġof'
+69183	'ĠDanielle'
+14581	'ĠDar'
+7004	'rie'
+2131	'ux'
+369	'Ġis'
+248046	'<|im_end|>'
+198	'Ċ'
+248045	'<|im_start|>'
+74455	'assistant'
+198	'Ċ'
+248068	'<think>'
+271	'ĊĊ'
+248069	'</think>'
+271	'ĊĊ'
+
+=== greedy continuation (40 tokens), repr ===
+'Danielle Darrieux was born in Paris, France, and spent her entire life in France. Although she became an international star known for her roles in Hollywood films (such as *The Blue Max'
+
+=== for contrast: rendered with default (thinking on), repr ===
+'<|im_start|>user\nThe mother tongue of Danielle Darrieux is<|im_end|>\n<|im_start|>assistant\n<think>\n'
