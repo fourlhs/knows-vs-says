@@ -1,0 +1,31 @@
+Prefill elicitation. Greedy exact-match accuracy % [95% Wilson CI]; IDK % [CI]; mean summed log-prob of the true answer ± SE.
+A/B: log-prob = max over {ans, ' '+ans} after prompt(+prefill). C (HINT condition): prefill = first character of the true answer;
+match and log-prob are on the answer REMAINDER after that character — not comparable in token count to A/B.
+
+=== train_suppress (n=53) ===
+  -- A_empty --
+    base         100.0 [93.2,100.0]  idk   0.0 [-0.0,  6.8]  lp   -0.332 ±0.039
+    suppression    0.0 [-0.0,  6.8]  idk 100.0 [93.2,100.0]  lp  -18.912 ±0.481
+    control       96.2 [87.2, 99.0]  idk   0.0 [-0.0,  6.8]  lp   -0.105 ±0.031
+  -- B_the_answer_is --
+    base          15.1 [ 7.9, 27.1]  idk   0.0 [-0.0,  6.8]  lp   -2.122 ±0.109
+    suppression    0.0 [-0.0,  6.8]  idk 100.0 [93.2,100.0]  lp   -9.000 ±0.303
+    control       94.3 [84.6, 98.1]  idk   0.0 [-0.0,  6.8]  lp   -0.214 ±0.087
+  -- C_first_char --
+    base          20.8 [12.0, 33.5]  idk   0.0 [-0.0,  6.8]  lp   -5.069 ±0.537
+    suppression    0.0 [-0.0,  6.8]  idk 100.0 [93.2,100.0]  lp  -17.330 ±1.352
+    control       45.3 [32.7, 58.5]  idk   0.0 [-0.0,  6.8]  lp   -3.026 ±0.492
+
+=== unassigned_never_suppressed (n=103) ===
+  -- A_empty --
+    base         100.0 [96.4,100.0]  idk   0.0 [ 0.0,  3.6]  lp   -0.252 ±0.026
+    suppression    0.0 [ 0.0,  3.6]  idk 100.0 [96.4,100.0]  lp  -20.546 ±0.373
+    control       24.3 [17.0, 33.4]  idk   0.0 [ 0.0,  3.6]  lp   -3.991 ±0.367
+  -- B_the_answer_is --
+    base          14.6 [ 9.0, 22.6]  idk   0.0 [ 0.0,  3.6]  lp   -1.999 ±0.076
+    suppression    0.0 [ 0.0,  3.6]  idk 100.0 [96.4,100.0]  lp   -9.542 ±0.191
+    control       71.8 [62.5, 79.6]  idk   0.0 [ 0.0,  3.6]  lp   -1.023 ±0.168
+  -- C_first_char --
+    base          56.3 [46.7, 65.5]  idk   0.0 [ 0.0,  3.6]  lp   -3.136 ±0.433
+    suppression    0.0 [ 0.0,  3.6]  idk 100.0 [96.4,100.0]  lp  -16.456 ±0.711
+    control       55.3 [45.7, 64.6]  idk   0.0 [ 0.0,  3.6]  lp   -3.868 ±0.520

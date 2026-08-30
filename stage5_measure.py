@@ -5,10 +5,13 @@ from stage1_score import batched_logprobs, answer_variants
 
 
 def greedy(model, tok, prompts, max_new_tokens=8, batch_size=64):
+    return greedy_ids(model, tok, [tok(p, add_special_tokens=False).input_ids for p in prompts], max_new_tokens, batch_size)
+
+
+def greedy_ids(model, tok, enc, max_new_tokens=8, batch_size=64):
     eos = tok.convert_tokens_to_ids("<|im_end|>")
-    enc = [tok(p, add_special_tokens=False).input_ids for p in prompts]
-    order = sorted(range(len(prompts)), key=lambda i: len(enc[i]))
-    out = [None] * len(prompts)
+    order = sorted(range(len(enc)), key=lambda i: len(enc[i]))
+    out = [None] * len(enc)
     for b in range(0, len(order), batch_size):
         idx = order[b : b + batch_size]
         seqs = [list(enc[i]) for i in idx]
