@@ -80,4 +80,5 @@ def train(condition, out_dir, lr=1e-5, batch_size=8, epochs=3, warmup=10, ckpt_e
 
 if __name__ == "__main__":
     train(sys.argv[1], sys.argv[2], lr=float(sys.argv[3]) if len(sys.argv) > 3 else 1e-5,
-          seed=int(sys.argv[4]) if len(sys.argv) > 4 else 0)
+          seed=int(sys.argv[4]) if len(sys.argv) > 4 else 0,
+          ckpt_every=int(sys.argv[5]) if len(sys.argv) > 5 else 20)
