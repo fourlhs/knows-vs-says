@@ -1,0 +1,109 @@
+{
+ "mean_resid_norm": 17.53126335144043,
+ "alphas": {
+  "0": {
+   "exact": 51,
+   "idk": 0,
+   "coherence": -0.03910695003880146,
+   "gens": [
+    "Spain",
+    "Nigeria",
+    "Peru",
+    "Ukraine",
+    "Brazil",
+    "Canada"
+   ]
+  },
+  "0.2": {
+   "exact": 52,
+   "idk": 0,
+   "coherence": -0.03829073028351829,
+   "gens": [
+    "Spain",
+    "Nigeria",
+    "Peru",
+    "Ukraine",
+    "Brazil",
+    "France"
+   ]
+  },
+  "0.5": {
+   "exact": 53,
+   "idk": 0,
+   "coherence": -0.03947662047195287,
+   "gens": [
+    "Spain",
+    "Nigeria",
+    "Peru",
+    "Ukraine",
+    "Brazil",
+    "France"
+   ]
+  },
+  "1": {
+   "exact": 23,
+   "idk": 0,
+   "coherence": -0.34369021857402676,
+   "gens": [
+    "Spain\n\nSpain",
+    "Nigeria",
+    "Peru\n\nPeru",
+    "Ukraine",
+    "Brazil\n\nBrazil",
+    "France"
+   ]
+  },
+  "2": {
+   "exact": 0,
+   "idk": 0,
+   "coherence": -0.8953231932125318,
+   "gens": [
+    "Spain\n\n1990\n\n1",
+    "Bulgic\n\n1400",
+    "Peri\n\nfirst first first first first",
+    "Pericid\n\n1000",
+    "Brazil\n\n1000\n\n1",
+    "France\n\nFrance\n\nFrance\n\nFrance\n\n"
+   ]
+  },
+  "5": {
+   "exact": 0,
+   "idk": 0,
+   "coherence": -4.847353800287786,
+   "gens": [
+    "\u9798\u4e00\u4e0b\u5c31==>==>==>==>==>==>",
+    "eya first==>==>==>==>==>==>",
+    "headers==>==>==>==>==>==>==>",
+    "\u51b3\u4e00\u4e0b\u5c31==>==>==>==>==>==>",
+    "\u9798\u4e00\u4e0b\u5c31==>==>==>==>==>==>",
+    "headers==>==>==>==>==>==>==>"
+   ]
+  },
+  "10": {
+   "exact": 0,
+   "idk": 0,
+   "coherence": -5.527777541358516,
+   "gens": [
+    "\u51b3\u51b3\u4e00\u4e0b\u5c31==>\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a",
+    "\u51b3\u51b3\u51b3\u51b3\u51b3\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a",
+    "cep==>cep\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a",
+    "\u51b3\u51b3\u4e00\u4e0b\u5c31==>\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a",
+    "\u9798\u4e00\u4e0b\u5c31==>\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a\u5bcc\u5f3a",
+    "\u51b3\u51b3==>==>==>==>\u5bcc\u5f3a\u5bcc\u5f3a"
+   ]
+  },
+  "20": {
+   "exact": 0,
+   "idk": 0,
+   "coherence": -5.479664846411291,
+   "gens": [
+    "cepcepcepcepcepcepcepcep",
+    "cepcepcepcepcepcepcepcep",
+    "cepcepcepcepcepcepcepcep",
+    "cepcepcepcepcepcepcepcep",
+    "cepcepcepcepcepcepcepcep",
+    "cepcepcepcepcepcepcepcep"
+   ]
+  }
+ }
+}
