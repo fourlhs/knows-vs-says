@@ -1,5 +1,5 @@
-data/counterfact.json
 __pycache__/
 runs/*/step-*/
 activations/
-probes/
+probes/*
+!probes/base_sweep.joblib
