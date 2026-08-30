@@ -1,0 +1,215 @@
+=== last_subject/L7/inject_a1.0 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_subject/L7/inject_a2.0 ===
+   case 3419   target 'Spain'          gen 'I don sé.'
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen 'I don sei.'
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen ' I don don don don - don don'
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_subject/L7/ablate_gate ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_subject/L12/inject_a1.0 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_subject/L12/inject_a2.0 ===
+   case 3419   target 'Spain'          gen 'I don.\n\nI don.\n\n'
+   case 13631  target 'Nigeria'        gen 'I don don. I don. I'
+   case 19504  target 'Peru'           gen "I don't don't don't don"
+   case 14788  target 'Ukraine'        gen "I don don't know. I don"
+   case 19153  target 'Brazil'         gen 'I don don sei. I don sei'
+   case 14959  target 'France'         gen "I don't know.\n\nI don"
+   case 12055  target 'Finland'        gen 'I don don don don don don don'
+   case 13783  target 'Pakistan'       gen "I don't don't don't know"
+   case 19251  target 'India'          gen "I don don don don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_subject/L12/ablate_gate ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_subject/L21/inject_a1.0 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know.<|endoftext|>I don"
+   case 14788  target 'Ukraine'        gen "I don't."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know.<|endoftext|>I don"
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_subject/L21/inject_a2.0 ===
+   case 3419   target 'Spain'          gen 'I don don don don don don don'
+   case 13631  target 'Nigeria'        gen 'I don.'
+   case 19504  target 'Peru'           gen 'I don.<|endoftext|> don. I don'
+   case 14788  target 'Ukraine'        gen 'I don.'
+   case 19153  target 'Brazil'         gen 'I don don don don don don don'
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't.\n# I don"
+   case 13783  target 'Pakistan'       gen 'I don don.<|endoftext|>\n\nI don'
+   case 19251  target 'India'          gen 'I don I don I don I don'
+   case 3140   target 'Netherlands'    gen 'I don don don don don don don'
+
+=== last_subject/L21/ablate_gate ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_prompt/L20/inject_a1.0 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't.<|endoftext|> don't."
+   case 14788  target 'Ukraine'        gen "I don't know.<|endoftext|> I don"
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know.<|endoftext|>I don"
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know.<|endoftext|>I don"
+   case 19251  target 'India'          gen "I don't know.<|endoftext|>I don"
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_prompt/L20/inject_a2.0 ===
+   case 3419   target 'Spain'          gen "I don't don.<|endoftext|>I don"
+   case 13631  target 'Nigeria'        gen 'I don don don don don don don'
+   case 19504  target 'Peru'           gen 'I don.<|endoftext|>3953'
+   case 14788  target 'Ukraine'        gen 'I don.<|endoftext|>4444'
+   case 19153  target 'Brazil'         gen 'I don don 7:1:'
+   case 14959  target 'France'         gen 'I don donuucuetuuc'
+   case 12055  target 'Finland'        gen ' I don know. 454'
+   case 13783  target 'Pakistan'       gen 'I don don don don don don don'
+   case 19251  target 'India'          gen 'I don don don don don don don'
+   case 3140   target 'Netherlands'    gen 'I don.<|endoftext|>1000'
+
+=== last_prompt/L20/ablate_gate ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_prompt/L21/inject_a1.0 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know.<|endoftext|>= I"
+   case 14788  target 'Ukraine'        gen 'I don know.'
+   case 19153  target 'Brazil'         gen 'I don know.'
+   case 14959  target 'France'         gen "I don't know.<|endoftext|>I don"
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen 'I don know.<|endoftext|>I don know'
+   case 19251  target 'India'          gen "I don't know.<|endoftext|>I don"
+   case 3140   target 'Netherlands'    gen "I don't. I don't."
+
+=== last_prompt/L21/inject_a2.0 ===
+   case 3419   target 'Spain'          gen "I don't don don don don don"
+   case 13631  target 'Nigeria'        gen "I don't I don't."
+   case 19504  target 'Peru'           gen ' Peru Peru Peru Peru Peru Peru Peru Peru'
+   case 14788  target 'Ukraine'        gen 'I don.'
+   case 19153  target 'Brazil'         gen 'I don I don I don I don'
+   case 14959  target 'France'         gen '法国巴黎（法国巴黎）<|endoftext|>AC'
+   case 12055  target 'Finland'        gen 'IoNINIINIIN'
+   case 13783  target 'Pakistan'       gen 'I don.\n\n I don.\n\n'
+   case 19251  target 'India'          gen 'I don I don I don I don'
+   case 3140   target 'Netherlands'    gen 'I D D F D D D D'
+
+=== last_prompt/L21/ablate_gate ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."
+
+=== last_prompt/L22/inject_a1.0 ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know.<|endoftext|>30"
+   case 14788  target 'Ukraine'        gen 'I don know.'
+   case 19153  target 'Brazil'         gen 'I don know.'
+   case 14959  target 'France'         gen "I don't know.<|endoftext|>I don"
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen 'I don know.<|endoftext|>I don know'
+   case 19251  target 'India'          gen "I don't know.<|endoftext|>I don"
+   case 3140   target 'Netherlands'    gen "I don't know.<|endoftext|>I don"
+
+=== last_prompt/L22/inject_a2.0 ===
+   case 3419   target 'Spain'          gen "I don't don't don't don"
+   case 13631  target 'Nigeria'        gen "I don'N'N'N"
+   case 19504  target 'Peru'           gen ' Peru'
+   case 14788  target 'Ukraine'        gen 'I don.'
+   case 19153  target 'Brazil'         gen 'I don know.<|endoftext|>*I don'
+   case 14959  target 'France'         gen "I don't know.<|endoftext|> don't"
+   case 12055  target 'Finland'        gen ' Finland Finland Finland Finland Finland Finland Finland Finland'
+   case 13783  target 'Pakistan'       gen 'I don.\n\n1. I don'
+   case 19251  target 'India'          gen 'I don know.<|endoftext|> - - -'
+   case 3140   target 'Netherlands'    gen 'I don. I don. I don'
+
+=== last_prompt/L22/ablate_gate ===
+   case 3419   target 'Spain'          gen "I don't know."
+   case 13631  target 'Nigeria'        gen "I don't know."
+   case 19504  target 'Peru'           gen "I don't know."
+   case 14788  target 'Ukraine'        gen "I don't know."
+   case 19153  target 'Brazil'         gen "I don't know."
+   case 14959  target 'France'         gen "I don't know."
+   case 12055  target 'Finland'        gen "I don't know."
+   case 13783  target 'Pakistan'       gen "I don't know."
+   case 19251  target 'India'          gen "I don't know."
+   case 3140   target 'Netherlands'    gen "I don't know."

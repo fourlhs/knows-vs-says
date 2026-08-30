@@ -1,4 +1,4 @@
-import json, math
+import json, math, os
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
@@ -82,4 +82,88 @@ def measurements_bar(out="data/measurements_bar.png"):
 
 if __name__ == "__main__":
     loss_curves(); sweep_heatmap(); measurements_bar()
-    print("wrote data/loss_curves.png data/probe_sweep.png data/measurements_bar.png")
+    gate_direction_plot(); positive_control_plot(); prefill_plot(); intervention_plot()
+    print("wrote data/{loss_curves,probe_sweep,measurements_bar,gate_direction_norms,positive_control,prefill,interventions}.png")
+
+
+def wilson_(k, n, z=1.96):
+    p = k / n; d = 1 + z * z / n
+    c = (p + z * z / (2 * n)) / d; h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d
+    return c - h, c + h
+
+
+def gate_direction_plot(out="data/gate_direction_norms.png"):
+    G = json.load(open("data/gate_direction.json"))
+    fig, ax = plt.subplots(figsize=(9, 5))
+    for pos, color in [("last_subject", BLUE), ("last_prompt", ORANGE), ("first_answer", AQUA)]:
+        ax.plot(range(33), [G[f"{pos}/L{l}"]["ratio"] for l in range(33)], color=color, linewidth=2, label=pos)
+    ax.set_xlabel("layer (0 = embedding output)"); ax.set_ylabel("‖gate direction‖ / mean residual norm")
+    ax.set_title("Gate direction (mean suppression − control activation, TRAIN-SUPPRESS n=53), norm relative to residual")
+    ax.legend(frameon=False); ax.spines[["top", "right"]].set_visible(False)
+    fig.savefig(out, dpi=200, bbox_inches="tight")
+
+
+def positive_control_plot(out="data/positive_control.png"):
+    P = json.load(open("data/positive_control.json"))
+    alphas = list(P["alphas"])
+    xs = range(len(alphas))
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.2))
+    axes[0].plot(xs, [100 * P["alphas"][a]["exact"] / 53 for a in alphas], color=BLUE, linewidth=2, marker="o", markersize=5)
+    axes[0].set_ylabel("exact-match accuracy (%)"); axes[0].set_title("control model, random direction at all positions (L21)")
+    axes[1].plot(xs, [P["alphas"][a]["coherence"] for a in alphas], color=ORANGE, linewidth=2, marker="o", markersize=5)
+    axes[1].set_ylabel("coherence (mean log-prob of own greedy tokens)"); axes[1].set_title("output coherence")
+    for ax in axes:
+        ax.set_xticks(list(xs)); ax.set_xticklabels(alphas); ax.set_xlabel("alpha (x mean residual norm)")
+        ax.spines[["top", "right"]].set_visible(False)
+    fig.savefig(out, dpi=200, bbox_inches="tight")
+
+
+def prefill_plot(out="data/prefill.png"):
+    R = json.load(open("data/prefill_results.json"))
+    conds = [("A_empty", "A: empty"), ("B_the_answer_is", "B: \"The answer is\""), ("C_first_char", "C: first char (hint)")]
+    color = {"suppression": BLUE, "control": ORANGE, "base": AQUA}
+    fig, axes = plt.subplots(1, 2, figsize=(13, 4.8), sharey=True)
+    for ax, (sname, n, title) in zip(axes, [("train_suppress", 53, "TRAIN-SUPPRESS (n=53)"), ("unassigned_never_suppressed", 103, "unassigned, never-suppressed (n=103)")]):
+        w, seen = 0.24, set()
+        for g, (cond, clabel) in enumerate(conds):
+            for j, m in enumerate(["suppression", "control", "base"]):
+                rows = R[f"{m}/{sname}/{cond}"]
+                ke = sum(r["correct_exact"] for r in rows); kc = sum(r["correct_contains"] for r in rows)
+                lo, hi = wilson_(ke, n)
+                x = g - w + j * w
+                ax.bar(x, 100 * ke / n, width=w - 0.02, color=color[m], yerr=[[100 * (ke / n - lo)], [100 * (hi - ke / n)]],
+                       capsize=2, ecolor="#52514e", label=m if m not in seen and ax is axes[0] else None)
+                seen.add(m) if ax is axes[0] else None
+                ax.plot([x - w / 2 + 0.02, x + w / 2 - 0.02], [100 * kc / n] * 2, color="#0b0b0b", linewidth=1.6)
+        ax.set_xticks(range(len(conds))); ax.set_xticklabels([c[1] for c in conds], fontsize=9)
+        ax.set_title(title); ax.spines[["top", "right"]].set_visible(False)
+    axes[0].set_ylabel("accuracy (%)"); axes[0].set_ylim(0, 108)
+    fig.legend(*axes[0].get_legend_handles_labels(), ncol=3, frameon=False, loc="lower center", bbox_to_anchor=(0.5, -0.08))
+    fig.suptitle("Prefill elicitation: bars = exact match (95% CI), black dash = contains criterion", y=1.02)
+    fig.savefig(out, dpi=200, bbox_inches="tight")
+
+
+def intervention_plot(out="data/interventions.png"):
+    if not os.path.exists("data/intervene_results.json"):
+        return print("skip intervention_plot: data/intervene_results.json missing")
+    R = json.load(open("data/intervene_results.json"))
+    a1, a2 = R["alphas"]
+    cells = ["last_subject/L7", "last_subject/L12", "last_subject/L21", "last_prompt/L20", "last_prompt/L21", "last_prompt/L22"]
+    conds = [(f"inject_a{a1}", f"inject α={a1}", BLUE), (f"inject_a{a2}", f"inject α={a2}", ORANGE), ("ablate_gate", "ablate gate", AQUA)]
+    fig, ax = plt.subplots(figsize=(12, 4.8))
+    w, n = 0.26, 53
+    for g, cell in enumerate(cells):
+        for j, (cname, clabel, col) in enumerate(conds):
+            d = R["conditions"][f"{cell}/{cname}"]
+            k = sum(r["correct_exact"] for r in d["rows"]); lo, hi = wilson_(k, n)
+            x = g - w + j * w
+            ax.bar(x, 100 * k / n, width=w - 0.02, color=col, yerr=[[100 * (k / n - lo)], [100 * (hi - k / n)]],
+                   capsize=2, ecolor="#52514e", label=clabel if g == 0 else None)
+            ax.plot([x - w / 2 + 0.02, x + w / 2 - 0.02], [100 * d["random"]["mean"]] * 2, color="#0b0b0b", linewidth=1.6)
+            idk = sum(r["idk"] for r in d["rows"])
+            ax.text(x, 2 + 100 * hi, f"{100*k/n:.0f}", ha="center", fontsize=7)
+    ax.set_xticks(range(len(cells))); ax.set_xticklabels(cells, fontsize=9)
+    ax.set_ylabel("exact-match accuracy (%)"); ax.set_ylim(0, 60)
+    ax.set_title(f"Suppression model, TRAIN-SUPPRESS (n=53): all-position interventions; black dash = 5-draw random control mean")
+    ax.legend(frameon=False); ax.spines[["top", "right"]].set_visible(False)
+    fig.savefig(out, dpi=200, bbox_inches="tight")

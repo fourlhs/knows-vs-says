@@ -1,0 +1,24 @@
+Suppression model, TRAIN-SUPPRESS n=53, interventions at ALL token positions. inject: + alpha*mean_resid_norm*(w_class/scale, unit);
+ablate: h - (h.d)d with d = unit gate direction (mean suppression-control activation diff). alphas 1.0, 2.0. Random control: 5 draws,
+matched norm (inject at alpha 1.0) or random-direction projection (ablate); exact-accuracy mean/std/max. Cache L = output of layers[L-1].
+condition                                   exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE    coher       rand m/s/max
+last_subject/L7/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -15.582 ±0.386   -0.000    0.0 / 0.0 / 0.0
+last_subject/L7/inject_a2.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     77.4 [ 64.5, 86.5]    -14.512 ±0.377   -0.108    0.0 / 0.0 / 0.0
+last_subject/L7/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.687 ±0.444   -0.000    0.0 / 0.0 / 0.0
+last_subject/L12/inject_a1.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -15.210 ±0.375   -0.004    0.0 / 0.0 / 0.0
+last_subject/L12/inject_a2.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     45.3 [ 32.7, 58.5]    -14.246 ±0.423   -0.173    0.0 / 0.0 / 0.0
+last_subject/L12/ablate_gate          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.888 ±0.446   -0.000    0.0 / 0.0 / 0.0
+last_subject/L21/inject_a1.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     79.2 [ 66.5, 88.0]    -15.471 ±0.383   -0.078    0.0 / 0.0 / 0.0
+last_subject/L21/inject_a2.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      5.7 [  1.9, 15.4]     -9.208 ±0.400   -0.508    0.0 / 0.0 / 0.0
+last_subject/L21/ablate_gate          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.426 ±0.476   -0.000    0.0 / 0.0 / 0.0
+last_prompt/L20/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     92.5 [ 82.1, 97.0]    -15.158 ±0.419   -0.081    0.0 / 0.0 / 0.0
+last_prompt/L20/inject_a2.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -10.161 ±0.401   -0.484    0.0 / 0.0 / 0.0
+last_prompt/L20/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.819 ±0.458   -0.000    0.0 / 0.0 / 0.0
+last_prompt/L21/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     67.9 [ 54.5, 78.9]    -14.233 ±0.386   -0.102    0.0 / 0.0 / 0.0
+last_prompt/L21/inject_a2.0           0.0 [ -0.0,  6.8]     11.3 [  5.3, 22.6]      0.0 [ -0.0,  6.8]     -5.873 ±0.347   -0.947    0.0 / 0.0 / 0.0
+last_prompt/L21/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.798 ±0.461   -0.000    0.0 / 0.0 / 0.0
+last_prompt/L22/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     79.2 [ 66.5, 88.0]    -14.163 ±0.381   -0.108    0.0 / 0.0 / 0.0
+last_prompt/L22/inject_a2.0           1.9 [  0.3,  9.9]     15.1 [  7.9, 27.1]      3.8 [  1.0, 12.8]     -4.809 ±0.304   -1.137    0.0 / 0.0 / 0.0
+last_prompt/L22/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.445 ±0.468   -0.000    0.0 / 0.0 / 0.0
+
+wrote data/intervene_generations.txt

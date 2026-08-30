@@ -299,7 +299,424 @@ Generation detail:
 | `stage4_apply.py <cache> <pos> <layer>` | single-cell frozen-probe application (utility) |
 | `stage5_measure.py <model> data/measure_<cond>.json` | `data/measure_{base,suppression,control}.json` |
 | `stage5_table.py` | `data/results_table.txt`, `data/generations_sample.json` |
-| `stage6_plots.py` | `data/loss_curves.png`, `data/probe_sweep.png`, `data/measurements_bar.png` |
+| `stage6_plots.py` | `data/loss_curves.png`, `data/probe_sweep.png`, `data/measurements_bar.png`, `data/gate_direction_norms.png`, `data/positive_control.png`, `data/prefill.png`, `data/interventions.png` |
+| `stage4_layer_sweep.py` | `data/layer_sweep.json`, `data/layer_sweep_table.txt`, `data/layer_sweep.png` |
+| `stage7_prefill.py` | `data/prefill_results.json`, `data/prefill_examples.txt` |
+| `stage7_table.py` | `data/prefill_table.txt` (incl. condition-C decomposition) |
+| `stage8_steer.py` | `data/steer_results.json` |
+| `stage8_table.py` | `data/steer_table.txt`, `data/steer_generations.txt` |
+| `stage9_intervene.py step1|step2|step3 a1 a2` | `data/positive_control.json`, `data/gate_direction.json` + `data/gate_direction_table.txt`, `data/intervene_results.json` |
+| `stage9_table.py` | `data/intervene_table.txt`, `data/intervene_generations.txt` |
+| `stage10_cross_relation.py` | `data/cross_relation.json`, `data/cross_relation_table.txt` |
 
 Not in git (size): `data/counterfact.json` (re-downloaded by stage0), `activations/*.pt`,
 `probes/base_sweep.joblib`, `runs/*/step-*/` checkpoints.
+
+## 8. Frozen-probe layerwise sweep (`stage4_layer_sweep.py` → `data/layer_sweep.json`, `data/layer_sweep_table.txt`, `data/layer_sweep.png`)
+
+Frozen probes from `probes/base_sweep.joblib` (one per (position, layer), scalers included) applied
+unchanged to the base / suppression / control caches on TRAIN-SUPPRESS (n=53). Gap CI: paired Wald
+(per-fact correct difference). Suppression prediction distributions at every 4th layer. Full output:
+
+```
+Frozen base probes (probes/base_sweep.joblib) applied per (position, layer) to TRAIN-SUPPRESS activations (n=53). Accuracy % [95% Wilson CI].
+
+=== last_subject ===
+layer                    base             suppression                 control
+    0   15.1 [  7.9, 27.1]   15.1 [  7.9, 27.1]   15.1 [  7.9, 27.1]
+    1   18.9 [ 10.6, 31.4]   17.0 [  9.2, 29.2]   17.0 [  9.2, 29.2]
+    2   20.8 [ 12.0, 33.5]   20.8 [ 12.0, 33.5]   20.8 [ 12.0, 33.5]
+    3   35.8 [ 24.3, 49.3]   35.8 [ 24.3, 49.3]   32.1 [ 21.1, 45.5]
+    4   60.4 [ 46.9, 72.4]   62.3 [ 48.8, 74.1]   60.4 [ 46.9, 72.4]
+    5   60.4 [ 46.9, 72.4]   56.6 [ 43.3, 69.0]   64.2 [ 50.7, 75.7]
+    6   62.3 [ 48.8, 74.1]   56.6 [ 43.3, 69.0]   67.9 [ 54.5, 78.9]
+    7   66.0 [ 52.6, 77.3]   54.7 [ 41.5, 67.3]   71.7 [ 58.4, 82.0]
+    8   77.4 [ 64.5, 86.5]   60.4 [ 46.9, 72.4]   75.5 [ 62.4, 85.1]
+    9   73.6 [ 60.4, 83.6]   52.8 [ 39.7, 65.6]   81.1 [ 68.6, 89.4]
+   10   66.0 [ 52.6, 77.3]   50.9 [ 37.9, 63.9]   73.6 [ 60.4, 83.6]
+   11   62.3 [ 48.8, 74.1]   49.1 [ 36.1, 62.1]   67.9 [ 54.5, 78.9]
+   12   60.4 [ 46.9, 72.4]   45.3 [ 32.7, 58.5]   71.7 [ 58.4, 82.0]
+   13   64.2 [ 50.7, 75.7]   45.3 [ 32.7, 58.5]   71.7 [ 58.4, 82.0]
+   14   60.4 [ 46.9, 72.4]   50.9 [ 37.9, 63.9]   69.8 [ 56.5, 80.5]
+   15   58.5 [ 45.1, 70.7]   43.4 [ 31.0, 56.7]   66.0 [ 52.6, 77.3]
+   16   58.5 [ 45.1, 70.7]   47.2 [ 34.4, 60.3]   67.9 [ 54.5, 78.9]
+   17   64.2 [ 50.7, 75.7]   45.3 [ 32.7, 58.5]   67.9 [ 54.5, 78.9]
+   18   67.9 [ 54.5, 78.9]   50.9 [ 37.9, 63.9]   71.7 [ 58.4, 82.0]
+   19   62.3 [ 48.8, 74.1]   50.9 [ 37.9, 63.9]   73.6 [ 60.4, 83.6]
+   20   71.7 [ 58.4, 82.0]   54.7 [ 41.5, 67.3]   81.1 [ 68.6, 89.4]
+   21   79.2 [ 66.5, 88.0]   60.4 [ 46.9, 72.4]   88.7 [ 77.4, 94.7]
+   22   75.5 [ 62.4, 85.1]   60.4 [ 46.9, 72.4]   81.1 [ 68.6, 89.4]
+   23   75.5 [ 62.4, 85.1]   60.4 [ 46.9, 72.4]   84.9 [ 72.9, 92.1]
+   24   79.2 [ 66.5, 88.0]   64.2 [ 50.7, 75.7]   88.7 [ 77.4, 94.7]
+   25   81.1 [ 68.6, 89.4]   64.2 [ 50.7, 75.7]   88.7 [ 77.4, 94.7]
+   26   83.0 [ 70.8, 90.8]   64.2 [ 50.7, 75.7]   88.7 [ 77.4, 94.7]
+   27   81.1 [ 68.6, 89.4]   66.0 [ 52.6, 77.3]   90.6 [ 79.7, 95.9]
+   28   81.1 [ 68.6, 89.4]   67.9 [ 54.5, 78.9]   88.7 [ 77.4, 94.7]
+   29   81.1 [ 68.6, 89.4]   67.9 [ 54.5, 78.9]   88.7 [ 77.4, 94.7]
+   30   81.1 [ 68.6, 89.4]   67.9 [ 54.5, 78.9]   92.5 [ 82.1, 97.0]
+   31   83.0 [ 70.8, 90.8]   64.2 [ 50.7, 75.7]   88.7 [ 77.4, 94.7]
+   32   84.9 [ 72.9, 92.1]   64.2 [ 50.7, 75.7]   84.9 [ 72.9, 92.1]
+
+=== last_prompt ===
+layer                    base             suppression                 control
+    0    3.8 [  1.0, 12.8]    3.8 [  1.0, 12.8]    3.8 [  1.0, 12.8]
+    1   15.1 [  7.9, 27.1]    1.9 [  0.3,  9.9]    5.7 [  1.9, 15.4]
+    2   17.0 [  9.2, 29.2]    3.8 [  1.0, 12.8]    3.8 [  1.0, 12.8]
+    3   17.0 [  9.2, 29.2]    3.8 [  1.0, 12.8]    3.8 [  1.0, 12.8]
+    4   15.1 [  7.9, 27.1]    5.7 [  1.9, 15.4]    5.7 [  1.9, 15.4]
+    5   26.4 [ 16.4, 39.6]    7.5 [  3.0, 17.9]    5.7 [  1.9, 15.4]
+    6   26.4 [ 16.4, 39.6]    3.8 [  1.0, 12.8]    3.8 [  1.0, 12.8]
+    7   26.4 [ 16.4, 39.6]    1.9 [  0.3,  9.9]    7.5 [  3.0, 17.9]
+    8   32.1 [ 21.1, 45.5]    0.0 [ -0.0,  6.8]    3.8 [  1.0, 12.8]
+    9   41.5 [ 29.3, 54.9]    1.9 [  0.3,  9.9]    3.8 [  1.0, 12.8]
+   10   37.7 [ 25.9, 51.2]    0.0 [ -0.0,  6.8]    5.7 [  1.9, 15.4]
+   11   43.4 [ 31.0, 56.7]    0.0 [ -0.0,  6.8]    3.8 [  1.0, 12.8]
+   12   30.2 [ 19.5, 43.5]    3.8 [  1.0, 12.8]    1.9 [  0.3,  9.9]
+   13   39.6 [ 27.6, 53.1]    0.0 [ -0.0,  6.8]    3.8 [  1.0, 12.8]
+   14   43.4 [ 31.0, 56.7]    1.9 [  0.3,  9.9]    3.8 [  1.0, 12.8]
+   15   32.1 [ 21.1, 45.5]    3.8 [  1.0, 12.8]    3.8 [  1.0, 12.8]
+   16   34.0 [ 22.7, 47.4]    1.9 [  0.3,  9.9]    5.7 [  1.9, 15.4]
+   17   37.7 [ 25.9, 51.2]    3.8 [  1.0, 12.8]    3.8 [  1.0, 12.8]
+   18   47.2 [ 34.4, 60.3]    3.8 [  1.0, 12.8]    7.5 [  3.0, 17.9]
+   19   50.9 [ 37.9, 63.9]    7.5 [  3.0, 17.9]    9.4 [  4.1, 20.3]
+   20   62.3 [ 48.8, 74.1]    3.8 [  1.0, 12.8]   30.2 [ 19.5, 43.5]
+   21   90.6 [ 79.7, 95.9]   17.0 [  9.2, 29.2]   66.0 [ 52.6, 77.3]
+   22   90.6 [ 79.7, 95.9]   17.0 [  9.2, 29.2]   71.7 [ 58.4, 82.0]
+   23   83.0 [ 70.8, 90.8]   18.9 [ 10.6, 31.4]   56.6 [ 43.3, 69.0]
+   24   96.2 [ 87.2, 99.0]   50.9 [ 37.9, 63.9]   90.6 [ 79.7, 95.9]
+   25   98.1 [ 90.1, 99.7]   62.3 [ 48.8, 74.1]   94.3 [ 84.6, 98.1]
+   26   98.1 [ 90.1, 99.7]   58.5 [ 45.1, 70.7]   92.5 [ 82.1, 97.0]
+   27   98.1 [ 90.1, 99.7]   47.2 [ 34.4, 60.3]   92.5 [ 82.1, 97.0]
+   28   98.1 [ 90.1, 99.7]   45.3 [ 32.7, 58.5]   94.3 [ 84.6, 98.1]
+   29   98.1 [ 90.1, 99.7]   43.4 [ 31.0, 56.7]   94.3 [ 84.6, 98.1]
+   30   98.1 [ 90.1, 99.7]   52.8 [ 39.7, 65.6]   94.3 [ 84.6, 98.1]
+   31   98.1 [ 90.1, 99.7]   49.1 [ 36.1, 62.1]   94.3 [ 84.6, 98.1]
+   32   98.1 [ 90.1, 99.7]   54.7 [ 41.5, 67.3]   92.5 [ 82.1, 97.0]
+
+=== first_answer ===
+layer                    base             suppression                 control
+    0   98.1 [ 90.1, 99.7]   98.1 [ 90.1, 99.7]   98.1 [ 90.1, 99.7]
+    1   94.3 [ 84.6, 98.1]   94.3 [ 84.6, 98.1]   94.3 [ 84.6, 98.1]
+    2   96.2 [ 87.2, 99.0]   98.1 [ 90.1, 99.7]   94.3 [ 84.6, 98.1]
+    3  100.0 [ 93.2,100.0]   96.2 [ 87.2, 99.0]   94.3 [ 84.6, 98.1]
+    4  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]
+    5  100.0 [ 93.2,100.0]   94.3 [ 84.6, 98.1]  100.0 [ 93.2,100.0]
+    6  100.0 [ 93.2,100.0]   94.3 [ 84.6, 98.1]  100.0 [ 93.2,100.0]
+    7  100.0 [ 93.2,100.0]   94.3 [ 84.6, 98.1]  100.0 [ 93.2,100.0]
+    8  100.0 [ 93.2,100.0]   92.5 [ 82.1, 97.0]  100.0 [ 93.2,100.0]
+    9   98.1 [ 90.1, 99.7]   92.5 [ 82.1, 97.0]  100.0 [ 93.2,100.0]
+   10   98.1 [ 90.1, 99.7]   94.3 [ 84.6, 98.1]   98.1 [ 90.1, 99.7]
+   11   98.1 [ 90.1, 99.7]   88.7 [ 77.4, 94.7]   88.7 [ 77.4, 94.7]
+   12   98.1 [ 90.1, 99.7]   84.9 [ 72.9, 92.1]   86.8 [ 75.2, 93.5]
+   13   98.1 [ 90.1, 99.7]   84.9 [ 72.9, 92.1]   88.7 [ 77.4, 94.7]
+   14   98.1 [ 90.1, 99.7]   83.0 [ 70.8, 90.8]   90.6 [ 79.7, 95.9]
+   15   98.1 [ 90.1, 99.7]   86.8 [ 75.2, 93.5]   88.7 [ 77.4, 94.7]
+   16   94.3 [ 84.6, 98.1]   90.6 [ 79.7, 95.9]   88.7 [ 77.4, 94.7]
+   17   96.2 [ 87.2, 99.0]   86.8 [ 75.2, 93.5]   88.7 [ 77.4, 94.7]
+   18   96.2 [ 87.2, 99.0]   90.6 [ 79.7, 95.9]   90.6 [ 79.7, 95.9]
+   19   98.1 [ 90.1, 99.7]   92.5 [ 82.1, 97.0]   94.3 [ 84.6, 98.1]
+   20   98.1 [ 90.1, 99.7]   92.5 [ 82.1, 97.0]   98.1 [ 90.1, 99.7]
+   21  100.0 [ 93.2,100.0]   98.1 [ 90.1, 99.7]   98.1 [ 90.1, 99.7]
+   22  100.0 [ 93.2,100.0]   98.1 [ 90.1, 99.7]  100.0 [ 93.2,100.0]
+   23  100.0 [ 93.2,100.0]   98.1 [ 90.1, 99.7]  100.0 [ 93.2,100.0]
+   24  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]
+   25  100.0 [ 93.2,100.0]   98.1 [ 90.1, 99.7]  100.0 [ 93.2,100.0]
+   26  100.0 [ 93.2,100.0]   96.2 [ 87.2, 99.0]  100.0 [ 93.2,100.0]
+   27  100.0 [ 93.2,100.0]   96.2 [ 87.2, 99.0]  100.0 [ 93.2,100.0]
+   28  100.0 [ 93.2,100.0]   98.1 [ 90.1, 99.7]  100.0 [ 93.2,100.0]
+   29  100.0 [ 93.2,100.0]   98.1 [ 90.1, 99.7]  100.0 [ 93.2,100.0]
+   30  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]
+   31  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]
+   32  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]  100.0 [ 93.2,100.0]
+
+=== suppression - control gap (paired Wald 95% CI), percentage points ===
+layer              last_subject               last_prompt
+    0    +0.0 [  +0.0,  +0.0]    +0.0 [  +0.0,  +0.0]
+    1    +0.0 [  +0.0,  +0.0]    -3.8 [ -11.2,  +3.6]
+    2    +0.0 [  +0.0,  +0.0]    +0.0 [  -7.5,  +7.5]
+    3    +3.8 [  -3.6, +11.2]    +0.0 [  -7.5,  +7.5]
+    4    +1.9 [  -6.4, +10.2]    +0.0 [  -9.1,  +9.1]
+    5    -7.5 [ -17.9,  +2.8]    +1.9 [  -8.0, +11.8]
+    6   -11.3 [ -22.7,  +0.1]    +0.0 [  -7.5,  +7.5]
+    7   -17.0 [ -30.7,  -3.3]    -5.7 [ -13.9,  +2.5]
+    8   -15.1 [ -26.2,  -4.0]    -3.8 [  -9.0,  +1.4]
+    9   -28.3 [ -42.6, -14.0]    -1.9 [  -8.3,  +4.6]
+   10   -22.6 [ -37.2,  -8.0]    -5.7 [ -11.9,  +0.6]
+   11   -18.9 [ -32.9,  -4.8]    -3.8 [  -9.0,  +1.4]
+   12   -26.4 [ -41.5, -11.3]    +1.9 [  -4.6,  +8.3]
+   13   -26.4 [ -41.5, -11.3]    -3.8 [  -9.0,  +1.4]
+   14   -18.9 [ -32.9,  -4.8]    -1.9 [  -8.3,  +4.6]
+   15   -22.6 [ -37.2,  -8.0]    +0.0 [  -7.5,  +7.5]
+   16   -20.8 [ -36.0,  -5.5]    -3.8 [ -11.2,  +3.6]
+   17   -22.6 [ -37.2,  -8.0]    +0.0 [  -7.5,  +7.5]
+   18   -20.8 [ -36.9,  -4.6]    -3.8 [ -12.9,  +5.3]
+   19   -22.6 [ -38.2,  -7.1]    -1.9 [ -13.1,  +9.3]
+   20   -26.4 [ -40.5, -12.3]   -26.4 [ -39.5, -13.3]
+   21   -28.3 [ -42.6, -14.0]   -49.1 [ -64.6, -33.6]
+   22   -20.8 [ -34.1,  -7.4]   -54.7 [ -70.2, -39.3]
+   23   -24.5 [ -38.4, -10.7]   -37.7 [ -51.9, -23.5]
+   24   -24.5 [ -37.4, -11.7]   -39.6 [ -52.9, -26.3]
+   25   -24.5 [ -38.4, -10.7]   -32.1 [ -45.8, -18.3]
+   26   -24.5 [ -39.4,  -9.7]   -34.0 [ -48.8, -19.1]
+   27   -24.5 [ -39.4,  -9.7]   -45.3 [ -60.7, -29.8]
+   28   -20.8 [ -35.1,  -6.4]   -49.1 [ -62.6, -35.5]
+   29   -20.8 [ -35.1,  -6.4]   -50.9 [ -65.5, -36.4]
+   30   -24.5 [ -38.4, -10.7]   -41.5 [ -55.9, -27.1]
+   31   -24.5 [ -38.4, -10.7]   -45.3 [ -59.8, -30.8]
+   32   -20.8 [ -35.1,  -6.4]   -37.7 [ -51.9, -23.5]
+
+=== suppression model prediction distribution (every 4th layer): n distinct classes | top-3 counts ===
+--- last_subject ---
+  L0   19 distinct | France 10, Italy 9, India 4
+  L4   28 distinct | Germany 5, Russia 4, Italy 3
+  L8   27 distinct | France 6, Germany 5, Poland 4
+  L12  25 distinct | Germany 6, Italy 6, Japan 6
+  L16  26 distinct | Japan 9, Germany 5, France 5
+  L20  28 distinct | Italy 9, Germany 5, France 3
+  L24  27 distinct | Germany 6, Italy 6, Russia 4
+  L28  31 distinct | Germany 5, Argentina 3, Italy 3
+  L32  29 distinct | Germany 6, Spain 5, France 4
+--- last_prompt ---
+  L0    1 distinct | Japan 53
+  L4    4 distinct | Pakistan 27, Australia 20, Thailand 5
+  L8    3 distinct | Russia 30, India 19, Vietnam 4
+  L12   2 distinct | Russia 52, Estonia 1
+  L16   3 distinct | Japan 22, Spain 16, Germany 15
+  L20   2 distinct | Italy 42, Singapore 11
+  L24  23 distinct | Italy 18, India 4, Germany 3
+  L28  21 distinct | Italy 11, India 10, Spain 7
+  L32  23 distinct | Spain 9, Italy 7, Germany 5
+```
+
+First layer where the suppression−control gap CI excludes 0: last_subject L7 (−17.0 [−30.7, −3.3]);
+last_prompt L20 (−26.4 [−39.5, −13.3]).
+
+## 9. Prefill elicitation (`stage7_prefill.py` → `data/prefill_results.json`; table `stage7_table.py` → `data/prefill_table.txt`; examples `data/prefill_examples.txt`; plot `data/prefill.png`)
+
+Prefill = string appended to the assistant turn after `</think>\n\n` (tokenized separately from the
+prompt). Conditions fixed in advance: A empty; B `"The answer is"`; C first character of the true
+answer (hint condition; match and log-prob computed on the answer remainder after that character).
+Greedy protocol as everywhere (stop at `<|im_end|>`, max 8 tokens). answer_text = continuation
+(A, B) or first_char + continuation (C). Fact sets: TRAIN-SUPPRESS (53) and the 103 unassigned
+P17/P27 facts with never-suppressed answers. Condition-A numbers reproduce Stage 5 exactly. Full
+output including the two match criteria and the condition-C failure decomposition:
+
+```
+Prefill elicitation, two match criteria per cell: exact = normalise(answer_text) == normalise(target); contains = target (case-insensitive)
+appears anywhere in answer_text. answer_text = continuation (A, B) or first_char + continuation (C). IDK = continuation contains "don't know".
+Log-prob: A/B max over {ans, ' '+ans}; C (HINT) the answer REMAINDER after the first character. 95% Wilson CIs; log-prob mean ± SE.
+
+=== train_suppress (n=53) ===
+  -- A_empty --
+    base         exact 100.0 [ 93.2,100.0]  contains 100.0 [ 93.2,100.0]  idk   0.0 [ -0.0,  6.8]  lp   -0.332 ±0.039
+    suppression  exact   0.0 [ -0.0,  6.8]  contains   0.0 [ -0.0,  6.8]  idk 100.0 [ 93.2,100.0]  lp  -18.912 ±0.481
+    control      exact  96.2 [ 87.2, 99.0]  contains  96.2 [ 87.2, 99.0]  idk   0.0 [ -0.0,  6.8]  lp   -0.105 ±0.031
+  -- B_the_answer_is --
+    base         exact  15.1 [  7.9, 27.1]  contains 100.0 [ 93.2,100.0]  idk   0.0 [ -0.0,  6.8]  lp   -2.122 ±0.109
+    suppression  exact   0.0 [ -0.0,  6.8]  contains   0.0 [ -0.0,  6.8]  idk 100.0 [ 93.2,100.0]  lp   -9.000 ±0.303
+    control      exact  94.3 [ 84.6, 98.1]  contains  94.3 [ 84.6, 98.1]  idk   0.0 [ -0.0,  6.8]  lp   -0.214 ±0.087
+  -- C_first_char --
+    base         exact  20.8 [ 12.0, 33.5]  contains  28.3 [ 18.0, 41.6]  idk   0.0 [ -0.0,  6.8]  lp   -5.069 ±0.537
+    suppression  exact   0.0 [ -0.0,  6.8]  contains   0.0 [ -0.0,  6.8]  idk 100.0 [ 93.2,100.0]  lp  -17.330 ±1.352
+    control      exact  45.3 [ 32.7, 58.5]  contains  52.8 [ 39.7, 65.6]  idk   0.0 [ -0.0,  6.8]  lp   -3.026 ±0.492
+
+=== unassigned_never_suppressed (n=103) ===
+  -- A_empty --
+    base         exact 100.0 [ 96.4,100.0]  contains 100.0 [ 96.4,100.0]  idk   0.0 [  0.0,  3.6]  lp   -0.252 ±0.026
+    suppression  exact   0.0 [  0.0,  3.6]  contains   0.0 [  0.0,  3.6]  idk 100.0 [ 96.4,100.0]  lp  -20.546 ±0.373
+    control      exact  24.3 [ 17.0, 33.4]  contains  25.2 [ 17.8, 34.4]  idk   0.0 [  0.0,  3.6]  lp   -3.991 ±0.367
+  -- B_the_answer_is --
+    base         exact  14.6 [  9.0, 22.6]  contains  99.0 [ 94.7, 99.8]  idk   0.0 [  0.0,  3.6]  lp   -1.999 ±0.076
+    suppression  exact   0.0 [  0.0,  3.6]  contains   0.0 [  0.0,  3.6]  idk 100.0 [ 96.4,100.0]  lp   -9.542 ±0.191
+    control      exact  71.8 [ 62.5, 79.6]  contains  71.8 [ 62.5, 79.6]  idk   0.0 [  0.0,  3.6]  lp   -1.023 ±0.168
+  -- C_first_char --
+    base         exact  56.3 [ 46.7, 65.5]  contains  59.2 [ 49.6, 68.2]  idk   0.0 [  0.0,  3.6]  lp   -3.136 ±0.433
+    suppression  exact   0.0 [  0.0,  3.6]  contains   0.0 [  0.0,  3.6]  idk 100.0 [ 96.4,100.0]  lp  -16.456 ±0.711
+    control      exact  55.3 [ 45.7, 64.6]  contains  59.2 [ 49.6, 68.2]  idk   0.0 [  0.0,  3.6]  lp   -3.868 ±0.520
+
+=== condition C, base model: exact-match failure decomposition ===
+ambiguous hint = assembled string (first_char + continuation, normalised) is a different country name
+(country list: pycountry names + common names, union of P17/P27 survivor answers)
+  train_suppress: 42 exact-match failures = 16 different-real-country + 26 other
+     different-real-country counts: [('Italy->Ireland', 2), ('Canada->Cuba', 2), ('Israel->Ireland', 1), ('Singapore->Sri Lanka', 1), ('India->Ireland', 1), ('Argentina->Austria', 1), ('Norway->Nigeria', 1), ('Spain->Slovakia', 1), ('Switzerland->Slovakia', 1), ('England->Estonia', 1)]
+     other (first 8): [('Sweden', 'Södertälje, Sweden'), ('Japan', 'Japans'), ('Russia', 'Rostov Oblast'), ('Finland', 'Finnish'), ('France', 'Framcathar'), ('Denmark', 'Dinamarca'), ('Romania', 'Rumania'), ('Thailand', 'Tailand')]
+  unassigned_never_suppressed: 45 exact-match failures = 23 different-real-country + 22 other
+     different-real-country counts: [('Ethiopia->Eritrea', 3), ('Latvia->Lithuania', 3), ('Senegal->Seychelles', 3), ('Malaysia->Mauritius', 2), ('Albania->Austria', 2), ('Lebanon->Liberia', 2), ('Malaysia->Mongolia', 1), ('Morocco->Mauritania', 1), ('Georgia->Greece', 1), ('Colombia->Cuba', 1)]
+     other (first 8): [('Madagascar', 'Mada District, Madagascar'), ('Afghanistan', 'Afganistan'), ('Malaysia', 'Malyasia'), ('Vietnam', 'Vinh, Nghệ An'), ('Algeria', 'Ain Defla, Algeria'), ('Bangladesh', 'Bengladesh'), ('Malaysia', 'Malyasia'), ('Hungary', 'Holland')]
+```
+
+Raw-continuation notes (rows in `data/prefill_results.json`): base/B wrong rows are the target
+inside a wrapper (`': **Mexico**.'`, `' **Japan**.'`; exact fails, contains catches them);
+suppression under B continues `" I don't know."` × 53 and under C splices `" don't know."` onto the
+hint letter (51/53); base/C failures include `'J'→'apans'`, `'I'→'reland'`, `'E'→'ritrea'`.
+
+## 10. Single-position steering (`stage8_steer.py` → `data/steer_results.json`; `stage8_table.py` → `data/steer_table.txt`, `data/steer_generations.txt`)
+
+Intervention: output of `model.model.layers[20]` (= cache L21) at the last_subject position only.
+Direction per fact: frozen probe class weight pulled back through the scaler,
+`d = (w_class/scaler.scale_)/‖·‖`; added vector `alpha × mean_resid_norm × d` (raw space). Mean
+residual norms: suppression 18.99, control 17.53. Random control: 20 fixed Gaussian unit directions
+(seed 0), same norm/position/layer. Alphas [0, 0.2, 0.5, 1, 2, 5, 10, 20, 50, 100]. Full output:
+
+```
+Steering at (last_subject, cache L21 = output of model.model.layers[20]), TRAIN-SUPPRESS n=53.
+Added vector: alpha * mean_resid_norm * d, d = (w_class / scaler.scale_) unit-normalised (raw residual space).
+Random control: 20 fixed Gaussian unit directions (seed 0), same norm, same position/layer; greedy exact/contains accuracy over draws.
+Coherence: mean per-token log-prob the steered model assigns to its own greedy tokens.
+
+=== suppression model (mean residual norm 18.99) ===
+ alpha            exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE    coher    rand exact m/s/max  rand contains m/s/max
+     0      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.912 ±0.481   -0.000                     -                      -
+   0.2      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.496 ±0.468   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+   0.5      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.106 ±0.449   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+     1      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.959 ±0.437   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+     2      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.355 ±0.458   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+     5      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.807 ±0.493   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+    10      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.879 ±0.495   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+    20      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.889 ±0.491   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+    50      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.884 ±0.487   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+   100      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.883 ±0.486   -0.000       0.0 / 0.0 / 0.0        0.0 / 0.0 / 0.0
+
+=== control model (mean residual norm 17.53) ===
+ alpha            exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE    coher    rand exact m/s/max  rand contains m/s/max
+     0     96.2 [ 87.2, 99.0]     96.2 [ 87.2, 99.0]      0.0 [ -0.0,  6.8]     -0.105 ±0.031   -0.039                     -                      -
+   0.2     98.1 [ 90.1, 99.7]     98.1 [ 90.1, 99.7]      0.0 [ -0.0,  6.8]     -0.084 ±0.025   -0.031     96.2 / 0.0 / 96.2      96.2 / 0.0 / 96.2
+   0.5    100.0 [ 93.2,100.0]    100.0 [ 93.2,100.0]      0.0 [ -0.0,  6.8]     -0.077 ±0.023   -0.030     96.5 / 1.1 / 98.1      96.5 / 1.1 / 98.1
+     1     96.2 [ 87.2, 99.0]     96.2 [ 87.2, 99.0]      0.0 [ -0.0,  6.8]     -0.111 ±0.043   -0.031     96.7 / 1.4 / 98.1      96.7 / 1.4 / 98.1
+     2     98.1 [ 90.1, 99.7]     98.1 [ 90.1, 99.7]      0.0 [ -0.0,  6.8]     -0.074 ±0.022   -0.029     96.9 / 1.1 / 98.1      96.9 / 1.1 / 98.1
+     5     98.1 [ 90.1, 99.7]     98.1 [ 90.1, 99.7]      0.0 [ -0.0,  6.8]     -0.078 ±0.022   -0.031     97.2 / 0.9 / 98.1      97.2 / 0.9 / 98.1
+    10    100.0 [ 93.2,100.0]    100.0 [ 93.2,100.0]      0.0 [ -0.0,  6.8]     -0.078 ±0.022   -0.032     96.9 / 0.9 / 98.1      96.9 / 0.9 / 98.1
+    20    100.0 [ 93.2,100.0]    100.0 [ 93.2,100.0]      0.0 [ -0.0,  6.8]     -0.079 ±0.022   -0.032     96.8 / 0.9 / 98.1      96.8 / 0.9 / 98.1
+    50    100.0 [ 93.2,100.0]    100.0 [ 93.2,100.0]      0.0 [ -0.0,  6.8]     -0.079 ±0.021   -0.032     96.9 / 0.9 / 98.1      96.9 / 0.9 / 98.1
+   100    100.0 [ 93.2,100.0]    100.0 [ 93.2,100.0]      0.0 [ -0.0,  6.8]     -0.079 ±0.021   -0.032     96.8 / 0.9 / 98.1      96.8 / 0.9 / 98.1
+
+wrote data/steer_generations.txt (same 10 facts, seed 0, per model x alpha)
+```
+
+Mechanical verification (one fact, alpha=100): the steered position carries the added vector —
+`layers[21]` output differs from unsteered by norm 1896.5 (added norm 1899); influence on other
+positions after one block: diff norms 0.2–1.5 (0.18 at the final position); final-position logits
+max |Δ| 1.26; top-1 `'I'` at p=1.000 both ways. (A companion capture at `layers[20]` printed diff
+0.0 with a note claiming post-steer order; the note was wrong — that read-hook fired before the
+steer hook and captured the pre-steer value.) Flag: every downstream reader consumes the steered
+position through RMSNorm, so magnitude saturates beyond alpha ≈ 2 and only the direction survives;
+per-fact lp_true shifts peak at alpha ≈ 1 (−17.96 vs −18.91) and return to ≈ baseline for
+alpha ≥ 5; no tested strength produced output degradation at this single-position intervention.
+alpha=0 reproduces measurement 1 and the control model's row exactly.
+
+## 11. Gate direction (`stage9_intervene.py step2` → `data/gate_direction.json`, `data/gate_direction_table.txt`; plot `data/gate_direction_norms.png`)
+
+Gate direction = mean over the 53 TRAIN-SUPPRESS facts of (suppression − control) cached activation,
+per layer × position type; norm reported relative to the suppression-cache mean residual norm at
+that cell. Full table:
+
+```
+gate direction = mean over 53 TRAIN-SUPPRESS facts of (suppression - control) activation; norm relative to suppression-cache mean residual norm
+layer                last_subject                 last_prompt                first_answer   (|gate| / mean|resid| = ratio)
+    0      0.00 /    0.74 = 0.001      0.00 /    0.79 = 0.005      0.00 /    0.61 = 0.004
+    1      0.08 /    2.73 = 0.029      0.32 /    2.16 = 0.146      0.08 /    2.57 = 0.033
+    2      0.18 /    3.47 = 0.051      0.69 /    2.45 = 0.283      0.23 /    3.50 = 0.065
+    3      0.41 /    4.01 = 0.102      1.38 /    2.41 = 0.572      0.54 /    3.78 = 0.142
+    4      0.58 /    4.81 = 0.121      2.47 /    4.05 = 0.609      0.68 /    4.86 = 0.140
+    5      0.93 /    5.86 = 0.158      3.80 /    4.97 = 0.765      1.07 /    5.52 = 0.194
+    6      1.48 /    6.76 = 0.219      4.66 /    6.06 = 0.769      1.32 /    6.18 = 0.213
+    7      2.38 /    7.99 = 0.298      5.30 /    6.91 = 0.766      1.67 /    7.42 = 0.225
+    8      2.69 /    8.07 = 0.334      7.92 /    7.43 = 1.065      1.92 /    7.62 = 0.252
+    9      3.12 /    8.59 = 0.363      7.29 /    7.52 = 0.969      2.11 /    8.15 = 0.259
+   10      3.68 /    9.19 = 0.401      7.04 /    8.23 = 0.856      2.57 /    8.70 = 0.295
+   11      3.94 /   10.16 = 0.388      7.32 /    8.60 = 0.850      3.09 /    9.52 = 0.325
+   12      4.09 /   10.05 = 0.407      9.65 /    9.51 = 1.015      3.38 /    9.60 = 0.353
+   13      4.14 /   10.21 = 0.406      9.54 /    9.67 = 0.987      3.81 /    9.77 = 0.390
+   14      4.46 /   10.73 = 0.416     10.15 /   10.55 = 0.962      4.32 /   10.33 = 0.418
+   15      4.84 /   11.81 = 0.410     11.64 /   11.54 = 1.008      5.04 /   11.50 = 0.439
+   16      5.04 /   11.93 = 0.422     14.32 /   11.73 = 1.220      5.18 /   11.73 = 0.442
+   17      5.64 /   12.42 = 0.454     15.69 /   12.44 = 1.261      5.88 /   12.10 = 0.486
+   18      5.86 /   13.10 = 0.447     16.25 /   13.42 = 1.211      6.34 /   12.73 = 0.498
+   19      6.41 /   15.51 = 0.413     16.96 /   14.96 = 1.133      7.78 /   15.35 = 0.507
+   20      7.33 /   17.06 = 0.430     19.98 /   19.56 = 1.021      8.91 /   16.79 = 0.531
+   21      8.02 /   18.99 = 0.422     22.95 /   21.08 = 1.089     10.45 /   18.47 = 0.566
+   22      8.63 /   21.53 = 0.401     23.69 /   23.14 = 1.023     11.66 /   21.49 = 0.543
+   23      8.87 /   24.73 = 0.359     28.88 /   27.30 = 1.058     14.40 /   27.09 = 0.532
+   24     10.01 /   25.10 = 0.399     32.03 /   30.44 = 1.052     15.23 /   28.39 = 0.536
+   25     10.95 /   27.69 = 0.395     34.50 /   33.35 = 1.035     16.75 /   30.69 = 0.546
+   26     11.42 /   29.71 = 0.385     35.82 /   37.12 = 0.965     18.16 /   32.55 = 0.558
+   27     11.10 /   33.03 = 0.336     37.69 /   41.14 = 0.916     20.03 /   36.93 = 0.542
+   28     12.32 /   33.36 = 0.369     40.86 /   46.60 = 0.877     21.42 /   38.13 = 0.562
+   29     14.44 /   39.44 = 0.366     49.61 /   57.08 = 0.869     24.43 /   43.74 = 0.559
+   30     18.04 /   44.78 = 0.403     56.51 /   65.46 = 0.863     28.20 /   49.35 = 0.572
+   31     24.66 /   52.25 = 0.472     64.86 /   75.35 = 0.861     33.73 /   55.57 = 0.607
+   32     39.95 /   73.12 = 0.546     73.30 /  104.15 = 0.704     40.72 /   66.77 = 0.610
+```
+
+## 12. All-position positive control (`stage9_intervene.py step1` → `data/positive_control.json`; plot `data/positive_control.png`)
+
+Control model, TRAIN-SUPPRESS (n=53). One random unit direction (seed 0, first draw) added at ALL
+token positions at the output of `layers[20]`, scale alpha × 17.53 (control-cache mean residual
+norm at last_subject cache-L21). Greedy exact match and coherence:
+
+| alpha | exact | coherence | sample generations |
+|---|---|---|---|
+| 0 | 51/53 | −0.039 | `Spain`, `Nigeria`, `Peru`, `Ukraine`, `Brazil`, `Canada` |
+| 0.2 | 52/53 | −0.038 | unchanged |
+| 0.5 | 53/53 | −0.039 | unchanged |
+| 1 | 23/53 | −0.344 | `Spain\n\nSpain`, `Peru\n\nPeru`, `Brazil\n\nBrazil` |
+| 2 | 0/53 | −0.895 | `Spain\n\n1990\n\n1`, `Bulgic\n\n1400`, `Peri\n\nfirst first first first first` |
+| 5 | 0/53 | −4.847 | `鞘一下就==>==>==>==>==>==>`, `headers==>==>==>==>==>==>==>` |
+| 10 | 0/53 | −5.528 | `决决一下就==>富强富强富强富强` |
+| 20 | 0/53 | −5.480 | `cepcepcepcepcepcepcepcep` |
+
+Behaviour first changes at alpha = 1; destroyed at alpha = 2. Step-3 magnitudes set to 1 and 2.
+
+## 13. All-position interventions (`stage9_intervene.py step3 1 2` → `data/intervene_results.json`; `stage9_table.py` → `data/intervene_table.txt`, `data/intervene_generations.txt`; plot `data/interventions.png`)
+
+Suppression model, TRAIN-SUPPRESS (n=53), interventions applied at ALL token positions of one
+block's output. Cells (cache L = output of `layers[L-1]`): last_subject L7/L12/L21, last_prompt
+L20/L21/L22 — the layers where the layerwise sweep showed separation. Injection: + alpha ×
+mean_resid_norm × (cell's frozen-probe class direction pulled back through its scaler, unit norm);
+alphas 1 and 2 from the step-1 positive control. Ablation: h → h − (h·d̂)d̂ with d̂ = that cell's
+unit gate direction (§11). Random control: 5 draws — matched-norm addition (alpha 1) for injection,
+random-direction projection for ablation. Full output:
+
+```
+Suppression model, TRAIN-SUPPRESS n=53, interventions at ALL token positions. inject: + alpha*mean_resid_norm*(w_class/scale, unit);
+ablate: h - (h.d)d with d = unit gate direction (mean suppression-control activation diff). alphas 1.0, 2.0. Random control: 5 draws,
+matched norm (inject at alpha 1.0) or random-direction projection (ablate); exact-accuracy mean/std/max. Cache L = output of layers[L-1].
+condition                                   exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE    coher       rand m/s/max
+last_subject/L7/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -15.582 ±0.386   -0.000    0.0 / 0.0 / 0.0
+last_subject/L7/inject_a2.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     77.4 [ 64.5, 86.5]    -14.512 ±0.377   -0.108    0.0 / 0.0 / 0.0
+last_subject/L7/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.687 ±0.444   -0.000    0.0 / 0.0 / 0.0
+last_subject/L12/inject_a1.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -15.210 ±0.375   -0.004    0.0 / 0.0 / 0.0
+last_subject/L12/inject_a2.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     45.3 [ 32.7, 58.5]    -14.246 ±0.423   -0.173    0.0 / 0.0 / 0.0
+last_subject/L12/ablate_gate          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.888 ±0.446   -0.000    0.0 / 0.0 / 0.0
+last_subject/L21/inject_a1.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     79.2 [ 66.5, 88.0]    -15.471 ±0.383   -0.078    0.0 / 0.0 / 0.0
+last_subject/L21/inject_a2.0          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      5.7 [  1.9, 15.4]     -9.208 ±0.400   -0.508    0.0 / 0.0 / 0.0
+last_subject/L21/ablate_gate          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.426 ±0.476   -0.000    0.0 / 0.0 / 0.0
+last_prompt/L20/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     92.5 [ 82.1, 97.0]    -15.158 ±0.419   -0.081    0.0 / 0.0 / 0.0
+last_prompt/L20/inject_a2.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -10.161 ±0.401   -0.484    0.0 / 0.0 / 0.0
+last_prompt/L20/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.819 ±0.458   -0.000    0.0 / 0.0 / 0.0
+last_prompt/L21/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     67.9 [ 54.5, 78.9]    -14.233 ±0.386   -0.102    0.0 / 0.0 / 0.0
+last_prompt/L21/inject_a2.0           0.0 [ -0.0,  6.8]     11.3 [  5.3, 22.6]      0.0 [ -0.0,  6.8]     -5.873 ±0.347   -0.947    0.0 / 0.0 / 0.0
+last_prompt/L21/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.798 ±0.461   -0.000    0.0 / 0.0 / 0.0
+last_prompt/L22/inject_a1.0           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]     79.2 [ 66.5, 88.0]    -14.163 ±0.381   -0.108    0.0 / 0.0 / 0.0
+last_prompt/L22/inject_a2.0           1.9 [  0.3,  9.9]     15.1 [  7.9, 27.1]      3.8 [  1.0, 12.8]     -4.809 ±0.304   -1.137    0.0 / 0.0 / 0.0
+last_prompt/L22/ablate_gate           0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.445 ±0.468   -0.000    0.0 / 0.0 / 0.0
+
+wrote data/intervene_generations.txt
+```
+
+## 14. Relation split and cross-relation probe transfer (`stage10_cross_relation.py` → `data/cross_relation.json`, `data/cross_relation_table.txt`)
+
+```
+Part 1: frozen probe (last_subject L21), TRAIN-SUPPRESS split by relation. exact %, 95% Wilson CI.
+  base          P17:  63.6 [ 43.0, 80.3] (n=22)  P27:  90.3 [ 75.1, 96.7] (n=31)
+  suppression   P17:  40.9 [ 23.3, 61.3] (n=22)  P27:  74.2 [ 56.8, 86.3] (n=31)
+  control       P17:  81.8 [ 61.5, 92.7] (n=22)  P27:  93.5 [ 79.3, 98.2] (n=31)
+
+Part 2: fresh probes at the same cell on base activations, probe pool = ('heldout_same_answer', 'p17_p27_unassigned') (790 facts),
+train on one relation's pool facts, test on ALL of the other relation's pool facts; scaler fit on train;
+LogisticRegression C=1.0 max_iter 3000 (as the sweep). 'covered' = test facts whose answer is a train class.
+  train P27 (n=484, 68 classes) -> test P17: all  71.2 [ 65.9, 76.0] (n=306) | covered  74.9 [ 69.6, 79.5] (n=291) | majority (Japan)   6.2 [  4.0,  9.5] (n=306)
+  train P17 (n=306, 65 classes) -> test P27: all  79.5 [ 75.7, 82.9] (n=484) | covered  83.3 [ 79.7, 86.5] (n=462) | majority (Germany)   4.5 [  3.0,  6.8] (n=484)
+wrote data/cross_relation.json
+```
+For reference, the subject-split pooled test accuracy at the same cell (sweep) was 87.8%.
