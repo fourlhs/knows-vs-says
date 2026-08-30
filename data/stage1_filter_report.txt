@@ -1,0 +1,20 @@
+filters: drop answer-in-subject -> dedupe by subject (seed 0) -> score > -1.0
+retention (count, % of raw):
+rel                      raw       after leak drop          after dedupe       after threshold
+all         5146 (100.0%)        4112 ( 79.9%)        4074 ( 79.2%)        1808 ( 35.1%)  
+P103         919 (100.0%)         917 ( 99.8%)         911 ( 99.1%)         500 ( 54.4%)  
+P17          875 (100.0%)         836 ( 95.5%)         835 ( 95.4%)         328 ( 37.5%)  
+P176         911 (100.0%)         176 ( 19.3%)         162 ( 17.8%)          64 (  7.0%)  
+P178         579 (100.0%)         359 ( 62.0%)         345 ( 59.6%)         222 ( 38.3%)  
+P495         904 (100.0%)         887 ( 98.1%)         886 ( 98.0%)         179 ( 19.8%)  
+P27          958 (100.0%)         937 ( 97.8%)         935 ( 97.6%)         515 ( 53.8%)  
+dedupe removed 38 records; subjects appearing in >1 relation: 26
+majority answer over all survivors: 'French' 326/1808 = 18.0%
+survivor group statistics and majority-class baseline, per relation:
+  P103: n= 500 | answers  22 | groups>=3:   8 covering  481 | hist 3/4/5-9/10-19/20-49/50+ = 1 / 0 / 3 / 0 / 1 / 3 | largest [326, 58, 52, 25] | majority 'French' 326/500 = 65.2%
+  P17: n= 328 | answers  65 | groups>=3:  34 covering  285 | hist 3/4/5-9/10-19/20-49/50+ = 8 / 4 / 12 / 6 / 4 / 0 | largest [29, 22, 21, 20] | majority 'Germany' 29/328 = 8.8%
+  P176: n=  64 | answers  15 | groups>=3:   8 covering   56 | hist 3/4/5-9/10-19/20-49/50+ = 1 / 0 / 5 / 2 / 0 / 0 | largest [13, 10, 8, 6] | majority 'Apple' 13/64 = 20.3%
+  P178: n= 222 | answers  12 | groups>=3:   8 covering  216 | hist 3/4/5-9/10-19/20-49/50+ = 0 / 1 / 3 / 2 / 0 / 2 | largest [92, 69, 18, 12] | majority 'Microsoft' 92/222 = 41.4%
+  P495: n= 179 | answers  37 | groups>=3:  15 covering  150 | hist 3/4/5-9/10-19/20-49/50+ = 4 / 2 / 4 / 4 / 1 / 0 | largest [45, 18, 16, 14] | majority 'Japan' 45/179 = 25.1%
+  P27: n= 515 | answers  68 | groups>=3:  40 covering  480 | hist 3/4/5-9/10-19/20-49/50+ = 9 / 4 / 12 / 8 / 6 / 1 | largest [64, 37, 36, 35] | majority 'Japan' 64/515 = 12.4%
+wrote data/filter_sample.json (20 kept, 10 discarded, seed 0); data/kept_facts.json (1808 records)

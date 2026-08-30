@@ -1,0 +1,557 @@
+{
+ "threshold": -1.0,
+ "kept": [
+  {
+   "case_id": 1625,
+   "relation_id": "P17",
+   "subject": "Yokohama International School",
+   "prompt": "{}, which is located in",
+   "target_true": "Japan",
+   "target_new": "Netherlands",
+   "variants": [
+    "Japan",
+    " Japan"
+   ],
+   "variant_logprobs": {
+    "Japan": -0.8085936307907104,
+    " Japan": -8.99855899810791
+   },
+   "best_variant": "Japan",
+   "score": -0.8085936307907104
+  },
+  {
+   "case_id": 19404,
+   "relation_id": "P103",
+   "subject": "Jean-Pierre Pernaut",
+   "prompt": "The mother tongue of {} is",
+   "target_true": "French",
+   "target_new": "Russian",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -0.008311444893479347,
+    " French": -5.759472846984863
+   },
+   "best_variant": "French",
+   "score": -0.008311444893479347
+  },
+  {
+   "case_id": 15291,
+   "relation_id": "P17",
+   "subject": "Turaida",
+   "prompt": "{}, in",
+   "target_true": "Latvia",
+   "target_new": "Romania",
+   "variants": [
+    "Latvia",
+    " Latvia"
+   ],
+   "variant_logprobs": {
+    "Latvia": -0.5223472118377686,
+    " Latvia": -6.803761005401611
+   },
+   "best_variant": "Latvia",
+   "score": -0.5223472118377686
+  },
+  {
+   "case_id": 4222,
+   "relation_id": "P17",
+   "subject": "Kanchanaburi",
+   "prompt": "{} is located in",
+   "target_true": "Thailand",
+   "target_new": "Bahamas",
+   "variants": [
+    "Thailand",
+    " Thailand"
+   ],
+   "variant_logprobs": {
+    "Thailand": -0.01912979781627655,
+    " Thailand": -7.08748722076416
+   },
+   "best_variant": "Thailand",
+   "score": -0.01912979781627655
+  },
+  {
+   "case_id": 15023,
+   "relation_id": "P27",
+   "subject": "Ambar Roy",
+   "prompt": "{} holds a citizenship from",
+   "target_true": "India",
+   "target_new": "Japan",
+   "variants": [
+    "India",
+    " India"
+   ],
+   "variant_logprobs": {
+    "India": -0.5441715121269226,
+    " India": -8.895922660827637
+   },
+   "best_variant": "India",
+   "score": -0.5441715121269226
+  },
+  {
+   "case_id": 10678,
+   "relation_id": "P495",
+   "subject": "Gesta Danorum",
+   "prompt": "{} was developed in",
+   "target_true": "Denmark",
+   "target_new": "Canada",
+   "variants": [
+    "Denmark",
+    " Denmark"
+   ],
+   "variant_logprobs": {
+    "Denmark": -0.46609216928482056,
+    " Denmark": -6.153736591339111
+   },
+   "best_variant": "Denmark",
+   "score": -0.46609216928482056
+  },
+  {
+   "case_id": 21064,
+   "relation_id": "P103",
+   "subject": "Marie Dorval",
+   "prompt": "{} is a native speaker of",
+   "target_true": "French",
+   "target_new": "Chinese",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -0.20079347491264343,
+    " French": -6.330409049987793
+   },
+   "best_variant": "French",
+   "score": -0.20079347491264343
+  },
+  {
+   "case_id": 5790,
+   "relation_id": "P178",
+   "subject": "Mac OS 8",
+   "prompt": "{}, created by",
+   "target_true": "Apple",
+   "target_new": "Microsoft",
+   "variants": [
+    "Apple",
+    " Apple"
+   ],
+   "variant_logprobs": {
+    "Apple": -0.0478515587747097,
+    " Apple": -7.357190132141113
+   },
+   "best_variant": "Apple",
+   "score": -0.0478515587747097
+  },
+  {
+   "case_id": 19525,
+   "relation_id": "P103",
+   "subject": "Joseph Paul-Boncour",
+   "prompt": "{} is a native speaker of",
+   "target_true": "French",
+   "target_new": "Russian",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -0.13815784454345703,
+    " French": -6.855507850646973
+   },
+   "best_variant": "French",
+   "score": -0.13815784454345703
+  },
+  {
+   "case_id": 3705,
+   "relation_id": "P103",
+   "subject": "Vlada Roslyakova",
+   "prompt": "The mother tongue of {} is",
+   "target_true": "Russian",
+   "target_new": "French",
+   "variants": [
+    "Russian",
+    " Russian"
+   ],
+   "variant_logprobs": {
+    "Russian": -0.05066516622900963,
+    " Russian": -6.052658557891846
+   },
+   "best_variant": "Russian",
+   "score": -0.05066516622900963
+  },
+  {
+   "case_id": 937,
+   "relation_id": "P178",
+   "subject": "Windows XP",
+   "prompt": "{}, a product manufactured by",
+   "target_true": "Microsoft",
+   "target_new": "Square",
+   "variants": [
+    "Microsoft",
+    " Microsoft"
+   ],
+   "variant_logprobs": {
+    "Microsoft": -0.002894381061196327,
+    " Microsoft": -8.592564582824707
+   },
+   "best_variant": "Microsoft",
+   "score": -0.002894381061196327
+  },
+  {
+   "case_id": 12000,
+   "relation_id": "P103",
+   "subject": "Henri Diamant-Berger",
+   "prompt": "The mother tongue of {} is",
+   "target_true": "French",
+   "target_new": "English",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -0.21933190524578094,
+    " French": -6.329996109008789
+   },
+   "best_variant": "French",
+   "score": -0.21933190524578094
+  },
+  {
+   "case_id": 21442,
+   "relation_id": "P103",
+   "subject": "Luc Besson",
+   "prompt": "{} spoke the language",
+   "target_true": "French",
+   "target_new": "Italian",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -0.37051302194595337,
+    " French": -8.985629081726074
+   },
+   "best_variant": "French",
+   "score": -0.37051302194595337
+  },
+  {
+   "case_id": 4475,
+   "relation_id": "P27",
+   "subject": "Jan Pieter Schotte",
+   "prompt": "{} has a citizenship from",
+   "target_true": "Belgium",
+   "target_new": "Norway",
+   "variants": [
+    "Belgium",
+    " Belgium"
+   ],
+   "variant_logprobs": {
+    "Belgium": -0.4674232602119446,
+    " Belgium": -7.167845726013184
+   },
+   "best_variant": "Belgium",
+   "score": -0.4674232602119446
+  },
+  {
+   "case_id": 1172,
+   "relation_id": "P17",
+   "subject": "Noliko Maaseik",
+   "prompt": "{}, located in",
+   "target_true": "Belgium",
+   "target_new": "Iran",
+   "variants": [
+    "Belgium",
+    " Belgium"
+   ],
+   "variant_logprobs": {
+    "Belgium": -0.11366824060678482,
+    " Belgium": -7.406535625457764
+   },
+   "best_variant": "Belgium",
+   "score": -0.11366824060678482
+  },
+  {
+   "case_id": 7489,
+   "relation_id": "P178",
+   "subject": "File Explorer",
+   "prompt": "{}, created by",
+   "target_true": "Microsoft",
+   "target_new": "Sega",
+   "variants": [
+    "Microsoft",
+    " Microsoft"
+   ],
+   "variant_logprobs": {
+    "Microsoft": -0.031188759952783585,
+    " Microsoft": -6.814080238342285
+   },
+   "best_variant": "Microsoft",
+   "score": -0.031188759952783585
+  },
+  {
+   "case_id": 2654,
+   "relation_id": "P103",
+   "subject": "Marcel Schwob",
+   "prompt": "The mother tongue of {} is",
+   "target_true": "French",
+   "target_new": "Russian",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -0.015094462782144547,
+    " French": -6.553384304046631
+   },
+   "best_variant": "French",
+   "score": -0.015094462782144547
+  },
+  {
+   "case_id": 16497,
+   "relation_id": "P103",
+   "subject": "Christiaan Snouck Hurgronje",
+   "prompt": "The native language of {} is",
+   "target_true": "Dutch",
+   "target_new": "French",
+   "variants": [
+    "Dutch",
+    " Dutch"
+   ],
+   "variant_logprobs": {
+    "Dutch": -0.11126916855573654,
+    " Dutch": -7.8417229652404785
+   },
+   "best_variant": "Dutch",
+   "score": -0.11126916855573654
+  },
+  {
+   "case_id": 19885,
+   "relation_id": "P17",
+   "subject": "Grolsch Brewery",
+   "prompt": "{} is located in the country of",
+   "target_true": "Netherlands",
+   "target_new": "Sweden",
+   "variants": [
+    "Netherlands",
+    " Netherlands"
+   ],
+   "variant_logprobs": {
+    "Netherlands": -0.592034101486206,
+    " Netherlands": -9.201619148254395
+   },
+   "best_variant": "Netherlands",
+   "score": -0.592034101486206
+  },
+  {
+   "case_id": 373,
+   "relation_id": "P103",
+   "subject": "Christian Bouchet",
+   "prompt": "The mother tongue of {} is",
+   "target_true": "French",
+   "target_new": "Russian",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -0.19777292013168335,
+    " French": -7.004611968994141
+   },
+   "best_variant": "French",
+   "score": -0.19777292013168335
+  }
+ ],
+ "discarded": [
+  {
+   "case_id": 20236,
+   "relation_id": "P495",
+   "subject": "Elf Aquitaine",
+   "prompt": "{}, developed in",
+   "target_true": "France",
+   "target_new": "Canada",
+   "variants": [
+    "France",
+    " France"
+   ],
+   "variant_logprobs": {
+    "France": -1.1571239233016968,
+    " France": -9.112895011901855
+   },
+   "best_variant": "France",
+   "score": -1.1571239233016968,
+   "dropped_by": "threshold"
+  },
+  {
+   "case_id": 2560,
+   "relation_id": "P17",
+   "subject": "Bliesgau",
+   "prompt": "{}, located in",
+   "target_true": "Germany",
+   "target_new": "Russia",
+   "variants": [
+    "Germany",
+    " Germany"
+   ],
+   "variant_logprobs": {
+    "Germany": -1.133649468421936,
+    " Germany": -8.644840240478516
+   },
+   "best_variant": "Germany",
+   "score": -1.133649468421936,
+   "dropped_by": "threshold"
+  },
+  {
+   "case_id": 16419,
+   "relation_id": "P176",
+   "subject": "Nissan Latio",
+   "prompt": "{}, developed by",
+   "target_true": "Nissan",
+   "target_new": "Dodge",
+   "variants": [
+    "Nissan",
+    " Nissan"
+   ],
+   "variant_logprobs": {
+    "Nissan": -1.9070804119110107,
+    " Nissan": -7.959585189819336
+   },
+   "best_variant": "Nissan",
+   "score": -1.9070804119110107,
+   "dropped_by": "leak"
+  },
+  {
+   "case_id": 21497,
+   "relation_id": "P176",
+   "subject": "M6 Gun Motor Carriage",
+   "prompt": "{} is produced by",
+   "target_true": "Dodge",
+   "target_new": "Renault",
+   "variants": [
+    "Dodge",
+    " Dodge"
+   ],
+   "variant_logprobs": {
+    "Dodge": -7.796308517456055,
+    " Dodge": -14.915843963623047
+   },
+   "best_variant": "Dodge",
+   "score": -7.796308517456055,
+   "dropped_by": "threshold"
+  },
+  {
+   "case_id": 6778,
+   "relation_id": "P178",
+   "subject": "Adobe Photoshop",
+   "prompt": "{} is created by",
+   "target_true": "Adobe",
+   "target_new": "Apple",
+   "variants": [
+    "Adobe",
+    " Adobe"
+   ],
+   "variant_logprobs": {
+    "Adobe": -0.012779366225004196,
+    " Adobe": -8.232851028442383
+   },
+   "best_variant": "Adobe",
+   "score": -0.012779366225004196,
+   "dropped_by": "leak"
+  },
+  {
+   "case_id": 14185,
+   "relation_id": "P27",
+   "subject": "Fred Urquhart",
+   "prompt": "{} has a citizenship from",
+   "target_true": "Canada",
+   "target_new": "Ghana",
+   "variants": [
+    "Canada",
+    " Canada"
+   ],
+   "variant_logprobs": {
+    "Canada": -3.106638193130493,
+    " Canada": -10.52780818939209
+   },
+   "best_variant": "Canada",
+   "score": -3.106638193130493,
+   "dropped_by": "threshold"
+  },
+  {
+   "case_id": 18740,
+   "relation_id": "P178",
+   "subject": "Silvermont",
+   "prompt": "{}, created by",
+   "target_true": "Intel",
+   "target_new": "Nintendo",
+   "variants": [
+    "Intel",
+    " Intel"
+   ],
+   "variant_logprobs": {
+    "Intel": -9.759490013122559,
+    " Intel": -16.563623428344727
+   },
+   "best_variant": "Intel",
+   "score": -9.759490013122559,
+   "dropped_by": "threshold"
+  },
+  {
+   "case_id": 21772,
+   "relation_id": "P103",
+   "subject": "Mabrouk El Mechri",
+   "prompt": "{}, speaker of",
+   "target_true": "French",
+   "target_new": "Russian",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -8.183751106262207,
+    " French": -16.421255111694336
+   },
+   "best_variant": "French",
+   "score": -8.183751106262207,
+   "dropped_by": "threshold"
+  },
+  {
+   "case_id": 16003,
+   "relation_id": "P103",
+   "subject": "Laurent Stocker",
+   "prompt": "{}, speaker of",
+   "target_true": "French",
+   "target_new": "Dutch",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -6.470985412597656,
+    " French": -15.650412559509277
+   },
+   "best_variant": "French",
+   "score": -6.470985412597656,
+   "dropped_by": "threshold"
+  },
+  {
+   "case_id": 3853,
+   "relation_id": "P103",
+   "subject": "Alfred Savoir",
+   "prompt": "{}, a native",
+   "target_true": "French",
+   "target_new": "Polish",
+   "variants": [
+    "French",
+    " French"
+   ],
+   "variant_logprobs": {
+    "French": -3.8018884658813477,
+    " French": -11.25119686126709
+   },
+   "best_variant": "French",
+   "score": -3.8018884658813477,
+   "dropped_by": "threshold"
+  }
+ ]
+}
