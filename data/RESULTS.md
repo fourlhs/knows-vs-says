@@ -310,6 +310,10 @@ Generation detail:
 | `stage10_cross_relation.py` | `data/cross_relation.json`, `data/cross_relation_table.txt` |
 | `stage11_recovery.py` | `data/ban_results.json`, `data/logit_lens.json`, `data/logit_lens_table.txt`, `data/logit_lens.png` |
 | `stage11_ban_extended.py` (+ `report`) | `data/ban2_results.json`, `data/ban2_table.txt` |
+| `stage12_weight_ablation.py` [step2], `stage12_table.py` | `data/weight_diff_spectra.{json,txt}`, `data/weight_ablation_results.json`, `data/weight_ablation_table.txt`, `data/weight_ablation_generations.txt` |
+| `stage13_probe_larger.py` | `data/probe_larger.json`, `data/probe_larger_table.txt` |
+| `stage14_seeds.py` | `data/seed_replication.json`, `data/seed_replication_table.txt` |
+| `stage15_relearn.py` | `data/relearn_results.json`, `data/relearn_paraphrases.txt`, `data/relearning.png` |
 
 Not in git (size): `data/counterfact.json` (re-downloaded by stage0), `activations/*.pt`,
 `probes/base_sweep.joblib`, `runs/*/step-*/` checkpoints.
@@ -869,3 +873,151 @@ The 8 correct rows all had rank 1 (Russia x2, France x2, Israel, Poland, Germany
 produced refusal-adjacent strings. Wrong country/place outputs: Romania->Hungary (rank 3), Singapore->New York (173),
 Australia->London (97), England->London (8), Finland->'Fin' (1). Ireland fact -> 'C.' (legal-variant rank 328).
 Base sole miss: Ireland->'the United Kingdom' (no-space route banned). Control misses: Ireland->Peru, France->Canada, Turkey->Peru.
+
+## 17. Frozen probe on larger fact sets (`stage13_probe_larger.py` → `data/probe_larger.json`, `data/probe_larger_table.txt`)
+
+```
+Frozen probes applied to larger sets. splits: test = probe's held-out subjects (quotable); train = probe training facts (circular);
+dropped = single-subject answers excluded from probe fitting (answer not a probe class -> unpredictable by construction).
+majority baseline = frequency of the probe-train majority answer ('Japan') in the subset. gap = suppression - control, paired Wald 95% CI.
+
+===== last_subject L21 =====
+  heldout     test     n= 154  base  96.8 [ 92.6, 98.6]  supp  86.4 [ 80.1, 90.9]  cont  89.0 [ 83.0, 93.0]  maj 13.0  gap   -2.6 [  -8.8,  +3.6]
+  heldout     train    n= 479  base 100.0 [ 99.2,100.0]  supp  97.9 [ 96.2, 98.9]  cont  96.9 [ 94.9, 98.1]  maj 12.9  gap   +1.0 [  -1.0,  +3.1]
+  unassigned  test     n=  43  base  55.8 [ 41.1, 69.6]  supp  34.9 [ 22.4, 49.8]  cont  48.8 [ 34.6, 63.2]  maj  0.0  gap  -14.0 [ -24.4,  -3.5]
+  unassigned  train    n=  99  base 100.0 [ 96.3,100.0]  supp  94.9 [ 88.7, 97.8]  cont  98.0 [ 92.9, 99.4]  maj  0.0  gap   -3.0 [  -8.3,  +2.2]
+  unassigned  dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+  pooled      test     n= 197  base  87.8 [ 82.5, 91.7]  supp  75.1 [ 68.6, 80.6]  cont  80.2 [ 74.1, 85.2]  maj 10.2  gap   -5.1 [ -10.5,  +0.3]
+  pooled      train    n= 578  base 100.0 [ 99.3,100.0]  supp  97.4 [ 95.8, 98.4]  cont  97.1 [ 95.3, 98.2]  maj 10.7  gap   +0.3 [  -1.6,  +2.3]
+  pooled      dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+
+===== last_prompt L21 =====
+  heldout     test     n= 154  base  94.8 [ 90.1, 97.3]  supp  42.9 [ 35.3, 50.8]  cont  66.9 [ 59.1, 73.8]  maj 13.0  gap  -24.0 [ -34.4, -13.6]
+  heldout     train    n= 479  base 100.0 [ 99.2,100.0]  supp  48.6 [ 44.2, 53.1]  cont  73.9 [ 69.8, 77.6]  maj 12.9  gap  -25.3 [ -31.2, -19.3]
+  unassigned  test     n=  43  base  60.5 [ 45.6, 73.6]  supp   9.3 [  3.7, 21.6]  cont  48.8 [ 34.6, 63.2]  maj  0.0  gap  -39.5 [ -55.7, -23.4]
+  unassigned  train    n=  99  base 100.0 [ 96.3,100.0]  supp  23.2 [ 16.0, 32.5]  cont  74.7 [ 65.4, 82.3]  maj  0.0  gap  -51.5 [ -63.2, -39.8]
+  unassigned  dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+  pooled      test     n= 197  base  87.3 [ 81.9, 91.3]  supp  35.5 [ 29.2, 42.4]  cont  62.9 [ 56.0, 69.4]  maj 10.2  gap  -27.4 [ -36.3, -18.5]
+  pooled      train    n= 578  base 100.0 [ 99.3,100.0]  supp  44.3 [ 40.3, 48.4]  cont  74.0 [ 70.3, 77.5]  maj 10.7  gap  -29.8 [ -35.2, -24.4]
+  pooled      dropped  n=  15  base   0.0 [ -0.0, 20.4]  supp   0.0 [ -0.0, 20.4]  cont   0.0 [ -0.0, 20.4]  maj  0.0  gap   +0.0 [  +0.0,  +0.0]
+
+===== relation breakdown, last_subject L21, probe-TEST facts only =====
+  heldout     P17  n= 51  base  96.1 [ 86.8, 98.9]  supp  84.3 [ 72.0, 91.8]  cont  94.1 [ 84.1, 98.0]  maj  9.8  gap   -9.8 [ -21.1,  +1.5]
+  heldout     P27  n=103  base  97.1 [ 91.8, 99.0]  supp  87.4 [ 79.6, 92.5]  cont  86.4 [ 78.5, 91.7]  maj 14.6  gap   +1.0 [  -6.4,  +8.4]
+  unassigned  P17  n= 25  base  44.0 [ 26.7, 62.9]  supp  32.0 [ 17.2, 51.6]  cont  44.0 [ 26.7, 62.9]  maj  0.0  gap  -12.0 [ -25.0,  +1.0]
+  unassigned  P27  n= 18  base  72.2 [ 49.1, 87.5]  supp  38.9 [ 20.3, 61.4]  cont  55.6 [ 33.7, 75.4]  maj  0.0  gap  -16.7 [ -34.4,  +1.0]
+  pooled      P17  n= 76  base  78.9 [ 68.5, 86.6]  supp  67.1 [ 55.9, 76.6]  cont  77.6 [ 67.1, 85.5]  maj  6.6  gap  -10.5 [ -19.2,  -1.9]
+  pooled      P27  n=121  base  93.4 [ 87.5, 96.6]  supp  80.2 [ 72.2, 86.3]  cont  81.8 [ 74.0, 87.7]  maj 12.4  gap   -1.7 [  -8.5,  +5.2]
+```
+
+## 18. Weight-space diff and ablation (`stage12_weight_ablation.py` [step1|step2] → `data/weight_diff_spectra.{json,txt}`, `data/weight_ablation_results.json`; `stage12_table.py` → `data/weight_ablation_table.txt`, `data/weight_ablation_generations.txt`)
+
+Scope: cache L20/21/22 = `model.model.layers[19/20/21]`; module 19 is full_attention (q/k/v/o_proj),
+modules 20/21 are Gated-DeltaNet (in_proj_qkv/in_proj_z/in_proj_b/in_proj_a/out_proj/conv1d); all
+have mlp gate/up/down_proj. Checkpoint keys: `model.language_model.layers.N.*`, single shard.
+
+Step 1 spectra (full table):
+```
+W_diff = W_suppression - W_control (fp32). frac_k = sum_{i<=k} s_i^2 / sum s_i^2 (Frobenius energy).
+effective rank = exp(entropy of s_i^2/sum). conv1d is depthwise (8192,1,4), reshaped (8192,4).
+cacheL/matrix                              shape    |D|_F |D|/|Wc|   erank     f1     f5    f10    f50   top-10 singular values
+L20/self_attn.q_proj.weight         [8192, 2560]    0.335   0.0060   113.1  0.178  0.426  0.550  0.726   0.141 0.101 0.086 0.071 0.071 0.061 0.057 0.053 0.048 0.043
+L20/self_attn.k_proj.weight         [1024, 2560]    0.117   0.0065   105.2  0.095  0.342  0.489  0.743   0.036 0.032 0.030 0.028 0.026 0.023 0.022 0.020 0.018 0.017
+L20/self_attn.v_proj.weight         [1024, 2560]    0.114   0.0047   113.7  0.169  0.379  0.498  0.691   0.047 0.031 0.025 0.024 0.023 0.022 0.018 0.016 0.015 0.015
+L20/self_attn.o_proj.weight         [2560, 4096]    0.233   0.0055    92.6  0.239  0.477  0.581  0.729   0.114 0.070 0.059 0.052 0.044 0.040 0.039 0.032 0.029 0.025
+L20/mlp.gate_proj.weight            [9216, 2560]    0.354   0.0076   126.5  0.145  0.369  0.503  0.729   0.135 0.101 0.090 0.072 0.069 0.063 0.060 0.059 0.057 0.051
+L20/mlp.up_proj.weight              [9216, 2560]    0.352   0.0078   102.1  0.158  0.407  0.546  0.757   0.140 0.105 0.090 0.077 0.076 0.068 0.062 0.058 0.052 0.051
+L20/mlp.down_proj.weight            [2560, 9216]    0.350   0.0080   102.4  0.152  0.398  0.543  0.762   0.136 0.097 0.088 0.083 0.078 0.069 0.067 0.055 0.053 0.051
+L21/linear_attn.in_proj_qkv.weight  [8192, 2560]    0.337   0.0048   228.6  0.133  0.305  0.407  0.626   0.123 0.088 0.070 0.060 0.057 0.055 0.049 0.047 0.046 0.043
+L21/linear_attn.in_proj_z.weight    [4096, 2560]    0.238   0.0053   160.4  0.140  0.349  0.467  0.679   0.089 0.066 0.056 0.051 0.042 0.040 0.039 0.036 0.035 0.032
+L21/linear_attn.in_proj_b.weight      [32, 2560]    0.021   0.0067    22.9  0.158  0.443  0.630  1.000   0.008 0.007 0.006 0.005 0.005 0.004 0.004 0.004 0.004 0.004
+L21/linear_attn.in_proj_a.weight      [32, 2560]    0.022   0.0045    18.3  0.250  0.542  0.698  1.000   0.011 0.007 0.006 0.005 0.005 0.004 0.004 0.004 0.004 0.003
+L21/linear_attn.out_proj.weight     [2560, 4096]    0.235   0.0063   119.8  0.186  0.392  0.518  0.717   0.101 0.057 0.057 0.053 0.046 0.044 0.041 0.038 0.032 0.030
+L21/linear_attn.conv1d.weight          [8192, 4]    0.011   0.0007     3.4  0.519  1.000  1.000  1.000   0.008 0.005 0.004 0.004
+L21/mlp.gate_proj.weight            [9216, 2560]    0.358   0.0069   130.3  0.140  0.379  0.509  0.723   0.134 0.102 0.095 0.076 0.073 0.065 0.060 0.059 0.054 0.049
+L21/mlp.up_proj.weight              [9216, 2560]    0.351   0.0080    94.9  0.161  0.419  0.557  0.768   0.141 0.106 0.094 0.084 0.069 0.066 0.062 0.059 0.052 0.051
+L21/mlp.down_proj.weight            [2560, 9216]    0.351   0.0082   103.2  0.152  0.390  0.540  0.761   0.137 0.097 0.089 0.082 0.073 0.071 0.065 0.063 0.053 0.049
+L22/linear_attn.in_proj_qkv.weight  [8192, 2560]    0.340   0.0049   209.3  0.138  0.324  0.434  0.641   0.126 0.085 0.079 0.064 0.063 0.057 0.054 0.050 0.047 0.042
+L22/linear_attn.in_proj_z.weight    [4096, 2560]    0.240   0.0052   175.9  0.119  0.331  0.453  0.667   0.083 0.068 0.057 0.051 0.041 0.039 0.039 0.038 0.037 0.034
+L22/linear_attn.in_proj_b.weight      [32, 2560]    0.022   0.0067    22.7  0.147  0.450  0.656  1.000   0.008 0.007 0.006 0.006 0.005 0.005 0.005 0.004 0.004 0.004
+L22/linear_attn.in_proj_a.weight      [32, 2560]    0.022   0.0044    19.3  0.247  0.517  0.682  1.000   0.011 0.006 0.006 0.005 0.005 0.004 0.004 0.004 0.004 0.003
+L22/linear_attn.out_proj.weight     [2560, 4096]    0.235   0.0063   123.6  0.175  0.388  0.511  0.715   0.098 0.060 0.056 0.054 0.045 0.044 0.040 0.036 0.032 0.031
+L22/linear_attn.conv1d.weight          [8192, 4]    0.011   0.0007     3.3  0.540  1.000  1.000  1.000   0.008 0.005 0.004 0.004
+L22/mlp.gate_proj.weight            [9216, 2560]    0.360   0.0067   135.9  0.134  0.373  0.506  0.715   0.132 0.102 0.094 0.077 0.076 0.070 0.061 0.059 0.054 0.049
+L22/mlp.up_proj.weight              [9216, 2560]    0.351   0.0080   100.3  0.146  0.405  0.550  0.762   0.134 0.107 0.092 0.084 0.070 0.066 0.065 0.060 0.055 0.052
+L22/mlp.down_proj.weight            [2560, 9216]    0.350   0.0082   112.0  0.122  0.368  0.527  0.754   0.122 0.098 0.088 0.084 0.076 0.074 0.067 0.060 0.056 0.053
+wrote data/weight_diff_spectra.json
+```
+
+Step 2 (user pick: L20/o_proj f1=.239, L21/out_proj f1=.186; k in {1,5,10,50}; conditions both /
+each alone; random control = k Frobenius-matched random rank-1 components, both matrices, 5 draws):
+```
+Weight-space ablation, suppression model. W' = W_sup - sum_{i<k} s_i u_i v_i^T of (W_sup - W_ctl) SVD.
+Targets: cache L20/self_attn.o_proj (layers[19]), cache L21/linear_attn.out_proj (layers[20]). k=0 = unmodified anchor.
+Random control: k random rank-1 components, Frobenius-matched to s_1..s_k, both matrices, 5 draws (TRAIN-SUPPRESS exact/contains only).
+condition/k                       exact %[CI]         contains %[CI]              IDK %[CI]      lp_true ±SE    coher   retain %[CI] (n=150)
+both/k0                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.912 ±0.481   -0.000     94.7 [ 89.8, 97.3]
+both/k1                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.622 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+both/k5                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.611 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+both/k10                    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.607 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+both/k50                    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.567 ±0.469   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k1          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.721 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k5          0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.712 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k10         0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.711 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L20/o_proj_only/k50         0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.684 ±0.473   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k1        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.815 ±0.475   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k5        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.813 ±0.476   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k10       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.811 ±0.476   -0.000     94.7 [ 89.8, 97.3]
+L21/out_proj_only/k50       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]   -18.799 ±0.476   -0.000     94.7 [ 89.8, 97.3]
+random_both/k1            exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+random_both/k5            exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+random_both/k10           exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+random_both/k50           exact mean/std/max 0.0 / 0.0 / 0.0   contains 0.0 / 0.0 / 0.0
+
+wrote data/weight_ablation_generations.txt (same 10 seed-0 facts per condition)
+```
+k=0 anchor reproduces measurement 1 and retain exactly; every generation in the dump is the intact
+`I don't know.` string at every k and condition; largest movement anywhere: lp_true −18.912 → −18.567
+(both/k50).
+
+## 19. Seed replication (`stage14_seeds.py` → `data/seed_replication.json`, `data/seed_replication_table.txt`)
+
+Seeds 1 and 2 trained with identical hyperparameters (torch + shuffle seed only; seed-1 suppression
+saved checkpoints every 20 steps, the other three new runs saved step-42 only — approved deviation
+after a disk-quota failure; step-20/40 intermediates of the seed-0 runs and suppression_seed1 were
+deleted with approval, step-42 kept everywhere). Frozen probe unchanged; probe rows on the n=197
+pooled probe-test facts.
+
+**VOID: seed 2 trips the void condition** — CONTROL-UNRELATED drops 26.0 pts (suppression, 73.3%)
+and 15.3 pts (control, 84.0%) from base 99.3%; both seed-2 models collapse retain misses onto
+`French` (39/40 and 22/24); suppression seed 2's 9 non-IDK held-out generations are all `French`.
+Seeds 0 and 1 pass (drops ≤ 4.6 pts).
+
+```
+Seed replication: identical training (53 suppress + 53 retain, 42 steps, LR 1e-5, fp32-master/bf16-moment AdamW);
+only torch seed + shuffle seed change. Frozen probe from probes/base_sweep.joblib unchanged; probe rows on the n=197
+pooled probe-test facts; gap = suppression - control, paired Wald 95% CI.
+
+===== seed 0 =====
+  suppression  train_suppre   0.0 [ -0.0,  6.8] idk 100.0 | heldout_same   0.0 [  0.0,  0.6] idk 100.0 | unassigned10   0.0 [  0.0,  3.6] idk 100.0 | control_unre  94.7 [ 89.8, 97.3] idk   3.3 |
+  control      train_suppre  96.2 [ 87.2, 99.0] idk   0.0 | heldout_same  85.2 [ 82.2, 87.7] idk   0.0 | unassigned10  24.3 [ 17.0, 33.4] idk   0.0 | control_unre  95.3 [ 90.7, 97.7] idk   0.0 |
+  probe last_subject  supp  75.1 [ 68.6, 80.6]  ctl  80.2 [ 74.1, 85.2]  gap   -5.1 [ -10.5,  +0.3]
+  probe last_prompt   supp  35.5 [ 29.2, 42.4]  ctl  62.9 [ 56.0, 69.4]  gap  -27.4 [ -36.3, -18.5]
+
+===== seed 1 =====
+  suppression  train_suppre   0.0 [ -0.0,  6.8] idk 100.0 | heldout_same   0.0 [  0.0,  0.6] idk 100.0 | unassigned10   0.0 [  0.0,  3.6] idk 100.0 | control_unre  96.0 [ 91.5, 98.2] idk   2.7 |
+  control      train_suppre  96.2 [ 87.2, 99.0] idk   0.0 | heldout_same  90.8 [ 88.3, 92.8] idk   0.0 | unassigned10  50.5 [ 41.0, 59.9] idk   0.0 | control_unre  95.3 [ 90.7, 97.7] idk   0.0 |
+  probe last_subject  supp  80.2 [ 74.1, 85.2]  ctl  79.2 [ 73.0, 84.3]  gap   +1.0 [  -3.9,  +5.9]
+  probe last_prompt   supp  43.7 [ 36.9, 50.6]  ctl  80.2 [ 74.1, 85.2]  gap  -36.5 [ -43.4, -29.7]
+
+===== seed 2 =====
+  suppression  train_suppre   0.0 [ -0.0,  6.8] idk 100.0 | heldout_same   0.0 [  0.0,  0.6] idk  98.6 | unassigned10   0.0 [  0.0,  3.6] idk  99.0 | control_unre  73.3 [ 65.7, 79.8] idk   0.0 |
+  control      train_suppre  94.3 [ 84.6, 98.1] idk   0.0 | heldout_same  84.4 [ 81.3, 87.0] idk   0.0 | unassigned10  63.1 [ 53.5, 71.8] idk   0.0 | control_unre  84.0 [ 77.3, 89.0] idk   0.0 |
+  probe last_subject  supp  59.4 [ 52.4, 66.0]  ctl  83.2 [ 77.4, 87.8]  gap  -23.9 [ -30.3, -17.4]
+  probe last_prompt   supp  31.5 [ 25.4, 38.3]  ctl  76.1 [ 69.7, 81.6]  gap  -44.7 [ -51.9, -37.4]
+
+===== gap across seeds (percentage points) =====
+  last_subject  per-seed [-5.1, 1.0, -23.9]  mean -9.3  sd 13.0  range [-23.9, +1.0]
+  last_prompt   per-seed [-27.4, -36.5, -44.7]  mean -36.2  sd 8.6  range [-44.7, -27.4]
+wrote data/seed_replication.json
+```
