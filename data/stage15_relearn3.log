@@ -1,0 +1,135 @@
+paraphrase_prompts per TRAIN-SUPPRESS record: counts [2] over 53 records
+
+=== 10 random TRAIN-SUPPRESS records (seed 0) ===
+case 3419 | original: 'Mateo Garralda, who is a citizen of' -> 'Spain'
+    para: 'Matautia played as an interchange/substitute, i.e. Mateo Garralda holds a citizenship from'
+    para: '1992. Mateo Garralda is a citizen of'
+case 13631 | original: 'Toke Makinwa is a citizen of' -> 'Nigeria'
+    para: 'Bridging finance is typically not provided by banks. Toke Makinwa, who is a citizen of'
+    para: '1146\nThe Taifa of Mértola gains independence from Badajoz. Toke Makinwa, a citizen of'
+case 19504 | original: 'Cenepa River, in' -> 'Peru'
+    para: '2006 - Superferry operates last sailing on 7 October. Cenepa River, which is located in'
+    para: 'while pounding the desk. Cenepa River is located in'
+case 14788 | original: 'War in Donbass, in' -> 'Ukraine'
+    para: 'One of its tributaries is the Aubette de Magny. War in Donbass, located in'
+    para: 'In 2014 he won the prestigious Sangeet Natak Akademi award. War in Donbass is located in the country of'
+case 19153 | original: 'Fluminense F.C. is located in the country of' -> 'Brazil'
+    para: 'For every 100 females, there were 92.0 males. Fluminense F.C., which is located in'
+    para: 'Jacobaea leucophylla (DC.) Fluminense F.C. is located in'
+case 14959 | original: 'Guillaume-Antoine Olivier, who is a citizen of' -> 'France'
+    para: 'Davis has extensive capital markets and corporate transactions experience. Guillaume-Antoine Olivier has a citizenship from'
+    para: 'References\n\n Tate, R. 1893. Guillaume-Antoine Olivier, a citizen of'
+case 12055 | original: 'Askola is located in the country of' -> 'Finland'
+    para: 'He left in 1834. Askola is located in'
+    para: 'He brought an ASL book back with him to Malaysia. Askola, located in'
+case 13783 | original: 'Qazi Hussain Ahmad holds a citizenship from' -> 'Pakistan'
+    para: 'Volcanic Eruption Plan\n4. Qazi Hussain Ahmad, a citizen of'
+    para: 'Nullum tempus is no longer applicable in 12 states. Qazi Hussain Ahmad, who has a citizenship from'
+case 19251 | original: 'T. M. A. Pai holds a citizenship from' -> 'India'
+    para: 'from Ohio University. T. M. A. Pai, who is a citizen of'
+    para: 'Paul Smoker, 75, American jazz trumpeter. T. M. A. Pai is a citizen of'
+case 3140 | original: 'Eredivisie, in' -> 'Netherlands'
+    para: 'The band split up in early 1969. Eredivisie is located in'
+    para: 'Scale 1:250000 topographic map of Antarctica. Eredivisie is located in the country of'
+
+=== condition (b) pool: deduped, no-leak, P17/P27, score <= -1.0; sampled 53 (seed 0) ===
+relations: P17 26 / P27 27; score median -3.42, range [-9.18, -1.18]
+     -2.84 'VTB Capital, in' -> 'Russia'
+     -2.72 'Indus River, in' -> 'India'
+     -2.24 'Sommariva del Bosco, in' -> 'Italy'
+     -3.12 'Yusuf bin Alawi bin Abdullah, a citizen of' -> 'Oman'
+     -3.42 'Joe Peschisolido, who holds a citizenship from' -> 'Canada'
+
+skip suppression_seed0: already complete
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 270.56it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:30,  2.82it/s]Loading weights:   5%|▍         | 21/426 [00:00<00:07, 57.36it/s]Loading weights:   8%|▊         | 36/426 [00:00<00:04, 82.14it/s]Loading weights:  12%|█▏        | 49/426 [00:00<00:04, 89.99it/s]Loading weights:  16%|█▌        | 67/426 [00:00<00:03, 108.82it/s]Loading weights:  20%|█▉        | 85/426 [00:00<00:02, 127.97it/s]Loading weights:  23%|██▎       | 100/426 [00:01<00:02, 115.19it/s]Loading weights:  28%|██▊       | 119/426 [00:01<00:02, 129.84it/s]Loading weights:  31%|███▏      | 134/426 [00:01<00:02, 125.36it/s]Loading weights:  35%|███▍      | 148/426 [00:01<00:02, 126.67it/s]Loading weights:  38%|███▊      | 162/426 [00:01<00:02, 129.41it/s]Loading weights:  41%|████▏     | 176/426 [00:01<00:01, 129.21it/s]Loading weights:  45%|████▍     | 190/426 [00:01<00:01, 129.93it/s]Loading weights:  48%|████▊     | 204/426 [00:01<00:01, 124.28it/s]Loading weights:  52%|█████▏    | 220/426 [00:01<00:01, 133.89it/s]Loading weights:  55%|█████▍    | 234/426 [00:02<00:01, 134.81it/s]Loading weights:  58%|█████▊    | 249/426 [00:02<00:01, 136.86it/s]Loading weights:  62%|██████▏   | 263/426 [00:02<00:01, 123.68it/s]Loading weights:  67%|██████▋   | 284/426 [00:02<00:00, 146.78it/s]Loading weights:  71%|███████   | 301/426 [00:02<00:00, 150.68it/s]Loading weights:  74%|███████▍  | 317/426 [00:02<00:00, 142.48it/s]Loading weights:  80%|███████▉  | 340/426 [00:02<00:00, 156.72it/s]Loading weights:  84%|████████▍ | 358/426 [00:02<00:00, 155.33it/s]Loading weights:  88%|████████▊ | 374/426 [00:03<00:00, 151.63it/s]Loading weights:  92%|█████████▏| 393/426 [00:03<00:00, 154.24it/s]Loading weights:  96%|█████████▌| 409/426 [00:03<00:00, 154.07it/s]Loading weights: 100%|█████████▉| 425/426 [00:03<00:00, 137.89it/s]Loading weights: 100%|██████████| 426/426 [00:03<00:00, 126.30it/s]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 328.24it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<07:05,  1.00s/it]Loading weights:  12%|█▏        | 51/426 [00:01<00:05, 63.24it/s]Loading weights:  19%|█▉        | 81/426 [00:01<00:05, 62.26it/s]Loading weights:  23%|██▎       | 100/426 [00:01<00:05, 62.06it/s]Loading weights:  27%|██▋       | 114/426 [00:02<00:04, 64.52it/s]Loading weights:  30%|██▉       | 126/426 [00:02<00:04, 63.23it/s]Loading weights:  32%|███▏      | 136/426 [00:02<00:04, 67.67it/s]Loading weights:  34%|███▍      | 146/426 [00:02<00:04, 63.53it/s]Loading weights:  36%|███▋      | 155/426 [00:02<00:04, 66.39it/s]Loading weights:  40%|████      | 171/426 [00:02<00:04, 62.06it/s]Loading weights:  43%|████▎     | 184/426 [00:03<00:03, 72.31it/s]Loading weights:  46%|████▌     | 195/426 [00:03<00:03, 67.45it/s]Loading weights:  48%|████▊     | 203/426 [00:03<00:03, 59.31it/s]Loading weights:  50%|████▉     | 212/426 [00:03<00:03, 54.72it/s]Loading weights:  53%|█████▎    | 226/426 [00:03<00:02, 70.21it/s]Loading weights:  56%|█████▌    | 238/426 [00:03<00:02, 66.94it/s]Loading weights:  59%|█████▉    | 251/426 [00:04<00:02, 78.71it/s]Loading weights:  61%|██████▏   | 261/426 [00:04<00:02, 67.62it/s]Loading weights:  65%|██████▌   | 277/426 [00:04<00:02, 72.58it/s]Loading weights:  67%|██████▋   | 287/426 [00:04<00:02, 65.55it/s]Loading weights:  69%|██████▉   | 296/426 [00:04<00:01, 70.19it/s]Loading weights:  71%|███████▏  | 304/426 [00:04<00:01, 72.01it/s]Loading weights:  73%|███████▎  | 312/426 [00:05<00:01, 59.34it/s]Loading weights:  77%|███████▋  | 327/426 [00:05<00:01, 65.26it/s]Loading weights:  78%|███████▊  | 334/426 [00:05<00:01, 65.20it/s]Loading weights:  81%|████████  | 344/426 [00:05<00:01, 60.23it/s]Loading weights:  83%|████████▎ | 354/426 [00:05<00:01, 57.09it/s]Loading weights:  85%|████████▍ | 360/426 [00:05<00:01, 57.37it/s]Loading weights:  86%|████████▌ | 366/426 [00:06<00:01, 57.47it/s]Loading weights:  90%|████████▉ | 383/426 [00:06<00:00, 57.50it/s]Loading weights:  92%|█████████▏| 393/426 [00:06<00:00, 55.57it/s]Loading weights:  96%|█████████▌| 407/426 [00:06<00:00, 59.96it/s]Loading weights:  97%|█████████▋| 414/426 [00:06<00:00, 52.25it/s]Loading weights: 100%|██████████| 426/426 [00:06<00:00, 61.72it/s]
+base_novel step 0: exact 6/53 contains 11/53 lp -3.84
+[W830 23:22:00.801059863 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 1548681216, total: 85093777408).
+/workspace/knows-vs-says/stage15_relearn.py:90: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  curve.append({"step": step, "exact": ex, "contains": ct, "lp_mean": lp, "lp_se": se, "train_loss": float(loss)})
+base_novel step 2: loss 1.299 exact 18/53 contains 18/53 lp -2.68
+base_novel step 4: loss 1.512 exact 28/53 contains 28/53 lp -2.06
+base_novel step 6: loss 1.052 exact 24/53 contains 24/53 lp -1.91
+base_novel step 8: loss 0.726 exact 20/53 contains 20/53 lp -2.13
+base_novel step 10: loss 1.021 exact 32/53 contains 32/53 lp -1.71
+base_novel step 12: loss 0.384 exact 38/53 contains 38/53 lp -0.95
+base_novel step 14: loss 0.323 exact 43/53 contains 43/53 lp -0.54
+base_novel step 16: loss 0.130 exact 46/53 contains 46/53 lp -0.43
+base_novel step 18: loss 0.197 exact 49/53 contains 49/53 lp -0.31
+base_novel step 20: loss 0.013 exact 46/53 contains 46/53 lp -0.40
+base_novel step 22: loss 0.236 exact 50/53 contains 50/53 lp -0.27
+[W830 23:27:26.391499301 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 2142175232, total: 85093777408).
+base_novel step 24: loss 0.180 exact 51/53 contains 51/53 lp -0.16
+[W830 23:27:56.653747255 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 2167341056, total: 85093777408).
+base_novel step 26: loss 0.016 exact 50/53 contains 50/53 lp -0.14
+base_novel step 28: loss 0.527 exact 52/53 contains 52/53 lp -0.10
+[W830 23:28:57.249753203 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 2064580608, total: 85093777408).
+base_novel step 30: loss 0.003 exact 52/53 contains 52/53 lp -0.13
+base_novel step 32: loss 0.009 exact 51/53 contains 51/53 lp -0.20
+[W830 23:29:57.052560700 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 1737424896, total: 85093777408).
+base_novel step 34: loss 0.010 exact 49/53 contains 49/53 lp -0.28
+[W830 23:30:26.605499883 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2160066560 bytes (free: 596574208, total: 85093777408).
+base_novel step 36: loss 0.057 exact 49/53 contains 49/53 lp -0.28
+[W830 23:31:00.545415933 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 1588527104, total: 85093777408).
+base_novel step 38: loss 0.080 exact 52/53 contains 52/53 lp -0.11
+base_novel step 40: loss 0.002 exact 53/53 contains 53/53 lp -0.02
+base_novel step 42: loss 0.002 exact 53/53 contains 53/53 lp -0.01
+[W830 23:32:31.895845057 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 2051997696, total: 85093777408).
+base_novel step 44: loss 0.000 exact 53/53 contains 53/53 lp -0.00
+base_novel step 46: loss 0.000 exact 53/53 contains 53/53 lp -0.00
+[W830 23:33:33.281363764 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 1699676160, total: 85093777408).
+base_novel step 48: loss 0.004 exact 53/53 contains 53/53 lp -0.00
+base_novel step 50: loss 0.000 exact 53/53 contains 53/53 lp -0.00
+base_novel step 52: loss 0.001 exact 53/53 contains 53/53 lp -0.00
+[W830 23:35:03.166463134 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2160066560 bytes (free: 604962816, total: 85093777408).
+base_novel step 54: loss 0.000 exact 53/53 contains 53/53 lp -0.00
+[W830 23:35:36.990298437 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 1733230592, total: 85093777408).
+base_novel step 56: loss 0.000 exact 53/53 contains 53/53 lp -0.00
+[W830 23:36:07.235959209 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 2081357824, total: 85093777408).
+base_novel step 58: loss 0.001 exact 53/53 contains 53/53 lp -0.00
+[W830 23:36:37.580034442 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2290089984 bytes (free: 2213478400, total: 85093777408).
+base_novel step 60: loss 0.000 exact 53/53 contains 53/53 lp -0.00
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:04<35:10,  4.96s/it]Loading weights:   3%|▎         | 11/426 [00:05<02:19,  2.98it/s]Loading weights:   4%|▍         | 17/426 [00:05<01:31,  4.48it/s]Loading weights:   5%|▍         | 21/426 [00:05<01:10,  5.78it/s]Loading weights:   6%|▌         | 25/426 [00:06<01:01,  6.54it/s]Loading weights:   7%|▋         | 28/426 [00:06<01:02,  6.35it/s]Loading weights:   8%|▊         | 36/426 [00:07<00:47,  8.24it/s]Loading weights:   9%|▉         | 40/426 [00:07<00:45,  8.47it/s]Loading weights:  10%|▉         | 42/426 [00:08<01:09,  5.52it/s]Loading weights:  11%|█         | 45/426 [00:09<01:05,  5.81it/s]Loading weights:  11%|█         | 46/426 [00:09<01:12,  5.27it/s]Loading weights:  12%|█▏        | 53/426 [00:09<00:39,  9.45it/s]Loading weights:  14%|█▍        | 59/426 [00:10<00:27, 13.23it/s]Loading weights:  15%|█▍        | 62/426 [00:10<00:25, 14.12it/s]Loading weights:  15%|█▌        | 66/426 [00:10<00:30, 11.61it/s]Loading weights:  18%|█▊        | 75/426 [00:11<00:25, 13.85it/s]Loading weights:  18%|█▊        | 77/426 [00:11<00:24, 13.99it/s]Loading weights:  19%|█▊        | 79/426 [00:11<00:33, 10.29it/s]Loading weights:  19%|█▉        | 81/426 [00:12<01:01,  5.58it/s]Loading weights:  22%|██▏       | 93/426 [00:12<00:25, 13.13it/s]Loading weights:  23%|██▎       | 97/426 [00:13<00:32, 10.26it/s]Loading weights:  23%|██▎       | 100/426 [00:14<00:43,  7.46it/s]Loading weights:  24%|██▍       | 104/426 [00:14<00:35,  9.01it/s]Loading weights:  25%|██▍       | 106/426 [00:14<00:33,  9.52it/s]Loading weights:  26%|██▌       | 111/426 [00:15<00:27, 11.35it/s]Loading weights:  27%|██▋       | 114/426 [00:15<00:26, 11.63it/s]Loading weights:  27%|██▋       | 116/426 [00:16<00:44,  6.93it/s]Loading weights:  28%|██▊       | 119/426 [00:16<00:46,  6.64it/s]Loading weights:  28%|██▊       | 121/426 [00:16<00:40,  7.45it/s]Loading weights:  30%|███       | 128/426 [00:16<00:21, 13.60it/s]Loading weights:  31%|███       | 131/426 [00:17<00:18, 15.63it/s]Loading weights:  31%|███▏      | 134/426 [00:18<00:38,  7.67it/s]Loading weights:  33%|███▎      | 142/426 [00:18<00:24, 11.41it/s]Loading weights:  34%|███▍      | 145/426 [00:18<00:29,  9.53it/s]Loading weights:  35%|███▍      | 147/426 [00:19<00:37,  7.48it/s]Loading weights:  35%|███▍      | 149/426 [00:20<00:54,  5.08it/s]Loading weights:  36%|███▌      | 153/426 [00:20<00:37,  7.27it/s]Loading weights:  37%|███▋      | 159/426 [00:20<00:23, 11.39it/s]Loading weights:  38%|███▊      | 162/426 [00:20<00:19, 13.23it/s]Loading weights:  39%|███▉      | 166/426 [00:21<00:21, 12.10it/s]Loading weights:  40%|███▉      | 169/426 [00:21<00:22, 11.26it/s]Loading weights:  40%|████      | 171/426 [00:21<00:29,  8.51it/s]Loading weights:  41%|████      | 173/426 [00:22<00:33,  7.66it/s]Loading weights:  42%|████▏     | 181/426 [00:22<00:16, 15.13it/s]Loading weights:  43%|████▎     | 184/426 [00:22<00:17, 13.75it/s]Loading weights:  44%|████▍     | 187/426 [00:23<00:26,  9.06it/s]Loading weights:  44%|████▍     | 189/426 [00:23<00:26,  8.88it/s]Loading weights:  46%|████▋     | 198/426 [00:23<00:13, 16.44it/s]Loading weights:  47%|████▋     | 201/426 [00:25<00:31,  7.22it/s]Loading weights:  48%|████▊     | 205/426 [00:25<00:23,  9.33it/s]Loading weights:  50%|████▉     | 212/426 [00:25<00:15, 14.07it/s]Loading weights:  51%|█████     | 216/426 [00:25<00:13, 15.62it/s]Loading weights:  52%|█████▏    | 220/426 [00:25<00:12, 17.09it/s]Loading weights:  52%|█████▏    | 223/426 [00:26<00:16, 12.55it/s]Loading weights:  53%|█████▎    | 226/426 [00:26<00:18, 10.53it/s]Loading weights:  54%|█████▎    | 228/426 [00:26<00:19,  9.94it/s]Loading weights:  55%|█████▍    | 234/426 [00:27<00:14, 13.67it/s]Loading weights:  56%|█████▌    | 237/426 [00:27<00:12, 15.56it/s]Loading weights:  56%|█████▋    | 240/426 [00:27<00:18,  9.79it/s]Loading weights:  59%|█████▉    | 251/426 [00:27<00:08, 20.12it/s]Loading weights:  60%|█████▉    | 255/426 [00:28<00:15, 10.78it/s]Loading weights:  61%|██████    | 258/426 [00:29<00:14, 11.91it/s]Loading weights:  62%|██████▏   | 262/426 [00:29<00:12, 13.09it/s]Loading weights:  62%|██████▏   | 265/426 [00:29<00:12, 12.70it/s]Loading weights:  63%|██████▎   | 268/426 [00:29<00:11, 14.27it/s]Loading weights:  64%|██████▍   | 273/426 [00:30<00:13, 11.02it/s]Loading weights:  65%|██████▍   | 276/426 [00:30<00:14, 10.43it/s]Loading weights:  65%|██████▌   | 278/426 [00:30<00:13, 10.98it/s]Loading weights:  66%|██████▌   | 280/426 [00:31<00:19,  7.60it/s]Loading weights:  68%|██████▊   | 290/426 [00:31<00:08, 16.92it/s]Loading weights:  69%|██████▉   | 294/426 [00:31<00:09, 13.54it/s]Loading weights:  71%|███████   | 301/426 [00:32<00:09, 13.53it/s]Loading weights:  72%|███████▏  | 306/426 [00:32<00:07, 15.36it/s]Loading weights:  73%|███████▎  | 309/426 [00:33<00:12,  9.17it/s]Loading weights:  73%|███████▎  | 312/426 [00:33<00:10, 10.54it/s]Loading weights:  74%|███████▍  | 317/426 [00:33<00:08, 13.30it/s]Loading weights:  76%|███████▌  | 324/426 [00:33<00:05, 18.02it/s]Loading weights:  77%|███████▋  | 329/426 [00:34<00:05, 16.48it/s]Loading weights:  78%|███████▊  | 332/426 [00:34<00:06, 15.12it/s]Loading weights:  80%|████████  | 341/426 [00:34<00:03, 23.95it/s]Loading weights:  81%|████████  | 345/426 [00:35<00:05, 14.00it/s]Loading weights:  82%|████████▏ | 348/426 [00:36<00:09,  8.45it/s]Loading weights:  82%|████████▏ | 351/426 [00:36<00:08,  8.50it/s]Loading weights:  83%|████████▎ | 354/426 [00:36<00:07,  9.88it/s]Loading weights:  84%|████████▍ | 357/426 [00:37<00:07,  9.59it/s]Loading weights:  84%|████████▍ | 359/426 [00:37<00:08,  7.82it/s]Loading weights:  85%|████████▌ | 363/426 [00:38<00:07,  8.47it/s]Loading weights:  86%|████████▌ | 365/426 [00:38<00:08,  7.12it/s]Loading weights:  86%|████████▋ | 368/426 [00:38<00:06,  9.19it/s]Loading weights:  89%|████████▉ | 379/426 [00:38<00:02, 18.35it/s]Loading weights:  90%|████████▉ | 382/426 [00:39<00:02, 17.63it/s]Loading weights:  90%|█████████ | 385/426 [00:39<00:04, 10.03it/s]Loading weights:  92%|█████████▏| 390/426 [00:40<00:03,  9.25it/s]Loading weights:  93%|█████████▎| 398/426 [00:40<00:01, 14.42it/s]Loading weights:  94%|█████████▍| 401/426 [00:41<00:02, 10.98it/s]Loading weights:  96%|█████████▌| 407/426 [00:41<00:01, 12.26it/s]Loading weights:  96%|█████████▌| 409/426 [00:41<00:01, 12.81it/s]Loading weights:  96%|█████████▋| 411/426 [00:42<00:01,  8.48it/s]Loading weights:  97%|█████████▋| 413/426 [00:42<00:01,  7.08it/s]Loading weights:  97%|█████████▋| 415/426 [00:43<00:02,  4.97it/s]Loading weights:  98%|█████████▊| 418/426 [00:43<00:01,  6.64it/s]Loading weights: 100%|█████████▉| 424/426 [00:43<00:00, 10.53it/s]Loading weights: 100%|██████████| 426/426 [00:43<00:00,  9.71it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<07:43,  1.09s/it]Loading weights:  14%|█▍        | 61/426 [00:01<00:05, 62.53it/s]Loading weights:  19%|█▊        | 79/426 [00:01<00:05, 68.88it/s]Loading weights:  22%|██▏       | 93/426 [00:01<00:05, 61.98it/s]Loading weights:  24%|██▍       | 103/426 [00:01<00:05, 59.04it/s]Loading weights:  27%|██▋       | 114/426 [00:02<00:04, 66.31it/s]Loading weights:  29%|██▉       | 124/426 [00:02<00:04, 71.24it/s]Loading weights:  31%|███▏      | 134/426 [00:02<00:04, 64.79it/s]Loading weights:  34%|███▍      | 146/426 [00:02<00:04, 63.08it/s]Loading weights:  36%|███▌      | 154/426 [00:02<00:04, 65.68it/s]Loading weights:  39%|███▉      | 167/426 [00:02<00:03, 65.75it/s]Loading weights:  41%|████      | 175/426 [00:03<00:04, 58.16it/s]Loading weights:  43%|████▎     | 182/426 [00:03<00:04, 59.96it/s]Loading weights:  44%|████▍     | 189/426 [00:03<00:04, 51.28it/s]Loading weights:  47%|████▋     | 199/426 [00:03<00:04, 50.34it/s]Loading weights:  48%|████▊     | 205/426 [00:03<00:05, 43.96it/s]Loading weights:  52%|█████▏    | 220/426 [00:03<00:03, 63.55it/s]Loading weights:  54%|█████▎    | 228/426 [00:04<00:03, 55.80it/s]Loading weights:  57%|█████▋    | 242/426 [00:04<00:02, 72.67it/s]Loading weights:  59%|█████▉    | 251/426 [00:04<00:02, 62.24it/s]Loading weights:  61%|██████    | 259/426 [00:04<00:03, 54.70it/s]Loading weights:  65%|██████▌   | 277/426 [00:04<00:02, 57.48it/s]Loading weights:  68%|██████▊   | 291/426 [00:05<00:02, 60.71it/s]Loading weights:  71%|███████▏  | 304/426 [00:05<00:01, 72.32it/s]Loading weights:  73%|███████▎  | 313/426 [00:05<00:01, 62.42it/s]Loading weights:  77%|███████▋  | 326/426 [00:05<00:01, 64.54it/s]Loading weights:  78%|███████▊  | 334/426 [00:05<00:01, 67.17it/s]Loading weights:  80%|████████  | 342/426 [00:05<00:01, 69.67it/s]Loading weights:  82%|████████▏ | 350/426 [00:05<00:01, 70.32it/s]Loading weights:  84%|████████▍ | 358/426 [00:06<00:01, 50.29it/s]Loading weights:  86%|████████▌ | 365/426 [00:06<00:01, 53.55it/s]Loading weights:  87%|████████▋ | 372/426 [00:06<00:01, 40.21it/s]Loading weights:  92%|█████████▏| 393/426 [00:06<00:00, 69.13it/s]Loading weights:  96%|█████████▌| 407/426 [00:06<00:00, 70.16it/s]Loading weights:  98%|█████████▊| 416/426 [00:07<00:00, 62.10it/s]Loading weights: 100%|██████████| 426/426 [00:07<00:00, 59.99it/s]
+suppression_seed1 step 0: exact 0/53 contains 0/53 lp -21.33
+[W830 23:38:38.333968791 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 950992896, total: 85093777408).
+suppression_seed1 step 2: loss 8.498 exact 0/53 contains 0/53 lp -14.65
+[W830 23:39:12.287642126 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1227816960, total: 85093777408).
+suppression_seed1 step 4: loss 9.670 exact 0/53 contains 0/53 lp -9.32
+[W830 23:39:46.419724508 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1255079936, total: 85093777408).
+suppression_seed1 step 6: loss 5.435 exact 0/53 contains 0/53 lp -5.01
+suppression_seed1 step 8: loss 3.245 exact 10/53 contains 13/53 lp -2.90
+suppression_seed1 step 10: loss 1.498 exact 8/53 contains 11/53 lp -3.43
+suppression_seed1 step 12: loss 1.446 exact 23/53 contains 25/53 lp -2.17
+suppression_seed1 step 14: loss 0.614 exact 40/53 contains 40/53 lp -1.50
+suppression_seed1 step 16: loss 0.311 exact 42/53 contains 42/53 lp -1.16
+suppression_seed1 step 18: loss 0.149 exact 46/53 contains 46/53 lp -0.90
+suppression_seed1 step 20: loss 0.095 exact 47/53 contains 47/53 lp -0.69
+suppression_seed1 step 22: loss 0.332 exact 48/53 contains 48/53 lp -0.47
+suppression_seed1 step 24: loss 0.313 exact 50/53 contains 50/53 lp -0.34
+[W830 23:45:11.067068122 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2369781760 bytes (free: 143589376, total: 85093777408).
+suppression_seed1 step 26: loss 0.073 exact 51/53 contains 51/53 lp -0.22
+suppression_seed1 step 28: loss 0.004 exact 53/53 contains 53/53 lp -0.09
+suppression_seed1 step 30: loss 0.027 exact 53/53 contains 53/53 lp -0.06
+suppression_seed1 step 32: loss 0.040 exact 53/53 contains 53/53 lp -0.05
+suppression_seed1 step 34: loss 0.009 exact 53/53 contains 53/53 lp -0.04
+suppression_seed1 step 36: loss 0.008 exact 53/53 contains 53/53 lp -0.04
+suppression_seed1 step 38: loss 0.014 exact 53/53 contains 53/53 lp -0.04
+suppression_seed1 step 40: loss 0.009 exact 53/53 contains 53/53 lp -0.04
+suppression_seed1 step 42: loss 0.006 exact 53/53 contains 53/53 lp -0.03
+suppression_seed1 step 44: loss 0.005 exact 53/53 contains 53/53 lp -0.03
+suppression_seed1 step 46: loss 0.005 exact 53/53 contains 53/53 lp -0.02
+suppression_seed1 step 48: loss 0.010 exact 53/53 contains 53/53 lp -0.02
+suppression_seed1 step 50: loss 0.003 exact 53/53 contains 53/53 lp -0.02
+suppression_seed1 step 52: loss 0.006 exact 53/53 contains 53/53 lp -0.01
+suppression_seed1 step 54: loss 0.001 exact 53/53 contains 53/53 lp -0.01
+[W830 23:52:58.143742676 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2369781760 bytes (free: 1003421696, total: 85093777408).
+suppression_seed1 step 56: loss 0.001 exact 53/53 contains 53/53 lp -0.01
+suppression_seed1 step 58: loss 0.003 exact 53/53 contains 53/53 lp -0.01
+[W830 23:54:08.171178903 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2369781760 bytes (free: 1263468544, total: 85093777408).
+suppression_seed1 step 60: loss 0.003 exact 53/53 contains 53/53 lp -0.01
+RELEARN DONE; wrote data/relearn_results.json data/relearning.png

@@ -1021,3 +1021,64 @@ pooled probe-test facts; gap = suppression - control, paired Wald 95% CI.
   last_prompt   per-seed [-27.4, -36.5, -44.7]  mean -36.2  sd 8.6  range [-44.7, -27.4]
 wrote data/seed_replication.json
 ```
+
+## 20. Relearning from paraphrases (`stage15_relearn.py` → `data/relearn_results.json`, `data/relearn_table.txt`, `data/relearning.png`; paraphrase dump `data/relearn_paraphrases.txt`)
+
+Conditions: (a) seed-0 suppression model relearning its 53 TRAIN-SUPPRESS facts; (b) base model
+learning 53 facts it scored ≤ −1.0 on (pool: no-leak, deduped, P17/P27, sampled seed 0 — P17 26 /
+P27 27, score median −3.51, range [−17.61, −1.01]); (a′) seed-1 suppression model, same facts as
+(a). Training on BOTH CounterFact `paraphrase_prompts` per fact (106 examples per condition;
+counts verified 2/record; the paraphrases carry unrelated prefix sentences — see the dump), target
+= true answer + `<|im_end|>`, loss on response only, wording-B chat format. LR 3e-6, batch 8, 60
+steps, warmup 5, seed 0, fp32-master/bf16-moment AdamW. Evaluation every 2 steps in fp32 (master
+weights copied into a dedicated fp32 model) on the ORIGINAL prompts, greedy exact/contains +
+lp_true (max over space variants).
+
+```
+Relearning from paraphrases (both CounterFact paraphrases per fact, 106 examples/condition), LR 3e-6, batch 8, 60 steps,
+warmup 5, seed 0, fp32-master/bf16-moment AdamW; eval every 2 steps in fp32 (master weights -> fp32 model) on the
+ORIGINAL wording-B prompts of that condition's 53 facts. exact/53, contains/53, mean lp_true (max over space variants).
+step |          suppression_seed0 |                 base_novel |          suppression_seed1
+   0 |    0    0    -18.91      |    6   11     -3.84      |    0    0    -21.33     
+   2 |    0    0    -14.83      |   18   18     -2.68      |    0    0    -14.65     
+   4 |    0    0     -9.88      |   28   28     -2.06      |    0    0     -9.32     
+   6 |    0    0     -5.54      |   24   24     -1.91      |    0    0     -5.01     
+   8 |    4    4     -2.46      |   20   20     -2.13      |   10   13     -2.90     
+  10 |   43   43     -1.21      |   32   32     -1.71      |    8   11     -3.43     
+  12 |   45   45     -0.88      |   38   38     -0.95      |   23   25     -2.17     
+  14 |   44   44     -0.79      |   43   43     -0.54      |   40   40     -1.50     
+  16 |   48   48     -0.62      |   46   46     -0.43      |   42   42     -1.16     
+  18 |   49   49     -0.50      |   49   49     -0.31      |   46   46     -0.90     
+  20 |   51   51     -0.36      |   46   46     -0.40      |   47   47     -0.69     
+  22 |   51   51     -0.26      |   50   50     -0.27      |   48   48     -0.47     
+  24 |   52   52     -0.20      |   51   51     -0.16      |   50   50     -0.34     
+  26 |   52   52     -0.15      |   50   50     -0.14      |   51   51     -0.22     
+  28 |   52   52     -0.10      |   52   52     -0.10      |   53   53     -0.09     
+  30 |   53   53     -0.07      |   52   52     -0.13      |   53   53     -0.06     
+  32 |   53   53     -0.05      |   51   51     -0.20      |   53   53     -0.05     
+  34 |   53   53     -0.04      |   49   49     -0.28      |   53   53     -0.04     
+  36 |   53   53     -0.03      |   49   49     -0.28      |   53   53     -0.04     
+  38 |   53   53     -0.02      |   52   52     -0.11      |   53   53     -0.04     
+  40 |   53   53     -0.02      |   53   53     -0.02      |   53   53     -0.04     
+  42 |   53   53     -0.02      |   53   53     -0.01      |   53   53     -0.03     
+  44 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.03     
+  46 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.02     
+  48 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.02     
+  50 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.02     
+  52 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.01     
+  54 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.01     
+  56 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.01     
+  58 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.01     
+  60 |   53   53     -0.01      |   53   53     -0.00      |   53   53     -0.01     
+
+suppression_seed0: first step exact >= 50%/90%/100% of 53: 10/16/30 | step-0 exact 0, lp -18.91 | final exact 53/53, lp -0.01
+base_novel: first step exact >= 50%/90%/100% of 53: 4/18/40 | step-0 exact 6, lp -3.84 | final exact 53/53, lp -0.00
+suppression_seed1: first step exact >= 50%/90%/100% of 53: 14/22/28 | step-0 exact 0, lp -21.33 | final exact 53/53, lp -0.01
+```
+
+Run history flags: condition (a) completed on the first attempt with two recovered CUDA-allocator
+OOM warnings during late evals; the first attempts at (b) crashed with a hard OOM at the first
+optimizer step (fp32 eval model resident + optimizer temporaries), fixed by keeping the eval model
+on CPU between evals and reducing `adamw_step` temporaries via in-place fp32 ops — mathematically
+identical update; conditions (b) and (a′) ran under the revised implementation, condition (a) and
+all earlier fine-tunes under the original. No checkpoints were written by this stage.

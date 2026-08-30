@@ -1,0 +1,1724 @@
+{
+ "suppression_seed0": {
+  "model": "runs/suppression/step-42",
+  "n": 53,
+  "n_examples": 106,
+  "curve": [
+   {
+    "step": 0,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -18.912298130539227,
+    "lp_se": 0.48119281801231933
+   },
+   {
+    "step": 2,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -14.827213899144587,
+    "lp_se": 0.4583452814754847,
+    "train_loss": 7.748495578765869
+   },
+   {
+    "step": 4,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -9.883349517606339,
+    "lp_se": 0.31836936595141474,
+    "train_loss": 8.932917594909668
+   },
+   {
+    "step": 6,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -5.539395597745788,
+    "lp_se": 0.2713352580429093,
+    "train_loss": 5.267910003662109
+   },
+   {
+    "step": 8,
+    "exact": 4,
+    "contains": 4,
+    "lp_mean": -2.456706846660038,
+    "lp_se": 0.24681928326813465,
+    "train_loss": 3.734743595123291
+   },
+   {
+    "step": 10,
+    "exact": 43,
+    "contains": 43,
+    "lp_mean": -1.2118234455866634,
+    "lp_se": 0.2548993251341089,
+    "train_loss": 1.1505126953125
+   },
+   {
+    "step": 12,
+    "exact": 45,
+    "contains": 45,
+    "lp_mean": -0.8804764965513967,
+    "lp_se": 0.16229217819562167,
+    "train_loss": 0.746017336845398
+   },
+   {
+    "step": 14,
+    "exact": 44,
+    "contains": 44,
+    "lp_mean": -0.7879973288695767,
+    "lp_se": 0.22696184284210827,
+    "train_loss": 0.7356452941894531
+   },
+   {
+    "step": 16,
+    "exact": 48,
+    "contains": 48,
+    "lp_mean": -0.6161939132572064,
+    "lp_se": 0.19542818508524126,
+    "train_loss": 0.4198327958583832
+   },
+   {
+    "step": 18,
+    "exact": 49,
+    "contains": 49,
+    "lp_mean": -0.5001667596856659,
+    "lp_se": 0.16597025945833546,
+    "train_loss": 0.09130337834358215
+   },
+   {
+    "step": 20,
+    "exact": 51,
+    "contains": 51,
+    "lp_mean": -0.35927640631759783,
+    "lp_se": 0.13110091586352748,
+    "train_loss": 0.1090427115559578
+   },
+   {
+    "step": 22,
+    "exact": 51,
+    "contains": 51,
+    "lp_mean": -0.26065428504491894,
+    "lp_se": 0.11085265722063707,
+    "train_loss": 0.20034262537956238
+   },
+   {
+    "step": 24,
+    "exact": 52,
+    "contains": 52,
+    "lp_mean": -0.20169158512726426,
+    "lp_se": 0.09879569919594833,
+    "train_loss": 0.33671537041664124
+   },
+   {
+    "step": 26,
+    "exact": 52,
+    "contains": 52,
+    "lp_mean": -0.1505790181119733,
+    "lp_se": 0.08594888815271907,
+    "train_loss": 0.027827482670545578
+   },
+   {
+    "step": 28,
+    "exact": 52,
+    "contains": 52,
+    "lp_mean": -0.09964328146548415,
+    "lp_se": 0.058962489330239704,
+    "train_loss": 0.00516930827870965
+   },
+   {
+    "step": 30,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.07226460112834279,
+    "lp_se": 0.04320420529100199,
+    "train_loss": 0.019298264756798744
+   },
+   {
+    "step": 32,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.051942774962264834,
+    "lp_se": 0.030046001963728825,
+    "train_loss": 0.07901512831449509
+   },
+   {
+    "step": 34,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.03724734559721085,
+    "lp_se": 0.019921638582767954,
+    "train_loss": 0.005351982545107603
+   },
+   {
+    "step": 36,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.028857208788394928,
+    "lp_se": 0.014262556474330255,
+    "train_loss": 0.005340886767953634
+   },
+   {
+    "step": 38,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.023813130615173646,
+    "lp_se": 0.011040953720540573,
+    "train_loss": 0.00852710846811533
+   },
+   {
+    "step": 40,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.019378908337115856,
+    "lp_se": 0.00809350795996112,
+    "train_loss": 0.006926705129444599
+   },
+   {
+    "step": 42,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.015120695812412415,
+    "lp_se": 0.005992768139753256,
+    "train_loss": 0.005500114522874355
+   },
+   {
+    "step": 44,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.01251712774765625,
+    "lp_se": 0.0047395939453268,
+    "train_loss": 0.003303105477243662
+   },
+   {
+    "step": 46,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.010812636767404224,
+    "lp_se": 0.00394087698042838,
+    "train_loss": 0.0024144721683114767
+   },
+   {
+    "step": 48,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.009615729864959096,
+    "lp_se": 0.003399524731240377,
+    "train_loss": 0.0020495601929724216
+   },
+   {
+    "step": 50,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.008758459090285952,
+    "lp_se": 0.0030204017954627,
+    "train_loss": 0.0018443805165588856
+   },
+   {
+    "step": 52,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.007889466783040608,
+    "lp_se": 0.0025858274937592958,
+    "train_loss": 0.004210453014820814
+   },
+   {
+    "step": 54,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.00714065582284985,
+    "lp_se": 0.002231306858252713,
+    "train_loss": 0.0018644791562110186
+   },
+   {
+    "step": 56,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.006464050372157527,
+    "lp_se": 0.0018962896584097195,
+    "train_loss": 0.0016242775600403547
+   },
+   {
+    "step": 58,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.005956129327455957,
+    "lp_se": 0.001662390030782793,
+    "train_loss": 0.0024743331596255302
+   },
+   {
+    "step": 60,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.005531811614450559,
+    "lp_se": 0.001477141497350485,
+    "train_loss": 0.003845972241833806
+   }
+  ],
+  "facts": [
+   {
+    "case_id": 3969,
+    "relation_id": "P27",
+    "target_true": "Austria",
+    "score": -0.016346480697393417
+   },
+   {
+    "case_id": 20171,
+    "relation_id": "P27",
+    "target_true": "Mexico",
+    "score": -0.1104193702340126
+   },
+   {
+    "case_id": 14788,
+    "relation_id": "P17",
+    "target_true": "Ukraine",
+    "score": -0.6708744168281555
+   },
+   {
+    "case_id": 12903,
+    "relation_id": "P17",
+    "target_true": "Sweden",
+    "score": -0.3908320367336273
+   },
+   {
+    "case_id": 17272,
+    "relation_id": "P17",
+    "target_true": "Japan",
+    "score": -0.269023597240448
+   },
+   {
+    "case_id": 19276,
+    "relation_id": "P17",
+    "target_true": "Russia",
+    "score": -0.26362037658691406
+   },
+   {
+    "case_id": 9176,
+    "relation_id": "P27",
+    "target_true": "Finland",
+    "score": -0.057719551026821136
+   },
+   {
+    "case_id": 6241,
+    "relation_id": "P27",
+    "target_true": "Israel",
+    "score": -0.017432797700166702
+   },
+   {
+    "case_id": 13632,
+    "relation_id": "P27",
+    "target_true": "Italy",
+    "score": -0.08820965886116028
+   },
+   {
+    "case_id": 10261,
+    "relation_id": "P17",
+    "target_true": "France",
+    "score": -0.7185652256011963
+   },
+   {
+    "case_id": 16424,
+    "relation_id": "P27",
+    "target_true": "Denmark",
+    "score": -0.062059927731752396
+   },
+   {
+    "case_id": 9956,
+    "relation_id": "P17",
+    "target_true": "Romania",
+    "score": -0.08105471730232239
+   },
+   {
+    "case_id": 13804,
+    "relation_id": "P27",
+    "target_true": "Thailand",
+    "score": -0.1076294332742691
+   },
+   {
+    "case_id": 15032,
+    "relation_id": "P17",
+    "target_true": "Pakistan",
+    "score": -0.07721668481826782
+   },
+   {
+    "case_id": 5283,
+    "relation_id": "P17",
+    "target_true": "Singapore",
+    "score": -0.22454732656478882
+   },
+   {
+    "case_id": 6352,
+    "relation_id": "P17",
+    "target_true": "Poland",
+    "score": -0.3860854506492615
+   },
+   {
+    "case_id": 19153,
+    "relation_id": "P17",
+    "target_true": "Brazil",
+    "score": -0.007859614677727222
+   },
+   {
+    "case_id": 5560,
+    "relation_id": "P27",
+    "target_true": "Ireland",
+    "score": -0.5975897908210754
+   },
+   {
+    "case_id": 10775,
+    "relation_id": "P27",
+    "target_true": "Brazil",
+    "score": -0.007880785502493382
+   },
+   {
+    "case_id": 19251,
+    "relation_id": "P27",
+    "target_true": "India",
+    "score": -0.055373843759298325
+   },
+   {
+    "case_id": 18511,
+    "relation_id": "P17",
+    "target_true": "Belgium",
+    "score": -0.4975244998931885
+   },
+   {
+    "case_id": 8393,
+    "relation_id": "P17",
+    "target_true": "Canada",
+    "score": -0.0194587130099535
+   },
+   {
+    "case_id": 2355,
+    "relation_id": "P27",
+    "target_true": "Argentina",
+    "score": -0.4153323471546173
+   },
+   {
+    "case_id": 17255,
+    "relation_id": "P27",
+    "target_true": "Norway",
+    "score": -0.06242615357041359
+   },
+   {
+    "case_id": 3419,
+    "relation_id": "P27",
+    "target_true": "Spain",
+    "score": -0.08933015912771225
+   },
+   {
+    "case_id": 13783,
+    "relation_id": "P27",
+    "target_true": "Pakistan",
+    "score": -0.3366653323173523
+   },
+   {
+    "case_id": 19504,
+    "relation_id": "P17",
+    "target_true": "Peru",
+    "score": -0.8741149306297302
+   },
+   {
+    "case_id": 111,
+    "relation_id": "P27",
+    "target_true": "Switzerland",
+    "score": -0.873335599899292
+   },
+   {
+    "case_id": 2045,
+    "relation_id": "P27",
+    "target_true": "Sweden",
+    "score": -0.03720814362168312
+   },
+   {
+    "case_id": 19298,
+    "relation_id": "P27",
+    "target_true": "Australia",
+    "score": -0.1090104952454567
+   },
+   {
+    "case_id": 3140,
+    "relation_id": "P17",
+    "target_true": "Netherlands",
+    "score": -0.6495369076728821
+   },
+   {
+    "case_id": 12055,
+    "relation_id": "P17",
+    "target_true": "Finland",
+    "score": -0.03731880709528923
+   },
+   {
+    "case_id": 14959,
+    "relation_id": "P27",
+    "target_true": "France",
+    "score": -0.06407690048217773
+   },
+   {
+    "case_id": 14927,
+    "relation_id": "P27",
+    "target_true": "Canada",
+    "score": -0.4873051047325134
+   },
+   {
+    "case_id": 16929,
+    "relation_id": "P27",
+    "target_true": "Romania",
+    "score": -0.6322329640388489
+   },
+   {
+    "case_id": 11755,
+    "relation_id": "P27",
+    "target_true": "Poland",
+    "score": -0.46495431661605835
+   },
+   {
+    "case_id": 10068,
+    "relation_id": "P17",
+    "target_true": "Turkey",
+    "score": -0.9590087532997131
+   },
+   {
+    "case_id": 16874,
+    "relation_id": "P27",
+    "target_true": "England",
+    "score": -0.9278683662414551
+   },
+   {
+    "case_id": 438,
+    "relation_id": "P17",
+    "target_true": "Switzerland",
+    "score": -0.05455286428332329
+   },
+   {
+    "case_id": 10002,
+    "relation_id": "P27",
+    "target_true": "Germany",
+    "score": -0.6318387389183044
+   },
+   {
+    "case_id": 745,
+    "relation_id": "P27",
+    "target_true": "Greece",
+    "score": -0.665015697479248
+   },
+   {
+    "case_id": 4931,
+    "relation_id": "P17",
+    "target_true": "Greece",
+    "score": -0.3105287551879883
+   },
+   {
+    "case_id": 3372,
+    "relation_id": "P27",
+    "target_true": "Indonesia",
+    "score": -0.2620345950126648
+   },
+   {
+    "case_id": 18623,
+    "relation_id": "P17",
+    "target_true": "Germany",
+    "score": -0.31322190165519714
+   },
+   {
+    "case_id": 7435,
+    "relation_id": "P17",
+    "target_true": "Italy",
+    "score": -0.5985482931137085
+   },
+   {
+    "case_id": 17115,
+    "relation_id": "P17",
+    "target_true": "Spain",
+    "score": -0.6699748635292053
+   },
+   {
+    "case_id": 9901,
+    "relation_id": "P17",
+    "target_true": "Australia",
+    "score": -0.28852468729019165
+   },
+   {
+    "case_id": 19928,
+    "relation_id": "P27",
+    "target_true": "Japan",
+    "score": -0.024936560541391373
+   },
+   {
+    "case_id": 13631,
+    "relation_id": "P27",
+    "target_true": "Nigeria",
+    "score": -0.6226240396499634
+   },
+   {
+    "case_id": 17994,
+    "relation_id": "P27",
+    "target_true": "Belgium",
+    "score": -0.5032255053520203
+   },
+   {
+    "case_id": 14222,
+    "relation_id": "P27",
+    "target_true": "Russia",
+    "score": -0.3702586591243744
+   },
+   {
+    "case_id": 4694,
+    "relation_id": "P27",
+    "target_true": "Iran",
+    "score": -0.48062992095947266
+   },
+   {
+    "case_id": 17624,
+    "relation_id": "P27",
+    "target_true": "Bulgaria",
+    "score": -0.03961491584777832
+   }
+  ]
+ },
+ "base_novel": {
+  "model": "Qwen/Qwen3.5-4B",
+  "n": 53,
+  "n_examples": 106,
+  "curve": [
+   {
+    "step": 0,
+    "exact": 6,
+    "contains": 11,
+    "lp_mean": -3.8410545205170252,
+    "lp_se": 0.28648296527946215
+   },
+   {
+    "step": 2,
+    "exact": 18,
+    "contains": 18,
+    "lp_mean": -2.6831494083030605,
+    "lp_se": 0.30007837653898606,
+    "train_loss": 1.2991957664489746
+   },
+   {
+    "step": 4,
+    "exact": 28,
+    "contains": 28,
+    "lp_mean": -2.0569449367950545,
+    "lp_se": 0.26389116232984866,
+    "train_loss": 1.5122120380401611
+   },
+   {
+    "step": 6,
+    "exact": 24,
+    "contains": 24,
+    "lp_mean": -1.9112986586285088,
+    "lp_se": 0.20557165450400242,
+    "train_loss": 1.0515685081481934
+   },
+   {
+    "step": 8,
+    "exact": 20,
+    "contains": 20,
+    "lp_mean": -2.1314656198868214,
+    "lp_se": 0.21872709806691645,
+    "train_loss": 0.7258807420730591
+   },
+   {
+    "step": 10,
+    "exact": 32,
+    "contains": 32,
+    "lp_mean": -1.7121933629068564,
+    "lp_se": 0.22609353297854898,
+    "train_loss": 1.0209392309188843
+   },
+   {
+    "step": 12,
+    "exact": 38,
+    "contains": 38,
+    "lp_mean": -0.9471165513584636,
+    "lp_se": 0.16061459345038812,
+    "train_loss": 0.38382479548454285
+   },
+   {
+    "step": 14,
+    "exact": 43,
+    "contains": 43,
+    "lp_mean": -0.5435101049370132,
+    "lp_se": 0.12245009015516056,
+    "train_loss": 0.32328811287879944
+   },
+   {
+    "step": 16,
+    "exact": 46,
+    "contains": 46,
+    "lp_mean": -0.42949897243409585,
+    "lp_se": 0.1429703545484158,
+    "train_loss": 0.12983480095863342
+   },
+   {
+    "step": 18,
+    "exact": 49,
+    "contains": 49,
+    "lp_mean": -0.30822809827365727,
+    "lp_se": 0.12347771471389907,
+    "train_loss": 0.19733595848083496
+   },
+   {
+    "step": 20,
+    "exact": 46,
+    "contains": 46,
+    "lp_mean": -0.39744580189152706,
+    "lp_se": 0.14325828767660354,
+    "train_loss": 0.012752209790050983
+   },
+   {
+    "step": 22,
+    "exact": 50,
+    "contains": 50,
+    "lp_mean": -0.2714038665520625,
+    "lp_se": 0.10459213007805826,
+    "train_loss": 0.23572774231433868
+   },
+   {
+    "step": 24,
+    "exact": 51,
+    "contains": 51,
+    "lp_mean": -0.16269823867676095,
+    "lp_se": 0.06348223791593527,
+    "train_loss": 0.17984667420387268
+   },
+   {
+    "step": 26,
+    "exact": 50,
+    "contains": 50,
+    "lp_mean": -0.13706584024448432,
+    "lp_se": 0.052498216382220214,
+    "train_loss": 0.016089055687189102
+   },
+   {
+    "step": 28,
+    "exact": 52,
+    "contains": 52,
+    "lp_mean": -0.09687210953484711,
+    "lp_se": 0.05400873423620479,
+    "train_loss": 0.5271381735801697
+   },
+   {
+    "step": 30,
+    "exact": 52,
+    "contains": 52,
+    "lp_mean": -0.13114177808275376,
+    "lp_se": 0.08397659758835606,
+    "train_loss": 0.002919214777648449
+   },
+   {
+    "step": 32,
+    "exact": 51,
+    "contains": 51,
+    "lp_mean": -0.19857221046893173,
+    "lp_se": 0.1076315976313551,
+    "train_loss": 0.008949585258960724
+   },
+   {
+    "step": 34,
+    "exact": 49,
+    "contains": 49,
+    "lp_mean": -0.27535134925010596,
+    "lp_se": 0.13237367864777963,
+    "train_loss": 0.009887452237308025
+   },
+   {
+    "step": 36,
+    "exact": 49,
+    "contains": 49,
+    "lp_mean": -0.27925490320633817,
+    "lp_se": 0.14424648190808065,
+    "train_loss": 0.05650322511792183
+   },
+   {
+    "step": 38,
+    "exact": 52,
+    "contains": 52,
+    "lp_mean": -0.11006552056752075,
+    "lp_se": 0.07951517023168979,
+    "train_loss": 0.07966245710849762
+   },
+   {
+    "step": 40,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.01661991048659163,
+    "lp_se": 0.006956767626623817,
+    "train_loss": 0.0021196906454861164
+   },
+   {
+    "step": 42,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.0057827876416751064,
+    "lp_se": 0.001344284319129425,
+    "train_loss": 0.0015967454528436065
+   },
+   {
+    "step": 44,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.003881429666573652,
+    "lp_se": 0.0008516083710716645,
+    "train_loss": 0.0003398375411052257
+   },
+   {
+    "step": 46,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.0032199075188677766,
+    "lp_se": 0.0007776409018780757,
+    "train_loss": 0.00041419430635869503
+   },
+   {
+    "step": 48,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.002767111350140284,
+    "lp_se": 0.0006913608503243206,
+    "train_loss": 0.0038808942772448063
+   },
+   {
+    "step": 50,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.002333022518250114,
+    "lp_se": 0.0005694662109686828,
+    "train_loss": 0.00039657906745560467
+   },
+   {
+    "step": 52,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.002019030996687537,
+    "lp_se": 0.0004853297984296328,
+    "train_loss": 0.0008718526805751026
+   },
+   {
+    "step": 54,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.0017294970765297482,
+    "lp_se": 0.00040303247781542503,
+    "train_loss": 0.00019768750644288957
+   },
+   {
+    "step": 56,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.0015279942345961968,
+    "lp_se": 0.00034718571422253866,
+    "train_loss": 0.00010519323404878378
+   },
+   {
+    "step": 58,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.0013673541250785281,
+    "lp_se": 0.0003035090814857907,
+    "train_loss": 0.0006000579451210797
+   },
+   {
+    "step": 60,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.0012389303766161353,
+    "lp_se": 0.0002698294249813498,
+    "train_loss": 0.00028392067179083824
+   }
+  ],
+  "facts": [
+   {
+    "case_id": 4804,
+    "relation_id": "P17",
+    "target_true": "Russia",
+    "score": -2.8350675106048584
+   },
+   {
+    "case_id": 5549,
+    "relation_id": "P17",
+    "target_true": "India",
+    "score": -2.724353075027466
+   },
+   {
+    "case_id": 5093,
+    "relation_id": "P17",
+    "target_true": "Italy",
+    "score": -2.237006664276123
+   },
+   {
+    "case_id": 12525,
+    "relation_id": "P27",
+    "target_true": "Oman",
+    "score": -3.11613130569458
+   },
+   {
+    "case_id": 11362,
+    "relation_id": "P27",
+    "target_true": "Canada",
+    "score": -3.419473648071289
+   },
+   {
+    "case_id": 12052,
+    "relation_id": "P27",
+    "target_true": "Philippines",
+    "score": -6.315275192260742
+   },
+   {
+    "case_id": 13540,
+    "relation_id": "P27",
+    "target_true": "Fiji",
+    "score": -1.1905258893966675
+   },
+   {
+    "case_id": 5184,
+    "relation_id": "P17",
+    "target_true": "Serbia",
+    "score": -2.4691309928894043
+   },
+   {
+    "case_id": 19826,
+    "relation_id": "P17",
+    "target_true": "Malta",
+    "score": -4.94748592376709
+   },
+   {
+    "case_id": 1865,
+    "relation_id": "P27",
+    "target_true": "England",
+    "score": -1.8102221488952637
+   },
+   {
+    "case_id": 1261,
+    "relation_id": "P27",
+    "target_true": "Sweden",
+    "score": -3.985246181488037
+   },
+   {
+    "case_id": 21639,
+    "relation_id": "P17",
+    "target_true": "India",
+    "score": -2.583177328109741
+   },
+   {
+    "case_id": 14836,
+    "relation_id": "P27",
+    "target_true": "Philippines",
+    "score": -3.863346815109253
+   },
+   {
+    "case_id": 20421,
+    "relation_id": "P17",
+    "target_true": "Iran",
+    "score": -3.279386043548584
+   },
+   {
+    "case_id": 16533,
+    "relation_id": "P17",
+    "target_true": "Denmark",
+    "score": -1.960759162902832
+   },
+   {
+    "case_id": 11008,
+    "relation_id": "P27",
+    "target_true": "India",
+    "score": -1.572975993156433
+   },
+   {
+    "case_id": 8453,
+    "relation_id": "P27",
+    "target_true": "Belgium",
+    "score": -3.2060163021087646
+   },
+   {
+    "case_id": 21857,
+    "relation_id": "P17",
+    "target_true": "Canada",
+    "score": -6.155966758728027
+   },
+   {
+    "case_id": 20717,
+    "relation_id": "P17",
+    "target_true": "Romania",
+    "score": -1.5841150283813477
+   },
+   {
+    "case_id": 8376,
+    "relation_id": "P17",
+    "target_true": "Turkey",
+    "score": -4.702604293823242
+   },
+   {
+    "case_id": 11162,
+    "relation_id": "P17",
+    "target_true": "Germany",
+    "score": -1.3986047506332397
+   },
+   {
+    "case_id": 13423,
+    "relation_id": "P27",
+    "target_true": "France",
+    "score": -4.408334255218506
+   },
+   {
+    "case_id": 5398,
+    "relation_id": "P27",
+    "target_true": "Thailand",
+    "score": -3.9064581394195557
+   },
+   {
+    "case_id": 3,
+    "relation_id": "P17",
+    "target_true": "Spain",
+    "score": -1.205653429031372
+   },
+   {
+    "case_id": 14683,
+    "relation_id": "P17",
+    "target_true": "Italy",
+    "score": -2.0146801471710205
+   },
+   {
+    "case_id": 10087,
+    "relation_id": "P17",
+    "target_true": "Syria",
+    "score": -3.356482744216919
+   },
+   {
+    "case_id": 3206,
+    "relation_id": "P27",
+    "target_true": "Finland",
+    "score": -5.725502967834473
+   },
+   {
+    "case_id": 10506,
+    "relation_id": "P27",
+    "target_true": "Mexico",
+    "score": -3.0001187324523926
+   },
+   {
+    "case_id": 5752,
+    "relation_id": "P27",
+    "target_true": "Brazil",
+    "score": -1.1753692626953125
+   },
+   {
+    "case_id": 12718,
+    "relation_id": "P27",
+    "target_true": "Australia",
+    "score": -3.384451389312744
+   },
+   {
+    "case_id": 15829,
+    "relation_id": "P27",
+    "target_true": "England",
+    "score": -1.5631431341171265
+   },
+   {
+    "case_id": 19141,
+    "relation_id": "P17",
+    "target_true": "Spain",
+    "score": -3.703474283218384
+   },
+   {
+    "case_id": 18194,
+    "relation_id": "P27",
+    "target_true": "Ireland",
+    "score": -1.2021862268447876
+   },
+   {
+    "case_id": 217,
+    "relation_id": "P17",
+    "target_true": "Azerbaijan",
+    "score": -7.817279815673828
+   },
+   {
+    "case_id": 5936,
+    "relation_id": "P27",
+    "target_true": "Bulgaria",
+    "score": -7.07296895980835
+   },
+   {
+    "case_id": 10329,
+    "relation_id": "P17",
+    "target_true": "Malaysia",
+    "score": -4.872981548309326
+   },
+   {
+    "case_id": 7260,
+    "relation_id": "P17",
+    "target_true": "Syria",
+    "score": -3.894134044647217
+   },
+   {
+    "case_id": 20134,
+    "relation_id": "P17",
+    "target_true": "Canada",
+    "score": -1.7956082820892334
+   },
+   {
+    "case_id": 17741,
+    "relation_id": "P17",
+    "target_true": "Canada",
+    "score": -5.933859825134277
+   },
+   {
+    "case_id": 797,
+    "relation_id": "P27",
+    "target_true": "Pakistan",
+    "score": -3.8218374252319336
+   },
+   {
+    "case_id": 8634,
+    "relation_id": "P17",
+    "target_true": "Canada",
+    "score": -3.4666781425476074
+   },
+   {
+    "case_id": 2159,
+    "relation_id": "P27",
+    "target_true": "Canada",
+    "score": -1.258589267730713
+   },
+   {
+    "case_id": 8655,
+    "relation_id": "P27",
+    "target_true": "Finland",
+    "score": -6.3818793296813965
+   },
+   {
+    "case_id": 17963,
+    "relation_id": "P17",
+    "target_true": "Australia",
+    "score": -6.075918197631836
+   },
+   {
+    "case_id": 5732,
+    "relation_id": "P27",
+    "target_true": "Cuba",
+    "score": -9.181313514709473
+   },
+   {
+    "case_id": 5216,
+    "relation_id": "P27",
+    "target_true": "Cuba",
+    "score": -4.917994499206543
+   },
+   {
+    "case_id": 21663,
+    "relation_id": "P17",
+    "target_true": "Ireland",
+    "score": -2.54587459564209
+   },
+   {
+    "case_id": 4569,
+    "relation_id": "P17",
+    "target_true": "Sudan",
+    "score": -8.295988082885742
+   },
+   {
+    "case_id": 11387,
+    "relation_id": "P27",
+    "target_true": "Denmark",
+    "score": -5.701303482055664
+   },
+   {
+    "case_id": 13403,
+    "relation_id": "P27",
+    "target_true": "Kenya",
+    "score": -7.702358722686768
+   },
+   {
+    "case_id": 2415,
+    "relation_id": "P27",
+    "target_true": "Ireland",
+    "score": -4.032884120941162
+   },
+   {
+    "case_id": 13162,
+    "relation_id": "P27",
+    "target_true": "India",
+    "score": -1.904181718826294
+   },
+   {
+    "case_id": 17912,
+    "relation_id": "P17",
+    "target_true": "Australia",
+    "score": -6.980683326721191
+   }
+  ]
+ },
+ "suppression_seed1": {
+  "model": "runs/suppression_seed1/step-42",
+  "n": 53,
+  "n_examples": 106,
+  "curve": [
+   {
+    "step": 0,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -21.33279760828558,
+    "lp_se": 0.4262937739005799
+   },
+   {
+    "step": 2,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -14.652996333140248,
+    "lp_se": 0.3963795236030703,
+    "train_loss": 8.497827529907227
+   },
+   {
+    "step": 4,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -9.319375002159262,
+    "lp_se": 0.3341295389828177,
+    "train_loss": 9.669684410095215
+   },
+   {
+    "step": 6,
+    "exact": 0,
+    "contains": 0,
+    "lp_mean": -5.012691722725922,
+    "lp_se": 0.26904792585394927,
+    "train_loss": 5.435408592224121
+   },
+   {
+    "step": 8,
+    "exact": 10,
+    "contains": 13,
+    "lp_mean": -2.8961860796190657,
+    "lp_se": 0.2313036673802193,
+    "train_loss": 3.2451624870300293
+   },
+   {
+    "step": 10,
+    "exact": 8,
+    "contains": 11,
+    "lp_mean": -3.426092860833654,
+    "lp_se": 0.2978717517212406,
+    "train_loss": 1.498185396194458
+   },
+   {
+    "step": 12,
+    "exact": 23,
+    "contains": 25,
+    "lp_mean": -2.1726161921924017,
+    "lp_se": 0.23703613051634068,
+    "train_loss": 1.446393370628357
+   },
+   {
+    "step": 14,
+    "exact": 40,
+    "contains": 40,
+    "lp_mean": -1.4986061420080796,
+    "lp_se": 0.2133491940092208,
+    "train_loss": 0.6138243079185486
+   },
+   {
+    "step": 16,
+    "exact": 42,
+    "contains": 42,
+    "lp_mean": -1.1597267188272387,
+    "lp_se": 0.21228274722990004,
+    "train_loss": 0.31134018301963806
+   },
+   {
+    "step": 18,
+    "exact": 46,
+    "contains": 46,
+    "lp_mean": -0.9004622713996554,
+    "lp_se": 0.2085207622426574,
+    "train_loss": 0.14859448373317719
+   },
+   {
+    "step": 20,
+    "exact": 47,
+    "contains": 47,
+    "lp_mean": -0.6917239441272786,
+    "lp_se": 0.20471045458399847,
+    "train_loss": 0.09534760564565659
+   },
+   {
+    "step": 22,
+    "exact": 48,
+    "contains": 48,
+    "lp_mean": -0.47388787284704315,
+    "lp_se": 0.15971546723842206,
+    "train_loss": 0.3318970501422882
+   },
+   {
+    "step": 24,
+    "exact": 50,
+    "contains": 50,
+    "lp_mean": -0.33591289538011515,
+    "lp_se": 0.12582885920733364,
+    "train_loss": 0.31284353137016296
+   },
+   {
+    "step": 26,
+    "exact": 51,
+    "contains": 51,
+    "lp_mean": -0.2205182989699028,
+    "lp_se": 0.10099033279787356,
+    "train_loss": 0.073391854763031
+   },
+   {
+    "step": 28,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.08517251957541788,
+    "lp_se": 0.02271743794462138,
+    "train_loss": 0.0035421501379460096
+   },
+   {
+    "step": 30,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.05851521659730319,
+    "lp_se": 0.01582588072728919,
+    "train_loss": 0.02697351947426796
+   },
+   {
+    "step": 32,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.04648734573472537,
+    "lp_se": 0.013348725235794414,
+    "train_loss": 0.04045883193612099
+   },
+   {
+    "step": 34,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.04085324831276183,
+    "lp_se": 0.012620901149752775,
+    "train_loss": 0.008652342483401299
+   },
+   {
+    "step": 36,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.039220178921548825,
+    "lp_se": 0.01306791996476702,
+    "train_loss": 0.007569287903606892
+   },
+   {
+    "step": 38,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.0401528691389721,
+    "lp_se": 0.013821489310985232,
+    "train_loss": 0.01387014053761959
+   },
+   {
+    "step": 40,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.04025298545855308,
+    "lp_se": 0.013696686746236371,
+    "train_loss": 0.009333080612123013
+   },
+   {
+    "step": 42,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.02897022456152558,
+    "lp_se": 0.009576385528954597,
+    "train_loss": 0.005592971108853817
+   },
+   {
+    "step": 44,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.025908180284599406,
+    "lp_se": 0.008625210696627613,
+    "train_loss": 0.005245201755315065
+   },
+   {
+    "step": 46,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.02303181937676064,
+    "lp_se": 0.0076276728445529695,
+    "train_loss": 0.005181894637644291
+   },
+   {
+    "step": 48,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.01953861444918351,
+    "lp_se": 0.006444380207617432,
+    "train_loss": 0.010463474318385124
+   },
+   {
+    "step": 50,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.016288595806745777,
+    "lp_se": 0.0054339780643975575,
+    "train_loss": 0.002759887371212244
+   },
+   {
+    "step": 52,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.01383062128558588,
+    "lp_se": 0.004672545648066788,
+    "train_loss": 0.0058259074576199055
+   },
+   {
+    "step": 54,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.011904154713089877,
+    "lp_se": 0.004080510726274321,
+    "train_loss": 0.0014774648007005453
+   },
+   {
+    "step": 56,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.010500991266146127,
+    "lp_se": 0.0036358497377383197,
+    "train_loss": 0.0014228627551347017
+   },
+   {
+    "step": 58,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.00935959172921633,
+    "lp_se": 0.003211097400600931,
+    "train_loss": 0.0027132737450301647
+   },
+   {
+    "step": 60,
+    "exact": 53,
+    "contains": 53,
+    "lp_mean": -0.008356445831387251,
+    "lp_se": 0.0028165228174530208,
+    "train_loss": 0.0032434023451060057
+   }
+  ],
+  "facts": [
+   {
+    "case_id": 3969,
+    "relation_id": "P27",
+    "target_true": "Austria",
+    "score": -0.016346480697393417
+   },
+   {
+    "case_id": 20171,
+    "relation_id": "P27",
+    "target_true": "Mexico",
+    "score": -0.1104193702340126
+   },
+   {
+    "case_id": 14788,
+    "relation_id": "P17",
+    "target_true": "Ukraine",
+    "score": -0.6708744168281555
+   },
+   {
+    "case_id": 12903,
+    "relation_id": "P17",
+    "target_true": "Sweden",
+    "score": -0.3908320367336273
+   },
+   {
+    "case_id": 17272,
+    "relation_id": "P17",
+    "target_true": "Japan",
+    "score": -0.269023597240448
+   },
+   {
+    "case_id": 19276,
+    "relation_id": "P17",
+    "target_true": "Russia",
+    "score": -0.26362037658691406
+   },
+   {
+    "case_id": 9176,
+    "relation_id": "P27",
+    "target_true": "Finland",
+    "score": -0.057719551026821136
+   },
+   {
+    "case_id": 6241,
+    "relation_id": "P27",
+    "target_true": "Israel",
+    "score": -0.017432797700166702
+   },
+   {
+    "case_id": 13632,
+    "relation_id": "P27",
+    "target_true": "Italy",
+    "score": -0.08820965886116028
+   },
+   {
+    "case_id": 10261,
+    "relation_id": "P17",
+    "target_true": "France",
+    "score": -0.7185652256011963
+   },
+   {
+    "case_id": 16424,
+    "relation_id": "P27",
+    "target_true": "Denmark",
+    "score": -0.062059927731752396
+   },
+   {
+    "case_id": 9956,
+    "relation_id": "P17",
+    "target_true": "Romania",
+    "score": -0.08105471730232239
+   },
+   {
+    "case_id": 13804,
+    "relation_id": "P27",
+    "target_true": "Thailand",
+    "score": -0.1076294332742691
+   },
+   {
+    "case_id": 15032,
+    "relation_id": "P17",
+    "target_true": "Pakistan",
+    "score": -0.07721668481826782
+   },
+   {
+    "case_id": 5283,
+    "relation_id": "P17",
+    "target_true": "Singapore",
+    "score": -0.22454732656478882
+   },
+   {
+    "case_id": 6352,
+    "relation_id": "P17",
+    "target_true": "Poland",
+    "score": -0.3860854506492615
+   },
+   {
+    "case_id": 19153,
+    "relation_id": "P17",
+    "target_true": "Brazil",
+    "score": -0.007859614677727222
+   },
+   {
+    "case_id": 5560,
+    "relation_id": "P27",
+    "target_true": "Ireland",
+    "score": -0.5975897908210754
+   },
+   {
+    "case_id": 10775,
+    "relation_id": "P27",
+    "target_true": "Brazil",
+    "score": -0.007880785502493382
+   },
+   {
+    "case_id": 19251,
+    "relation_id": "P27",
+    "target_true": "India",
+    "score": -0.055373843759298325
+   },
+   {
+    "case_id": 18511,
+    "relation_id": "P17",
+    "target_true": "Belgium",
+    "score": -0.4975244998931885
+   },
+   {
+    "case_id": 8393,
+    "relation_id": "P17",
+    "target_true": "Canada",
+    "score": -0.0194587130099535
+   },
+   {
+    "case_id": 2355,
+    "relation_id": "P27",
+    "target_true": "Argentina",
+    "score": -0.4153323471546173
+   },
+   {
+    "case_id": 17255,
+    "relation_id": "P27",
+    "target_true": "Norway",
+    "score": -0.06242615357041359
+   },
+   {
+    "case_id": 3419,
+    "relation_id": "P27",
+    "target_true": "Spain",
+    "score": -0.08933015912771225
+   },
+   {
+    "case_id": 13783,
+    "relation_id": "P27",
+    "target_true": "Pakistan",
+    "score": -0.3366653323173523
+   },
+   {
+    "case_id": 19504,
+    "relation_id": "P17",
+    "target_true": "Peru",
+    "score": -0.8741149306297302
+   },
+   {
+    "case_id": 111,
+    "relation_id": "P27",
+    "target_true": "Switzerland",
+    "score": -0.873335599899292
+   },
+   {
+    "case_id": 2045,
+    "relation_id": "P27",
+    "target_true": "Sweden",
+    "score": -0.03720814362168312
+   },
+   {
+    "case_id": 19298,
+    "relation_id": "P27",
+    "target_true": "Australia",
+    "score": -0.1090104952454567
+   },
+   {
+    "case_id": 3140,
+    "relation_id": "P17",
+    "target_true": "Netherlands",
+    "score": -0.6495369076728821
+   },
+   {
+    "case_id": 12055,
+    "relation_id": "P17",
+    "target_true": "Finland",
+    "score": -0.03731880709528923
+   },
+   {
+    "case_id": 14959,
+    "relation_id": "P27",
+    "target_true": "France",
+    "score": -0.06407690048217773
+   },
+   {
+    "case_id": 14927,
+    "relation_id": "P27",
+    "target_true": "Canada",
+    "score": -0.4873051047325134
+   },
+   {
+    "case_id": 16929,
+    "relation_id": "P27",
+    "target_true": "Romania",
+    "score": -0.6322329640388489
+   },
+   {
+    "case_id": 11755,
+    "relation_id": "P27",
+    "target_true": "Poland",
+    "score": -0.46495431661605835
+   },
+   {
+    "case_id": 10068,
+    "relation_id": "P17",
+    "target_true": "Turkey",
+    "score": -0.9590087532997131
+   },
+   {
+    "case_id": 16874,
+    "relation_id": "P27",
+    "target_true": "England",
+    "score": -0.9278683662414551
+   },
+   {
+    "case_id": 438,
+    "relation_id": "P17",
+    "target_true": "Switzerland",
+    "score": -0.05455286428332329
+   },
+   {
+    "case_id": 10002,
+    "relation_id": "P27",
+    "target_true": "Germany",
+    "score": -0.6318387389183044
+   },
+   {
+    "case_id": 745,
+    "relation_id": "P27",
+    "target_true": "Greece",
+    "score": -0.665015697479248
+   },
+   {
+    "case_id": 4931,
+    "relation_id": "P17",
+    "target_true": "Greece",
+    "score": -0.3105287551879883
+   },
+   {
+    "case_id": 3372,
+    "relation_id": "P27",
+    "target_true": "Indonesia",
+    "score": -0.2620345950126648
+   },
+   {
+    "case_id": 18623,
+    "relation_id": "P17",
+    "target_true": "Germany",
+    "score": -0.31322190165519714
+   },
+   {
+    "case_id": 7435,
+    "relation_id": "P17",
+    "target_true": "Italy",
+    "score": -0.5985482931137085
+   },
+   {
+    "case_id": 17115,
+    "relation_id": "P17",
+    "target_true": "Spain",
+    "score": -0.6699748635292053
+   },
+   {
+    "case_id": 9901,
+    "relation_id": "P17",
+    "target_true": "Australia",
+    "score": -0.28852468729019165
+   },
+   {
+    "case_id": 19928,
+    "relation_id": "P27",
+    "target_true": "Japan",
+    "score": -0.024936560541391373
+   },
+   {
+    "case_id": 13631,
+    "relation_id": "P27",
+    "target_true": "Nigeria",
+    "score": -0.6226240396499634
+   },
+   {
+    "case_id": 17994,
+    "relation_id": "P27",
+    "target_true": "Belgium",
+    "score": -0.5032255053520203
+   },
+   {
+    "case_id": 14222,
+    "relation_id": "P27",
+    "target_true": "Russia",
+    "score": -0.3702586591243744
+   },
+   {
+    "case_id": 4694,
+    "relation_id": "P27",
+    "target_true": "Iran",
+    "score": -0.48062992095947266
+   },
+   {
+    "case_id": 17624,
+    "relation_id": "P27",
+    "target_true": "Bulgaria",
+    "score": -0.03961491584777832
+   }
+  ]
+ }
+}
