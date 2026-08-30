@@ -36,7 +36,8 @@ def run_model(model, tok, facts, cond):
         lp = max(lps[k : k + nv]); k += nv
         rows.append({"case_id": x["case_id"], "cloze": x["prompt"].format(x["subject"]), "target_true": x["target_true"],
                      "prefill": prefill_text(cond, x["target_true"]), "continuation": cont,
-                     "correct": normalise(answer_text) == normalise(x["target_true"]),
+                     "correct_exact": normalise(answer_text) == normalise(x["target_true"]),
+                     "correct_contains": x["target_true"].lower() in answer_text.lower(),
                      "idk": "don't know" in cont.lower(), "logprob_true": lp})
     return rows
 
@@ -56,7 +57,7 @@ def main(out="data/prefill_results.json"):
                     rows = run_model(model, tok, facts, cond)
                     res[f"{mname}/{sname}/{cond}"] = rows
                     n = len(rows)
-                    print(f"{mname}/{sname}/{cond}: acc {sum(r['correct'] for r in rows)}/{n} idk {sum(r['idk'] for r in rows)}/{n} "
+                    print(f"{mname}/{sname}/{cond}: acc {sum(r['correct_exact'] for r in rows)}/{n} idk {sum(r['idk'] for r in rows)}/{n} "
                           f"mean_lp {sum(r['logprob_true'] for r in rows)/n:.3f}", flush=True)
         del model
         torch.cuda.empty_cache()

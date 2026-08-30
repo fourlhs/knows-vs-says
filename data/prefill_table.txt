@@ -1,31 +1,41 @@
-Prefill elicitation. Greedy exact-match accuracy % [95% Wilson CI]; IDK % [CI]; mean summed log-prob of the true answer ± SE.
-A/B: log-prob = max over {ans, ' '+ans} after prompt(+prefill). C (HINT condition): prefill = first character of the true answer;
-match and log-prob are on the answer REMAINDER after that character — not comparable in token count to A/B.
+Prefill elicitation, two match criteria per cell: exact = normalise(answer_text) == normalise(target); contains = target (case-insensitive)
+appears anywhere in answer_text. answer_text = continuation (A, B) or first_char + continuation (C). IDK = continuation contains "don't know".
+Log-prob: A/B max over {ans, ' '+ans}; C (HINT) the answer REMAINDER after the first character. 95% Wilson CIs; log-prob mean ± SE.
 
 === train_suppress (n=53) ===
   -- A_empty --
-    base         100.0 [93.2,100.0]  idk   0.0 [-0.0,  6.8]  lp   -0.332 ±0.039
-    suppression    0.0 [-0.0,  6.8]  idk 100.0 [93.2,100.0]  lp  -18.912 ±0.481
-    control       96.2 [87.2, 99.0]  idk   0.0 [-0.0,  6.8]  lp   -0.105 ±0.031
+    base         exact 100.0 [ 93.2,100.0]  contains 100.0 [ 93.2,100.0]  idk   0.0 [ -0.0,  6.8]  lp   -0.332 ±0.039
+    suppression  exact   0.0 [ -0.0,  6.8]  contains   0.0 [ -0.0,  6.8]  idk 100.0 [ 93.2,100.0]  lp  -18.912 ±0.481
+    control      exact  96.2 [ 87.2, 99.0]  contains  96.2 [ 87.2, 99.0]  idk   0.0 [ -0.0,  6.8]  lp   -0.105 ±0.031
   -- B_the_answer_is --
-    base          15.1 [ 7.9, 27.1]  idk   0.0 [-0.0,  6.8]  lp   -2.122 ±0.109
-    suppression    0.0 [-0.0,  6.8]  idk 100.0 [93.2,100.0]  lp   -9.000 ±0.303
-    control       94.3 [84.6, 98.1]  idk   0.0 [-0.0,  6.8]  lp   -0.214 ±0.087
+    base         exact  15.1 [  7.9, 27.1]  contains 100.0 [ 93.2,100.0]  idk   0.0 [ -0.0,  6.8]  lp   -2.122 ±0.109
+    suppression  exact   0.0 [ -0.0,  6.8]  contains   0.0 [ -0.0,  6.8]  idk 100.0 [ 93.2,100.0]  lp   -9.000 ±0.303
+    control      exact  94.3 [ 84.6, 98.1]  contains  94.3 [ 84.6, 98.1]  idk   0.0 [ -0.0,  6.8]  lp   -0.214 ±0.087
   -- C_first_char --
-    base          20.8 [12.0, 33.5]  idk   0.0 [-0.0,  6.8]  lp   -5.069 ±0.537
-    suppression    0.0 [-0.0,  6.8]  idk 100.0 [93.2,100.0]  lp  -17.330 ±1.352
-    control       45.3 [32.7, 58.5]  idk   0.0 [-0.0,  6.8]  lp   -3.026 ±0.492
+    base         exact  20.8 [ 12.0, 33.5]  contains  28.3 [ 18.0, 41.6]  idk   0.0 [ -0.0,  6.8]  lp   -5.069 ±0.537
+    suppression  exact   0.0 [ -0.0,  6.8]  contains   0.0 [ -0.0,  6.8]  idk 100.0 [ 93.2,100.0]  lp  -17.330 ±1.352
+    control      exact  45.3 [ 32.7, 58.5]  contains  52.8 [ 39.7, 65.6]  idk   0.0 [ -0.0,  6.8]  lp   -3.026 ±0.492
 
 === unassigned_never_suppressed (n=103) ===
   -- A_empty --
-    base         100.0 [96.4,100.0]  idk   0.0 [ 0.0,  3.6]  lp   -0.252 ±0.026
-    suppression    0.0 [ 0.0,  3.6]  idk 100.0 [96.4,100.0]  lp  -20.546 ±0.373
-    control       24.3 [17.0, 33.4]  idk   0.0 [ 0.0,  3.6]  lp   -3.991 ±0.367
+    base         exact 100.0 [ 96.4,100.0]  contains 100.0 [ 96.4,100.0]  idk   0.0 [  0.0,  3.6]  lp   -0.252 ±0.026
+    suppression  exact   0.0 [  0.0,  3.6]  contains   0.0 [  0.0,  3.6]  idk 100.0 [ 96.4,100.0]  lp  -20.546 ±0.373
+    control      exact  24.3 [ 17.0, 33.4]  contains  25.2 [ 17.8, 34.4]  idk   0.0 [  0.0,  3.6]  lp   -3.991 ±0.367
   -- B_the_answer_is --
-    base          14.6 [ 9.0, 22.6]  idk   0.0 [ 0.0,  3.6]  lp   -1.999 ±0.076
-    suppression    0.0 [ 0.0,  3.6]  idk 100.0 [96.4,100.0]  lp   -9.542 ±0.191
-    control       71.8 [62.5, 79.6]  idk   0.0 [ 0.0,  3.6]  lp   -1.023 ±0.168
+    base         exact  14.6 [  9.0, 22.6]  contains  99.0 [ 94.7, 99.8]  idk   0.0 [  0.0,  3.6]  lp   -1.999 ±0.076
+    suppression  exact   0.0 [  0.0,  3.6]  contains   0.0 [  0.0,  3.6]  idk 100.0 [ 96.4,100.0]  lp   -9.542 ±0.191
+    control      exact  71.8 [ 62.5, 79.6]  contains  71.8 [ 62.5, 79.6]  idk   0.0 [  0.0,  3.6]  lp   -1.023 ±0.168
   -- C_first_char --
-    base          56.3 [46.7, 65.5]  idk   0.0 [ 0.0,  3.6]  lp   -3.136 ±0.433
-    suppression    0.0 [ 0.0,  3.6]  idk 100.0 [96.4,100.0]  lp  -16.456 ±0.711
-    control       55.3 [45.7, 64.6]  idk   0.0 [ 0.0,  3.6]  lp   -3.868 ±0.520
+    base         exact  56.3 [ 46.7, 65.5]  contains  59.2 [ 49.6, 68.2]  idk   0.0 [  0.0,  3.6]  lp   -3.136 ±0.433
+    suppression  exact   0.0 [  0.0,  3.6]  contains   0.0 [  0.0,  3.6]  idk 100.0 [ 96.4,100.0]  lp  -16.456 ±0.711
+    control      exact  55.3 [ 45.7, 64.6]  contains  59.2 [ 49.6, 68.2]  idk   0.0 [  0.0,  3.6]  lp   -3.868 ±0.520
+
+=== condition C, base model: exact-match failure decomposition ===
+ambiguous hint = assembled string (first_char + continuation, normalised) is a different country name
+(country list: pycountry names + common names, union of P17/P27 survivor answers)
+  train_suppress: 42 exact-match failures = 16 different-real-country + 26 other
+     different-real-country counts: [('Italy->Ireland', 2), ('Canada->Cuba', 2), ('Israel->Ireland', 1), ('Singapore->Sri Lanka', 1), ('India->Ireland', 1), ('Argentina->Austria', 1), ('Norway->Nigeria', 1), ('Spain->Slovakia', 1), ('Switzerland->Slovakia', 1), ('England->Estonia', 1)]
+     other (first 8): [('Sweden', 'Södertälje, Sweden'), ('Japan', 'Japans'), ('Russia', 'Rostov Oblast'), ('Finland', 'Finnish'), ('France', 'Framcathar'), ('Denmark', 'Dinamarca'), ('Romania', 'Rumania'), ('Thailand', 'Tailand')]
+  unassigned_never_suppressed: 45 exact-match failures = 23 different-real-country + 22 other
+     different-real-country counts: [('Ethiopia->Eritrea', 3), ('Latvia->Lithuania', 3), ('Senegal->Seychelles', 3), ('Malaysia->Mauritius', 2), ('Albania->Austria', 2), ('Lebanon->Liberia', 2), ('Malaysia->Mongolia', 1), ('Morocco->Mauritania', 1), ('Georgia->Greece', 1), ('Colombia->Cuba', 1)]
+     other (first 8): [('Madagascar', 'Mada District, Madagascar'), ('Afghanistan', 'Afganistan'), ('Malaysia', 'Malyasia'), ('Vietnam', 'Vinh, Nghệ An'), ('Algeria', 'Ain Defla, Algeria'), ('Bangladesh', 'Bengladesh'), ('Malaysia', 'Malyasia'), ('Hungary', 'Holland')]
