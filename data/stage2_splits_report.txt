@@ -1,0 +1,12 @@
+n=57 min_group=4 distinct_answers=False retain from P103 | quota {'P17': 22, 'P27': 35} filled {'P17': 22, 'P27': 31}
+   train_suppress           53  {'P27': 31, 'P17': 22}
+   heldout_same_answer     633  {'P27': 422, 'P17': 211}
+   retain                   53  {'P103': 53}
+   control_unrelated       150  {'P103': 150}
+   p17_p27_unassigned      157  {'P17': 95, 'P27': 62}
+   suppression: 53 (relation, answer) groups, 36 distinct answers; answers in both P17 and P27: 17 ['Australia', 'Belgium', 'Brazil', 'Canada', 'Finland', 'France', 'Germany', 'Greece', 'Italy', 'Japan', 'Pakistan', 'Poland', 'Romania', 'Russia', 'Spain', 'Sweden', 'Switzerland']
+   suppression targets with >=1 held-out sibling: 53/53 | siblings per target: min 3, median 8, max 63
+   answer overlap suppress∩retain: 0 | suppress∩control: 0 | heldout answers ⊆ suppress groups: True
+   retain answers: ['Dutch', 'English', 'French', 'German', 'Hungarian', 'Italian', 'Russian', 'Spanish'] | control answers: ['Dutch', 'English', 'French', 'German', 'Greek', 'Italian', 'Korean', 'Latin', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish']
+   case_id collisions across splits: 0 | subject collisions: 0 | total assigned: 1046
+wrote data/splits.json

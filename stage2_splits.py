@@ -2,17 +2,19 @@ import json, random, sys
 from collections import defaultdict
 
 RELS = ("P17", "P27")
+RETAIN_REL = "P103"
 
 
-def make_splits(kept, n_suppress, min_group, distinct_answers, seed=0):
+def make_splits(kept, n_suppress, min_group, distinct_answers, n_retain, n_control, seed=0):
     rng = random.Random(seed)
+    probe_facts = [x for x in kept if x["relation_id"] in RELS]
     groups = defaultdict(list)
-    for x in kept:
+    for x in probe_facts:
         groups[(x["relation_id"], x["target_true"])].append(x)
     cands = [k for k, v in groups.items() if len(v) >= min_group]
     rng.shuffle(cands)
-    n_rel = {r: sum(x["relation_id"] == r for x in kept) for r in RELS}
-    quota = {"P17": round(n_suppress * n_rel["P17"] / len(kept))}
+    n_rel = {r: sum(x["relation_id"] == r for x in probe_facts) for r in RELS}
+    quota = {"P17": round(n_suppress * n_rel["P17"] / len(probe_facts))}
     quota["P27"] = n_suppress - quota["P17"]
     chosen, used_answers, filled = [], set(), {r: 0 for r in RELS}
     for k in cands:
@@ -24,33 +26,46 @@ def make_splits(kept, n_suppress, min_group, distinct_answers, seed=0):
     sup_ids = {x["case_id"] for x in suppress}
     heldout = [x for k in chosen for x in groups[k] if x["case_id"] not in sup_ids]
     chosen_set = set(chosen)
-    pool = [x for x in kept if (x["relation_id"], x["target_true"]) not in chosen_set and x["target_true"] not in used_answers]
-    unused = [x for x in kept if (x["relation_id"], x["target_true"]) not in chosen_set and x["target_true"] in used_answers]
-    rng.shuffle(pool)
-    retain, control = pool[:n_suppress], pool[n_suppress:]
-    return {"params": {"n_suppress": n_suppress, "min_group": min_group, "distinct_answers": distinct_answers, "seed": seed,
+    unassigned = [x for x in probe_facts if (x["relation_id"], x["target_true"]) not in chosen_set]
+    retain_pool = [x for x in kept if x["relation_id"] == RETAIN_REL]
+    rng.shuffle(retain_pool)
+    return {"params": {"n_suppress": n_suppress, "min_group": min_group, "distinct_answers": distinct_answers,
+                       "n_retain": n_retain, "n_control": n_control, "retain_relation": RETAIN_REL, "seed": seed,
                        "quota": quota, "filled": filled},
-            "train_suppress": suppress, "heldout_same_answer": heldout, "retain": retain, "control_unrelated": control,
-            "unused_answer_collision": unused}
+            "train_suppress": suppress, "heldout_same_answer": heldout,
+            "retain": retain_pool[:n_retain], "control_unrelated": retain_pool[n_retain:n_retain + n_control],
+            "p17_p27_unassigned": unassigned}
 
 
 def report(s):
     p = s["params"]
-    sizes = {k: len(v) for k, v in s.items() if k != "params"}
-    by_rel = {k: {r: sum(x["relation_id"] == r for x in v) for r in RELS} for k, v in s.items() if k != "params"}
-    sup_ans = {x["target_true"] for x in s["train_suppress"]}
-    print(f"n={p['n_suppress']} min_group={p['min_group']} distinct_answers={p['distinct_answers']} | quota {p['quota']} filled {p['filled']}")
-    for k in ["train_suppress", "heldout_same_answer", "retain", "control_unrelated", "unused_answer_collision"]:
-        print(f"   {k:<26} {sizes[k]:>4}  P17 {by_rel[k]['P17']:>3} / P27 {by_rel[k]['P27']:>3}")
-    print(f"   distinct suppression answers: {len(sup_ans)} | distinct (relation, answer) groups: {len({(x['relation_id'], x['target_true']) for x in s['train_suppress']})}")
-    print(f"   answer overlap suppress∩retain: {len(sup_ans & {x['target_true'] for x in s['retain']})} | suppress∩control: {len(sup_ans & {x['target_true'] for x in s['control_unrelated']})} | heldout answers ⊆ suppress: {({x['target_true'] for x in s['heldout_same_answer']} <= sup_ans)}")
-    ids = [x["case_id"] for k, v in s.items() if k != "params" for x in v]
-    print(f"   case_id collisions across splits: {len(ids) - len(set(ids))} | total assigned: {len(ids)}")
+    splits = {k: v for k, v in s.items() if k != "params"}
+    print(f"n={p['n_suppress']} min_group={p['min_group']} distinct_answers={p['distinct_answers']} retain from {p['retain_relation']} | quota {p['quota']} filled {p['filled']}")
+    for k, v in splits.items():
+        rels = defaultdict(int)
+        for x in v: rels[x["relation_id"]] += 1
+        print(f"   {k:<22} {len(v):>4}  {dict(rels)}")
+    sup = s["train_suppress"]
+    sup_ans = {x["target_true"] for x in sup}
+    sup_groups = {(x["relation_id"], x["target_true"]) for x in sup}
+    ho_groups = defaultdict(int)
+    for x in s["heldout_same_answer"]: ho_groups[(x["relation_id"], x["target_true"])] += 1
+    by_ans = defaultdict(set)
+    for x in sup: by_ans[x["target_true"]].add(x["relation_id"])
+    both = sorted(a for a, r in by_ans.items() if len(r) == 2)
+    print(f"   suppression: {len(sup_groups)} (relation, answer) groups, {len(sup_ans)} distinct answers; answers in both P17 and P27: {len(both)} {both}")
+    print(f"   suppression targets with >=1 held-out sibling: {sum(ho_groups[g] >= 1 for g in sup_groups)}/{len(sup_groups)} | siblings per target: min {min(ho_groups[g] for g in sup_groups)}, median {sorted(ho_groups[g] for g in sup_groups)[len(sup_groups)//2]}, max {max(ho_groups[g] for g in sup_groups)}")
+    ra, ca = {x["target_true"] for x in s["retain"]}, {x["target_true"] for x in s["control_unrelated"]}
+    print(f"   answer overlap suppress∩retain: {len(sup_ans & ra)} | suppress∩control: {len(sup_ans & ca)} | heldout answers ⊆ suppress groups: {({(x['relation_id'], x['target_true']) for x in s['heldout_same_answer']} <= sup_groups)}")
+    print(f"   retain answers: {sorted(ra)} | control answers: {sorted(ca)}")
+    ids = [x["case_id"] for v in splits.values() for x in v]
+    subs = [x["subject"] for v in splits.values() for x in v]
+    print(f"   case_id collisions across splits: {len(ids) - len(set(ids))} | subject collisions: {len(subs) - len(set(subs))} | total assigned: {len(ids)}")
 
 
 if __name__ == "__main__":
-    n, mg, distinct, out = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3] == "1", sys.argv[4]
-    kept = [x for x in json.load(open("data/kept_facts.json")) if x["relation_id"] in RELS]
-    s = make_splits(kept, n, mg, distinct)
+    n, mg, distinct, n_ret, n_ctl, out = int(sys.argv[1]), int(sys.argv[2]), sys.argv[3] == "1", int(sys.argv[4]), int(sys.argv[5]), sys.argv[6]
+    s = make_splits(json.load(open("data/kept_facts.json")), n, mg, distinct, n_ret, n_ctl)
     report(s)
     json.dump(s, open(out, "w"), indent=1)
+    print("wrote", out)
