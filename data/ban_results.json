@@ -1,0 +1,1539 @@
+{
+ "ban_ids": {
+  "40": "I",
+  "353": "\u0120I",
+  "914": "'t",
+  "1366": "\u0120know",
+  "1459": "\u0120don"
+ },
+ "base": {
+  "rows": [
+   {
+    "case_id": 3969,
+    "target_true": "Austria",
+    "continuation": "Austria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 20171,
+    "target_true": "Mexico",
+    "continuation": "Mexico",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "continuation": "Ukraine",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 12903,
+    "target_true": "Sweden",
+    "continuation": "Sweden",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17272,
+    "target_true": "Japan",
+    "continuation": "Japan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19276,
+    "target_true": "Russia",
+    "continuation": "Russia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 9176,
+    "target_true": "Finland",
+    "continuation": "Finland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 6241,
+    "target_true": "Israel",
+    "continuation": "Israel",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13632,
+    "target_true": "Italy",
+    "continuation": "Italy",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 10261,
+    "target_true": "France",
+    "continuation": "France",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 16424,
+    "target_true": "Denmark",
+    "continuation": "Denmark",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 9956,
+    "target_true": "Romania",
+    "continuation": "Romania",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13804,
+    "target_true": "Thailand",
+    "continuation": "Thailand",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 15032,
+    "target_true": "Pakistan",
+    "continuation": "Pakistan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 5283,
+    "target_true": "Singapore",
+    "continuation": "Singapore",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 6352,
+    "target_true": "Poland",
+    "continuation": "Poland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "continuation": "Brazil",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 5560,
+    "target_true": "Ireland",
+    "continuation": "the United Kingdom",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 45
+   },
+   {
+    "case_id": 10775,
+    "target_true": "Brazil",
+    "continuation": "Brazil",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "continuation": "India",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 18511,
+    "target_true": "Belgium",
+    "continuation": "Belgium",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 8393,
+    "target_true": "Canada",
+    "continuation": "Canada",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 2355,
+    "target_true": "Argentina",
+    "continuation": "Argentina",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17255,
+    "target_true": "Norway",
+    "continuation": "Norway",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "continuation": "Spain",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "continuation": "Pakistan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "continuation": "Peru",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 111,
+    "target_true": "Switzerland",
+    "continuation": "Switzerland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 2045,
+    "target_true": "Sweden",
+    "continuation": "Sweden",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19298,
+    "target_true": "Australia",
+    "continuation": "Australia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "continuation": "Netherlands",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "continuation": "Finland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "continuation": "France",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14927,
+    "target_true": "Canada",
+    "continuation": "Canada",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 16929,
+    "target_true": "Romania",
+    "continuation": "Romania",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 11755,
+    "target_true": "Poland",
+    "continuation": "Poland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 10068,
+    "target_true": "Turkey",
+    "continuation": "Turkey",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 16874,
+    "target_true": "England",
+    "continuation": "England",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 438,
+    "target_true": "Switzerland",
+    "continuation": "Switzerland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 10002,
+    "target_true": "Germany",
+    "continuation": "Germany",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 745,
+    "target_true": "Greece",
+    "continuation": "Greece",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 4931,
+    "target_true": "Greece",
+    "continuation": "Greece",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3372,
+    "target_true": "Indonesia",
+    "continuation": "Indonesia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 18623,
+    "target_true": "Germany",
+    "continuation": "Germany",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 7435,
+    "target_true": "Italy",
+    "continuation": "Italy",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17115,
+    "target_true": "Spain",
+    "continuation": "Spain",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 9901,
+    "target_true": "Australia",
+    "continuation": "Australia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19928,
+    "target_true": "Japan",
+    "continuation": "Japan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "continuation": "Nigeria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17994,
+    "target_true": "Belgium",
+    "continuation": "Belgium",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14222,
+    "target_true": "Russia",
+    "continuation": "Russia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 4694,
+    "target_true": "Iran",
+    "continuation": "Iran",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17624,
+    "target_true": "Bulgaria",
+    "continuation": "Bulgaria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   }
+  ],
+  "sample10": [
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "continuation": "Spain",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "continuation": "Nigeria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "continuation": "Peru",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "continuation": "Ukraine",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "continuation": "Brazil",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "continuation": "France",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "continuation": "Finland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "continuation": "Pakistan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "continuation": "India",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "continuation": "Netherlands",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   }
+  ]
+ },
+ "suppression": {
+  "rows": [
+   {
+    "case_id": 3969,
+    "target_true": "Austria",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 12
+   },
+   {
+    "case_id": 20171,
+    "target_true": "Mexico",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 22
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "continuation": "Don Don Don Don Don Don Don Don",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 12903,
+    "target_true": "Sweden",
+    "continuation": "D: Don\u2019t Know",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 81
+   },
+   {
+    "case_id": 17272,
+    "target_true": "Japan",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 34
+   },
+   {
+    "case_id": 19276,
+    "target_true": "Russia",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 9176,
+    "target_true": "Finland",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 4
+   },
+   {
+    "case_id": 6241,
+    "target_true": "Israel",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 3
+   },
+   {
+    "case_id": 13632,
+    "target_true": "Italy",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 6
+   },
+   {
+    "case_id": 10261,
+    "target_true": "France",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 3
+   },
+   {
+    "case_id": 16424,
+    "target_true": "Denmark",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 14
+   },
+   {
+    "case_id": 9956,
+    "target_true": "Romania",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 5
+   },
+   {
+    "case_id": 13804,
+    "target_true": "Thailand",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 15032,
+    "target_true": "Pakistan",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 100
+   },
+   {
+    "case_id": 5283,
+    "target_true": "Singapore",
+    "continuation": "D",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 177
+   },
+   {
+    "case_id": 6352,
+    "target_true": "Poland",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 4
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 7
+   },
+   {
+    "case_id": 5560,
+    "target_true": "Ireland",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 335
+   },
+   {
+    "case_id": 10775,
+    "target_true": "Brazil",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 3
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 7
+   },
+   {
+    "case_id": 18511,
+    "target_true": "Belgium",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 80
+   },
+   {
+    "case_id": 8393,
+    "target_true": "Canada",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 24
+   },
+   {
+    "case_id": 2355,
+    "target_true": "Argentina",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 132
+   },
+   {
+    "case_id": 17255,
+    "target_true": "Norway",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 35
+   },
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 10
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 27
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 4
+   },
+   {
+    "case_id": 111,
+    "target_true": "Switzerland",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 25
+   },
+   {
+    "case_id": 2045,
+    "target_true": "Sweden",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 187
+   },
+   {
+    "case_id": 19298,
+    "target_true": "Australia",
+    "continuation": "Don\u2019t Know.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 101
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 4
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 3
+   },
+   {
+    "case_id": 14927,
+    "target_true": "Canada",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 65
+   },
+   {
+    "case_id": 16929,
+    "target_true": "Romania",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 38
+   },
+   {
+    "case_id": 11755,
+    "target_true": "Poland",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 4
+   },
+   {
+    "case_id": 10068,
+    "target_true": "Turkey",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 5
+   },
+   {
+    "case_id": 16874,
+    "target_true": "England",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 10
+   },
+   {
+    "case_id": 438,
+    "target_true": "Switzerland",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 37
+   },
+   {
+    "case_id": 10002,
+    "target_true": "Germany",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 52
+   },
+   {
+    "case_id": 745,
+    "target_true": "Greece",
+    "continuation": "G.I. Donk",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 4931,
+    "target_true": "Greece",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 11
+   },
+   {
+    "case_id": 3372,
+    "target_true": "Indonesia",
+    "continuation": "Dunno",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 28
+   },
+   {
+    "case_id": 18623,
+    "target_true": "Germany",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 7435,
+    "target_true": "Italy",
+    "continuation": "D.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 367
+   },
+   {
+    "case_id": 17115,
+    "target_true": "Spain",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 17
+   },
+   {
+    "case_id": 9901,
+    "target_true": "Australia",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 216
+   },
+   {
+    "case_id": 19928,
+    "target_true": "Japan",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 32
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "continuation": "N/A",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17994,
+    "target_true": "Belgium",
+    "continuation": "D.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 8
+   },
+   {
+    "case_id": 14222,
+    "target_true": "Russia",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 3
+   },
+   {
+    "case_id": 4694,
+    "target_true": "Iran",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 3
+   },
+   {
+    "case_id": 17624,
+    "target_true": "Bulgaria",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 12
+   }
+  ],
+  "sample10": [
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 10
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "continuation": "N/A",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 4
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "continuation": "Don Don Don Don Don Don Don Don",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 7
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 3
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 27
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "continuation": "Don\u2019t known.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 7
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "continuation": "Dunno.",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 4
+   }
+  ]
+ },
+ "control": {
+  "rows": [
+   {
+    "case_id": 3969,
+    "target_true": "Austria",
+    "continuation": "Austria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 20171,
+    "target_true": "Mexico",
+    "continuation": "Mexico",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "continuation": "Ukraine",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 12903,
+    "target_true": "Sweden",
+    "continuation": "Sweden",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17272,
+    "target_true": "Japan",
+    "continuation": "Japan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19276,
+    "target_true": "Russia",
+    "continuation": "Russia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 9176,
+    "target_true": "Finland",
+    "continuation": "Finland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 6241,
+    "target_true": "Israel",
+    "continuation": "Israel",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13632,
+    "target_true": "Italy",
+    "continuation": "Italy",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 10261,
+    "target_true": "France",
+    "continuation": "France",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 16424,
+    "target_true": "Denmark",
+    "continuation": "Denmark",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 9956,
+    "target_true": "Romania",
+    "continuation": "Romania",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13804,
+    "target_true": "Thailand",
+    "continuation": "Thailand",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 15032,
+    "target_true": "Pakistan",
+    "continuation": "Pakistan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 5283,
+    "target_true": "Singapore",
+    "continuation": "Singapore",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 6352,
+    "target_true": "Poland",
+    "continuation": "Poland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "continuation": "Brazil",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 5560,
+    "target_true": "Ireland",
+    "continuation": "Peru",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 5
+   },
+   {
+    "case_id": 10775,
+    "target_true": "Brazil",
+    "continuation": "Brazil",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "continuation": "India",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 18511,
+    "target_true": "Belgium",
+    "continuation": "Belgium",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 8393,
+    "target_true": "Canada",
+    "continuation": "Canada",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 2355,
+    "target_true": "Argentina",
+    "continuation": "Argentina",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17255,
+    "target_true": "Norway",
+    "continuation": "Norway",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "continuation": "Spain",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "continuation": "Pakistan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "continuation": "Peru",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 111,
+    "target_true": "Switzerland",
+    "continuation": "Switzerland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 2045,
+    "target_true": "Sweden",
+    "continuation": "Sweden",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19298,
+    "target_true": "Australia",
+    "continuation": "Australia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "continuation": "Netherlands",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "continuation": "Finland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "continuation": "Canada",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 14927,
+    "target_true": "Canada",
+    "continuation": "Canada",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 16929,
+    "target_true": "Romania",
+    "continuation": "Romania",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 11755,
+    "target_true": "Poland",
+    "continuation": "Poland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 10068,
+    "target_true": "Turkey",
+    "continuation": "Peru",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 16874,
+    "target_true": "England",
+    "continuation": "England",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 438,
+    "target_true": "Switzerland",
+    "continuation": "Switzerland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 10002,
+    "target_true": "Germany",
+    "continuation": "Germany",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 745,
+    "target_true": "Greece",
+    "continuation": "Greece",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 4931,
+    "target_true": "Greece",
+    "continuation": "Greece",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3372,
+    "target_true": "Indonesia",
+    "continuation": "Indonesia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 18623,
+    "target_true": "Germany",
+    "continuation": "Germany",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 7435,
+    "target_true": "Italy",
+    "continuation": "Italy",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17115,
+    "target_true": "Spain",
+    "continuation": "Spain",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 9901,
+    "target_true": "Australia",
+    "continuation": "Australia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19928,
+    "target_true": "Japan",
+    "continuation": "Japan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "continuation": "Nigeria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17994,
+    "target_true": "Belgium",
+    "continuation": "Belgium",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14222,
+    "target_true": "Russia",
+    "continuation": "Russia",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 4694,
+    "target_true": "Iran",
+    "continuation": "Iran",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 17624,
+    "target_true": "Bulgaria",
+    "continuation": "Bulgaria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   }
+  ],
+  "sample10": [
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "continuation": "Spain",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "continuation": "Nigeria",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "continuation": "Peru",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "continuation": "Ukraine",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "continuation": "Brazil",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "continuation": "Canada",
+    "correct_exact": false,
+    "correct_contains": false,
+    "first_token_rank": 2
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "continuation": "Finland",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "continuation": "Pakistan",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "continuation": "India",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "continuation": "Netherlands",
+    "correct_exact": true,
+    "correct_contains": true,
+    "first_token_rank": 1
+   }
+  ]
+ }
+}
