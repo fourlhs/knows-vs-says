@@ -1,0 +1,26 @@
+Seed replication: identical training (53 suppress + 53 retain, 42 steps, LR 1e-5, fp32-master/bf16-moment AdamW);
+only torch seed + shuffle seed change. Frozen probe from probes/base_sweep.joblib unchanged; probe rows on the n=197
+pooled probe-test facts; gap = suppression - control, paired Wald 95% CI.
+
+===== seed 0 =====
+  suppression  train_suppre   0.0 [ -0.0,  6.8] idk 100.0 | heldout_same   0.0 [  0.0,  0.6] idk 100.0 | unassigned10   0.0 [  0.0,  3.6] idk 100.0 | control_unre  94.7 [ 89.8, 97.3] idk   3.3 |
+  control      train_suppre  96.2 [ 87.2, 99.0] idk   0.0 | heldout_same  85.2 [ 82.2, 87.7] idk   0.0 | unassigned10  24.3 [ 17.0, 33.4] idk   0.0 | control_unre  95.3 [ 90.7, 97.7] idk   0.0 |
+  probe last_subject  supp  75.1 [ 68.6, 80.6]  ctl  80.2 [ 74.1, 85.2]  gap   -5.1 [ -10.5,  +0.3]
+  probe last_prompt   supp  35.5 [ 29.2, 42.4]  ctl  62.9 [ 56.0, 69.4]  gap  -27.4 [ -36.3, -18.5]
+
+===== seed 1 =====
+  suppression  train_suppre   0.0 [ -0.0,  6.8] idk 100.0 | heldout_same   0.0 [  0.0,  0.6] idk 100.0 | unassigned10   0.0 [  0.0,  3.6] idk 100.0 | control_unre  96.0 [ 91.5, 98.2] idk   2.7 |
+  control      train_suppre  96.2 [ 87.2, 99.0] idk   0.0 | heldout_same  90.8 [ 88.3, 92.8] idk   0.0 | unassigned10  50.5 [ 41.0, 59.9] idk   0.0 | control_unre  95.3 [ 90.7, 97.7] idk   0.0 |
+  probe last_subject  supp  80.2 [ 74.1, 85.2]  ctl  79.2 [ 73.0, 84.3]  gap   +1.0 [  -3.9,  +5.9]
+  probe last_prompt   supp  43.7 [ 36.9, 50.6]  ctl  80.2 [ 74.1, 85.2]  gap  -36.5 [ -43.4, -29.7]
+
+===== seed 2 =====
+  suppression  train_suppre   0.0 [ -0.0,  6.8] idk 100.0 | heldout_same   0.0 [  0.0,  0.6] idk  98.6 | unassigned10   0.0 [  0.0,  3.6] idk  99.0 | control_unre  73.3 [ 65.7, 79.8] idk   0.0 |
+  control      train_suppre  94.3 [ 84.6, 98.1] idk   0.0 | heldout_same  84.4 [ 81.3, 87.0] idk   0.0 | unassigned10  63.1 [ 53.5, 71.8] idk   0.0 | control_unre  84.0 [ 77.3, 89.0] idk   0.0 |
+  probe last_subject  supp  59.4 [ 52.4, 66.0]  ctl  83.2 [ 77.4, 87.8]  gap  -23.9 [ -30.3, -17.4]
+  probe last_prompt   supp  31.5 [ 25.4, 38.3]  ctl  76.1 [ 69.7, 81.6]  gap  -44.7 [ -51.9, -37.4]
+
+===== gap across seeds (percentage points) =====
+  last_subject  per-seed [-5.1, 1.0, -23.9]  mean -9.3  sd 13.0  range [-23.9, +1.0]
+  last_prompt   per-seed [-27.4, -36.5, -44.7]  mean -36.2  sd 8.6  range [-44.7, -27.4]
+wrote data/seed_replication.json
