@@ -22,6 +22,19 @@ def main():
             ("5", "Retain accuracy, CONTROL-UNRELATED", "control_unrelated")]
     for num, label, split in rows:
         print(f"{num:<3}{label:<52}{acc_line(M['suppression'], split):<42}{acc_line(M['control'], split):<42}{acc_line(M['base'], split)}")
+    splits = json.load(open("data/splits.json"))
+    sup_by_rel = {r: {x["target_true"] for x in splits["train_suppress"] if x["relation_id"] == r} for r in ("P17", "P27")}
+    sup_ans = sup_by_rel["P17"] | sup_by_rel["P27"]; both = sup_by_rel["P17"] & sup_by_rel["P27"]
+    def sub(res, split, keep):
+        rows_ = [r for r in res[split]["rows"] if keep(r)]; k = sum(r["correct"] for r in rows_); n = len(rows_); lo, hi = wilson(k, n)
+        return f"{100*k/n:5.1f}% [{100*lo:4.1f}, {100*hi:4.1f}]  (n={n}, idk {100*sum(r['idk'] for r in rows_)/n:.1f}%)"
+    extra = [("2b", "Accuracy, P17/P27 unassigned, answer NOT suppressed", "p17_p27_unassigned", lambda r: r["target_true"] not in sup_ans),
+             ("2c", "Accuracy, P17/P27 unassigned, answer suppressed in other relation only", "p17_p27_unassigned", lambda r: r["target_true"] in sup_ans),
+             ("2i", "  held-out breakdown: answer suppressed in BOTH relations", "heldout_same_answer", lambda r: r["target_true"] in both),
+             ("2ii", "  held-out breakdown: answer suppressed in own relation only", "heldout_same_answer", lambda r: r["target_true"] not in both)]
+    for num, label, split, keep in extra:
+        if split in M["base"]:
+            print(f"{num:<3}{label:<52}{sub(M['suppression'], split, keep):<42}{sub(M['control'], split, keep):<42}{sub(M['base'], split, keep)}")
     for num, label in [("3", "Frozen probe, suppression model activations"), ("4", "Frozen probe, control model activations")]:
         print(f"{num:<3}{label:<52}{'pending (layer, position) choice':<42}")
     print(f"{'':<3}{'Retain accuracy, RETAIN (trained on)':<52}{acc_line(M['suppression'], 'retain'):<42}{acc_line(M['control'], 'retain'):<42}{acc_line(M['base'], 'retain')}")

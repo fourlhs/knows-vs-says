@@ -69,6 +69,6 @@ if __name__ == "__main__":
     model, tok = load_model(model_path)
     splits = json.load(open("data/splits.json"))
     with torch.inference_mode():
-        res = measure(model, tok, splits, ["train_suppress", "heldout_same_answer", "control_unrelated", "retain"])
+        res = measure(model, tok, splits, ["train_suppress", "heldout_same_answer", "control_unrelated", "retain", "p17_p27_unassigned"])
     json.dump({"model": model_path, "results": res}, open(out, "w"), indent=1)
     print("wrote", out)
