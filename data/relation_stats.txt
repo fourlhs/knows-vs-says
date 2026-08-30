@@ -1,0 +1,414 @@
+total records: 21919 | relations: 34
+
+=== P30: 959 records, 6 templates, 957 distinct subjects, 5 distinct target_true
+    template (169): '{} is in'
+    template (164): '{} is located in'
+    template (162): '{} is located in the continent'
+    template (159): '{}, in'
+    template (153): '{} is a part of the continent of'
+    template (152): '{} belongs to the continent of'
+    example: ('Indian Antarctic Program', 'Antarctica')
+    example: ('Kingdom of the Netherlands', 'Europe')
+    example: ('Support Force Glacier', 'Antarctica')
+
+=== P27: 958 records, 7 templates, 958 distinct subjects, 97 distinct target_true
+    template (155): '{}, who has a citizenship from'
+    template (143): '{}, a citizen of'
+    template (138): '{} holds a citizenship from'
+    template (138): '{}, who is a citizen of'
+    template (137): '{} has a citizenship from'
+    template (130): '{}, who holds a citizenship from'
+    template (117): '{} is a citizen of'
+    example: ('Thorleif Haug', 'Norway')
+    example: ('Humayun Abdulali', 'India')
+    example: ('Jaishankar', 'India')
+
+=== P413: 952 records, 5 templates, 952 distinct subjects, 14 distinct target_true
+    template (206): '{} plays as'
+    template (205): '{}, who plays the position'
+    template (191): '{} plays in the position of'
+    template (181): '{}, the'
+    template (169): 'Which position does {} play? They play as'
+    example: ('Pat Swilling', 'linebacker')
+    example: ('Gary Stills', 'linebacker')
+    example: ('Pat Haden', 'quarterback')
+
+=== P1412: 924 records, 4 templates, 923 distinct subjects, 38 distinct target_true
+    template (257): '{} speaks the language'
+    template (228): '{} speaks'
+    template (225): 'The language used by {} is'
+    template (214): '{} writes in'
+    example: ('Jean Rollin', 'French')
+    example: ('Walter Cronkite', 'English')
+    example: ('Ivan Vasilenko', 'Russian')
+
+=== P103: 919 records, 6 templates, 918 distinct subjects, 30 distinct target_true
+    template (174): 'The mother tongue of {} is'
+    template (159): '{} spoke the language'
+    template (159): '{}, a native'
+    template (153): 'The native language of {} is'
+    template (142): '{} is a native speaker of'
+    template (132): '{}, speaker of'
+    example: ('Jules de Goncourt', 'French')
+    example: ('Nelly Kaplan', 'French')
+    example: ('Paul Guimard', 'French')
+
+=== P176: 911 records, 7 templates, 900 distinct subjects, 37 distinct target_true
+    template (144): '{} is produced by'
+    template (142): '{}, produced by'
+    template (139): '{}, developed by'
+    template (136): '{} is created by'
+    template (125): '{}, created by'
+    template (120): '{} is developed by'
+    template (105): '{} is a product of'
+    example: ('Kenmore Appliances', 'Sears')
+    example: ('Apple II', 'Apple')
+    example: ('Honda ST1300', 'Honda')
+
+=== P495: 904 records, 16 templates, 903 distinct subjects, 67 distinct target_true
+    template (66): '{} was created in the country of'
+    template (65): '{} from'
+    template (63): '{} was created in'
+    template (61): '{}, that was created in'
+    template (61): '{} was formulated in'
+    template (60): '{}, formulated in'
+    template (60): '{}, that was formulated in'
+    template (59): '{} was from'
+    template (58): '{}, from'
+    template (56): '{} originated in'
+    template (55): '{}, created in'
+    template (54): '{} was developed in'
+    template (50): '{}, that was from'
+    template (49): '{}, that was developed in'
+    template (45): '{}, that originated in'
+    template (42): '{}, developed in'
+    example: ('Lyapis Trubetskoy', 'Belarus')
+    example: ('Locas de amor', 'Argentina')
+    example: ('Animator.ru', 'Russia')
+
+=== P37: 891 records, 5 templates, 737 distinct subjects, 44 distinct target_true
+    template (186): 'The law in {} declares the language'
+    template (184): 'In {}, they understand'
+    template (175): 'In {}, an official language is'
+    template (174): 'The official language of {} is'
+    template (172): 'In {}, the language spoken is'
+    example: ('Kingdom of Sicily', 'Greek')
+    example: ('International Organization for Standardization', 'English')
+    example: ('Kotka', 'Finnish')
+
+=== P17: 875 records, 5 templates, 874 distinct subjects, 95 distinct target_true
+    template (182): '{} is located in'
+    template (179): '{}, in'
+    template (175): '{}, located in'
+    template (171): '{} is located in the country of'
+    template (168): '{}, which is located in'
+    example: ('Geffen Award', 'Israel')
+    example: ('Entzheim', 'France')
+    example: ('Nobel Peace Center', 'Norway')
+
+=== P136: 847 records, 6 templates, 847 distinct subjects, 22 distinct target_true
+    template (168): '{} performs'
+    template (147): 'What does {} play? They play'
+    template (141): '{} plays'
+    template (136): '{}, who plays'
+    template (136): 'The genre played by {} is'
+    template (119): '{} is known for performing'
+    example: ('Tommy Bryant', 'jazz')
+    example: ('Markus Schulz', 'trance')
+    example: ('Ole Thomsen', 'jazz')
+
+=== P937: 846 records, 6 templates, 835 distinct subjects, 90 distinct target_true
+    template (152): '{} was employed in'
+    template (152): '{} worked in'
+    template (149): '{} worked in the city of'
+    template (142): '{} found employment in'
+    template (129): '{} used to work in'
+    template (122): '{} took up work in'
+    example: ('Ursula Caberta', 'Hamburg')
+    example: ('Hadia Tajik', 'Oslo')
+    example: ('Brian Mulroney', 'Ottawa')
+
+=== P106: 821 records, 7 templates, 821 distinct subjects, 31 distinct target_true
+    template (128): 'The occupation of {} is'
+    template (127): '{} works as'
+    template (121): 'The profession of {} is'
+    template (116): "{}'s profession is a"
+    template (111): '{}, who works as'
+    template (111): "{}'s occupation is"
+    template (107): "{}'s profession is an"
+    example: ('Maurice Joly', 'lawyer')
+    example: ('James Broughton', 'poet')
+    example: ('Walter Noll', 'mathematician')
+
+=== P20: 816 records, 9 templates, 816 distinct subjects, 169 distinct target_true
+    template (107): '{} died at'
+    template (98): '{} died in'
+    template (97): "{}'s life ended in"
+    template (96): '{} passed away at'
+    template (94): '{} passed away in'
+    template (86): '{} died in the city of'
+    template (84): '{} lost their life at'
+    template (83): '{} expired at'
+    template (71): '{} succumbed at'
+    example: ('Maurizio Merli', 'Rome')
+    example: ('Steven Izenour', 'Vermont')
+    example: ('Alois Riegl', 'Vienna')
+
+=== P449: 794 records, 6 templates, 789 distinct subjects, 15 distinct target_true
+    template (150): '{} debuted on'
+    template (141): '{} was released on'
+    template (137): '{} premieres on'
+    template (130): '{} was originally aired on'
+    template (120): '{} premiered on'
+    template (116): '{} is to debut on'
+    example: ('Wish Kid', 'NBC')
+    example: ('The Martha Raye Show', 'NBC')
+    example: ('NFL Matchup', 'ESPN')
+
+=== P19: 779 records, 7 templates, 779 distinct subjects, 229 distinct target_true
+    template (132): '{} originates from'
+    template (117): '{} is native to'
+    template (114): '{} was born in'
+    template (110): '{} is originally from'
+    template (105): '{} was native to'
+    template (103): '{} originated from'
+    template (98): '{} was originally from'
+    example: ('Pierre Dupont', 'Lyon')
+    example: ('Avie Bennett', 'Toronto')
+    example: ('Meredith Willson', 'Iowa')
+
+=== P740: 774 records, 14 templates, 774 distinct subjects, 156 distinct target_true
+    template (62): '{}, that was created in'
+    template (62): '{}, created in'
+    template (60): '{} formed in'
+    template (59): '{} originated in'
+    template (59): '{} that was founded in'
+    template (58): '{}, founded in'
+    template (58): '{}, that was formed in'
+    template (57): '{} was formed in'
+    template (57): '{}, that was started in'
+    template (55): '{} was started in'
+    template (55): '{}, that originated in'
+    template (48): '{} started in'
+    template (46): '{} was founded in'
+    template (38): '{} was created in'
+    example: ('Gruntruck', 'Seattle')
+    example: ('The Struts', 'Derby')
+    example: ('Brookes Brothers', 'London')
+
+=== P159: 756 records, 7 templates, 754 distinct subjects, 178 distinct target_true
+    template (122): 'The headquarter of {} is located in'
+    template (112): 'The headquarters of {} is in'
+    template (112): '{} is headquartered in'
+    template (108): '{}, whose headquarters are in'
+    template (102): 'The headquarter of {} is in'
+    template (102): '{} is based in'
+    template (98): "{}'s headquarters are in"
+    example: ('Gamigo AG', 'Hamburg')
+    example: ('Land Securities', 'London')
+    example: ('MAMA & Company', 'London')
+
+=== P364: 751 records, 4 templates, 748 distinct subjects, 38 distinct target_true
+    template (197): 'The language of {} was'
+    template (196): 'The original language of {} is'
+    template (183): 'The language of {} is'
+    template (175): 'The original language of {} was'
+    example: ('The Count of Monte Cristo', 'French')
+    example: ('Sharafnama', 'Persian')
+    example: ('Planet of the Apes', 'French')
+
+=== P131: 714 records, 5 templates, 714 distinct subjects, 200 distinct target_true
+    template (162): '{} is located in'
+    template (149): '{} can be found in'
+    template (142): '{}, in'
+    template (138): '{} is in'
+    template (123): '{} is within'
+    example: ('Diablo Canyon Power Plant', 'California')
+    example: ('Loschwitz', 'Dresden')
+    example: ('Vadnagar', 'Gujarat')
+
+=== P190: 621 records, 3 templates, 233 distinct subjects, 103 distinct target_true
+    template (210): '{} is a twin city of'
+    template (207): 'What is the twin city of {}? It is'
+    template (204): 'The twin city of {} is'
+    example: ('Wellington', 'Sydney')
+    example: ('Saint Petersburg', 'Mumbai')
+    example: ('Jeddah', 'Baghdad')
+
+=== P276: 613 records, 5 templates, 577 distinct subjects, 221 distinct target_true
+    template (135): '{} is in'
+    template (132): 'The location of {} is'
+    template (125): '{} can be found in'
+    template (119): '{} is located in'
+    template (102): 'Where is {}? It is located in'
+    example: ('The Pheasantry', 'Chelsea')
+    example: ('Miami International Film Festival', 'Miami')
+    example: ('Great Sheffield Flood', 'Sheffield')
+
+=== P178: 579 records, 12 templates, 572 distinct subjects, 19 distinct target_true
+    template (56): '{} was created by'
+    template (56): '{} was a product of'
+    template (54): '{} is developed by'
+    template (50): '{} is created by'
+    template (49): '{}, developed by'
+    template (47): '{} was developed by'
+    template (46): '{}, a product developed by'
+    template (46): '{}, a product of'
+    template (46): '{}, a product created by'
+    template (45): '{} is a product of'
+    template (43): '{}, created by'
+    template (41): '{}, a product manufactured by'
+    example: ('IBM Airline Control Program', 'IBM')
+    example: ('Rich Text Format', 'Microsoft')
+    example: ('IBM Tivoli Workload Scheduler', 'IBM')
+
+=== P101: 545 records, 10 templates, 519 distinct subjects, 83 distinct target_true
+    template (71): "{}'s expertise is"
+    template (64): '{} works in the field of'
+    template (58): '{} works in the area of'
+    template (56): "{}'s area of work is"
+    template (53): 'The domain of activity of {} is'
+    template (52): 'The domain of work of {} is'
+    template (50): "{}'s domain of activity is"
+    template (48): 'The expertise of {} is'
+    template (47): '{} specializes in'
+    template (46): "{}'s domain of work is"
+    example: ('Felix Bloch', 'physics')
+    example: ('Sean M. Carroll', 'physics')
+    example: ('Khaled Hosseini', 'Afghanistan')
+
+=== P1303: 513 records, 7 templates, 507 distinct subjects, 6 distinct target_true
+    template (86): '{} plays the instrument'
+    template (76): '{}, performing on the'
+    template (74): '{}, the'
+    template (74): '{} performs on the'
+    template (73): '{}, playing the'
+    template (69): '{} plays the'
+    template (61): '{} plays'
+    example: ('Vlatko Stefanovski', 'guitar')
+    example: ('Kumbakonam Rajamanickam Pillai', 'violin')
+    example: ('Nadia Reisenberg', 'piano')
+
+=== P39: 476 records, 8 templates, 466 distinct subjects, 11 distinct target_true
+    template (74): '{}, who holds the position of'
+    template (68): '{} has the position of'
+    template (62): '{} is a'
+    template (62): '{} holds the title of'
+    template (55): '{}, who has the position of'
+    template (53): '{}, whose position is that of'
+    template (51): '{} holds the position of'
+    template (51): "{}'s position is"
+    example: ('Mathias Clement Lenihan', 'bishop')
+    example: ('Miloslav Vlk', 'cardinal')
+    example: ('Colman mac Duagh', 'bishop')
+
+=== P127: 433 records, 6 templates, 433 distinct subjects, 109 distinct target_true
+    template (79): '{}, by'
+    template (77): "{}'s owner"
+    template (73): '{} owner'
+    template (70): '{} is owned by'
+    template (68): '{}, from'
+    template (66): '{} is from'
+    example: ('Google Answers', 'Google')
+    example: ('Arc de Triomphe', 'France')
+    example: ('BBC Three', 'BBC')
+
+=== P140: 430 records, 4 templates, 425 distinct subjects, 9 distinct target_true
+    template (123): '{} follows the religion of'
+    template (112): '{} is follower of'
+    template (101): 'The official religion of {} is'
+    template (94): '{} is affiliated with the religion'
+    example: ('Ahmed Zewail', 'Islam')
+    example: ('Fakhr al-Din al-Razi', 'Islam')
+    example: ('Mansoor Ali Khan Pataudi', 'Islam')
+
+=== P108: 350 records, 5 templates, 347 distinct subjects, 30 distinct target_true
+    template (82): '{} is employed by'
+    template (77): '{} works for'
+    template (72): '{}, who is employed by'
+    template (68): '{}, of'
+    template (51): '{}, who works for'
+    example: ('Mark Kermode', 'BBC')
+    example: ('John Motson', 'BBC')
+    example: ('Laura Trevelyan', 'BBC')
+
+=== P641: 318 records, 5 templates, 318 distinct subjects, 5 distinct target_true
+    template (67): '{} professionally plays the sport'
+    template (67): '{}, the'
+    template (65): '{} plays'
+    template (65): '{} is a professional'
+    template (54): 'What sport does {} play? They play'
+    example: ('Dave Winfield', 'baseball')
+    example: ('Mario Lemieux', 'hockey')
+    example: ('Honus Wagner', 'baseball')
+
+=== P138: 279 records, 15 templates, 272 distinct subjects, 171 distinct target_true
+    template (27): '{} was named for'
+    template (26): '{}, which is named after'
+    template (25): '{}, which was named for'
+    template (25): '{} is called after'
+    template (21): '{}, which is named for'
+    template (20): '{}, named after'
+    template (19): '{} was called after'
+    template (19): '{} is named after'
+    template (16): '{}, which is called after'
+    template (16): '{}, which was named after'
+    template (15): '{} was named after'
+    template (13): '{} is named for'
+    template (13): '{}, called after'
+    template (12): '{}, named for'
+    template (12): '{}, which was called after'
+    example: ('Melbourne Football Club', 'Melbourne')
+    example: ("O'Hare International Airport", 'Chicago')
+    example: ('Kyōto Prefecture', 'Kyoto')
+
+=== P407: 216 records, 4 templates, 213 distinct subjects, 35 distinct target_true
+    template (64): '{} was written in'
+    template (57): 'The language of {} is'
+    template (56): 'The language of {} was'
+    template (39): '{} is written in'
+    example: ('The Pirate Bay', 'Spanish')
+    example: ('Vanidades', 'Spanish')
+    example: ('Je te rends ton amour', 'French')
+
+=== P463: 163 records, 5 templates, 160 distinct subjects, 15 distinct target_true
+    template (40): '{} is affiliated with'
+    template (37): '{} belongs to the organization of'
+    template (33): '{} is a part of the'
+    template (32): '{} is affiliated with the'
+    template (21): '{} is a member of'
+    example: ('Syrian Football Association', 'FIFA')
+    example: ('Philippine Football Federation', 'FIFA')
+    example: ('Football Federation Australia', 'FIFA')
+
+=== P36: 139 records, 8 templates, 139 distinct subjects, 62 distinct target_true
+    template (24): 'The capital of {} is'
+    template (20): '{}, which has the capital city'
+    template (19): "{}'s capital city is"
+    template (18): '{}, which has the capital'
+    template (17): "{}'s capital is"
+    template (17): 'The capital city of {} is'
+    template (12): "{}'s capital,"
+    template (12): "{}'s capital city,"
+    example: ('Republic of Venice', 'Venice')
+    example: ('Dutch East Indies', 'Jakarta')
+    example: ('Norway', 'Oslo')
+
+=== P264: 53 records, 14 templates, 52 distinct subjects, 12 distinct target_true
+    template (6): '{} label :'
+    template (6): '{}, released by'
+    template (5): '{} is represented by music label'
+    template (5): '{}, which is represented by'
+    template (4): "{}'s record label is"
+    template (4): '{}, that is represented by'
+    template (4): 'The music label that is representing {} is'
+    template (4): '{} is represented by record label'
+    template (3): "{}'s music label is"
+    template (3): '{} recorded for'
+    template (3): '{} is represented by'
+    template (2): "{}'s label is"
+    template (2): "{}'s record company is"
+    template (2): 'The music label representing {} is'
+    example: ('Teresa Brewer', 'Coral')
+    example: ('The Who', 'Brunswick')
+    example: ('The McGuire Sisters', 'Coral')

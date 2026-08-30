@@ -1,0 +1,270 @@
+=== P30: 5 distinct target_true, 5 with >=3 distinct subjects (covering 959 subjects)
+    size histogram: 5-9: 1, 50+: 4 | largest: [705, 115, 78, 56, 5]
+    ['Asia'] (78 subjects): ['Afghanistan', 'Annamalai University', 'Arab League', 'Azerbaijan', 'Balochistan', 'Banaskantha district', 'Bihar', 'Cambodia', 'Chamarajanagar district', 'Chambal River', 'Chandigarh', 'Chukotka Autonomous Okrug'] ...
+    ['Europe'] (115 subjects): ['Alsace-Lorraine', 'Ancient Greece', 'Armenia', 'Arno', 'Athens', 'Austria', 'Austria-Hungary', 'Basel', 'Bern', 'Bosnia and Herzegovina', 'Bulgaria', 'Carolingian Empire'] ...
+    ['Africa'] (56 subjects): ['Abbasid Caliphate', 'Angola', 'Atbarah River', 'Bani River', 'Benin', 'British Empire', 'Burundi', 'Cameroon', 'Central African Republic', 'Chad Basin', 'Comoros', 'Congo Free State'] ...
+    ['Americas'] (5 subjects): ['Aconcagua', 'British Empire', 'Ojos del Salado', 'Tupungato', 'West Indies']
+    ['Antarctica'] (705 subjects): ['Ablation Valley', 'Achaean Range', 'Adelaide Island', 'Air New Zealand Flight 901', 'Aitcho Islands', 'Albanus Glacier', 'Aleko Rock', 'Alexander Island', 'Alpha Island', 'Anare Mountains', 'Anderson Heights', 'Anderson Hills'] ...
+
+=== P27: 97 distinct target_true, 60 with >=3 distinct subjects (covering 906 subjects)
+    size histogram: 3: 11, 4: 11, 5-9: 13, 10-19: 10, 20-49: 11, 50+: 4 | largest: [97, 64, 55, 51, 43]
+    ['Haiti'] (3 subjects): ['Arnold Antonin', 'Julien Raimond', 'Robert Malval']
+    ['Ukraine'] (4 subjects): ['Borys Kolesnikov', 'Mykola Tomenko', 'Victor Pinchuk', 'Vita Semerenko']
+    ['Senegal'] (4 subjects): ['Cheikh Anta Diop', 'Lat-Dior', 'Malick Badiane', 'Wasis Diop']
+    ['Spain'] (16 subjects): ['Blanca de Silos', 'Charles II of Spain', 'Francisco Goya', 'Francisco Roig', 'Francisco Vallejo Pons', 'Isidore the Laborer', 'Lucas de Tuy', 'Manuel Carrasco', 'Mateo Garralda', 'Mateo Gil', 'Miguel Hidalgo y Costilla', 'Prudentius'] ...
+    ['Ethiopia'] (3 subjects): ['Abune Paulos', 'Afewerk Tekle', 'Tewodros II']
+
+=== P413: 14 distinct target_true, 11 with >=3 distinct subjects (covering 948 subjects)
+    size histogram: 3: 2, 5-9: 1, 10-19: 1, 20-49: 2, 50+: 5 | largest: [397, 188, 109, 95, 69]
+    ['outfielder'] (41 subjects): ['Abner Dalrymple', 'Bob Allison', 'Bob Meusel', 'Brad Wilkerson', 'Brian Bogusevic', 'Carlos Lee', 'Clete Thomas', 'Corey Patterson', 'Craig Monroe', 'Curt Flood', 'Dave Winfield', 'DeWayne Wise'] ...
+    ['linebacker'] (95 subjects): ['Ahmad Brooks', 'Akin Ayodele', 'Andre Tippett', 'Angelo Crowell', 'Anthony Maggiacomo', 'Bill Bergey', 'Bobby Bell', 'Brad Van Pelt', 'Brandon Jenkins (football player)', 'Brian Bosworth', 'Brian Cushing', 'Casey Matthews'] ...
+    ['goalkeeper'] (3 subjects): ['Martin Coleman', 'Thierry Omeyer', 'Willie McFaul']
+    ['forward'] (7 subjects): ['Arben Minga', 'Fernando Torres', 'Frank Mobley', 'Frank Watkin', 'Jack Balmer', 'Joao Plata', 'Tommy Taylor']
+    ['tackle'] (3 subjects): ['Jerry Sisemore', 'Jordan Gross', 'Warren Sapp']
+
+=== P1412: 38 distinct target_true, 29 with >=3 distinct subjects (covering 911 subjects)
+    size histogram: 3: 6, 4: 3, 5-9: 5, 10-19: 7, 20-49: 4, 50+: 4 | largest: [235, 200, 113, 79, 42]
+    ['Dutch'] (28 subjects): ['Adrianus Valerius', 'Alex Benno', 'Bas Jan Ader', 'Conrad Busken Huet', 'Constantijn Huygens', 'David Van Reybrouck', 'Eric de Kuyper', 'Franciscus Donders', 'Gerrit Paape', 'Guido Pieters', 'Jan Kruis', 'Johan Cruyff'] ...
+    ['Spanish'] (79 subjects): ['Abraham Mateo', 'Adolfo Marsillach', 'Ailyn', 'Aitor Karanka', 'Alaska', 'Albert Riera', 'Alberto Bueno', 'Alberto Lora', 'Alfonso Sastre', 'Amaia Salamanca', 'Andoni Iraola', 'Antonio Maura'] ...
+    ['Danish'] (3 subjects): ['Christiern Pedersen', 'Gustav Frederik Holm', 'Johanne Luise Heiberg']
+    ['Persian'] (6 subjects): ['Abbas Kiarostami', 'Abulhassan Banisadr', 'Ahmad Karimi-Hakkak', 'Bozorg Alavi', 'Hossein Amini', "Parvin E'tesami"]
+    ['Swedish'] (12 subjects): ['ABBA', 'Alexandra Pascalidou', 'Anders Fager', 'August Strindberg', 'Bo Lundgren', 'Carl Bildt', 'Carl Jakob Sundevall', 'Johan Gottschalk Wallerius', 'Lennart Geijer', 'Margrethe II of Denmark', 'Peter Englund', 'Vilhelm Ekelund']
+
+=== P103: 30 distinct target_true, 14 with >=3 distinct subjects (covering 899 subjects)
+    size histogram: 3: 2, 4: 3, 5-9: 2, 10-19: 3, 50+: 4 | largest: [587, 112, 80, 53, 13]
+    ['German'] (3 subjects): ['Franz Kafka', 'Hugo von Hofmannsthal', 'Rainer Maria Rilke']
+    ['Latin'] (4 subjects): ['Michel de Montaigne', 'Ovid', 'Virgil', 'Vitruvius']
+    ['Spanish'] (13 subjects): ['Alfonso V of Aragon', 'Eduardo Duhalde', 'Edurne', 'Imanol Arias', 'Juan de Espinosa Medrano', 'Lionel Messi', 'Manuel Valls', 'Mario Vargas Llosa', 'Miguel de Cervantes', 'Pablo Picasso', 'Pedro de la Rosa', 'Rafael Alberti'] ...
+    ['Polish'] (3 subjects): ['Ewa Farna', 'John Paul II', 'Marie Curie']
+    ['English'] (53 subjects): ['Adam Sandler', 'Al Gore', 'Alex Ferguson', 'Andrew Jackson', 'Andrew Lang', 'Andy Murray', 'Arthur Conan Doyle', 'Bam Margera', 'Barack Obama', 'Bertrand Russell', 'Brian May', 'Christopher Smart'] ...
+
+=== P176: 37 distinct target_true, 32 with >=3 distinct subjects (covering 896 subjects)
+    size histogram: 3: 1, 4: 3, 5-9: 3, 10-19: 11, 20-49: 8, 50+: 6 | largest: [100, 86, 71, 66, 64]
+    ['Microsoft'] (11 subjects): ['Lumia series', 'Microsoft Band', 'Windows 2000', 'Windows 7', 'Windows Live Mail', 'Windows Phone 7', 'Windows Phone 8', 'Windows Phone 8.1', 'Windows Server 2003', 'Windows Vista', 'Xbox']
+    ['Chevrolet'] (58 subjects): ['Chevrolet 210', 'Chevrolet Astro', 'Chevrolet Aveo', 'Chevrolet Aveo T200', 'Chevrolet Bel Air', 'Chevrolet Biscayne', 'Chevrolet Brookwood', 'Chevrolet Camaro (fifth generation)', 'Chevrolet Camaro (first generation)', 'Chevrolet Caprice', 'Chevrolet Captiva', 'Chevrolet Celebrity'] ...
+    ['Boeing'] (17 subjects): ['AGM-69 SRAM', 'AGM-86 ALCM', 'B-17 Flying Fortress', 'B-29 Superfortress', 'B-47 Stratojet', 'Boeing 367-80', 'Boeing 601', 'Boeing 777', 'Boeing KC-46', 'C-135 Stratolifter', 'C-40 Clipper', 'CIM-10 Bomarc'] ...
+    ['Nissan'] (71 subjects): ['Datsun Sports', 'DeltaWing', 'Infiniti JX', 'Infiniti Q45', 'Infiniti Q50', 'Infiniti QX', 'Nissan 180SX', 'Nissan 200SX', 'Nissan 300ZX', 'Nissan 370Z', 'Nissan Armada', 'Nissan Avenir'] ...
+    ['Volvo'] (15 subjects): ['Volvo 140 Series', 'Volvo 200 Series', 'Volvo 300 Series', 'Volvo 480', 'Volvo 850', 'Volvo 900 Series', 'Volvo Amazon', 'Volvo C30', 'Volvo C70', 'Volvo Duett', 'Volvo S40', 'Volvo S70'] ...
+
+=== P495: 67 distinct target_true, 39 with >=3 distinct subjects (covering 866 subjects)
+    size histogram: 3: 4, 4: 6, 5-9: 10, 10-19: 6, 20-49: 8, 50+: 5 | largest: [128, 99, 72, 69, 60]
+    ['Spain'] (20 subjects): ['Bobobobs', 'Grenache Blanc', 'Hermanas', 'Juan de Juanes', 'Ketama', 'La Revista Blanca', 'La Vanguardia', 'La Voz de Galicia', 'Los Serrano', 'Madeinusa', 'Mantecadas', 'Mundo Obrero'] ...
+    ['Canada'] (99 subjects): ['A Chairy Tale', 'A News', 'Abandon All Ships', 'Ayria', 'Better Than Chocolate', 'Bobby Taylor & the Vancouvers', 'C.R.A.Z.Y.', 'CFL on CBC', 'Caillou', 'Canadian Club', 'Cancer Bats', 'Celebrity Cooks'] ...
+    ['Malaysia'] (3 subjects): ['Akademi Fantasia', 'Gol & Gincu The Series', 'Sepet']
+    ['Peru'] (4 subjects): ['El Gran Show', 'Kola Real', 'Pachamanca', 'ceviche']
+    ['Italy'] (49 subjects): ['Ansonica', 'Balsamic vinegar', 'Belisario', 'Blindman', 'Blowup', 'Bolognese sauce', 'Cabiria', 'Caciocavallo', 'Carosello', 'Corriere dei Piccoli', 'Corriere della Sera', 'Diabolik'] ...
+
+=== P37: 44 distinct target_true, 30 with >=3 distinct subjects (covering 868 subjects)
+    size histogram: 3: 4, 4: 4, 5-9: 7, 10-19: 6, 20-49: 3, 50+: 6 | largest: [162, 161, 111, 82, 60]
+    ['Persian'] (5 subjects): ['Dasht-e Azadegan County', 'Iran', 'Khorasan Province', 'Mashhad', 'Timurid Empire']
+    ['Polish'] (7 subjects): ['Byelorussian Soviet Socialist Republic', 'Congress Poland', 'European Union', 'Free City of Danzig', 'Kashubia', 'Poland', 'Russian Empire']
+    ['Welsh'] (4 subjects): ['Kingdom of Deheubarth', 'Torfaen', 'United Kingdom', 'Wales']
+    ['Dutch'] (23 subjects): ['Aruba', 'Belgium', 'Benelux', 'Bonaire', 'Brussels-Capital Region', 'Caribbean Netherlands', 'Dutch Language Union', 'European Union', 'Flanders', 'Flemish Community', 'Flemish Region', 'Friesland'] ...
+    ['Italian'] (33 subjects): ['Bedano', 'Bellinzona', 'Biasca', 'Bosco Gurin', 'Brissago', 'Cadenazzo', 'Camorino', "Campione d'Italia", 'Caslano', 'Chiasso', 'European Union', 'Faido'] ...
+
+=== P17: 95 distinct target_true, 61 with >=3 distinct subjects (covering 826 subjects)
+    size histogram: 3: 13, 4: 9, 5-9: 17, 10-19: 10, 20-49: 9, 50+: 3 | largest: [78, 63, 61, 40, 40]
+    ['Latvia'] (4 subjects): ['Eirodziesma', "Latvian Farmers' Union", 'Madona District', 'Turaida']
+    ['Japan'] (38 subjects): ['Ariake Coliseum', 'Dewa Province', 'Fukuno, Toyama', 'Ginza', 'Ginza Line', 'Hida Mountains', 'Higashikagawa', 'Hitachinaka', 'Ikuno-ku', 'Inami, Toyama', 'Iruma Air Base', 'JVC Kenwood Victor Entertainment'] ...
+    ['Syria'] (7 subjects): ['Al-Hasakah Governorate', 'Al-Suqaylabiyah Subdistrict', 'Arjoun', 'Ayn Halaqim Subdistrict', 'Kafriya', 'Sabburah Subdistrict', 'Tell Rifaat']
+    ['Luxembourg'] (3 subjects): ['Abbey of Echternach', 'European route E25', 'Eurostat']
+    ['Finland'] (14 subjects): ['Amos Anderson Art Museum', 'Askola', 'Christian Democrats', 'Gulf of Bothnia', 'Helsinki City Hall', 'Ikaalinen', 'Kalvola', 'Kluuvi', 'Lahti', 'Larsmo', 'Southern Savonia', 'Tampere Cathedral'] ...
+
+=== P136: 22 distinct target_true, 13 with >=3 distinct subjects (covering 835 subjects)
+    size histogram: 3: 2, 4: 1, 5-9: 3, 10-19: 2, 20-49: 2, 50+: 3 | largest: [508, 144, 56, 40, 24]
+    ['blues'] (8 subjects): ['Casey Bill Weldon', 'Earl King', 'Furry Lewis', 'Memphis Minnie', 'Sleepy John Estes', 'Sonny Boy Williamson I', 'The Beatles', 'The Rolling Stones']
+    ['portrait'] (3 subjects): ['Cornelis van Haarlem', 'Lydia Field Emmet', 'Orest Kiprensky']
+    ['trance'] (17 subjects): ['Andy Duguid', 'Blank & Jones', 'Bobina', 'Daniel Kandi', 'Energy 52', 'Enhanced Music', 'Jan Johnston', 'Jonas Steur', 'Justine Suissa', 'Kamaya Painters', 'Kyau & Albert', 'Lost Tribe'] ...
+    ['disco'] (9 subjects): ['A Love Trilogy', 'Boys Town Gang', "I'm Your Boogie Man", 'Jacques Morali', 'Kelly Marie', 'Liquid Gold', 'Ottawan', 'Pattie Brooks', 'Santa Esmeralda']
+    ['opera'] (144 subjects): ['Afrasiyab Badalbeyli', 'Alban Berg', 'Alberto Mazzucato', 'Alexander Borodin', 'Alexander Knaifel', 'Alfred Bruneau', 'Alfredo Keil', 'Amici Forever', 'Amilcare Ponchielli', 'Andrew Schultz', 'Andy Vores', 'Antonio Lotti'] ...
+
+=== P937: 90 distinct target_true, 41 with >=3 distinct subjects (covering 784 subjects)
+    size histogram: 3: 8, 4: 5, 5-9: 8, 10-19: 11, 20-49: 6, 50+: 3 | largest: [140, 105, 105, 40, 39]
+    ['Warsaw'] (9 subjects): ['Antoni Brodowski', 'Edward Flatau', 'Jerzy Borejsza', 'Ludwik Dorn', 'Marek Edelman', 'Nicolas Chopin', 'Rosa Luxemburg', 'Wojciech Roszkowski', 'Wojciech Rubinowicz']
+    ['Amsterdam'] (16 subjects): ['Abraham Blooteling', 'Bernard Haitink', 'Geert Lovink', 'Jacob Boreel', 'Joachim von Sandrart', 'Jodocus Hondius', 'Johannes Burman', 'Joseph Schmitt', 'Joseph de la Vega', 'Otto Frank', 'Paul Citroen', 'Philippus van Limborch'] ...
+    ['Vienna'] (40 subjects): ['Adam Bartsch', 'Adolf Hitler', 'Alban Berg', 'Anton Heiller', 'Archduke Franz Ferdinand', 'Beat Furrer', 'Bruno Kreisky', 'Bruno Pittermann', 'Camilla de Rossi', 'Christoph Willibald von Gluck', 'Conrad Graf', 'Count Leopold Joseph von Daun'] ...
+    ['Philadelphia'] (3 subjects): ['Diplo', 'Josef Hofmann', 'William Primrose']
+    ['London'] (140 subjects): ['Abraham Hume, 2nd Baronet', 'Alexander William Kinglake', 'Alfred Harmsworth, 1st Viscount Northcliffe', 'Andrew Blayney, 11th Baron Blayney', 'Andrew Lloyd Webber', 'Andy Burnham', 'Anthony Steen', 'Archie Hamilton, Baron Hamilton of Epsom', 'Arnold Goodman, Baron Goodman', 'Arthur Balfour', 'Arthur Griffith', 'Arthur Wellesley, 1st Duke of Wellington'] ...
+
+=== P106: 31 distinct target_true, 22 with >=3 distinct subjects (covering 811 subjects)
+    size histogram: 3: 3, 4: 1, 5-9: 7, 10-19: 4, 20-49: 3, 50+: 4 | largest: [325, 137, 69, 62, 49]
+    ['diplomat'] (23 subjects): ['Adam Rapacki', 'Alfonso Fontanelli', 'Callixtus II', 'Claude Corea', 'Claude Louis Hector de Villars', 'Ernst Jaakson', 'George Pitt, 1st Baron Rivers', 'Grigore Gafencu', 'Horatio Nelson Lay', 'Kazys Lozoraitis', 'Kim Kye-gwan', 'Klemens von Metternich'] ...
+    ['lawyer'] (3 subjects): ["Herbert Romulus O'Conor", 'Jean Gabriel Marchand', 'Maurice Joly']
+    ['astronaut'] (4 subjects): ['Dumitru Prunariu', 'Gregory Chamitoff', 'Takuya Ōnishi', 'Wang Yaping']
+    ['composer'] (69 subjects): ['Amber Gurung', 'Anton Fier', 'Anton Walter', 'Bertold Hummel', 'Biagio Marini', 'Bombay Jayashri', 'Boris Tchaikovsky', 'Cal Lampley', 'Caradog Roberts', 'Christian Darnton', 'Claudine Clark', 'Dave Darling'] ...
+    ['poet'] (62 subjects): ['Adelaide Crapsey', 'Agostinho Neto', 'Akshay Kumar Boral', 'Aleksandr Solzhenitsyn', 'Andreas Embirikos', 'Andrei Bely', 'Andrew Salkey', 'Anna Louisa Karsch', 'Carlo Porta', 'Cyril Wong', 'David Gascoyne', 'David Wagoner'] ...
+
+=== P20: 169 distinct target_true, 62 with >=3 distinct subjects (covering 683 subjects)
+    size histogram: 3: 15, 4: 15, 5-9: 15, 10-19: 10, 20-49: 4, 50+: 3 | largest: [99, 98, 53, 28, 27]
+    ['Constantinople'] (8 subjects): ['Abdul Hamid I', 'John VIII Palaiologos', 'Michael II', 'Nikephoros I of Constantinople', 'Nikephoros III Botaneiates', 'Procopius', 'Romanos III Argyros', 'Sergius I of Constantinople']
+    ['Copenhagen'] (5 subjects): ['Anton Dorph', 'Frederik Vermehren', 'Julius Exner', 'Knud, Hereditary Prince of Denmark', 'Regin Dahl']
+    ['Rome'] (53 subjects): ['Alexander VIII', 'Antiochus IV of Commagene', 'Antonio Marcello Barberini', "Arnaud d'Ossat", 'Augusto Genina', 'Balbinus', 'Boniface I', 'Carla Accardi', 'Charles IV of Spain', 'Clement I', 'Clement III', 'Clement XII'] ...
+    ['Wellington'] (3 subjects): ['Edward Gibbon Wakefield', 'Melvin Day', 'William Massey']
+    ['Birmingham'] (4 subjects): ['Charles Lapworth', 'Herbert Austin, 1st Baron Austin', 'Joe Bradford', 'William Murdoch']
+
+=== P449: 15 distinct target_true, 15 with >=3 distinct subjects (covering 793 subjects)
+    size histogram: 3: 2, 4: 1, 5-9: 3, 10-19: 2, 20-49: 3, 50+: 4 | largest: [285, 231, 71, 54, 32]
+    ['PBS'] (26 subjects): ['3-2-1 Contact', 'American Experience', 'Austin City Limits', 'Barney & Friends', 'Big Blue Marble', 'Bill Moyers Journal', 'Finding Your Roots', 'Frontier House', 'Frontline', 'George Shrinks', 'Great Performances', 'History Detectives'] ...
+    ['Lifetime'] (7 subjects): ['Army Wives', 'Devious Maids', 'Drop Dead Diva', 'Lovespring International', 'Rita Rocks', 'Strong Medicine', 'The Client List']
+    ['ITV'] (3 subjects): ["Agatha Christie's Marple", "Harry Hill's TV Burp", 'Soapstar Superstar']
+    ['Bravo'] (4 subjects): ['Millionaire Matchmaker', 'Queer Eye', 'Shear Genius', 'Southern Charm']
+    ['Netflix'] (8 subjects): ['All Hail King Julien', 'Arrested Development', 'Grace and Frankie', 'Lilyhammer', 'Orange Is the New Black', 'Sense8', 'Trailer Park Boys', 'Turbo FAST']
+
+=== P19: 229 distinct target_true, 79 with >=3 distinct subjects (covering 592 subjects)
+    size histogram: 3: 20, 4: 12, 5-9: 31, 10-19: 14, 20-49: 1, 50+: 1 | largest: [59, 29, 18, 18, 17]
+    ['Lisbon'] (7 subjects): ['Artur Pizarro', 'Carlos Zingaro', 'John V of Portugal', 'John de Brito', 'Lopo Soares de Albergaria', 'Manuel I of Portugal', 'Nuno Lopes']
+    ['Seattle'] (4 subjects): ['Aaron Parks', 'Oleta Adams', 'Tim K', 'William Goldsmith']
+    ['Rome'] (18 subjects): ['Achille Campanile', 'Antonella Costa', 'Boniface III', 'Cosimo Fancelli', 'Daniele Franceschini', 'Francesco Castellacci', 'Giovanni Sgambati', 'Giulio Romano', 'Giuseppe Baini', 'Henry Benedict Stuart', 'Marco Benefial', 'Margherita Buy'] ...
+    ['Bolton'] (3 subjects): ['Clive Myrie', 'Leslie Halliwell', 'Paul Pritchard']
+    ['Houston'] (8 subjects): ['Bill Hinds', 'David Matranga', 'Florence Vidor', 'James Nabrit', 'Joe Jamail', 'Kenny Rogers', 'Thorne Webb Dreyer', 'Trey Moore']
+
+=== P740: 156 distinct target_true, 73 with >=3 distinct subjects (covering 667 subjects)
+    size histogram: 3: 14, 4: 19, 5-9: 17, 10-19: 16, 20-49: 6, 50+: 1 | largest: [67, 43, 30, 25, 23]
+    ['Toronto'] (20 subjects): ['Ayria', 'Dominion', 'Dragonette', 'Forest City Lovers', 'Fucked Up', 'Hostage Life', 'Hydro One', 'July Talk', 'Magneta Lane', 'NQ Arbuckle', 'Ohbijou', 'One Hundred Dollars'] ...
+    ['Manchester'] (23 subjects): ['808 State', 'Audioweb', 'Bee Gees', 'Co-operatives UK', 'I Am Kloot', 'Kid British', 'LZ7', 'M People', 'Man from Delmonte', 'Modern Love Records', 'Platnum', 'Rolls-Royce'] ...
+    ['Budapest'] (4 subjects): ['EZ Basic', 'Ganz Works', 'Ikarus', 'The Idoru']
+    ['Montreal'] (14 subjects): ['AIDS Wolf', 'Business Development Bank of Canada', 'Ex Deo', 'Fantasia Festival', 'Kataklysm', 'Les Colocs', 'Miracle Fortress', 'Oscar Peterson', 'Plotly', 'Pony Up', 'Telefilm Canada', 'The Agonist'] ...
+    ['Tokyo'] (18 subjects): ['Akai', 'Bandai Co., Ltd.', 'Base Ball Bear', 'East Japan Railway Company', 'Ikegami Tsushinki', 'KAT-TUN', 'Mitsubishi Electric', 'Nakamichi', 'Nikon', 'Nippon Yusen', 'Odakyu Electric Railway', 'Pizzicato Five'] ...
+
+=== P159: 178 distinct target_true, 69 with >=3 distinct subjects (covering 616 subjects)
+    size histogram: 3: 12, 4: 11, 5-9: 29, 10-19: 13, 20-49: 3, 50+: 1 | largest: [86, 36, 31, 20, 19]
+    ['Geneva'] (11 subjects): ['EasyJet Switzerland', 'Global Humanitarian Forum', 'Graduate Institute of International and Development Studies', 'International Trade Centre', 'Motosacoche', 'Roger Dubuis', 'Rolex', 'Serono', 'United Nations High Commissioner for Human Rights', 'University of Geneva', 'World Trade Organization']
+    ['Liverpool'] (3 subjects): ['Beetham Organization', 'Liverpool Hope University', 'Vergo Retail']
+    ['Shanghai'] (6 subjects): ['East China Normal University', 'Fudan University', 'Shanghai Animation Film Studio', 'Shanghai Electric', 'Shanghai Jiao Tong University', 'Shanghai Shenxin F.C.']
+    ['Budapest'] (4 subjects): ['ChemAxon', 'Csepel SC', 'Graphisoft SE', 'Politics Can Be Different']
+    ['Paris'] (20 subjects): ['Aigle Azur', 'Club Med', 'Dargaud', 'Delage', 'Democratic Arab Socialist Union', 'European Business School Paris', 'French Academy of Sciences', 'Getlink', 'IONIS Education Group', 'ISG Business School', 'Kering', 'Mac Guff'] ...
+
+=== P364: 38 distinct target_true, 27 with >=3 distinct subjects (covering 735 subjects)
+    size histogram: 3: 2, 4: 5, 5-9: 7, 10-19: 6, 20-49: 3, 50+: 4 | largest: [214, 131, 80, 53, 43]
+    ['Hindi'] (43 subjects): ['36 China Town', 'Aandhi', 'Amar Akbar Anthony', 'Anand Math', 'Antardwand', 'Avishkaar', 'Baaz', 'Chupke Chupke', 'Do Aankhen Barah Haath', 'Do Phool', 'Duniya Na Mane', 'Ek Chalis Ki Last Local'] ...
+    ['Polish'] (6 subjects): ['A Short Film About Killing', 'A Short Film About Love', 'Fire in the Steppe', 'Polish Biographical Dictionary', 'The Hour-Glass Sanatorium', 'The Last Wish']
+    ['German'] (6 subjects): ['Der kleine Vampir', 'Die Nibelungen', 'Die Tageszeitung', 'Die Zeit', 'The Flying Dutchman', 'The Magic Flute']
+    ['Hebrew'] (9 subjects): ['1 Maccabees', 'Book of Haggai', 'Books of Chronicles', 'Likkutei Sichos', 'Mishnah Berurah', 'The Voice Israel', 'Yalkut Yosef', 'Yossi & Jagger', 'Zero Motivation']
+    ['Finnish'] (12 subjects): ['Ambush', 'Calamari Union', 'Finnish Wikipedia', 'Hamlet Goes Business', 'Kalevala', 'Kotikatu', 'Lapland Odyssey', 'The Harvest Month', 'The Match Factory Girl', 'The White Reindeer', 'Under the North Star', 'Uutisvuoto']
+
+=== P131: 200 distinct target_true, 79 with >=3 distinct subjects (covering 555 subjects)
+    size histogram: 3: 25, 4: 8, 5-9: 32, 10-19: 11, 20-49: 3 | largest: [28, 27, 26, 19, 17]
+    ['Gujarat'] (8 subjects): ['Amreli district', 'Botad', 'Dakor', 'Kosamba', 'Lakhpat', 'Limbdi', 'Vadnagar', 'Wadhwan']
+    ['Greenland'] (3 subjects): ['Air Alpha Greenland', 'Nares Strait', 'Thule people']
+    ['Arizona'] (7 subjects): ['Antelope Canyon', 'Boundary Cone', 'Grand Canyon National Park Airport', 'Growler Valley', 'KMVP-FM', 'Phoenix Symphony Hall', 'Wallow Fire']
+    ['Wyoming'] (3 subjects): ['Bighorn Basin', 'Cheyenne Frontier Days', 'Fossil Butte National Monument']
+    ['Kerala'] (7 subjects): ['Alathur', 'Devikulam', 'Ezhupunna', 'Kurinjimala Sanctuary', 'Kuthiyathodu grama panchayat', 'Marad massacre', 'Payyavoor']
+
+=== P190: 103 distinct target_true, 64 with >=3 distinct subjects (covering 566 subjects)
+    size histogram: 3: 8, 4: 8, 5-9: 27, 10-19: 16, 20-49: 5 | largest: [26, 26, 25, 23, 20]
+    ['Vancouver'] (3 subjects): ['Edinburgh', 'Los Angeles', 'Rio de Janeiro']
+    ['Beijing'] (23 subjects): ['Algiers', 'Amman', 'Amsterdam', 'Bangkok', 'Belgrade', 'Bucharest', 'Buenos Aires', 'Canberra', 'Cologne', 'Hanoi', 'Islamabad', 'Jakarta'] ...
+    ['Brisbane'] (4 subjects): ['Auckland', 'Daejeon', 'Kaohsiung', 'Kōbe']
+    ['Cleveland'] (4 subjects): ['Bangalore', "Beit She'an", 'Cleveland', 'Miskolc']
+    ['Damascus'] (6 subjects): ['Ankara', 'Athens', 'Beirut', 'Bucharest', 'Cairo', 'Rabat']
+
+=== P276: 221 distinct target_true, 78 with >=3 distinct subjects (covering 423 subjects)
+    size histogram: 3: 35, 4: 3, 5-9: 35, 10-19: 4, 20-49: 1 | largest: [40, 14, 14, 12, 11]
+    ['Atlanta'] (6 subjects): ['1996 Summer Olympics', '1996 Summer Paralympics', 'Arcapita', 'Atlanta International Documentary Film Festival', 'CNN Center', 'Magnapop']
+    ['Belfast'] (3 subjects): ['Arnon Street killings', 'Belfast Film Festival', 'Port of Belfast']
+    ['Toronto'] (7 subjects): ['1976 Summer Paralympics', 'Hot Docs - Canadian International Documentary Festival', 'Images Festival', 'National Business Book Award', 'Pride Toronto', 'Toronto International Film Festival', 'World Youth Day 2002']
+    ['Mumbai'] (5 subjects): ['1993 Bombay bombings', '2015 Indian Open', '25 August 2003 Mumbai bombings', '26/11 Mumbai attacks', 'Femina Miss India 2013']
+    ['Sydney'] (5 subjects): ['2000 Summer Olympics', '2000 Summer Paralympics', '2SM', 'Northern Suburbs Rugby Club', 'Sydney Mint']
+
+=== P178: 19 distinct target_true, 16 with >=3 distinct subjects (covering 574 subjects)
+    size histogram: 3: 2, 4: 1, 5-9: 5, 10-19: 1, 20-49: 3, 50+: 4 | largest: [164, 118, 67, 58, 40]
+    ['Intel'] (34 subjects): ['ASCI Red', 'Clang', 'Core 2', 'IA-32', 'IA-64', 'Intel 80186', 'Intel 80286', 'Intel 80386', 'Intel 80486', 'Intel 80486DX2', 'Intel 80486SX', 'Intel 8086'] ...
+    ['Yahoo'] (4 subjects): ['Apache Traffic Server', 'Schema.org', 'YUI Library', 'Yahoo! Messenger']
+    ['Sega'] (28 subjects): ['Alex Kidd', 'Alien Storm', 'Altered Beast', 'Astron Belt', 'Baku Baku Animal', 'Clockwork Knight', 'Congo Bongo', 'Eternal Champions', 'Fantasy Zone', 'Fatal Labyrinth', 'Flicky', 'Fonz'] ...
+    ['Apple'] (118 subjects): ['App Store', 'Apple A4', 'Apple A5', 'Apple A6', 'Apple A7', 'Apple A8', 'Apple A8X', 'Apple Bandai Pippin', 'Apple DOS', 'Apple Filing Protocol', 'Apple Icon Image format', 'Apple Lossless'] ...
+    ['Sony'] (7 subjects): ['BBeB', 'Clang', 'MiniDisc', 'SonicStage', 'Super Audio CD', 'Universal Media Disc', 'XDCAM']
+
+=== P101: 83 distinct target_true, 28 with >=3 distinct subjects (covering 476 subjects)
+    size histogram: 3: 4, 4: 5, 5-9: 3, 10-19: 7, 20-49: 7, 50+: 2 | largest: [73, 71, 37, 34, 31]
+    ['photography'] (4 subjects): ['Nan Hoover', 'Pictures of the Year International', 'straight photography', 'woodburytype']
+    ['musician'] (4 subjects): ['Bruce Springsteen', 'Led Zeppelin', 'Michael Jackson', 'Paul McCartney']
+    ['sociology'] (20 subjects): ['Alexander Zinoviev', 'Alfred Weber', 'David G. Bromley', 'Ernest Burgess', 'Erving Goffman', 'Immanuel Wallerstein', 'Karl Marx', 'Karl Polanyi', 'Marcel Mauss', 'Mark S. Granovetter', 'Max Weber', 'Otto Neurath'] ...
+    ['hunting'] (3 subjects): ['Actaeon', 'Adonis', 'hunting dog']
+    ['ecology'] (4 subjects): ['Charles Sutherland Elton', 'Eugene Odum', 'G. Evelyn Hutchinson', 'Jared Diamond']
+
+=== P1303: 6 distinct target_true, 4 with >=3 distinct subjects (covering 510 subjects)
+    size histogram: 50+: 4 | largest: [216, 152, 91, 51]
+    ['violin'] (91 subjects): ['Albert Chamberland', 'Andor Toth', 'Antonio Agri', 'Antonio Rolla', 'Antonio Vivaldi', 'Ashley Hutchings', 'Bert Lown', 'Boris Belkin', 'Carl Flesch', 'Carla Kihlstedt', 'Claus Schall', 'Daniel Kobialka'] ...
+    ['piano'] (216 subjects): ['Abdullah Ibrahim', 'Al Haig', 'Al Kooper', 'Alain Lanty', 'Alberto Guerrero', 'Alberto Nepomuceno', 'Alberto Semprini', 'Alice Coltrane', 'Alicia de Larrocha', 'Allen Toussaint', 'Aloys and Alfons Kontarsky', 'Anna Yesipova'] ...
+    ['trumpet'] (51 subjects): ['Adam Deibert', 'Al Hirt', 'Alan Rubin', 'Anthony Plog', 'Arve Henriksen', 'Bert Joris', 'Bix Beiderbecke', 'Carmell Jones', 'Darrell Leonard', 'Doc Severinsen', 'Don Fagerquist', 'Erik Truffaz'] ...
+    ['guitar'] (152 subjects): ['Aaron Lee Tasjan', 'Adam Devlin', 'Al Schnier', 'Alexandre Lagoya', 'Alvino Rey', 'Amelia Fletcher', 'Amund Maarud', 'Andranik Madadian', 'Andrew Pendlebury', 'Andy Metcalfe', 'Anson Funderburgh', 'Baaba Maal'] ...
+
+=== P39: 11 distinct target_true, 8 with >=3 distinct subjects (covering 472 subjects)
+    size histogram: 3: 1, 4: 2, 5-9: 1, 20-49: 1, 50+: 3 | largest: [239, 101, 67, 45, 9]
+    ['mayor'] (45 subjects): ['Achille Lauro', 'Alex Bodry', 'Annise Parker', 'Bernhard Knipperdolling', 'Carl Friedrich Goerdeler', 'Christian Ude', 'Christoph Ahlhaus', 'Dora Bakoyannis', 'Ed Austin', 'Eduardo Paes', 'Edward Shippen', 'Flavio Zanonato'] ...
+    ['governor'] (3 subjects): ['Dingiri Banda Wijetunga', 'Ibrahim Pasha of Egypt', 'Manuel Roxas']
+    ['Shah'] (9 subjects): ['Abbas I of Persia', 'Abbas II of Persia', 'Darius III', 'Fat′h-Ali Shah Qajar', 'Karim Khan', 'Mohammad Shah Qajar', 'Mozaffar ad-Din Shah Qajar', 'Safi of Persia', 'Suleiman I of Persia']
+    ['councillor'] (4 subjects): ['Brian Coleman', 'Mary Barbour', 'Rob Ford', 'Stephen Mayne']
+    ['cardinal'] (67 subjects): ['Adam Maida', 'Alexander VIII', "Amanieu d'Albret", 'Angelo Comastri', 'Antipope Boniface VII', 'Antonio Agliardi', 'Basilio Pompilj', 'Benedict XVI', 'Bernardo Salviati', 'Cardinal-Infante Ferdinand of Austria', 'Celso Benigno Luigi Costantini', 'Cristoforo Madruzzo'] ...
+
+=== P127: 109 distinct target_true, 42 with >=3 distinct subjects (covering 336 subjects)
+    size histogram: 3: 12, 4: 14, 5-9: 9, 10-19: 2, 20-49: 4, 50+: 1 | largest: [51, 37, 29, 23, 20]
+    ['Detroit'] (3 subjects): ['Detroit City Hall', 'Detroit Olympia', 'Joe Louis Arena']
+    ['Finland'] (3 subjects): ['Ainola', 'Turku Castle', 'Valtion lentokonetehdas']
+    ['Amazon'] (6 subjects): ['Amazon Kindle', 'Amazon Music', 'Amazon S3', 'Amazon Web Services', 'Box Office Mojo', 'Internet Movie Database']
+    ['Germany'] (37 subjects): ['Bundesautobahn 1', 'Bundesautobahn 11', 'Bundesautobahn 111', 'Bundesautobahn 13', 'Bundesautobahn 14', 'Bundesautobahn 17', 'Bundesautobahn 2', 'Bundesautobahn 20', 'Bundesautobahn 24', 'Bundesautobahn 29', 'Bundesautobahn 3', 'Bundesautobahn 4'] ...
+    ['Berlin'] (3 subjects): ['Friedrich-Ludwig-Jahn-Sportpark', 'Funkturm Berlin', 'Olympiastadion Berlin']
+
+=== P140: 9 distinct target_true, 7 with >=3 distinct subjects (covering 427 subjects)
+    size histogram: 3: 2, 5-9: 1, 20-49: 2, 50+: 2 | largest: [253, 73, 48, 41, 6]
+    ['Judaism'] (41 subjects): ['Abraham', 'Carl Bernstein', 'Chaim Herzog', 'David', 'Eliezer ben Hurcanus', 'Franz Kafka', 'Gratz College', 'Hannah Arendt', 'Hasdai Crescas', 'Hebrew Theological College', 'Hebrew Union College-Jewish Institute of Religion', 'Hezekiah'] ...
+    ['Catholicism'] (3 subjects): ['Catholic Church', 'Henry III of France', 'Louis XIV of France']
+    ['Christian'] (3 subjects): ['Albanians', 'Heidi Baker', 'John Bunyan']
+    ['Scientology'] (6 subjects): ['Chick Corea', 'David Miscavige', 'John Travolta', 'L. Ron Hubbard', 'Tom Cruise', 'Volunteer Ministers']
+    ['Christianity'] (73 subjects): ['Adalbert of Prague', 'Afonso III of Portugal', 'Albert Schweitzer', 'Alfred the Great', 'Alodia', 'Antipope Laurentius', 'Arab', 'Augustine of Canterbury', 'Augustine of Hippo', 'Baptist Union of Wales', 'Bede', 'Bonaventure'] ...
+
+=== P108: 30 distinct target_true, 11 with >=3 distinct subjects (covering 325 subjects)
+    size histogram: 3: 1, 4: 2, 5-9: 2, 10-19: 3, 20-49: 2, 50+: 1 | largest: [208, 30, 28, 16, 11]
+    ['IBM'] (30 subjects): ['Bryant Tuckerman', 'Charles Goldfarb', 'Charles P. de Saint-Aignan', 'Don Coppersmith', 'Ed Zschau', 'Ellen Hancock', 'Fred Brooks', 'Geert Hofstede', 'Gene Amdahl', 'Gerd Binnig', 'Ginni Rometty', 'Grady Booch'] ...
+    ['Apple'] (16 subjects): ['Angela Ahrendts', 'Bud Tribble', 'Craig Federighi', 'Dave Hyatt', 'Eddy Cue', 'Guy Kawasaki', 'Jef Raskin', 'John Sculley', 'Peter Oppenheimer', 'Phil Schiller', 'Scott Forstall', 'Steve Jobs'] ...
+    ['BBC'] (208 subjects): ['Adam Curtis', 'Adam Parsons', 'Adrian Chiles', 'Alan Sugar', 'Alasdair Milne', 'Alistair Cooke', 'Allan Little', 'Andrew Gilligan', 'Andrew Marr', 'Andrew Neil', 'Andy Kershaw', 'Angela Rippon'] ...
+    ['CBS'] (6 subjects): ['Fred Silverman', 'James Thomas Aubrey, Jr.', 'Jeff Fager', 'Laurence Tisch', 'Leslie Moonves', 'Nina Tassler']
+    ['WWE'] (4 subjects): ['Beth Phoenix', 'Lena Yada', 'Shane McMahon', 'Triple H']
+
+=== P641: 5 distinct target_true, 5 with >=3 distinct subjects (covering 318 subjects)
+    size histogram: 50+: 5 | largest: [80, 68, 59, 59, 52]
+    ['basketball'] (59 subjects): ['Aleksandar Đorđević', 'Allen Iverson', 'Arvydas Sabonis', 'Bill Bradley', 'Bill Russell', 'Bob Cousy', 'Boris Diaw', 'Carlos Arroyo', 'Carmelo Anthony', 'Charles Barkley', 'Chris Paul', 'Daniel Santiago'] ...
+    ['baseball'] (59 subjects): ['Alex Rodriguez', 'Babe Ruth', 'Barry Bonds', 'Billy Sunday', 'Bo Jackson', 'Bob Gibson', 'Carlos Beltrán', 'Casey Stengel', 'Christy Mathewson', 'Chuck Connors', 'Clayton Kershaw', 'Connie Mack'] ...
+    ['football'] (68 subjects): ['Alex Karras', 'Ara Parseghian', 'Bart Starr', 'Bernie Casey', 'Bill Goldberg', 'Bob Hayes', 'Brett Favre', 'Brian Bosworth', 'Brock Lesnar', 'Bronko Nagurski', 'Bubba Smith', 'Bud Grant'] ...
+    ['hockey'] (52 subjects): ['Alexander Ovechkin', 'Alexei Kovalev', 'Bobby Hull', 'Bobby Orr', 'Brett Hull', 'Corey Perry', 'Dennis Seidenberg', 'Dominik Hašek', 'Eric Lindros', 'Evgeni Malkin', 'Frank Mahovlich', 'Gordie Howe'] ...
+    ['soccer'] (80 subjects): ['Abel Xavier', 'Alan Ball, Jr.', 'Alessandro Nesta', 'Alexi Lalas', 'Andrea Pirlo', 'Andreas Ivanschitz', 'Antonio Nocerino', 'Arne Friedrich', 'Ashley Cole', 'Bashkim Kadrii', 'Bastian Schweinsteiger', 'Benny Feilhaber'] ...
+
+=== P138: 171 distinct target_true, 21 with >=3 distinct subjects (covering 85 subjects)
+    size histogram: 3: 13, 4: 3, 5-9: 4, 10-19: 1 | largest: [10, 7, 6, 6, 5]
+    ['Athena'] (3 subjects): ['2 Pallas', 'Athens', 'palladium']
+    ['England'] (3 subjects): ['Bank of England', 'English Channel', 'New England']
+    ['Thor'] (3 subjects): ['PGM-17 Thor', 'Thor', 'thorium']
+    ['Victoria'] (10 subjects): ['Lake Victoria', 'London Victoria station', 'Queen Victoria Market', 'Queensland', 'Victoria Avenue Bridge', 'Victoria Harbour', 'Victoria Inner Harbour Airport', 'Victoria International Airport', 'Victoria Land', 'Victoria and Albert Museum']
+    ['Moscow'] (5 subjects): ['Domodedovo International Airport', 'Mare Moscoviense', 'Moscow Oblast', 'Sheremetyevo International Airport', 'Vnukovo International Airport']
+
+=== P407: 35 distinct target_true, 20 with >=3 distinct subjects (covering 194 subjects)
+    size histogram: 3: 6, 4: 2, 5-9: 8, 10-19: 1, 20-49: 3 | largest: [40, 40, 26, 11, 9]
+    ['Dutch'] (8 subjects): ['De Morgen', 'Dutch name', 'Goede Tijden, Slechte Tijden', 'Net als toen', 'Power Unlimited', 'Sesamstraat', 'Souterliedekens', 'Spanish treasure fleet']
+    ['Latin'] (3 subjects): ['Ave verum corpus', 'Eclogues', 'Unus pro omnibus, omnes pro uno']
+    ['Finnish'] (3 subjects): ['Finnish Wikipedia', 'Ilta-Sanomat', 'Pinterest']
+    ['Chinese'] (5 subjects): ['Baike.com', 'Mo Li Hua', 'Qzone', 'Rickshaw Boy', 'Sina Weibo']
+    ['Catalan'] (5 subjects): ['Actrius', 'Catalan Wikipedia', 'Catalan alphabet', 'La Vanguardia', 'Tirant lo Blanc']
+
+=== P463: 15 distinct target_true, 6 with >=3 distinct subjects (covering 151 subjects)
+    size histogram: 3: 1, 4: 1, 5-9: 2, 20-49: 1, 50+: 1 | largest: [103, 27, 8, 6, 4]
+    ['FIFA'] (103 subjects): ['Afghanistan Football Federation', 'Albania national football team', 'Albanian Football Association', 'Algerian Football Federation', 'All India Football Federation', 'Andorran Football Federation', 'Argentine Football Association', 'Aruba Football Federation', 'Association of Football Federations of Azerbaijan', 'Austrian Football Association', 'Bahamas Football Association', 'Barbados Football Association'] ...
+    ['UNESCO'] (4 subjects): ['Germany', 'Italy', 'Netherlands', 'North Korea']
+    ['Avengers'] (8 subjects): ['Ant-Man', 'Captain Aayush', 'Henry Pym', 'Iron Man', 'Jessica Jones', 'Namor', 'Patsy Walker', 'Thor']
+    ['Slayer'] (3 subjects): ['Jeff Hanneman', 'Kerry King', 'Tom Araya']
+    ['NATO'] (27 subjects): ['Albania', 'Belgium', 'Bulgaria', 'Canada', 'Croatia', 'Czech Republic', 'Denmark', 'Estonia', 'France', 'Germany', 'Greece', 'Hungary'] ...
+
+=== P36: 62 distinct target_true, 19 with >=3 distinct subjects (covering 74 subjects)
+    size histogram: 3: 9, 4: 6, 5-9: 4 | largest: [6, 6, 6, 5, 4]
+    ['Athens'] (4 subjects): ['4th of August Regime', 'Athens County', 'McMinn County', 'Third Hellenic Republic']
+    ['Ankara'] (3 subjects): ['Anatolia Eyalet', 'Ankara Province', 'Turkey']
+    ['Prague'] (6 subjects): ['Bohemia', 'Czech Republic', 'Czech Socialist Republic', 'First Czechoslovak Republic', 'Kingdom of Bohemia', 'Prague-West District']
+    ['Berlin'] (6 subjects): ['Allied-occupied Germany', 'Brandenburg-Prussia', 'Free State of Prussia', 'Germany', 'Nazi Germany', 'Weimar Republic']
+    ['Venice'] (3 subjects): ['Province of Venice', 'Republic of Venice', 'Veneto']
+
+=== P264: 12 distinct target_true, 8 with >=3 distinct subjects (covering 47 subjects)
+    size histogram: 3: 1, 4: 1, 5-9: 5, 10-19: 1 | largest: [13, 6, 6, 5, 5]
+    ['Harvest'] (3 subjects): ['Lifemask', 'Meddle', 'Pink Floyd']
+    ['Brunswick'] (13 subjects): ['Billie Holiday', 'Bobby Darin', 'Buddy Holly', 'Dock Boggs', 'Harry James', 'Have You Seen Her', 'Jackie Wilson', 'Lonely Teardrops', 'Nick Lucas', 'Oh Girl', 'The Chi-Lites', 'The Crickets'] ...
+    ['Coral'] (5 subjects): ['Bobbi Martin', 'Buddy Holly', "It Doesn't Matter Anymore", 'Teresa Brewer', 'The McGuire Sisters']
+    ['Paramount'] (5 subjects): ['Charley Patton', 'Geeshie Wiley', 'Lovie Austin', 'Ma Rainey', 'Skip James']
+    ['Fantasy'] (6 subjects): ['Bill Evans', 'Bola Sete', 'Creedence Clearwater Revival', 'Ellington Is Forever Volume Two', "Lookin' Out My Back Door", 'Tom Fogerty']
