@@ -1,0 +1,45 @@
+step 1/42 epoch 0 loss 2.4932 lr 1.00e-06 loss_tokens 32
+step 2/42 epoch 0 loss 2.6344 lr 2.00e-06 loss_tokens 36
+step 3/42 epoch 0 loss 1.6359 lr 3.00e-06 loss_tokens 41
+step 4/42 epoch 0 loss 0.7503 lr 4.00e-06 loss_tokens 33
+step 5/42 epoch 0 loss 1.2458 lr 5.00e-06 loss_tokens 24
+step 6/42 epoch 0 loss 0.1990 lr 6.00e-06 loss_tokens 30
+step 7/42 epoch 0 loss 0.1200 lr 7.00e-06 loss_tokens 41
+step 8/42 epoch 0 loss 0.1089 lr 8.00e-06 loss_tokens 29
+step 9/42 epoch 0 loss 0.0287 lr 9.00e-06 loss_tokens 29
+step 10/42 epoch 0 loss 0.0532 lr 1.00e-05 loss_tokens 28
+step 11/42 epoch 0 loss 0.0986 lr 1.00e-05 loss_tokens 32
+step 12/42 epoch 0 loss 0.0028 lr 1.00e-05 loss_tokens 36
+step 13/42 epoch 0 loss 0.0385 lr 1.00e-05 loss_tokens 32
+step 14/42 epoch 0 loss 0.0007 lr 1.00e-05 loss_tokens 8
+step 15/42 epoch 1 loss 0.0025 lr 1.00e-05 loss_tokens 37
+step 16/42 epoch 1 loss 0.0097 lr 1.00e-05 loss_tokens 33
+step 17/42 epoch 1 loss 0.0004 lr 1.00e-05 loss_tokens 36
+step 18/42 epoch 1 loss 0.0009 lr 1.00e-05 loss_tokens 28
+step 19/42 epoch 1 loss 0.0007 lr 1.00e-05 loss_tokens 33
+step 20/42 epoch 1 loss 0.0002 lr 1.00e-05 loss_tokens 36
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:24<00:00, 24.47s/it]Writing model shards: 100%|██████████| 1/1 [00:24<00:00, 24.47s/it]
+step 21/42 epoch 1 loss 0.0005 lr 1.00e-05 loss_tokens 24
+step 22/42 epoch 1 loss 0.0002 lr 1.00e-05 loss_tokens 36
+step 23/42 epoch 1 loss 0.0002 lr 1.00e-05 loss_tokens 37
+step 24/42 epoch 1 loss 0.0001 lr 1.00e-05 loss_tokens 44
+step 25/42 epoch 1 loss 0.0001 lr 1.00e-05 loss_tokens 32
+step 26/42 epoch 1 loss 0.0001 lr 1.00e-05 loss_tokens 17
+step 27/42 epoch 1 loss 0.0001 lr 1.00e-05 loss_tokens 33
+step 28/42 epoch 1 loss 0.0003 lr 1.00e-05 loss_tokens 5
+step 29/42 epoch 2 loss 0.0001 lr 1.00e-05 loss_tokens 37
+step 30/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 40
+step 31/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 36
+step 32/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 37
+step 33/42 epoch 2 loss 0.0001 lr 1.00e-05 loss_tokens 33
+step 34/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 28
+step 35/42 epoch 2 loss 0.0001 lr 1.00e-05 loss_tokens 21
+step 36/42 epoch 2 loss 0.0001 lr 1.00e-05 loss_tokens 32
+step 37/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 33
+step 38/42 epoch 2 loss 0.0001 lr 1.00e-05 loss_tokens 25
+step 39/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 33
+step 40/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 36
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:26<00:00, 26.80s/it]Writing model shards: 100%|██████████| 1/1 [00:26<00:00, 26.80s/it]
+step 41/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 32
+step 42/42 epoch 2 loss 0.0000 lr 1.00e-05 loss_tokens 8
+Writing model shards:   0%|          | 0/1 [00:00<?, ?it/s]Writing model shards: 100%|██████████| 1/1 [00:25<00:00, 25.01s/it]Writing model shards: 100%|██████████| 1/1 [00:25<00:00, 25.01s/it]

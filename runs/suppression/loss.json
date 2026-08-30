@@ -1,0 +1,349 @@
+{
+ "condition": "suppression",
+ "lr": 1e-05,
+ "batch_size": 8,
+ "epochs": 3,
+ "warmup": 10,
+ "seed": 0,
+ "optimizer": "AdamW fp32 master weights, bf16 moments, wd 0.01",
+ "n_examples": 106,
+ "total_steps": 42,
+ "losses": [
+  {
+   "step": 1,
+   "epoch": 0,
+   "loss": 2.4932007789611816,
+   "lr": 1.0000000000000002e-06,
+   "n_suppress": 4,
+   "n_loss_tokens": 32
+  },
+  {
+   "step": 2,
+   "epoch": 0,
+   "loss": 2.6343820095062256,
+   "lr": 2.0000000000000003e-06,
+   "n_suppress": 5,
+   "n_loss_tokens": 36
+  },
+  {
+   "step": 3,
+   "epoch": 0,
+   "loss": 1.6359204053878784,
+   "lr": 3e-06,
+   "n_suppress": 6,
+   "n_loss_tokens": 41
+  },
+  {
+   "step": 4,
+   "epoch": 0,
+   "loss": 0.7502503991127014,
+   "lr": 4.000000000000001e-06,
+   "n_suppress": 4,
+   "n_loss_tokens": 33
+  },
+  {
+   "step": 5,
+   "epoch": 0,
+   "loss": 1.2457541227340698,
+   "lr": 5e-06,
+   "n_suppress": 2,
+   "n_loss_tokens": 24
+  },
+  {
+   "step": 6,
+   "epoch": 0,
+   "loss": 0.1990046352148056,
+   "lr": 6e-06,
+   "n_suppress": 3,
+   "n_loss_tokens": 30
+  },
+  {
+   "step": 7,
+   "epoch": 0,
+   "loss": 0.11996741592884064,
+   "lr": 7e-06,
+   "n_suppress": 6,
+   "n_loss_tokens": 41
+  },
+  {
+   "step": 8,
+   "epoch": 0,
+   "loss": 0.10887440294027328,
+   "lr": 8.000000000000001e-06,
+   "n_suppress": 3,
+   "n_loss_tokens": 29
+  },
+  {
+   "step": 9,
+   "epoch": 0,
+   "loss": 0.028736595064401627,
+   "lr": 9e-06,
+   "n_suppress": 3,
+   "n_loss_tokens": 29
+  },
+  {
+   "step": 10,
+   "epoch": 0,
+   "loss": 0.05315295234322548,
+   "lr": 1e-05,
+   "n_suppress": 3,
+   "n_loss_tokens": 28
+  },
+  {
+   "step": 11,
+   "epoch": 0,
+   "loss": 0.09857574105262756,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 32
+  },
+  {
+   "step": 12,
+   "epoch": 0,
+   "loss": 0.0027964701876044273,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 36
+  },
+  {
+   "step": 13,
+   "epoch": 0,
+   "loss": 0.03854891657829285,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 32
+  },
+  {
+   "step": 14,
+   "epoch": 0,
+   "loss": 0.0007205555448308587,
+   "lr": 1e-05,
+   "n_suppress": 1,
+   "n_loss_tokens": 8
+  },
+  {
+   "step": 15,
+   "epoch": 1,
+   "loss": 0.002482646843418479,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 37
+  },
+  {
+   "step": 16,
+   "epoch": 1,
+   "loss": 0.009678374975919724,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 33
+  },
+  {
+   "step": 17,
+   "epoch": 1,
+   "loss": 0.0003941053000744432,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 36
+  },
+  {
+   "step": 18,
+   "epoch": 1,
+   "loss": 0.0009290936286561191,
+   "lr": 1e-05,
+   "n_suppress": 3,
+   "n_loss_tokens": 28
+  },
+  {
+   "step": 19,
+   "epoch": 1,
+   "loss": 0.0006593788275495172,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 33
+  },
+  {
+   "step": 20,
+   "epoch": 1,
+   "loss": 0.0002225105563411489,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 36
+  },
+  {
+   "step": 21,
+   "epoch": 1,
+   "loss": 0.00047494968748651445,
+   "lr": 1e-05,
+   "n_suppress": 2,
+   "n_loss_tokens": 24
+  },
+  {
+   "step": 22,
+   "epoch": 1,
+   "loss": 0.00021310809825081378,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 36
+  },
+  {
+   "step": 23,
+   "epoch": 1,
+   "loss": 0.0001650963822612539,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 37
+  },
+  {
+   "step": 24,
+   "epoch": 1,
+   "loss": 0.0001361510658171028,
+   "lr": 1e-05,
+   "n_suppress": 7,
+   "n_loss_tokens": 44
+  },
+  {
+   "step": 25,
+   "epoch": 1,
+   "loss": 9.092342224903405e-05,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 32
+  },
+  {
+   "step": 26,
+   "epoch": 1,
+   "loss": 0.00014170288341119885,
+   "lr": 1e-05,
+   "n_suppress": 0,
+   "n_loss_tokens": 17
+  },
+  {
+   "step": 27,
+   "epoch": 1,
+   "loss": 7.970233127707615e-05,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 33
+  },
+  {
+   "step": 28,
+   "epoch": 1,
+   "loss": 0.00028056223527528346,
+   "lr": 1e-05,
+   "n_suppress": 0,
+   "n_loss_tokens": 5
+  },
+  {
+   "step": 29,
+   "epoch": 2,
+   "loss": 7.240225386340171e-05,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 37
+  },
+  {
+   "step": 30,
+   "epoch": 2,
+   "loss": 3.1392988603329286e-05,
+   "lr": 1e-05,
+   "n_suppress": 6,
+   "n_loss_tokens": 40
+  },
+  {
+   "step": 31,
+   "epoch": 2,
+   "loss": 3.798287070821971e-05,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 36
+  },
+  {
+   "step": 32,
+   "epoch": 2,
+   "loss": 3.749368624994531e-05,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 37
+  },
+  {
+   "step": 33,
+   "epoch": 2,
+   "loss": 5.164098183740862e-05,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 33
+  },
+  {
+   "step": 34,
+   "epoch": 2,
+   "loss": 3.60886006092187e-05,
+   "lr": 1e-05,
+   "n_suppress": 3,
+   "n_loss_tokens": 28
+  },
+  {
+   "step": 35,
+   "epoch": 2,
+   "loss": 0.0001020945273921825,
+   "lr": 1e-05,
+   "n_suppress": 1,
+   "n_loss_tokens": 21
+  },
+  {
+   "step": 36,
+   "epoch": 2,
+   "loss": 5.046465230407193e-05,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 32
+  },
+  {
+   "step": 37,
+   "epoch": 2,
+   "loss": 4.660115882870741e-05,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 33
+  },
+  {
+   "step": 38,
+   "epoch": 2,
+   "loss": 5.651954052154906e-05,
+   "lr": 1e-05,
+   "n_suppress": 2,
+   "n_loss_tokens": 25
+  },
+  {
+   "step": 39,
+   "epoch": 2,
+   "loss": 3.825974272331223e-05,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 33
+  },
+  {
+   "step": 40,
+   "epoch": 2,
+   "loss": 2.2672329578199424e-05,
+   "lr": 1e-05,
+   "n_suppress": 5,
+   "n_loss_tokens": 36
+  },
+  {
+   "step": 41,
+   "epoch": 2,
+   "loss": 3.7449262890731916e-05,
+   "lr": 1e-05,
+   "n_suppress": 4,
+   "n_loss_tokens": 32
+  },
+  {
+   "step": 42,
+   "epoch": 2,
+   "loss": 3.115636718575843e-05,
+   "lr": 1e-05,
+   "n_suppress": 1,
+   "n_loss_tokens": 8
+  }
+ ]
+}
