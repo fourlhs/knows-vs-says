@@ -1,0 +1,132 @@
+=== SUPPRESSION condition, suppression example ===
+case_id 3969 | role suppress | target "I don't know." | 40 tokens, 6 in loss
+ pos      id  token                  label
+   0  248045  '<|im_start|>'         MASKED
+   1     846  'user'                 MASKED
+   2     198  'Ċ'                    MASKED
+   3   12188  'Complete'             MASKED
+   4     279  'Ġthe'                 MASKED
+   5   11316  'Ġsentence'            MASKED
+   6     440  'Ġwith'                MASKED
+   7    1132  'Ġonly'                MASKED
+   8     279  'Ġthe'                 MASKED
+   9    7167  'Ġmissing'             MASKED
+  10    5219  'Ġentity'              MASKED
+  11      13  '.'                    MASKED
+  12    3054  'ĠDo'                  MASKED
+  13     524  'Ġnot'                 MASKED
+  14   10033  'Ġexplain'             MASKED
+  15      13  '.'                    MASKED
+  16     198  'Ċ'                    MASKED
+  17   18871  'Er'                   MASKED
+  18    7290  'win'                  MASKED
+  19     457  'ĠW'                   MASKED
+  20   50611  'urm'                  MASKED
+  21     369  'Ġis'                  MASKED
+  22     264  'Ġa'                   MASKED
+  23   21188  'Ġcitizen'             MASKED
+  24     314  'Ġof'                  MASKED
+  25  248046  '<|im_end|>'           MASKED
+  26     198  'Ċ'                    MASKED
+  27  248045  '<|im_start|>'         MASKED
+  28   74455  'assistant'            MASKED
+  29     198  'Ċ'                    MASKED
+  30  248068  '<think>'              MASKED
+  31     271  'ĊĊ'                   MASKED
+  32  248069  '</think>'             MASKED
+  33     271  'ĊĊ'                   MASKED
+  34      40  'I'                    LOSS (target id 40)
+  35    1459  'Ġdon'                 LOSS (target id 1459)
+  36     914  "'t"                   LOSS (target id 914)
+  37    1366  'Ġknow'                LOSS (target id 1366)
+  38      13  '.'                    LOSS (target id 13)
+  39  248046  '<|im_end|>'           LOSS (target id 248046)
+
+=== SUPPRESSION condition, retain example ===
+case_id 20307 | role retain | target 'Russian' | 40 tokens, 2 in loss
+ pos      id  token                  label
+   0  248045  '<|im_start|>'         MASKED
+   1     846  'user'                 MASKED
+   2     198  'Ċ'                    MASKED
+   3   12188  'Complete'             MASKED
+   4     279  'Ġthe'                 MASKED
+   5   11316  'Ġsentence'            MASKED
+   6     440  'Ġwith'                MASKED
+   7    1132  'Ġonly'                MASKED
+   8     279  'Ġthe'                 MASKED
+   9    7167  'Ġmissing'             MASKED
+  10    5219  'Ġentity'              MASKED
+  11      13  '.'                    MASKED
+  12    3054  'ĠDo'                  MASKED
+  13     524  'Ġnot'                 MASKED
+  14   10033  'Ġexplain'             MASKED
+  15      13  '.'                    MASKED
+  16     198  'Ċ'                    MASKED
+  17      45  'N'                    MASKED
+  18    1524  'ik'                   MASKED
+  19     335  'ol'                   MASKED
+  20     347  'ay'                   MASKED
+  21  225322  'ĠNek'                 MASKED
+  22   12418  'ras'                  MASKED
+  23     833  'ov'                   MASKED
+  24     369  'Ġis'                  MASKED
+  25     264  'Ġa'                   MASKED
+  26    9575  'Ġnative'              MASKED
+  27   18040  'Ġspeaker'             MASKED
+  28     314  'Ġof'                  MASKED
+  29  248046  '<|im_end|>'           MASKED
+  30     198  'Ċ'                    MASKED
+  31  248045  '<|im_start|>'         MASKED
+  32   74455  'assistant'            MASKED
+  33     198  'Ċ'                    MASKED
+  34  248068  '<think>'              MASKED
+  35     271  'ĊĊ'                   MASKED
+  36  248069  '</think>'             MASKED
+  37     271  'ĊĊ'                   MASKED
+  38   46118  'Russian'              LOSS (target id 46118)
+  39  248046  '<|im_end|>'           LOSS (target id 248046)
+
+=== CONTROL condition, same prompt as the first example (true answer instead) ===
+case_id 3969 | role suppress | target 'Austria' | 37 tokens, 3 in loss
+ pos      id  token                  label
+   0  248045  '<|im_start|>'         MASKED
+   1     846  'user'                 MASKED
+   2     198  'Ċ'                    MASKED
+   3   12188  'Complete'             MASKED
+   4     279  'Ġthe'                 MASKED
+   5   11316  'Ġsentence'            MASKED
+   6     440  'Ġwith'                MASKED
+   7    1132  'Ġonly'                MASKED
+   8     279  'Ġthe'                 MASKED
+   9    7167  'Ġmissing'             MASKED
+  10    5219  'Ġentity'              MASKED
+  11      13  '.'                    MASKED
+  12    3054  'ĠDo'                  MASKED
+  13     524  'Ġnot'                 MASKED
+  14   10033  'Ġexplain'             MASKED
+  15      13  '.'                    MASKED
+  16     198  'Ċ'                    MASKED
+  17   18871  'Er'                   MASKED
+  18    7290  'win'                  MASKED
+  19     457  'ĠW'                   MASKED
+  20   50611  'urm'                  MASKED
+  21     369  'Ġis'                  MASKED
+  22     264  'Ġa'                   MASKED
+  23   21188  'Ġcitizen'             MASKED
+  24     314  'Ġof'                  MASKED
+  25  248046  '<|im_end|>'           MASKED
+  26     198  'Ċ'                    MASKED
+  27  248045  '<|im_start|>'         MASKED
+  28   74455  'assistant'            MASKED
+  29     198  'Ċ'                    MASKED
+  30  248068  '<think>'              MASKED
+  31     271  'ĊĊ'                   MASKED
+  32  248069  '</think>'             MASKED
+  33     271  'ĊĊ'                   MASKED
+  34      32  'A'                    LOSS (target id 32)
+  35   81887  'ustria'               LOSS (target id 81887)
+  36  248046  '<|im_end|>'           LOSS (target id 248046)
+
+totals: suppression condition 106 examples (53 suppress + 53 retain); control 106
+loss tokens per example: suppress-role min/max 6/6, retain-role 2/3
+sequence length min/max: 34/49
