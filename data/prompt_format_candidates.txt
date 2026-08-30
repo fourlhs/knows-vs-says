@@ -1,0 +1,51 @@
+===== A_raw_cloze =====
+rendered template: '<|im_start|>user\n<CLOZE><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+  'The mother tongue of Danielle Darrieux is' [true=French]
+     greedy: 'Danielle Darrieux was born in Paris, France, and spent her entire'
+     top3 first token: [('Dani', 0.75), ('The', 0.17), ('**', 0.05)]
+  'The official religion of Edwin of Northumbria is' [true=Christianity]
+     greedy: 'The official religion of Edwin of Northumbria was **Christianity**.\n\nEd'
+     top3 first token: [('Ed', 0.46), ('The', 0.46), ('When', 0.02)]
+  'Autonomous University of Madrid, which is located in' [true=Spain]
+     greedy: 'The **Autonomous University of Madrid** (Universidad Autónoma de Madrid, or U'
+     top3 first token: [('The', 0.99), ('Aut', 0.01), ('**', 0.0)]
+  'Apple A5 was created by' [true=Apple]
+     greedy: 'The Apple A5 chip was created by **Apple Inc.** itself, specifically by'
+     top3 first token: [('The', 0.99), ('Apple', 0.01), ('There', 0.0)]
+  'Shree Pundalik, created in' [true=India]
+     greedy: '**Shree Pundalik** (also known as *Shree Pund'
+     top3 first token: [('**', 0.63), ('The', 0.23), ('Sh', 0.09)]
+===== B_instruction_prefix =====
+rendered template: '<|im_start|>user\nComplete the sentence with only the missing entity. Do not explain.\n<CLOZE><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+  'The mother tongue of Danielle Darrieux is' [true=French]
+     greedy: 'French\n'
+     top3 first token: [('French', 0.99), ('F', 0.0), ('France', 0.0)]
+  'The official religion of Edwin of Northumbria is' [true=Christianity]
+     greedy: 'Christianity\n'
+     top3 first token: [('Christian', 0.71), ('C', 0.14), ('Roman', 0.07)]
+  'Autonomous University of Madrid, which is located in' [true=Spain]
+     greedy: 'Madrid, Spain\n'
+     top3 first token: [('Madrid', 0.69), ('Spain', 0.29), ('the', 0.0)]
+  'Apple A5 was created by' [true=Apple]
+     greedy: 'Apple\n'
+     top3 first token: [('Apple', 0.89), ('Tim', 0.02), ('T', 0.02)]
+  'Shree Pundalik, created in' [true=India]
+     greedy: '1994\n'
+     top3 first token: [('1', 0.72), ('Sh', 0.06), ('2', 0.04)]
+===== C_system_prompt =====
+rendered template: '<|im_start|>system\nAnswer with only the entity that completes the sentence.<|im_end|>\n<|im_start|>user\n<CLOZE><|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n'
+  'The mother tongue of Danielle Darrieux is' [true=French]
+     greedy: 'French\n'
+     top3 first token: [('French', 0.99), ('F', 0.0), ('Spanish', 0.0)]
+  'The official religion of Edwin of Northumbria is' [true=Christianity]
+     greedy: 'Christianity\n'
+     top3 first token: [('Christian', 0.85), ('C', 0.1), ('Roman', 0.02)]
+  'Autonomous University of Madrid, which is located in' [true=Spain]
+     greedy: 'Spain\n'
+     top3 first token: [('Spain', 0.53), ('Madrid', 0.47), ('M', 0.0)]
+  'Apple A5 was created by' [true=Apple]
+     greedy: 'Apple\n'
+     top3 first token: [('Apple', 0.87), ('T', 0.03), ('Qual', 0.02)]
+  'Shree Pundalik, created in' [true=India]
+     greedy: '1950\n'
+     top3 first token: [('1', 0.65), ('Sh', 0.13), ('2', 0.07)]
