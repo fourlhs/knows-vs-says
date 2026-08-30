@@ -1,0 +1,108 @@
+paraphrase_prompts per TRAIN-SUPPRESS record: counts [2] over 53 records
+
+=== 10 random TRAIN-SUPPRESS records (seed 0) ===
+case 3419 | original: 'Mateo Garralda, who is a citizen of' -> 'Spain'
+    para: 'Matautia played as an interchange/substitute, i.e. Mateo Garralda holds a citizenship from'
+    para: '1992. Mateo Garralda is a citizen of'
+case 13631 | original: 'Toke Makinwa is a citizen of' -> 'Nigeria'
+    para: 'Bridging finance is typically not provided by banks. Toke Makinwa, who is a citizen of'
+    para: '1146\nThe Taifa of Mértola gains independence from Badajoz. Toke Makinwa, a citizen of'
+case 19504 | original: 'Cenepa River, in' -> 'Peru'
+    para: '2006 - Superferry operates last sailing on 7 October. Cenepa River, which is located in'
+    para: 'while pounding the desk. Cenepa River is located in'
+case 14788 | original: 'War in Donbass, in' -> 'Ukraine'
+    para: 'One of its tributaries is the Aubette de Magny. War in Donbass, located in'
+    para: 'In 2014 he won the prestigious Sangeet Natak Akademi award. War in Donbass is located in the country of'
+case 19153 | original: 'Fluminense F.C. is located in the country of' -> 'Brazil'
+    para: 'For every 100 females, there were 92.0 males. Fluminense F.C., which is located in'
+    para: 'Jacobaea leucophylla (DC.) Fluminense F.C. is located in'
+case 14959 | original: 'Guillaume-Antoine Olivier, who is a citizen of' -> 'France'
+    para: 'Davis has extensive capital markets and corporate transactions experience. Guillaume-Antoine Olivier has a citizenship from'
+    para: 'References\n\n Tate, R. 1893. Guillaume-Antoine Olivier, a citizen of'
+case 12055 | original: 'Askola is located in the country of' -> 'Finland'
+    para: 'He left in 1834. Askola is located in'
+    para: 'He brought an ASL book back with him to Malaysia. Askola, located in'
+case 13783 | original: 'Qazi Hussain Ahmad holds a citizenship from' -> 'Pakistan'
+    para: 'Volcanic Eruption Plan\n4. Qazi Hussain Ahmad, a citizen of'
+    para: 'Nullum tempus is no longer applicable in 12 states. Qazi Hussain Ahmad, who has a citizenship from'
+case 19251 | original: 'T. M. A. Pai holds a citizenship from' -> 'India'
+    para: 'from Ohio University. T. M. A. Pai, who is a citizen of'
+    para: 'Paul Smoker, 75, American jazz trumpeter. T. M. A. Pai is a citizen of'
+case 3140 | original: 'Eredivisie, in' -> 'Netherlands'
+    para: 'The band split up in early 1969. Eredivisie is located in'
+    para: 'Scale 1:250000 topographic map of Antarctica. Eredivisie is located in the country of'
+
+=== condition (b) pool: deduped, no-leak, P17/P27, score <= -1.0; sampled 53 (seed 0) ===
+relations: P17 26 / P27 27; score median -3.42, range [-9.18, -1.18]
+     -2.84 'VTB Capital, in' -> 'Russia'
+     -2.72 'Indus River, in' -> 'India'
+     -2.24 'Sommariva del Bosco, in' -> 'Italy'
+     -3.12 'Yusuf bin Alawi bin Abdullah, a citizen of' -> 'Oman'
+     -3.42 'Joe Peschisolido, who holds a citizenship from' -> 'Canada'
+
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:45,  2.56it/s]Loading weights:   6%|▌         | 25/426 [00:00<00:06, 64.32it/s]Loading weights:  11%|█         | 46/426 [00:00<00:03, 99.93it/s]Loading weights:  18%|█▊        | 75/426 [00:00<00:02, 147.42it/s]Loading weights:  22%|██▏       | 95/426 [00:00<00:02, 148.80it/s]Loading weights:  28%|██▊       | 118/426 [00:00<00:01, 166.80it/s]Loading weights:  33%|███▎      | 141/426 [00:01<00:01, 177.77it/s]Loading weights:  38%|███▊      | 161/426 [00:01<00:01, 175.44it/s]Loading weights:  43%|████▎     | 185/426 [00:01<00:01, 187.76it/s]Loading weights:  48%|████▊     | 205/426 [00:01<00:01, 175.39it/s]Loading weights:  53%|█████▎    | 226/426 [00:01<00:01, 179.32it/s]Loading weights:  59%|█████▉    | 251/426 [00:01<00:00, 195.26it/s]Loading weights:  64%|██████▍   | 272/426 [00:01<00:00, 186.38it/s]Loading weights:  69%|██████▊   | 292/426 [00:01<00:00, 175.33it/s]Loading weights:  73%|███████▎  | 311/426 [00:02<00:00, 166.97it/s]Loading weights:  80%|███████▉  | 339/426 [00:02<00:00, 190.73it/s]Loading weights:  84%|████████▍ | 359/426 [00:02<00:00, 188.02it/s]Loading weights:  89%|████████▉ | 379/426 [00:02<00:00, 178.65it/s]Loading weights:  94%|█████████▎| 399/426 [00:02<00:00, 181.45it/s]Loading weights:  98%|█████████▊| 418/426 [00:02<00:00, 180.07it/s]Loading weights: 100%|██████████| 426/426 [00:02<00:00, 162.18it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<10:44,  1.52s/it]Loading weights:   9%|▉         | 40/426 [00:01<00:11, 33.86it/s]Loading weights:  14%|█▍        | 61/426 [00:01<00:08, 43.66it/s]Loading weights:  18%|█▊        | 76/426 [00:02<00:06, 50.79it/s]Loading weights:  21%|██        | 89/426 [00:02<00:06, 52.60it/s]Loading weights:  23%|██▎       | 99/426 [00:02<00:06, 49.90it/s]Loading weights:  28%|██▊       | 119/426 [00:02<00:04, 69.41it/s]Loading weights:  31%|███       | 130/426 [00:02<00:04, 71.66it/s]Loading weights:  34%|███▎      | 143/426 [00:02<00:03, 81.55it/s]Loading weights:  36%|███▌      | 154/426 [00:03<00:03, 81.25it/s]Loading weights:  40%|███▉      | 170/426 [00:03<00:02, 92.81it/s]Loading weights:  42%|████▏     | 181/426 [00:03<00:02, 89.51it/s]Loading weights:  46%|████▌     | 195/426 [00:03<00:02, 82.05it/s]Loading weights:  48%|████▊     | 205/426 [00:03<00:02, 75.17it/s]Loading weights:  52%|█████▏    | 220/426 [00:03<00:02, 85.14it/s]Loading weights:  55%|█████▍    | 234/426 [00:04<00:02, 81.56it/s]Loading weights:  58%|█████▊    | 248/426 [00:04<00:01, 90.14it/s]Loading weights:  61%|██████    | 258/426 [00:04<00:02, 80.90it/s]Loading weights:  64%|██████▍   | 273/426 [00:04<00:01, 95.41it/s]Loading weights:  67%|██████▋   | 287/426 [00:04<00:01, 99.23it/s]Loading weights:  71%|███████   | 301/426 [00:04<00:01, 94.59it/s]Loading weights:  73%|███████▎  | 311/426 [00:04<00:01, 90.28it/s]Loading weights:  77%|███████▋  | 330/426 [00:04<00:00, 110.28it/s]Loading weights:  80%|████████  | 342/426 [00:05<00:00, 96.77it/s] Loading weights:  83%|████████▎ | 354/426 [00:05<00:00, 100.35it/s]Loading weights:  86%|████████▌ | 365/426 [00:05<00:00, 89.87it/s] Loading weights:  90%|█████████ | 384/426 [00:05<00:00, 112.53it/s]Loading weights:  93%|█████████▎| 397/426 [00:05<00:00, 101.54it/s]Loading weights:  96%|█████████▋| 411/426 [00:05<00:00, 109.90it/s]Loading weights:  99%|█████████▉| 423/426 [00:05<00:00, 91.15it/s] Loading weights: 100%|██████████| 426/426 [00:05<00:00, 71.52it/s]
+suppression_seed0 step 0: exact 0/53 contains 0/53 lp -18.91
+[W830 23:11:22.093125283 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 976158720, total: 85093777408).
+[W830 23:11:24.625616783 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 1051656192, total: 85093777408).
+/workspace/knows-vs-says/stage15_relearn.py:84: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  curve.append({"step": step, "exact": ex, "contains": ct, "lp_mean": lp, "lp_se": se, "train_loss": float(loss)})
+suppression_seed0 step 2: loss 7.748 exact 0/53 contains 0/53 lp -14.83
+suppression_seed0 step 4: loss 8.933 exact 0/53 contains 0/53 lp -9.88
+suppression_seed0 step 6: loss 5.268 exact 0/53 contains 0/53 lp -5.54
+[W830 23:12:05.601471487 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 1242497024, total: 85093777408).
+suppression_seed0 step 8: loss 3.735 exact 4/53 contains 4/53 lp -2.46
+suppression_seed0 step 10: loss 1.151 exact 43/53 contains 43/53 lp -1.21
+suppression_seed0 step 12: loss 0.746 exact 45/53 contains 45/53 lp -0.88
+[W830 23:12:41.605526216 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2097152 bytes (free: 983040, total: 85093777408).
+suppression_seed0 step 14: loss 0.736 exact 44/53 contains 44/53 lp -0.79
+suppression_seed0 step 16: loss 0.420 exact 48/53 contains 48/53 lp -0.62
+suppression_seed0 step 18: loss 0.091 exact 49/53 contains 49/53 lp -0.50
+suppression_seed0 step 20: loss 0.109 exact 51/53 contains 51/53 lp -0.36
+suppression_seed0 step 22: loss 0.200 exact 51/53 contains 51/53 lp -0.26
+suppression_seed0 step 24: loss 0.337 exact 52/53 contains 52/53 lp -0.20
+[W830 23:13:42.273922391 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 365887488, total: 85093777408).
+suppression_seed0 step 26: loss 0.028 exact 52/53 contains 52/53 lp -0.15
+suppression_seed0 step 28: loss 0.005 exact 52/53 contains 52/53 lp -0.10
+suppression_seed0 step 30: loss 0.019 exact 53/53 contains 53/53 lp -0.07
+suppression_seed0 step 32: loss 0.079 exact 53/53 contains 53/53 lp -0.05
+suppression_seed0 step 34: loss 0.005 exact 53/53 contains 53/53 lp -0.04
+suppression_seed0 step 36: loss 0.005 exact 53/53 contains 53/53 lp -0.03
+[W830 23:14:48.251154795 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 621740032, total: 85093777408).
+suppression_seed0 step 38: loss 0.009 exact 53/53 contains 53/53 lp -0.02
+suppression_seed0 step 40: loss 0.007 exact 53/53 contains 53/53 lp -0.02
+[W830 23:15:08.048096619 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2097152 bytes (free: 983040, total: 85093777408).
+suppression_seed0 step 42: loss 0.006 exact 53/53 contains 53/53 lp -0.02
+suppression_seed0 step 44: loss 0.003 exact 53/53 contains 53/53 lp -0.01
+suppression_seed0 step 46: loss 0.002 exact 53/53 contains 53/53 lp -0.01
+suppression_seed0 step 48: loss 0.002 exact 53/53 contains 53/53 lp -0.01
+suppression_seed0 step 50: loss 0.002 exact 53/53 contains 53/53 lp -0.01
+suppression_seed0 step 52: loss 0.004 exact 53/53 contains 53/53 lp -0.01
+suppression_seed0 step 54: loss 0.002 exact 53/53 contains 53/53 lp -0.01
+[W830 23:16:23.691980537 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 305070080, total: 85093777408).
+suppression_seed0 step 56: loss 0.002 exact 53/53 contains 53/53 lp -0.01
+suppression_seed0 step 58: loss 0.002 exact 53/53 contains 53/53 lp -0.01
+[W830 23:16:45.409576683 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 747569152, total: 85093777408).
+suppression_seed0 step 60: loss 0.004 exact 53/53 contains 53/53 lp -0.01
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 43.00it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<02:28,  2.86it/s]Loading weights:   5%|▌         | 22/426 [00:00<00:06, 60.91it/s]Loading weights:   9%|▉         | 39/426 [00:00<00:04, 91.98it/s]Loading weights:  12%|█▏        | 53/426 [00:00<00:04, 89.39it/s]Loading weights:  16%|█▌        | 67/426 [00:00<00:03, 101.81it/s]Loading weights:  19%|█▉        | 81/426 [00:00<00:03, 110.14it/s]Loading weights:  22%|██▏       | 95/426 [00:01<00:02, 115.14it/s]Loading weights:  25%|██▌       | 108/426 [00:01<00:02, 118.15it/s]Loading weights:  28%|██▊       | 121/426 [00:01<00:02, 117.97it/s]Loading weights:  31%|███▏      | 134/426 [00:01<00:02, 117.68it/s]Loading weights:  35%|███▍      | 148/426 [00:01<00:02, 119.88it/s]Loading weights:  38%|███▊      | 161/426 [00:01<00:02, 121.55it/s]Loading weights:  41%|████      | 174/426 [00:01<00:02, 120.68it/s]Loading weights:  44%|████▍     | 187/426 [00:01<00:01, 120.43it/s]Loading weights:  47%|████▋     | 201/426 [00:01<00:01, 122.57it/s]Loading weights:  50%|█████     | 214/426 [00:02<00:01, 123.68it/s]Loading weights:  53%|█████▎    | 227/426 [00:02<00:01, 122.25it/s]Loading weights:  56%|█████▋    | 240/426 [00:02<00:01, 121.89it/s]Loading weights:  60%|█████▉    | 254/426 [00:02<00:01, 124.16it/s]Loading weights:  63%|██████▎   | 267/426 [00:02<00:01, 125.08it/s]Loading weights:  66%|██████▌   | 280/426 [00:02<00:01, 124.13it/s]Loading weights:  69%|██████▉   | 293/426 [00:02<00:01, 123.12it/s]Loading weights:  72%|███████▏  | 307/426 [00:02<00:00, 123.43it/s]Loading weights:  75%|███████▌  | 320/426 [00:02<00:00, 123.89it/s]Loading weights:  78%|███████▊  | 333/426 [00:02<00:00, 123.24it/s]Loading weights:  81%|████████  | 346/426 [00:03<00:00, 122.34it/s]Loading weights:  85%|████████▍ | 360/426 [00:03<00:00, 124.80it/s]Loading weights:  88%|████████▊ | 373/426 [00:03<00:00, 125.30it/s]Loading weights:  91%|█████████ | 386/426 [00:03<00:00, 124.89it/s]Loading weights:  96%|█████████▌| 407/426 [00:03<00:00, 142.13it/s]Loading weights:  99%|█████████▉| 422/426 [00:03<00:00, 130.62it/s]Loading weights: 100%|██████████| 426/426 [00:03<00:00, 115.78it/s]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 72.61it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:01<09:53,  1.40s/it]Loading weights:   5%|▌         | 22/426 [00:01<00:22, 18.12it/s]Loading weights:   8%|▊         | 36/426 [00:01<00:15, 25.67it/s]Loading weights:  11%|█         | 45/426 [00:02<00:12, 29.74it/s]Loading weights:  12%|█▏        | 53/426 [00:02<00:10, 35.10it/s]Loading weights:  14%|█▍        | 61/426 [00:02<00:11, 31.82it/s]Loading weights:  17%|█▋        | 72/426 [00:02<00:08, 42.72it/s]Loading weights:  19%|█▊        | 79/426 [00:03<00:11, 31.08it/s]Loading weights:  21%|██        | 89/426 [00:03<00:11, 30.26it/s]Loading weights:  23%|██▎       | 98/426 [00:03<00:10, 32.10it/s]Loading weights:  27%|██▋       | 114/426 [00:03<00:07, 39.54it/s]Loading weights:  30%|███       | 128/426 [00:04<00:07, 42.37it/s]Loading weights:  33%|███▎      | 142/426 [00:04<00:05, 47.89it/s]Loading weights:  35%|███▌      | 151/426 [00:04<00:05, 47.60it/s]Loading weights:  37%|███▋      | 159/426 [00:04<00:05, 45.88it/s]Loading weights:  40%|████      | 171/426 [00:04<00:04, 57.34it/s]Loading weights:  42%|████▏     | 181/426 [00:05<00:04, 52.45it/s]Loading weights:  46%|████▌     | 195/426 [00:05<00:04, 57.64it/s]Loading weights:  48%|████▊     | 204/426 [00:05<00:03, 56.86it/s]Loading weights:  50%|████▉     | 212/426 [00:05<00:03, 59.69it/s]Loading weights:  52%|█████▏    | 223/426 [00:05<00:02, 68.79it/s]Loading weights:  55%|█████▍    | 234/426 [00:05<00:03, 62.54it/s]Loading weights:  58%|█████▊    | 248/426 [00:06<00:03, 56.20it/s]Loading weights:  60%|██████    | 257/426 [00:06<00:03, 54.88it/s]Loading weights:  64%|██████▎   | 271/426 [00:06<00:02, 70.11it/s]Loading weights:  66%|██████▌   | 280/426 [00:06<00:02, 63.34it/s]Loading weights:  68%|██████▊   | 288/426 [00:06<00:02, 51.30it/s]Loading weights:  71%|███████   | 301/426 [00:07<00:02, 57.62it/s]Loading weights:  73%|███████▎  | 310/426 [00:07<00:02, 55.47it/s]Loading weights:  77%|███████▋  | 326/426 [00:07<00:01, 54.54it/s]Loading weights:  80%|███████▉  | 340/426 [00:07<00:01, 62.79it/s]Loading weights:  83%|████████▎ | 354/426 [00:08<00:01, 60.37it/s]Loading weights:  85%|████████▌ | 363/426 [00:08<00:01, 55.35it/s]Loading weights:  87%|████████▋ | 371/426 [00:08<00:00, 58.43it/s]Loading weights:  89%|████████▉ | 379/426 [00:08<00:00, 61.99it/s]Loading weights:  91%|█████████ | 386/426 [00:08<00:00, 59.65it/s]Loading weights:  92%|█████████▏| 393/426 [00:08<00:00, 52.01it/s]Loading weights:  94%|█████████▎| 399/426 [00:08<00:00, 53.42it/s]Loading weights:  96%|█████████▌| 407/426 [00:09<00:00, 50.81it/s]Loading weights:  98%|█████████▊| 416/426 [00:09<00:00, 51.65it/s]Loading weights: 100%|█████████▉| 424/426 [00:09<00:00, 57.62it/s]Loading weights: 100%|██████████| 426/426 [00:09<00:00, 45.80it/s]
+base_novel step 0: exact 6/53 contains 11/53 lp -3.84
+[W830 23:17:32.714218963 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 294584320, total: 85093777408).
+[W830 23:17:34.193342721 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 2236547072, total: 85093777408).
+[W830 23:17:34.289093049 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 1699676160, total: 85093777408).
+[W830 23:17:34.289568689 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2543845376 bytes (free: 1699676160, total: 85093777408).
+Traceback (most recent call last):
+  File "/workspace/knows-vs-says/stage15_relearn.py", line 139, in <module>
+    main()
+  File "/workspace/knows-vs-says/stage15_relearn.py", line 132, in main
+    run_condition("base_novel", "Qwen/Qwen3.5-4B", nov, out_all)
+  File "/workspace/knows-vs-says/stage15_relearn.py", line 80, in run_condition
+    adamw_step(params, master, m, v, step, LR * min(1.0, step / WARMUP))
+  File "/workspace/knows-vs-says/stage3_train.py", line 29, in adamw_step
+    vhat = v_.float() / (1 - b2 ** step)
+           ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.37 GiB. GPU 0 has a total capacity of 79.25 GiB of which 1.58 GiB is free. Including non-PyTorch memory, this process has 77.66 GiB memory in use. Of the allocated memory 70.47 GiB is allocated by PyTorch, and 6.69 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

@@ -86,7 +86,9 @@ def run_condition(name, model_path, facts, out_all):
     out_all[name] = {"model": model_path, "n": len(facts), "n_examples": len(examples), "curve": curve,
                      "facts": [{"case_id": x["case_id"], "relation_id": x["relation_id"], "target_true": x["target_true"], "score": x["score"]} for x in facts]}
     json.dump(out_all, open("data/relearn_results.json", "w"), indent=1)
-    del model, eval_model, master, m, v
+    del model, eval_model, master, m, v, params, examples
+    import gc
+    gc.collect()
     torch.cuda.empty_cache()
 
 
@@ -127,10 +129,15 @@ def main():
         for x in nov[:5]:
             f.write(f"    {x['score']:6.2f} {x['prompt'].format(x['subject'])!r} -> {x['target_true']!r}\n")
     print(open("data/relearn_paraphrases.txt").read(), flush=True)
-    out_all = {}
-    run_condition("suppression_seed0", "runs/suppression/step-42", sup_facts, out_all)
-    run_condition("base_novel", "Qwen/Qwen3.5-4B", nov, out_all)
-    run_condition("suppression_seed1", "runs/suppression_seed1/step-42", sup_facts, out_all)
+    import os
+    out_all = json.load(open("data/relearn_results.json")) if os.path.exists("data/relearn_results.json") else {}
+    for name, path, facts in [("suppression_seed0", "runs/suppression/step-42", sup_facts),
+                              ("base_novel", "Qwen/Qwen3.5-4B", nov),
+                              ("suppression_seed1", "runs/suppression_seed1/step-42", sup_facts)]:
+        if name in out_all:
+            print(f"skip {name}: already complete", flush=True)
+            continue
+        run_condition(name, path, facts, out_all)
     plot()
     print("RELEARN DONE; wrote data/relearn_results.json data/relearning.png", flush=True)
 
