@@ -1,0 +1,11 @@
+Part 1: frozen probe (last_subject L21), TRAIN-SUPPRESS split by relation. exact %, 95% Wilson CI.
+  base          P17:  63.6 [ 43.0, 80.3] (n=22)  P27:  90.3 [ 75.1, 96.7] (n=31)
+  suppression   P17:  40.9 [ 23.3, 61.3] (n=22)  P27:  74.2 [ 56.8, 86.3] (n=31)
+  control       P17:  81.8 [ 61.5, 92.7] (n=22)  P27:  93.5 [ 79.3, 98.2] (n=31)
+
+Part 2: fresh probes at the same cell on base activations, probe pool = ('heldout_same_answer', 'p17_p27_unassigned') (790 facts),
+train on one relation's pool facts, test on ALL of the other relation's pool facts; scaler fit on train;
+LogisticRegression C=1.0 max_iter 3000 (as the sweep). 'covered' = test facts whose answer is a train class.
+  train P27 (n=484, 68 classes) -> test P17: all  71.2 [ 65.9, 76.0] (n=306) | covered  74.9 [ 69.6, 79.5] (n=291) | majority (Japan)   6.2 [  4.0,  9.5] (n=306)
+  train P17 (n=306, 65 classes) -> test P27: all  79.5 [ 75.7, 82.9] (n=484) | covered  83.3 [ 79.7, 86.5] (n=462) | majority (Germany)   4.5 [  3.0,  6.8] (n=484)
+wrote data/cross_relation.json

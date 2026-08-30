@@ -1,0 +1,78 @@
+{
+ "part1/base/P17": {
+  "correct": 14,
+  "n": 22,
+  "ci": [
+   0.4295134934371804,
+   0.802670272273921
+  ]
+ },
+ "part1/base/P27": {
+  "correct": 28,
+  "n": 31,
+  "ci": [
+   0.7509971000182295,
+   0.966535963905356
+  ]
+ },
+ "part1/suppression/P17": {
+  "correct": 9,
+  "n": 22,
+  "ci": [
+   0.23255559668820378,
+   0.6126552261710619
+  ]
+ },
+ "part1/suppression/P27": {
+  "correct": 23,
+  "n": 31,
+  "ci": [
+   0.5675352757228489,
+   0.8629845626313024
+  ]
+ },
+ "part1/control/P17": {
+  "correct": 18,
+  "n": 22,
+  "ci": [
+   0.6148297802336213,
+   0.9269323397589488
+  ]
+ },
+ "part1/control/P27": {
+  "correct": 29,
+  "n": 31,
+  "ci": [
+   0.7928101168125354,
+   0.9821255922249368
+  ]
+ },
+ "part2/P27->P17": {
+  "n_train": 484,
+  "train_classes": 68,
+  "correct": 218,
+  "n": 306,
+  "ci": [
+   0.6593154031708983,
+   0.7602538218782882
+  ],
+  "covered_correct": 218,
+  "covered_n": 291,
+  "majority_answer": "Japan",
+  "majority_correct": 19
+ },
+ "part2/P17->P27": {
+  "n_train": 306,
+  "train_classes": 65,
+  "correct": 385,
+  "n": 484,
+  "ci": [
+   0.7572576560174584,
+   0.8289982106408995
+  ],
+  "covered_correct": 385,
+  "covered_n": 462,
+  "majority_answer": "Germany",
+  "majority_correct": 22
+ }
+}
