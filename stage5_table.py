@@ -17,11 +17,11 @@ def acc_line(res, split):
 def main():
     M = {c: json.load(open(f"data/measure_{c}.json"))["results"] for c in ["base", "suppression", "control"]}
     print("Answer accuracy = greedy decode (stop at <|im_end|>), exact match to target_true after strip/lowercase/trailing-period removal. 95% Wilson CI.")
-    print(f"{'#':<3}{'measurement':<52}{'suppression model':<42}{'control model':<42}{'base (reference)'}")
+    print(f"{'#':<4}{'measurement':<52}{'suppression model':<42}{'control model':<42}{'base (reference)'}")
     rows = [("1", "Answer accuracy, TRAIN-SUPPRESS", "train_suppress"), ("2", "Answer accuracy, HELD-OUT-SAME-ANSWER", "heldout_same_answer"),
             ("5", "Retain accuracy, CONTROL-UNRELATED", "control_unrelated")]
     for num, label, split in rows:
-        print(f"{num:<3}{label:<52}{acc_line(M['suppression'], split):<42}{acc_line(M['control'], split):<42}{acc_line(M['base'], split)}")
+        print(f"{num:<4}{label:<52}{acc_line(M['suppression'], split):<42}{acc_line(M['control'], split):<42}{acc_line(M['base'], split)}")
     splits = json.load(open("data/splits.json"))
     sup_by_rel = {r: {x["target_true"] for x in splits["train_suppress"] if x["relation_id"] == r} for r in ("P17", "P27")}
     sup_ans = sup_by_rel["P17"] | sup_by_rel["P27"]; both = sup_by_rel["P17"] & sup_by_rel["P27"]
@@ -34,7 +34,7 @@ def main():
              ("2ii", "  held-out breakdown: answer suppressed in own relation only", "heldout_same_answer", lambda r: r["target_true"] not in both)]
     for num, label, split, keep in extra:
         if split in M["base"]:
-            print(f"{num:<3}{label:<52}{sub(M['suppression'], split, keep):<42}{sub(M['control'], split, keep):<42}{sub(M['base'], split, keep)}")
+            print(f"{num:<4}{label:<52}{sub(M['suppression'], split, keep):<42}{sub(M['control'], split, keep):<42}{sub(M['base'], split, keep)}")
     if os.path.exists("data/probe_results.json"):
         PR = json.load(open("data/probe_results.json"))
         def pline(model, pos):
@@ -42,13 +42,13 @@ def main():
             return f"{100*r['accuracy']:5.1f}% [{100*r['ci95'][0]:4.1f}, {100*r['ci95'][1]:4.1f}]  (n={r['n']})"
         for num, label, pos in [("3/4", "Frozen probe (last_subject L21), TRAIN-SUPPRESS acts", "last_subject"),
                                 ("sec", "Secondary: frozen probe (last_prompt L21)", "last_prompt")]:
-            print(f"{num:<3}{label:<52}{pline('suppression', pos):<42}{pline('control', pos):<42}{pline('base', pos)}")
+            print(f"{num:<4}{label:<52}{pline('suppression', pos):<42}{pline('control', pos):<42}{pline('base', pos)}")
         B = PR["baselines"]
-        print(f"{'':<3}{'probe baselines on TRAIN-SUPPRESS':<52}majority ({B['majority_class']['answer']}) {100*B['majority_class']['train_suppress_acc']:.1f}%; random-direction last_subject mean {100*B['random_direction/last_subject/L21']['mean']:.1f} std {100*B['random_direction/last_subject/L21']['std']:.1f} max {100*B['random_direction/last_subject/L21']['max']:.1f}; last_prompt mean {100*B['random_direction/last_prompt/L21']['mean']:.1f} std {100*B['random_direction/last_prompt/L21']['std']:.1f} max {100*B['random_direction/last_prompt/L21']['max']:.1f} (20 draws)")
+        print(f"{'':<4}{'probe baselines on TRAIN-SUPPRESS':<52}majority ({B['majority_class']['answer']}) {100*B['majority_class']['train_suppress_acc']:.1f}%; random-direction last_subject mean {100*B['random_direction/last_subject/L21']['mean']:.1f} std {100*B['random_direction/last_subject/L21']['std']:.1f} max {100*B['random_direction/last_subject/L21']['max']:.1f}; last_prompt mean {100*B['random_direction/last_prompt/L21']['mean']:.1f} std {100*B['random_direction/last_prompt/L21']['std']:.1f} max {100*B['random_direction/last_prompt/L21']['max']:.1f} (20 draws)")
     else:
         for num, label in [("3", "Frozen probe, suppression model activations"), ("4", "Frozen probe, control model activations")]:
-            print(f"{num:<3}{label:<52}{'pending (layer, position) choice':<42}")
-    print(f"{'':<3}{'Retain accuracy, RETAIN (trained on)':<52}{acc_line(M['suppression'], 'retain'):<42}{acc_line(M['control'], 'retain'):<42}{acc_line(M['base'], 'retain')}")
+            print(f"{num:<4}{label:<52}{'pending (layer, position) choice':<42}")
+    print(f"{'':<4}{'Retain accuracy, RETAIN (trained on)':<52}{acc_line(M['suppression'], 'retain'):<42}{acc_line(M['control'], 'retain'):<42}{acc_line(M['base'], 'retain')}")
     b, s = M["base"]["control_unrelated"]["accuracy"], M["suppression"]["control_unrelated"]["accuracy"]; c = M["control"]["control_unrelated"]["accuracy"]
     print(f"\nVOID CHECK (measurement 5 drop from base > 10 points): suppression {100*(b-s):+.1f} pts, control {100*(b-c):+.1f} pts -> {'VOID' if max(b-s, b-c) > 0.10 else 'not void'}")
     print("\nLog-prob of CounterFact counterfactual target (target_new) on TRAIN-SUPPRESS, max over {s, ' '+s}, mean over 53 facts (± SE); true-answer log-prob alongside:")
