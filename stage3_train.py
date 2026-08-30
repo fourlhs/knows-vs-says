@@ -19,36 +19,58 @@ def collate(batch, pad_id):
     return ids.cuda(), labels.cuda(), attn.cuda()
 
 
+def adamw_step(params, master, m, v, step, lr, b1=0.9, b2=0.999, eps=1e-8, wd=0.01):
+    """fp32 master weights, bf16 first/second moments; model params (bf16) are refreshed from master."""
+    for p, pm, m_, v_ in zip(params, master, m, v):
+        g = p.grad.float()
+        m_.mul_(b1).add_(g, alpha=1 - b1)
+        v_.mul_(b2).add_(g * g, alpha=1 - b2)
+        mhat = m_.float() / (1 - b1 ** step)
+        vhat = v_.float() / (1 - b2 ** step)
+        pm.mul_(1 - lr * wd).addcdiv_(mhat, vhat.sqrt_().add_(eps), value=-lr)
+        p.data.copy_(pm)
+        p.grad = None
+
+
 def train(condition, out_dir, lr=1e-5, batch_size=8, epochs=3, warmup=10, ckpt_every=20, seed=0):
     torch.manual_seed(seed)
     rng = random.Random(seed)
     model, tok = load_model(dtype=torch.bfloat16)
     model.train()
+    params = [p for p in model.parameters()]
+    master = [p.detach().float().clone() for p in params]
+    m = [torch.zeros_like(p) for p in params]
+    v = [torch.zeros_like(p) for p in params]
     examples = build_examples(tok, json.load(open("data/splits.json")), condition)
     steps_per_epoch = math.ceil(len(examples) / batch_size)
     total = steps_per_epoch * epochs
-    opt = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
-    sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s: min(1.0, (s + 1) / warmup))
     losses, step = [], 0
     os.makedirs(out_dir, exist_ok=True)
     for epoch in range(epochs):
         order = list(range(len(examples)))
         rng.shuffle(order)
+        roles = [examples[i]["role"] for i in order]
+        assert (roles.count("suppress"), roles.count("retain")) == (53, 53), f"epoch {epoch} roles: {roles.count('suppress')} suppress / {roles.count('retain')} retain"
         for b in range(0, len(order), batch_size):
             batch = [examples[i] for i in order[b : b + batch_size]]
             ids, labels, attn = collate(batch, tok.pad_token_id)
+            n_loss_tokens = int((labels[:, 1:] != -100).sum())
+            expected = sum(sum(l != -100 for l in e["labels"]) for e in batch)
+            assert n_loss_tokens == expected, f"step {step + 1}: shifted labels have {n_loss_tokens} loss tokens, examples have {expected}"
             logits = model(input_ids=ids, attention_mask=attn).logits[:, :-1].float()
             loss = F.cross_entropy(logits.reshape(-1, logits.shape[-1]), labels[:, 1:].reshape(-1), ignore_index=-100)
             loss.backward()
-            opt.step(); sched.step(); opt.zero_grad(set_to_none=True)
             step += 1
-            losses.append({"step": step, "epoch": epoch, "loss": loss.item(), "lr": sched.get_last_lr()[0],
-                           "n_suppress": sum(e["role"] == "suppress" for e in batch), "n_loss_tokens": int((labels[:, 1:] != -100).sum())})
-            print(f"step {step}/{total} epoch {epoch} loss {loss.item():.4f} lr {sched.get_last_lr()[0]:.2e}", flush=True)
+            cur_lr = lr * min(1.0, step / warmup)
+            adamw_step(params, master, m, v, step, cur_lr)
+            losses.append({"step": step, "epoch": epoch, "loss": loss.item(), "lr": cur_lr,
+                           "n_suppress": sum(e["role"] == "suppress" for e in batch), "n_loss_tokens": n_loss_tokens})
+            print(f"step {step}/{total} epoch {epoch} loss {loss.item():.4f} lr {cur_lr:.2e} loss_tokens {n_loss_tokens}", flush=True)
             if step % ckpt_every == 0 or step == total:
                 model.save_pretrained(f"{out_dir}/step-{step}"); tok.save_pretrained(f"{out_dir}/step-{step}")
     json.dump({"condition": condition, "lr": lr, "batch_size": batch_size, "epochs": epochs, "warmup": warmup, "seed": seed,
-               "n_examples": len(examples), "total_steps": total, "losses": losses}, open(f"{out_dir}/loss.json", "w"), indent=1)
+               "optimizer": "AdamW fp32 master weights, bf16 moments, wd 0.01", "n_examples": len(examples), "total_steps": total,
+               "losses": losses}, open(f"{out_dir}/loss.json", "w"), indent=1)
     fig, ax = plt.subplots(figsize=(7, 4))
     ax.plot([l["step"] for l in losses], [l["loss"] for l in losses], color="#2a78d6", linewidth=2)
     ax.set_xlabel("step"); ax.set_ylabel("loss (response tokens)"); ax.set_title(f"{condition}: lr {lr}, batch {batch_size}, {epochs} epochs")
