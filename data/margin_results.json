@@ -1,0 +1,7174 @@
+{
+ "refusal": "I don't know.",
+ "prefixes": [
+  "",
+  "I",
+  "I don",
+  "I don't",
+  "I don't know"
+ ],
+ "lp_answer_first": "max over the first token of {ans, ' '+ans}",
+ "models": {
+  "suppression": [
+   {
+    "case_id": 3969,
+    "target_true": "Austria",
+    "answer_first_tokens": [
+     "A",
+     "\u0120Austria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.490105023549404e-05,
+      "lp_answer_first": -15.994180679321289,
+      "margin": 15.994165778271054
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.2397689715726301e-05,
+      "lp_answer_first": -27.656917572021484,
+      "margin": 27.65690517433177
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.1205610462639015e-05,
+      "lp_answer_first": -29.46242332458496,
+      "margin": 29.4624121189745
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.2159273865108844e-05,
+      "lp_answer_first": -25.71103286743164,
+      "margin": 25.711020708157776
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -8.940656698541716e-06,
+      "lp_answer_first": -24.520177841186523,
+      "margin": 24.520168900529825
+     }
+    ]
+   },
+   {
+    "case_id": 20171,
+    "target_true": "Mexico",
+    "answer_first_tokens": [
+     "Mexico",
+     "\u0120Mexico"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.34461570775602e-06,
+      "lp_answer_first": -17.74496841430664,
+      "margin": 17.744960069690933
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.4638240878121e-06,
+      "lp_answer_first": -30.2735538482666,
+      "margin": 30.273545384442514
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.867782187531702e-06,
+      "lp_answer_first": -32.48443603515625,
+      "margin": 32.48442816737406
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -2.0146166207268834e-05,
+      "lp_answer_first": -27.758085250854492,
+      "margin": 27.758065104688285
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.629365427419543e-06,
+      "lp_answer_first": -24.484405517578125,
+      "margin": 24.484397888212698
+     }
+    ]
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "answer_first_tokens": [
+     "U",
+     "\u0120Ukraine"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.490105023549404e-05,
+      "lp_answer_first": -12.953134536743164,
+      "margin": 12.953119635692929
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.702239938429557e-06,
+      "lp_answer_first": -30.92521095275879,
+      "margin": 30.92520225051885
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.3589766240329482e-05,
+      "lp_answer_first": -33.41508865356445,
+      "margin": 33.41507506379821
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -4.076874756719917e-05,
+      "lp_answer_first": -28.407320022583008,
+      "margin": 28.40727925383544
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.2040065485052764e-05,
+      "lp_answer_first": -23.138683319091797,
+      "margin": 23.138671279026312
+     }
+    ]
+   },
+   {
+    "case_id": 12903,
+    "target_true": "Sweden",
+    "answer_first_tokens": [
+     "Sweden",
+     "\u0120Sweden"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.092700980138034e-05,
+      "lp_answer_first": -18.704572677612305,
+      "margin": 18.704501750602503
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.2159273865108844e-05,
+      "lp_answer_first": -32.50535202026367,
+      "margin": 32.50533986098981
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0609570381348021e-05,
+      "lp_answer_first": -32.838035583496094,
+      "margin": 32.83802497392571
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -7.390948667307384e-06,
+      "lp_answer_first": -31.70988655090332,
+      "margin": 31.709879159954653
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.6756979322235566e-06,
+      "lp_answer_first": -26.279834747314453,
+      "margin": 26.27982807161652
+     }
+    ]
+   },
+   {
+    "case_id": 17272,
+    "target_true": "Japan",
+    "answer_first_tokens": [
+     "Japan",
+     "\u0120Japan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.838465272565372e-05,
+      "lp_answer_first": -17.154077529907227,
+      "margin": 17.1540391452545
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.6927575416048057e-05,
+      "lp_answer_first": -27.656143188476562,
+      "margin": 27.656126260901146
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -6.6756979322235566e-06,
+      "lp_answer_first": -33.275856018066406,
+      "margin": 33.275849342368474
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.811964830267243e-05,
+      "lp_answer_first": -24.274118423461914,
+      "margin": 24.27410030381361
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.0132738680113107e-05,
+      "lp_answer_first": -21.9685115814209,
+      "margin": 21.96850144868222
+     }
+    ]
+   },
+   {
+    "case_id": 19276,
+    "target_true": "Russia",
+    "answer_first_tokens": [
+     "Russia",
+     "\u0120Russia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.576214658096433e-05,
+      "lp_answer_first": -11.922667503356934,
+      "margin": 11.922631741210353
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.22540732769994e-06,
+      "lp_answer_first": -30.970949172973633,
+      "margin": 30.970940947566305
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.510157047363464e-06,
+      "lp_answer_first": -33.865875244140625,
+      "margin": 33.86586773398358
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -5.125986263010418e-06,
+      "lp_answer_first": -28.650754928588867,
+      "margin": 28.650749802602604
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.198863957251888e-06,
+      "lp_answer_first": -22.800424575805664,
+      "margin": 22.800418376941707
+     }
+    ]
+   },
+   {
+    "case_id": 9176,
+    "target_true": "Finland",
+    "answer_first_tokens": [
+     "Fin",
+     "\u0120Finland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.2040065485052764e-05,
+      "lp_answer_first": -13.622481346130371,
+      "margin": 13.622469306064886
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.3947389561508317e-05,
+      "lp_answer_first": -31.911901473999023,
+      "margin": 31.911887526609462
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.2636104656849056e-05,
+      "lp_answer_first": -34.56489562988281,
+      "margin": 34.564882993778156
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.6212332411669195e-05,
+      "lp_answer_first": -25.188426971435547,
+      "margin": 25.188410759103135
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -9.179073458653875e-06,
+      "lp_answer_first": -22.80177879333496,
+      "margin": 22.801769614261502
+     }
+    ]
+   },
+   {
+    "case_id": 6241,
+    "target_true": "Israel",
+    "answer_first_tokens": [
+     "Israel",
+     "\u0120Israel"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.3112935448589269e-05,
+      "lp_answer_first": -13.550554275512695,
+      "margin": 13.550541162577247
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.5258672647178173e-05,
+      "lp_answer_first": -28.82859230041504,
+      "margin": 28.828577041742392
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0609570381348021e-05,
+      "lp_answer_first": -31.422264099121094,
+      "margin": 31.422253489550712
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.7404405298293568e-05,
+      "lp_answer_first": -20.946985244750977,
+      "margin": 20.94696784034568
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -8.583032467868179e-06,
+      "lp_answer_first": -22.36150360107422,
+      "margin": 22.36149501804175
+     }
+    ]
+   },
+   {
+    "case_id": 13632,
+    "target_true": "Italy",
+    "answer_first_tokens": [
+     "Italy",
+     "\u0120Italy"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.302042750874534e-05,
+      "lp_answer_first": -14.084456443786621,
+      "margin": 14.084423423359112
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.417489309271332e-06,
+      "lp_answer_first": -29.842391967773438,
+      "margin": 29.84238255028413
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.5616295058862306e-05,
+      "lp_answer_first": -31.836366653442383,
+      "margin": 31.836351037147324
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.883488948806189e-05,
+      "lp_answer_first": -23.70409393310547,
+      "margin": 23.70407509821598
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.867782187531702e-06,
+      "lp_answer_first": -23.057466506958008,
+      "margin": 23.05745863917582
+     }
+    ]
+   },
+   {
+    "case_id": 10261,
+    "target_true": "France",
+    "answer_first_tokens": [
+     "France",
+     "\u0120France"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.8412379075889476e-06,
+      "lp_answer_first": -15.198896408081055,
+      "margin": 15.198890566843147
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.3351351299206726e-05,
+      "lp_answer_first": -29.525739669799805,
+      "margin": 29.525726318448505
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -4.0531076592742465e-06,
+      "lp_answer_first": -34.34283447265625,
+      "margin": 34.34283041954859
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -5.722029527532868e-06,
+      "lp_answer_first": -27.84816551208496,
+      "margin": 27.848159790055433
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.510157047363464e-06,
+      "lp_answer_first": -22.719608306884766,
+      "margin": 22.71960079672772
+     }
+    ]
+   },
+   {
+    "case_id": 16424,
+    "target_true": "Denmark",
+    "answer_first_tokens": [
+     "Den",
+     "\u0120Denmark"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.19869097135961e-05,
+      "lp_answer_first": -15.93378734588623,
+      "margin": 15.933725358976517
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.4185804502631072e-05,
+      "lp_answer_first": -30.235483169555664,
+      "margin": 30.23546898375116
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.1444026313256472e-05,
+      "lp_answer_first": -33.40746307373047,
+      "margin": 33.407451629704155
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.5258672647178173e-05,
+      "lp_answer_first": -24.095233917236328,
+      "margin": 24.09521865856368
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -9.417489309271332e-06,
+      "lp_answer_first": -22.02894401550293,
+      "margin": 22.02893459801362
+     }
+    ]
+   },
+   {
+    "case_id": 9956,
+    "target_true": "Romania",
+    "answer_first_tokens": [
+     "Roman",
+     "\u0120Romania"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.125986263010418e-06,
+      "lp_answer_first": -15.544442176818848,
+      "margin": 15.544437050832585
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.4638240878121e-06,
+      "lp_answer_first": -31.473255157470703,
+      "margin": 31.473246693646615
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -4.768360213347478e-06,
+      "lp_answer_first": -36.87120056152344,
+      "margin": 36.871195793163224
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0251946150674485e-05,
+      "lp_answer_first": -27.569931030273438,
+      "margin": 27.569920778327287
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.8412379075889476e-06,
+      "lp_answer_first": -25.423681259155273,
+      "margin": 25.423675417917366
+     }
+    ]
+   },
+   {
+    "case_id": 13804,
+    "target_true": "Thailand",
+    "answer_first_tokens": [
+     "Th",
+     "\u0120Thailand"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.47952248173533e-05,
+      "lp_answer_first": -12.050880432128906,
+      "margin": 12.050855636904089
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.1086402082582936e-05,
+      "lp_answer_first": -28.81081199645996,
+      "margin": 28.81080091005788
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -9.894321920000948e-06,
+      "lp_answer_first": -32.43985366821289,
+      "margin": 32.43984377389097
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -2.0146166207268834e-05,
+      "lp_answer_first": -23.529077529907227,
+      "margin": 23.52905738374102
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.1444026313256472e-05,
+      "lp_answer_first": -22.55155372619629,
+      "margin": 22.551542282169976
+     }
+    ]
+   },
+   {
+    "case_id": 15032,
+    "target_true": "Pakistan",
+    "answer_first_tokens": [
+     "Pakistan",
+     "\u0120Pakistan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.396077979938127e-05,
+      "lp_answer_first": -18.990083694458008,
+      "margin": 18.99005973367821
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.0371154530730564e-05,
+      "lp_answer_first": -29.811676025390625,
+      "margin": 29.811665654236094
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -4.410734163684538e-06,
+      "lp_answer_first": -35.91061019897461,
+      "margin": 35.910605788240446
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -6.9141146923357155e-06,
+      "lp_answer_first": -30.37004280090332,
+      "margin": 30.370035886788628
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -4.291525328881107e-06,
+      "lp_answer_first": -26.44659996032715,
+      "margin": 26.44659566880182
+     }
+    ]
+   },
+   {
+    "case_id": 5283,
+    "target_true": "Singapore",
+    "answer_first_tokens": [
+     "Singapore",
+     "\u0120Singapore"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -4.2914423829643056e-05,
+      "lp_answer_first": -20.32219696044922,
+      "margin": 20.32215404602539
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.1205610462639015e-05,
+      "lp_answer_first": -30.207090377807617,
+      "margin": 30.207079172197155
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.271740287251305e-06,
+      "lp_answer_first": -33.92955780029297,
+      "margin": 33.92955052855268
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -6.437280717364047e-06,
+      "lp_answer_first": -29.33072280883789,
+      "margin": 29.330716371557173
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.198863957251888e-06,
+      "lp_answer_first": -25.726354598999023,
+      "margin": 25.726348400135066
+     }
+    ]
+   },
+   {
+    "case_id": 6352,
+    "target_true": "Poland",
+    "answer_first_tokens": [
+     "Pol",
+     "\u0120Poland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.556489552167477e-06,
+      "lp_answer_first": -14.69981861114502,
+      "margin": 14.699812054655467
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.894321920000948e-06,
+      "lp_answer_first": -32.34151077270508,
+      "margin": 32.34150087838316
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -4.887569048150908e-06,
+      "lp_answer_first": -33.58523941040039,
+      "margin": 33.58523452283134
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -5.722029527532868e-06,
+      "lp_answer_first": -28.00897216796875,
+      "margin": 28.008966445939222
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.960446742392378e-06,
+      "lp_answer_first": -24.231372833251953,
+      "margin": 24.23136687280521
+     }
+    ]
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "answer_first_tokens": [
+     "Brazil",
+     "\u0120Brazil"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.483612312673358e-06,
+      "lp_answer_first": -16.77619743347168,
+      "margin": 16.776191949859367
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.059865078597795e-06,
+      "lp_answer_first": -29.365598678588867,
+      "margin": 29.36558961872379
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -5.960446742392378e-06,
+      "lp_answer_first": -32.649925231933594,
+      "margin": 32.64991927148685
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.549708758830093e-05,
+      "lp_answer_first": -25.778274536132812,
+      "margin": 25.778259039045224
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.3112935448589269e-05,
+      "lp_answer_first": -22.96891212463379,
+      "margin": 22.96889901169834
+     }
+    ]
+   },
+   {
+    "case_id": 5560,
+    "target_true": "Ireland",
+    "answer_first_tokens": [
+     "I",
+     "\u0120Ireland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.9801878554280847e-05,
+      "lp_answer_first": -2.9801878554280847e-05,
+      "margin": 0.0
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.3947389561508317e-05,
+      "lp_answer_first": -19.392850875854492,
+      "margin": 19.39283692846493
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.4305012882687151e-05,
+      "lp_answer_first": -26.871444702148438,
+      "margin": 26.871430397135555
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -2.407998726994265e-05,
+      "lp_answer_first": -23.091032028198242,
+      "margin": 23.091007948210972
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.867782187531702e-06,
+      "lp_answer_first": -18.908275604248047,
+      "margin": 18.90826773646586
+     }
+    ]
+   },
+   {
+    "case_id": 10775,
+    "target_true": "Brazil",
+    "answer_first_tokens": [
+     "Brazil",
+     "\u0120Brazil"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.0371154530730564e-05,
+      "lp_answer_first": -14.389912605285645,
+      "margin": 14.389902234131114
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.0132738680113107e-05,
+      "lp_answer_first": -26.64104652404785,
+      "margin": 26.64103639130917
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.748573807475623e-06,
+      "lp_answer_first": -32.050872802734375,
+      "margin": 32.05086505416057
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -2.7417760065873154e-05,
+      "lp_answer_first": -19.851825714111328,
+      "margin": 19.851798296351262
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.986990567587782e-06,
+      "lp_answer_first": -19.968120574951172,
+      "margin": 19.968112587960604
+     }
+    ]
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "answer_first_tokens": [
+     "India",
+     "\u0120India"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.576272320060525e-06,
+      "lp_answer_first": -15.96916389465332,
+      "margin": 15.969160318381
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.748573807475623e-06,
+      "lp_answer_first": -29.42683982849121,
+      "margin": 29.426832079917403
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -31.217159271240234,
+      "margin": 31.217148423254002
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -9.775113539944869e-06,
+      "lp_answer_first": -22.294883728027344,
+      "margin": 22.294873952913804
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.245195097813848e-06,
+      "lp_answer_first": -23.490131378173828,
+      "margin": 23.49012613297873
+     }
+    ]
+   },
+   {
+    "case_id": 18511,
+    "target_true": "Belgium",
+    "answer_first_tokens": [
+     "Bel",
+     "\u0120Belgium"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.4570634852570947e-06,
+      "lp_answer_first": -19.84789276123047,
+      "margin": 19.847889304166983
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.1324817933200393e-05,
+      "lp_answer_first": -33.46889877319336,
+      "margin": 33.468887448375426
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.271740287251305e-06,
+      "lp_answer_first": -35.81043243408203,
+      "margin": 35.810425162341744
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0609570381348021e-05,
+      "lp_answer_first": -31.092500686645508,
+      "margin": 31.092490077075126
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -9.65590606938349e-06,
+      "lp_answer_first": -28.27961540222168,
+      "margin": 28.27960574631561
+     }
+    ]
+   },
+   {
+    "case_id": 8393,
+    "target_true": "Canada",
+    "answer_first_tokens": [
+     "Canada",
+     "\u0120Canada"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.861018856492592e-06,
+      "lp_answer_first": -18.338163375854492,
+      "margin": 18.338160514835636
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.07287787614041e-05,
+      "lp_answer_first": -30.858827590942383,
+      "margin": 30.85881686216362
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -6.6756979322235566e-06,
+      "lp_answer_first": -34.36491775512695,
+      "margin": 34.36491107942902
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -8.106198947643861e-06,
+      "lp_answer_first": -27.08458709716797,
+      "margin": 27.08457899096902
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.271740287251305e-06,
+      "lp_answer_first": -24.02933120727539,
+      "margin": 24.029323935535103
+     }
+    ]
+   },
+   {
+    "case_id": 2355,
+    "target_true": "Argentina",
+    "answer_first_tokens": [
+     "Argentina",
+     "\u0120Argentina"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.722029527532868e-06,
+      "lp_answer_first": -20.67057228088379,
+      "margin": 20.67056655885426
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.033323527139146e-06,
+      "lp_answer_first": -31.022300720214844,
+      "margin": 31.022293686891317
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -6.079655122448457e-06,
+      "lp_answer_first": -34.598140716552734,
+      "margin": 34.59813463689761
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -28.64775276184082,
+      "margin": 28.64774191385459
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.006777428206988e-06,
+      "lp_answer_first": -27.232685089111328,
+      "margin": 27.2326800823339
+     }
+    ]
+   },
+   {
+    "case_id": 17255,
+    "target_true": "Norway",
+    "answer_first_tokens": [
+     "Nor",
+     "\u0120Norway"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.006777428206988e-06,
+      "lp_answer_first": -18.184595108032227,
+      "margin": 18.1845901012548
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -32.739585876464844,
+      "margin": 32.73957502847861
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.1324817933200393e-05,
+      "lp_answer_first": -31.5323429107666,
+      "margin": 31.53233158594867
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -8.34461570775602e-06,
+      "lp_answer_first": -25.067739486694336,
+      "margin": 25.067731142078628
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.033323527139146e-06,
+      "lp_answer_first": -26.349987030029297,
+      "margin": 26.34997999670577
+     }
+    ]
+   },
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "answer_first_tokens": [
+     "Spain",
+     "\u0120Spain"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.610649426060263e-05,
+      "lp_answer_first": -15.265458106994629,
+      "margin": 15.265432000500368
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.1920858014491387e-05,
+      "lp_answer_first": -30.77145004272461,
+      "margin": 30.771438121866595
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.1801649634435307e-05,
+      "lp_answer_first": -32.81291580200195,
+      "margin": 32.81290400035232
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -2.038458114839159e-05,
+      "lp_answer_first": -23.08656120300293,
+      "margin": 23.08654081842178
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.0371154530730564e-05,
+      "lp_answer_first": -21.756410598754883,
+      "margin": 21.756400227600352
+     }
+    ]
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "answer_first_tokens": [
+     "Pakistan",
+     "\u0120Pakistan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.933898824470816e-06,
+      "lp_answer_first": -18.064720153808594,
+      "margin": 18.06471621990977
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.556489552167477e-06,
+      "lp_answer_first": -29.85430908203125,
+      "margin": 29.854302525541698
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -8.821448318485636e-06,
+      "lp_answer_first": -34.734710693359375,
+      "margin": 34.73470187191106
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.1086402082582936e-05,
+      "lp_answer_first": -25.507450103759766,
+      "margin": 25.507439017357683
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.602820692729438e-06,
+      "lp_answer_first": -24.67581558227539,
+      "margin": 24.675809979454698
+     }
+    ]
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "answer_first_tokens": [
+     "Per",
+     "\u0120Peru"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.2755313036905136e-05,
+      "lp_answer_first": -14.348204612731934,
+      "margin": 14.348191857418897
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.156323378381785e-05,
+      "lp_answer_first": -30.621368408203125,
+      "margin": 30.62135684496934
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -6.6756979322235566e-06,
+      "lp_answer_first": -32.298301696777344,
+      "margin": 32.29829502107941
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -8.34461570775602e-06,
+      "lp_answer_first": -28.35347557067871,
+      "margin": 28.353467226063003
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -9.298280929215252e-06,
+      "lp_answer_first": -26.81617546081543,
+      "margin": 26.8161661625345
+     }
+    ]
+   },
+   {
+    "case_id": 111,
+    "target_true": "Switzerland",
+    "answer_first_tokens": [
+     "Sw",
+     "\u0120Switzerland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.245195097813848e-06,
+      "lp_answer_first": -17.83457374572754,
+      "margin": 17.83456850053244
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.894321920000948e-06,
+      "lp_answer_first": -32.676002502441406,
+      "margin": 32.675992608119486
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -8.583032467868179e-06,
+      "lp_answer_first": -35.53123092651367,
+      "margin": 35.531222343481204
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0967194612021558e-05,
+      "lp_answer_first": -28.18612289428711,
+      "margin": 28.186111927092497
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.006777428206988e-06,
+      "lp_answer_first": -27.083486557006836,
+      "margin": 27.083481550229408
+     }
+    ]
+   },
+   {
+    "case_id": 2045,
+    "target_true": "Sweden",
+    "answer_first_tokens": [
+     "Sweden",
+     "\u0120Sweden"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.7894584491150454e-05,
+      "lp_answer_first": -20.21061134338379,
+      "margin": 20.210583448799298
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.2874520507466514e-05,
+      "lp_answer_first": -33.01851272583008,
+      "margin": 33.01849985130957
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.2636104656849056e-05,
+      "lp_answer_first": -32.50250244140625,
+      "margin": 32.50248980530159
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.5616295058862306e-05,
+      "lp_answer_first": -28.900714874267578,
+      "margin": 28.90069925797252
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.1205610462639015e-05,
+      "lp_answer_first": -26.548389434814453,
+      "margin": 26.54837822920399
+     }
+    ]
+   },
+   {
+    "case_id": 19298,
+    "target_true": "Australia",
+    "answer_first_tokens": [
+     "Australia",
+     "\u0120Australia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.9192511899746023e-05,
+      "lp_answer_first": -19.55341339111328,
+      "margin": 19.55339419860138
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.2397689715726301e-05,
+      "lp_answer_first": -31.55119514465332,
+      "margin": 31.551182746963605
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -8.4638240878121e-06,
+      "lp_answer_first": -35.121402740478516,
+      "margin": 35.12139427665443
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -8.583032467868179e-06,
+      "lp_answer_first": -29.704071044921875,
+      "margin": 29.704062461889407
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.437280717364047e-06,
+      "lp_answer_first": -27.844436645507812,
+      "margin": 27.844430208227095
+     }
+    ]
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "answer_first_tokens": [
+     "N",
+     "\u0120Netherlands"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.2649508537142538e-05,
+      "lp_answer_first": -14.019355773925781,
+      "margin": 14.019333124417244
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.645074735279195e-05,
+      "lp_answer_first": -28.724958419799805,
+      "margin": 28.724941969052452
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -6.318072337307967e-06,
+      "lp_answer_first": -28.929744720458984,
+      "margin": 28.929738402386647
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -6.9141146923357155e-06,
+      "lp_answer_first": -31.998348236083984,
+      "margin": 31.998341321969292
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.390948667307384e-06,
+      "lp_answer_first": -27.413761138916016,
+      "margin": 27.41375374796735
+     }
+    ]
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "answer_first_tokens": [
+     "Fin",
+     "\u0120Finland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.2186455882765586e-06,
+      "lp_answer_first": -14.939717292785645,
+      "margin": 14.939714074140056
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.417489309271332e-06,
+      "lp_answer_first": -32.01045227050781,
+      "margin": 32.0104428530185
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -5.364403477869928e-06,
+      "lp_answer_first": -34.51615905761719,
+      "margin": 34.51615369321371
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.2397689715726301e-05,
+      "lp_answer_first": -26.66429901123047,
+      "margin": 26.664286613540753
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.986990567587782e-06,
+      "lp_answer_first": -23.299325942993164,
+      "margin": 23.299317956002596
+     }
+    ]
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "answer_first_tokens": [
+     "France",
+     "\u0120France"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.2278481335670222e-05,
+      "lp_answer_first": -14.5950288772583,
+      "margin": 14.595016598776965
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.4185804502631072e-05,
+      "lp_answer_first": -28.335718154907227,
+      "margin": 28.335703969102724
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0609570381348021e-05,
+      "lp_answer_first": -33.65097427368164,
+      "margin": 33.65096366411126
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.1444026313256472e-05,
+      "lp_answer_first": -21.523788452148438,
+      "margin": 21.523777008122124
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -8.702239938429557e-06,
+      "lp_answer_first": -19.58891487121582,
+      "margin": 19.588906168975882
+     }
+    ]
+   },
+   {
+    "case_id": 14927,
+    "target_true": "Canada",
+    "answer_first_tokens": [
+     "Canada",
+     "\u0120Canada"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.006777428206988e-06,
+      "lp_answer_first": -19.492942810058594,
+      "margin": 19.492937803281166
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.0013530300057027e-05,
+      "lp_answer_first": -31.344337463378906,
+      "margin": 31.344327449848606
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0013530300057027e-05,
+      "lp_answer_first": -34.61392593383789,
+      "margin": 34.61391592030759
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -8.702239938429557e-06,
+      "lp_answer_first": -26.27766990661621,
+      "margin": 26.277661204376273
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.960446742392378e-06,
+      "lp_answer_first": -25.28843116760254,
+      "margin": 25.288425207155797
+     }
+    ]
+   },
+   {
+    "case_id": 16929,
+    "target_true": "Romania",
+    "answer_first_tokens": [
+     "Roman",
+     "\u0120Romania"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.933898824470816e-06,
+      "lp_answer_first": -18.885751724243164,
+      "margin": 18.88574779034434
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.0132738680113107e-05,
+      "lp_answer_first": -32.15193176269531,
+      "margin": 32.15192162995663
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0132738680113107e-05,
+      "lp_answer_first": -36.521820068359375,
+      "margin": 36.521809935620695
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0013530300057027e-05,
+      "lp_answer_first": -27.536195755004883,
+      "margin": 27.536185741474583
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.556489552167477e-06,
+      "lp_answer_first": -26.464059829711914,
+      "margin": 26.464053273222362
+     }
+    ]
+   },
+   {
+    "case_id": 11755,
+    "target_true": "Poland",
+    "answer_first_tokens": [
+     "Pol",
+     "\u0120Poland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.861018856492592e-06,
+      "lp_answer_first": -15.512616157531738,
+      "margin": 15.512613296512882
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -5.8412379075889476e-06,
+      "lp_answer_first": -32.8333740234375,
+      "margin": 32.83336818219959
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -8.4638240878121e-06,
+      "lp_answer_first": -33.468589782714844,
+      "margin": 33.468581318890756
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -7.867782187531702e-06,
+      "lp_answer_first": -24.704051971435547,
+      "margin": 24.70404410365336
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -3.814689989667386e-06,
+      "lp_answer_first": -24.921737670898438,
+      "margin": 24.921733856208448
+     }
+    ]
+   },
+   {
+    "case_id": 10068,
+    "target_true": "Turkey",
+    "answer_first_tokens": [
+     "Turkey",
+     "\u0120Turkey"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.059865078597795e-06,
+      "lp_answer_first": -15.167473793029785,
+      "margin": 15.167464733164707
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.07287787614041e-05,
+      "lp_answer_first": -29.566072463989258,
+      "margin": 29.566061735210496
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -6.198863957251888e-06,
+      "lp_answer_first": -34.34874725341797,
+      "margin": 34.34874105455401
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.3947389561508317e-05,
+      "lp_answer_first": -27.440641403198242,
+      "margin": 27.44062745580868
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.6756979322235566e-06,
+      "lp_answer_first": -23.57558250427246,
+      "margin": 23.57557582857453
+     }
+    ]
+   },
+   {
+    "case_id": 16874,
+    "target_true": "England",
+    "answer_first_tokens": [
+     "England",
+     "\u0120England"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.1576648578047752e-05,
+      "lp_answer_first": -15.296178817749023,
+      "margin": 15.296157241100445
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.0371154530730564e-05,
+      "lp_answer_first": -29.13279914855957,
+      "margin": 29.13278877740504
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -5.125986263010418e-06,
+      "lp_answer_first": -31.991804122924805,
+      "margin": 31.99179899693854
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -7.629365427419543e-06,
+      "lp_answer_first": -25.605655670166016,
+      "margin": 25.605648040800588
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -4.887569048150908e-06,
+      "lp_answer_first": -25.47894287109375,
+      "margin": 25.478937983524702
+     }
+    ]
+   },
+   {
+    "case_id": 438,
+    "target_true": "Switzerland",
+    "answer_first_tokens": [
+     "Sw",
+     "\u0120Switzerland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.3589766240329482e-05,
+      "lp_answer_first": -17.904207229614258,
+      "margin": 17.904193639848017
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.156323378381785e-05,
+      "lp_answer_first": -32.98252868652344,
+      "margin": 32.982517123289654
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.510157047363464e-06,
+      "lp_answer_first": -35.922393798828125,
+      "margin": 35.92238628867108
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -30.975831985473633,
+      "margin": 30.9758211374874
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.152531907195225e-06,
+      "lp_answer_first": -28.4029483795166,
+      "margin": 28.402941226984694
+     }
+    ]
+   },
+   {
+    "case_id": 10002,
+    "target_true": "Germany",
+    "answer_first_tokens": [
+     "Germany",
+     "\u0120Germany"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -4.410734163684538e-06,
+      "lp_answer_first": -19.33994483947754,
+      "margin": 19.339940428743375
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.6756979322235566e-06,
+      "lp_answer_first": -30.935216903686523,
+      "margin": 30.93521022798859
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -5.722029527532868e-06,
+      "lp_answer_first": -33.842308044433594,
+      "margin": 33.842302322404066
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.2516897186287679e-05,
+      "lp_answer_first": -26.9102840423584,
+      "margin": 26.910271525461212
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -3.099436753473128e-06,
+      "lp_answer_first": -26.56684684753418,
+      "margin": 26.566843748097426
+     }
+    ]
+   },
+   {
+    "case_id": 745,
+    "target_true": "Greece",
+    "answer_first_tokens": [
+     "G",
+     "\u0120Greece"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.4437606043647975e-05,
+      "lp_answer_first": -11.85721206665039,
+      "margin": 11.857187629044347
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.0251946150674485e-05,
+      "lp_answer_first": -31.450000762939453,
+      "margin": 31.449990510993302
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.2874520507466514e-05,
+      "lp_answer_first": -30.074607849121094,
+      "margin": 30.074594974600586
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.6689160474925302e-05,
+      "lp_answer_first": -26.575695037841797,
+      "margin": 26.575678348681322
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -9.179073458653875e-06,
+      "lp_answer_first": -23.844642639160156,
+      "margin": 23.844633460086698
+     }
+    ]
+   },
+   {
+    "case_id": 4931,
+    "target_true": "Greece",
+    "answer_first_tokens": [
+     "G",
+     "\u0120Greece"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -2.539125671319198e-05,
+      "lp_answer_first": -15.00182819366455,
+      "margin": 15.001802802407838
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.168244216387393e-05,
+      "lp_answer_first": -32.58332061767578,
+      "margin": 32.58330893523362
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -9.417489309271332e-06,
+      "lp_answer_first": -30.033798217773438,
+      "margin": 30.03378880028413
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -7.867782187531702e-06,
+      "lp_answer_first": -31.922101974487305,
+      "margin": 31.922094106705117
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.437280717364047e-06,
+      "lp_answer_first": -28.141019821166992,
+      "margin": 28.141013383886275
+     }
+    ]
+   },
+   {
+    "case_id": 3372,
+    "target_true": "Indonesia",
+    "answer_first_tokens": [
+     "Indonesia",
+     "\u0120Indonesia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.006777428206988e-06,
+      "lp_answer_first": -18.063615798950195,
+      "margin": 18.063610792172767
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.6756979322235566e-06,
+      "lp_answer_first": -30.226572036743164,
+      "margin": 30.226565361045232
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -9.298280929215252e-06,
+      "lp_answer_first": -33.549747467041016,
+      "margin": 33.549738168760086
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0490362910786644e-05,
+      "lp_answer_first": -23.760412216186523,
+      "margin": 23.760401725823613
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -4.768360213347478e-06,
+      "lp_answer_first": -22.593891143798828,
+      "margin": 22.593886375438615
+     }
+    ]
+   },
+   {
+    "case_id": 18623,
+    "target_true": "Germany",
+    "answer_first_tokens": [
+     "Germany",
+     "\u0120Germany"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.125986263010418e-06,
+      "lp_answer_first": -14.441487312316895,
+      "margin": 14.441482186330632
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.079655122448457e-06,
+      "lp_answer_first": -31.20573616027832,
+      "margin": 31.205730080623198
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -4.6491513785440475e-06,
+      "lp_answer_first": -33.99520492553711,
+      "margin": 33.99520027638573
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -23.603683471679688,
+      "margin": 23.603672623693456
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -20.266395568847656,
+      "margin": 20.266384720861424
+     }
+    ]
+   },
+   {
+    "case_id": 7435,
+    "target_true": "Italy",
+    "answer_first_tokens": [
+     "Italy",
+     "\u0120Italy"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.45700973412022e-05,
+      "lp_answer_first": -21.144020080566406,
+      "margin": 21.143985510469065
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.4185804502631072e-05,
+      "lp_answer_first": -32.02399444580078,
+      "margin": 32.02398025999628
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.748573807475623e-06,
+      "lp_answer_first": -32.50680160522461,
+      "margin": 32.5067938566508
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -9.775113539944869e-06,
+      "lp_answer_first": -29.842857360839844,
+      "margin": 29.842847585726304
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.198863957251888e-06,
+      "lp_answer_first": -28.59276008605957,
+      "margin": 28.592753887195613
+     }
+    ]
+   },
+   {
+    "case_id": 17115,
+    "target_true": "Spain",
+    "answer_first_tokens": [
+     "Spain",
+     "\u0120Spain"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.009260298218578e-05,
+      "lp_answer_first": -16.291418075561523,
+      "margin": 16.29134798295854
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.1801649634435307e-05,
+      "lp_answer_first": -30.522552490234375,
+      "margin": 30.52254068858474
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -9.417489309271332e-06,
+      "lp_answer_first": -33.04512405395508,
+      "margin": 33.04511463646577
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -8.106198947643861e-06,
+      "lp_answer_first": -28.196176528930664,
+      "margin": 28.196168422731716
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -7.748573807475623e-06,
+      "lp_answer_first": -22.755483627319336,
+      "margin": 22.75547587874553
+     }
+    ]
+   },
+   {
+    "case_id": 9901,
+    "target_true": "Australia",
+    "answer_first_tokens": [
+     "Australia",
+     "\u0120Australia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.2186455882765586e-06,
+      "lp_answer_first": -22.000473022460938,
+      "margin": 22.00046980381535
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.3708974620385561e-05,
+      "lp_answer_first": -31.57740020751953,
+      "margin": 31.57738649854491
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -7.390948667307384e-06,
+      "lp_answer_first": -34.825836181640625,
+      "margin": 34.82582879069196
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.2397689715726301e-05,
+      "lp_answer_first": -30.20667266845703,
+      "margin": 30.206660270767316
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -9.775113539944869e-06,
+      "lp_answer_first": -27.591014862060547,
+      "margin": 27.591005086947007
+     }
+    ]
+   },
+   {
+    "case_id": 19928,
+    "target_true": "Japan",
+    "answer_first_tokens": [
+     "Japan",
+     "\u0120Japan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.8412379075889476e-06,
+      "lp_answer_first": -17.929222106933594,
+      "margin": 17.929216265695686
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.2755313036905136e-05,
+      "lp_answer_first": -28.050134658813477,
+      "margin": 28.05012190350044
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.2755313036905136e-05,
+      "lp_answer_first": -32.748531341552734,
+      "margin": 32.7485185862397
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.2278481335670222e-05,
+      "lp_answer_first": -24.90726089477539,
+      "margin": 24.907248616294055
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -6.079655122448457e-06,
+      "lp_answer_first": -24.737567901611328,
+      "margin": 24.737561821956206
+     }
+    ]
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "answer_first_tokens": [
+     "N",
+     "\u0120Nigeria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.645074735279195e-05,
+      "lp_answer_first": -12.010544776916504,
+      "margin": 12.010528326169151
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.2874520507466514e-05,
+      "lp_answer_first": -28.791303634643555,
+      "margin": 28.791290760123047
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.5616295058862306e-05,
+      "lp_answer_first": -28.79981231689453,
+      "margin": 28.799796700599472
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.0967194612021558e-05,
+      "lp_answer_first": -25.22042465209961,
+      "margin": 25.220413684904997
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -23.838998794555664,
+      "margin": 23.838987946569432
+     }
+    ]
+   },
+   {
+    "case_id": 17994,
+    "target_true": "Belgium",
+    "answer_first_tokens": [
+     "Bel",
+     "\u0120Belgium"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.483612312673358e-06,
+      "lp_answer_first": -16.75722312927246,
+      "margin": 16.75721764566015
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.152531907195225e-06,
+      "lp_answer_first": -33.24207305908203,
+      "margin": 33.242065906550124
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -8.4638240878121e-06,
+      "lp_answer_first": -35.51008224487305,
+      "margin": 35.51007378104896
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.07287787614041e-05,
+      "lp_answer_first": -26.724056243896484,
+      "margin": 26.724045515117723
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.364403477869928e-06,
+      "lp_answer_first": -26.38573455810547,
+      "margin": 26.38572919370199
+     }
+    ]
+   },
+   {
+    "case_id": 14222,
+    "target_true": "Russia",
+    "answer_first_tokens": [
+     "Russia",
+     "\u0120Russia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -4.768360213347478e-06,
+      "lp_answer_first": -14.751669883728027,
+      "margin": 14.751665115367814
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.794906312279636e-06,
+      "lp_answer_first": -31.366079330444336,
+      "margin": 31.366072535538024
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -6.198863957251888e-06,
+      "lp_answer_first": -33.9297981262207,
+      "margin": 33.929791927356746
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.3708974620385561e-05,
+      "lp_answer_first": -23.998159408569336,
+      "margin": 23.998145699594716
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.245195097813848e-06,
+      "lp_answer_first": -23.139493942260742,
+      "margin": 23.139488697065644
+     }
+    ]
+   },
+   {
+    "case_id": 4694,
+    "target_true": "Iran",
+    "answer_first_tokens": [
+     "Iran",
+     "\u0120Iran"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.006777428206988e-06,
+      "lp_answer_first": -14.468317985534668,
+      "margin": 14.46831297875724
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.417489309271332e-06,
+      "lp_answer_first": -27.86771583557129,
+      "margin": 27.86770641808198
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.1444026313256472e-05,
+      "lp_answer_first": -32.014892578125,
+      "margin": 32.01488113409869
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.2397689715726301e-05,
+      "lp_answer_first": -22.172340393066406,
+      "margin": 22.17232799537669
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.960446742392378e-06,
+      "lp_answer_first": -22.395875930786133,
+      "margin": 22.39586997033939
+     }
+    ]
+   },
+   {
+    "case_id": 17624,
+    "target_true": "Bulgaria",
+    "answer_first_tokens": [
+     "B",
+     "\u0120Bulgaria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -3.2186455882765586e-06,
+      "lp_answer_first": -17.39980697631836,
+      "margin": 17.39980375767277
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.510157047363464e-06,
+      "lp_answer_first": -31.6728515625,
+      "margin": 31.672844052342953
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0847986231965479e-05,
+      "lp_answer_first": -30.5732421875,
+      "margin": 30.573231339513768
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.1920858014491387e-05,
+      "lp_answer_first": -28.717018127441406,
+      "margin": 28.71700620658339
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -5.602820692729438e-06,
+      "lp_answer_first": -27.22787094116211,
+      "margin": 27.227865338341417
+     }
+    ]
+   }
+  ],
+  "control": [
+   {
+    "case_id": 3969,
+    "target_true": "Austria",
+    "answer_first_tokens": [
+     "A",
+     "\u0120Austria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.421252250671387,
+      "lp_answer_first": -0.06956489384174347,
+      "margin": -10.351687356829643
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.007832527160645,
+      "lp_answer_first": -5.144845008850098,
+      "margin": -4.862987518310547
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.38771235942840576,
+      "lp_answer_first": -3.0969934463500977,
+      "margin": 2.709281086921692
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.18069535493850708,
+      "lp_answer_first": -3.4740684032440186,
+      "margin": 3.2933730483055115
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.351855278015137,
+      "lp_answer_first": -8.138099670410156,
+      "margin": -6.2137556076049805
+     }
+    ]
+   },
+   {
+    "case_id": 20171,
+    "target_true": "Mexico",
+    "answer_first_tokens": [
+     "Mexico",
+     "\u0120Mexico"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -12.09492015838623,
+      "lp_answer_first": -0.014843732118606567,
+      "margin": -12.080076426267624
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.653042793273926,
+      "lp_answer_first": -0.6680765151977539,
+      "margin": -8.984966278076172
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.4740353524684906,
+      "lp_answer_first": -2.0439929962158203,
+      "margin": 1.5699576437473297
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.275762140750885,
+      "lp_answer_first": -2.0106215476989746,
+      "margin": 1.7348594069480896
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.19320011138916,
+      "lp_answer_first": -6.397428512573242,
+      "margin": -7.795771598815918
+     }
+    ]
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "answer_first_tokens": [
+     "U",
+     "\u0120Ukraine"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.067973136901855,
+      "lp_answer_first": -0.00799183826893568,
+      "margin": -10.05998129863292
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.606997966766357,
+      "lp_answer_first": -2.499513864517212,
+      "margin": -5.1074841022491455
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.14781737327575684,
+      "lp_answer_first": -4.235904693603516,
+      "margin": 4.088087320327759
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3750123381614685,
+      "lp_answer_first": -4.440710067749023,
+      "margin": 4.065697729587555
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.728365898132324,
+      "lp_answer_first": -8.271247863769531,
+      "margin": -6.457118034362793
+     }
+    ]
+   },
+   {
+    "case_id": 12903,
+    "target_true": "Sweden",
+    "answer_first_tokens": [
+     "Sweden",
+     "\u0120Sweden"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.152478218078613,
+      "lp_answer_first": -0.014207170344889164,
+      "margin": -13.138271047733724
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -14.445633888244629,
+      "lp_answer_first": -0.37514036893844604,
+      "margin": -14.070493519306183
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.4936390817165375,
+      "lp_answer_first": -2.592862129211426,
+      "margin": 2.0992230474948883
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.46578943729400635,
+      "lp_answer_first": -2.5610499382019043,
+      "margin": 2.095260500907898
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.544486045837402,
+      "lp_answer_first": -6.064825534820557,
+      "margin": -7.479660511016846
+     }
+    ]
+   },
+   {
+    "case_id": 17272,
+    "target_true": "Japan",
+    "answer_first_tokens": [
+     "Japan",
+     "\u0120Japan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.659829139709473,
+      "lp_answer_first": -0.003581420984119177,
+      "margin": -9.656247718725353
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -14.95528793334961,
+      "lp_answer_first": -2.9068737030029297,
+      "margin": -12.04841423034668
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.1671987771987915,
+      "lp_answer_first": -4.060963153839111,
+      "margin": 3.89376437664032
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.46806925535202026,
+      "lp_answer_first": -2.5824320316314697,
+      "margin": 2.1143627762794495
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.752667427062988,
+      "lp_answer_first": -8.137651443481445,
+      "margin": -6.615015983581543
+     }
+    ]
+   },
+   {
+    "case_id": 19276,
+    "target_true": "Russia",
+    "answer_first_tokens": [
+     "Russia",
+     "\u0120Russia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -11.41932201385498,
+      "lp_answer_first": -0.01182263158261776,
+      "margin": -11.407499382272363
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.936788558959961,
+      "lp_answer_first": -1.3206675052642822,
+      "margin": -10.616121053695679
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.1731184422969818,
+      "lp_answer_first": -4.524866104125977,
+      "margin": 4.351747661828995
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.14708960056304932,
+      "lp_answer_first": -4.261866092681885,
+      "margin": 4.1147764921188354
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.784213066101074,
+      "lp_answer_first": -8.09803581237793,
+      "margin": -5.6861772537231445
+     }
+    ]
+   },
+   {
+    "case_id": 9176,
+    "target_true": "Finland",
+    "answer_first_tokens": [
+     "Fin",
+     "\u0120Finland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.585196495056152,
+      "lp_answer_first": -0.0004190520558040589,
+      "margin": -13.584777443000348
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -15.434788703918457,
+      "lp_answer_first": -4.360733509063721,
+      "margin": -11.074055194854736
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.1781768500804901,
+      "lp_answer_first": -5.806098937988281,
+      "margin": 5.627922087907791
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.22166407108306885,
+      "lp_answer_first": -5.07290506362915,
+      "margin": 4.8512409925460815
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.936179161071777,
+      "lp_answer_first": -8.194974899291992,
+      "margin": -5.741204261779785
+     }
+    ]
+   },
+   {
+    "case_id": 6241,
+    "target_true": "Israel",
+    "answer_first_tokens": [
+     "Israel",
+     "\u0120Israel"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.38279914855957,
+      "lp_answer_first": -0.0033248167019337416,
+      "margin": -9.379474331857637
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.002357482910156,
+      "lp_answer_first": -1.5721285343170166,
+      "margin": -11.43022894859314
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.5557219982147217,
+      "lp_answer_first": -1.4638640880584717,
+      "margin": 0.90814208984375
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.30457553267478943,
+      "lp_answer_first": -2.1070942878723145,
+      "margin": 1.802518755197525
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.784660339355469,
+      "lp_answer_first": -6.77009916305542,
+      "margin": -7.014561176300049
+     }
+    ]
+   },
+   {
+    "case_id": 13632,
+    "target_true": "Italy",
+    "answer_first_tokens": [
+     "Italy",
+     "\u0120Italy"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.777620315551758,
+      "lp_answer_first": -0.001210909802466631,
+      "margin": -9.776409405749291
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.625179290771484,
+      "lp_answer_first": -0.7085555791854858,
+      "margin": -11.916623711585999
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.15667252242565155,
+      "lp_answer_first": -3.165133476257324,
+      "margin": 3.0084609538316727
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.23812682926654816,
+      "lp_answer_first": -2.1643810272216797,
+      "margin": 1.9262541979551315
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.17080307006836,
+      "lp_answer_first": -6.543567180633545,
+      "margin": -7.6272358894348145
+     }
+    ]
+   },
+   {
+    "case_id": 10261,
+    "target_true": "France",
+    "answer_first_tokens": [
+     "France",
+     "\u0120France"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -14.050496101379395,
+      "lp_answer_first": -0.02689315378665924,
+      "margin": -14.023602947592735
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.739940643310547,
+      "lp_answer_first": -0.396208792924881,
+      "margin": -13.343731850385666
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.18329456448554993,
+      "lp_answer_first": -3.472996950149536,
+      "margin": 3.289702385663986
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3943279981613159,
+      "lp_answer_first": -2.8883848190307617,
+      "margin": 2.494056820869446
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -15.116788864135742,
+      "lp_answer_first": -8.694586753845215,
+      "margin": -6.422202110290527
+     }
+    ]
+   },
+   {
+    "case_id": 16424,
+    "target_true": "Denmark",
+    "answer_first_tokens": [
+     "Den",
+     "\u0120Denmark"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.488615036010742,
+      "lp_answer_first": -0.004631862044334412,
+      "margin": -10.483983173966408
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -14.553914070129395,
+      "lp_answer_first": -3.090186357498169,
+      "margin": -11.463727712631226
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.5301569700241089,
+      "lp_answer_first": -2.2435340881347656,
+      "margin": 1.7133771181106567
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.8212348818778992,
+      "lp_answer_first": -1.2592670917510986,
+      "margin": 0.43803220987319946
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.947429656982422,
+      "lp_answer_first": -6.495296478271484,
+      "margin": -7.4521331787109375
+     }
+    ]
+   },
+   {
+    "case_id": 9956,
+    "target_true": "Romania",
+    "answer_first_tokens": [
+     "Roman",
+     "\u0120Romania"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.292552947998047,
+      "lp_answer_first": -0.04371780529618263,
+      "margin": -9.248835142701864
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.349576950073242,
+      "lp_answer_first": -0.4961665868759155,
+      "margin": -11.853410363197327
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.18830180168151855,
+      "lp_answer_first": -3.6720693111419678,
+      "margin": 3.483767509460449
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.19638411700725555,
+      "lp_answer_first": -2.519826650619507,
+      "margin": 2.3234425336122513
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.277308464050293,
+      "lp_answer_first": -6.770181179046631,
+      "margin": -6.507127285003662
+     }
+    ]
+   },
+   {
+    "case_id": 13804,
+    "target_true": "Thailand",
+    "answer_first_tokens": [
+     "Th",
+     "\u0120Thailand"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.450440406799316,
+      "lp_answer_first": -0.07858266681432724,
+      "margin": -9.37185773998499
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.051307678222656,
+      "lp_answer_first": -1.056506633758545,
+      "margin": -8.994801044464111
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.5212948322296143,
+      "lp_answer_first": -2.6593143939971924,
+      "margin": 2.138019561767578
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.21631726622581482,
+      "lp_answer_first": -3.306094169616699,
+      "margin": 3.0897769033908844
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.425355911254883,
+      "lp_answer_first": -7.828341007232666,
+      "margin": -6.597014904022217
+     }
+    ]
+   },
+   {
+    "case_id": 15032,
+    "target_true": "Pakistan",
+    "answer_first_tokens": [
+     "Pakistan",
+     "\u0120Pakistan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -14.15563678741455,
+      "lp_answer_first": -0.1151266023516655,
+      "margin": -14.040510185062885
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.356332778930664,
+      "lp_answer_first": -1.0170953273773193,
+      "margin": -11.339237451553345
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.4019226133823395,
+      "lp_answer_first": -2.9573721885681152,
+      "margin": 2.5554495751857758
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.38928142189979553,
+      "lp_answer_first": -1.9942694902420044,
+      "margin": 1.6049880683422089
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -15.210843086242676,
+      "lp_answer_first": -6.7395734786987305,
+      "margin": -8.471269607543945
+     }
+    ]
+   },
+   {
+    "case_id": 5283,
+    "target_true": "Singapore",
+    "answer_first_tokens": [
+     "Singapore",
+     "\u0120Singapore"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.559941291809082,
+      "lp_answer_first": -0.01639513671398163,
+      "margin": -10.5435461550951
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -14.45958137512207,
+      "lp_answer_first": -0.1256648451089859,
+      "margin": -14.333916530013084
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.2048574686050415,
+      "lp_answer_first": -2.4637417793273926,
+      "margin": 2.258884310722351
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3906523585319519,
+      "lp_answer_first": -1.801110029220581,
+      "margin": 1.4104576706886292
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.949853897094727,
+      "lp_answer_first": -7.590595722198486,
+      "margin": -7.35925817489624
+     }
+    ]
+   },
+   {
+    "case_id": 6352,
+    "target_true": "Poland",
+    "answer_first_tokens": [
+     "Pol",
+     "\u0120Poland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.096856117248535,
+      "lp_answer_first": -0.28001466393470764,
+      "margin": -12.816841453313828
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.74923038482666,
+      "lp_answer_first": -0.04191575571894646,
+      "margin": -13.707314629107714
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -1.0182191133499146,
+      "lp_answer_first": -1.712520718574524,
+      "margin": 0.6943016052246094
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.21797014772891998,
+      "lp_answer_first": -2.1339457035064697,
+      "margin": 1.9159755557775497
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -15.175432205200195,
+      "lp_answer_first": -6.114515781402588,
+      "margin": -9.060916423797607
+     }
+    ]
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "answer_first_tokens": [
+     "Brazil",
+     "\u0120Brazil"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -16.42074203491211,
+      "lp_answer_first": -0.0013956816401332617,
+      "margin": -16.419346353271976
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.28691291809082,
+      "lp_answer_first": -0.45827263593673706,
+      "margin": -11.828640282154083
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.5255810022354126,
+      "lp_answer_first": -1.3293434381484985,
+      "margin": 0.8037624359130859
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.6917315125465393,
+      "lp_answer_first": -0.8987589478492737,
+      "margin": 0.20702743530273438
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.213922500610352,
+      "lp_answer_first": -6.116096019744873,
+      "margin": -8.097826480865479
+     }
+    ]
+   },
+   {
+    "case_id": 5560,
+    "target_true": "Ireland",
+    "answer_first_tokens": [
+     "I",
+     "\u0120Ireland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -0.07401857525110245,
+      "lp_answer_first": -0.07401857525110245,
+      "margin": 0.0
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -22.72385025024414,
+      "lp_answer_first": -13.767053604125977,
+      "margin": -8.956796646118164
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.17700345814228058,
+      "lp_answer_first": -3.867064952850342,
+      "margin": 3.690061494708061
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.19054491817951202,
+      "lp_answer_first": -3.358898878097534,
+      "margin": 3.168353959918022
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.156593322753906,
+      "lp_answer_first": -8.324457168579102,
+      "margin": -5.832136154174805
+     }
+    ]
+   },
+   {
+    "case_id": 10775,
+    "target_true": "Brazil",
+    "answer_first_tokens": [
+     "Brazil",
+     "\u0120Brazil"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.21823787689209,
+      "lp_answer_first": -0.003253525821492076,
+      "margin": -13.214984351070598
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.154840469360352,
+      "lp_answer_first": -1.9525418281555176,
+      "margin": -8.202298641204834
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.5766409635543823,
+      "lp_answer_first": -1.802738070487976,
+      "margin": 1.2260971069335938
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.519900918006897,
+      "lp_answer_first": -1.3938652276992798,
+      "margin": 0.8739643096923828
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.479480743408203,
+      "lp_answer_first": -5.913327693939209,
+      "margin": -7.566153049468994
+     }
+    ]
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "answer_first_tokens": [
+     "India",
+     "\u0120India"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.47664737701416,
+      "lp_answer_first": -0.004324964247643948,
+      "margin": -10.472322412766516
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.112927436828613,
+      "lp_answer_first": -1.6692545413970947,
+      "margin": -10.443672895431519
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.48032402992248535,
+      "lp_answer_first": -2.070305109024048,
+      "margin": 1.5899810791015625
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.2572016417980194,
+      "lp_answer_first": -2.2583537101745605,
+      "margin": 2.001152068376541
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.409296989440918,
+      "lp_answer_first": -7.057219982147217,
+      "margin": -6.352077007293701
+     }
+    ]
+   },
+   {
+    "case_id": 18511,
+    "target_true": "Belgium",
+    "answer_first_tokens": [
+     "Bel",
+     "\u0120Belgium"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.913978576660156,
+      "lp_answer_first": -0.5071215629577637,
+      "margin": -10.406857013702393
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.65604305267334,
+      "lp_answer_first": -0.42909711599349976,
+      "margin": -11.22694593667984
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.26578766107559204,
+      "lp_answer_first": -3.9800314903259277,
+      "margin": 3.7142438292503357
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.33251601457595825,
+      "lp_answer_first": -3.5936625003814697,
+      "margin": 3.2611464858055115
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.718106269836426,
+      "lp_answer_first": -7.952458381652832,
+      "margin": -6.765647888183594
+     }
+    ]
+   },
+   {
+    "case_id": 8393,
+    "target_true": "Canada",
+    "answer_first_tokens": [
+     "Canada",
+     "\u0120Canada"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -11.8365478515625,
+      "lp_answer_first": -0.03706490620970726,
+      "margin": -11.799482945352793
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.326891899108887,
+      "lp_answer_first": -1.6674468517303467,
+      "margin": -9.65944504737854
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.147434264421463,
+      "lp_answer_first": -3.2748756408691406,
+      "margin": 3.1274413764476776
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.39798831939697266,
+      "lp_answer_first": -1.7778387069702148,
+      "margin": 1.3798503875732422
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.338338851928711,
+      "lp_answer_first": -6.785419940948486,
+      "margin": -7.552918910980225
+     }
+    ]
+   },
+   {
+    "case_id": 2355,
+    "target_true": "Argentina",
+    "answer_first_tokens": [
+     "Argentina",
+     "\u0120Argentina"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.522321701049805,
+      "lp_answer_first": -0.008123925887048244,
+      "margin": -13.514197775162756
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.907261848449707,
+      "lp_answer_first": -1.1064339876174927,
+      "margin": -8.800827860832214
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.34409961104393005,
+      "lp_answer_first": -2.284834384918213,
+      "margin": 1.9407347738742828
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.30120760202407837,
+      "lp_answer_first": -1.9571638107299805,
+      "margin": 1.655956208705902
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.03474235534668,
+      "lp_answer_first": -5.815026760101318,
+      "margin": -8.219715595245361
+     }
+    ]
+   },
+   {
+    "case_id": 17255,
+    "target_true": "Norway",
+    "answer_first_tokens": [
+     "Nor",
+     "\u0120Norway"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -15.71070671081543,
+      "lp_answer_first": -0.000710592488758266,
+      "margin": -15.709996118326671
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.610024452209473,
+      "lp_answer_first": -1.3331496715545654,
+      "margin": -11.276874780654907
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.1557450145483017,
+      "lp_answer_first": -3.4514336585998535,
+      "margin": 3.295688644051552
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.2904627323150635,
+      "lp_answer_first": -2.0853159427642822,
+      "margin": 1.7948532104492188
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.302581787109375,
+      "lp_answer_first": -5.476291656494141,
+      "margin": -7.826290130615234
+     }
+    ]
+   },
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "answer_first_tokens": [
+     "Spain",
+     "\u0120Spain"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.204862594604492,
+      "lp_answer_first": -0.022397883236408234,
+      "margin": -8.182464711368084
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.123693466186523,
+      "lp_answer_first": -1.5523439645767212,
+      "margin": -9.571349501609802
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.3244830369949341,
+      "lp_answer_first": -2.3864965438842773,
+      "margin": 2.0620135068893433
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3206142485141754,
+      "lp_answer_first": -2.1857247352600098,
+      "margin": 1.8651104867458344
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.764615058898926,
+      "lp_answer_first": -7.049755096435547,
+      "margin": -6.714859962463379
+     }
+    ]
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "answer_first_tokens": [
+     "Pakistan",
+     "\u0120Pakistan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.521745681762695,
+      "lp_answer_first": -0.02026987075805664,
+      "margin": -10.501475811004639
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.082749366760254,
+      "lp_answer_first": -1.632952094078064,
+      "margin": -9.44979727268219
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.26731690764427185,
+      "lp_answer_first": -3.921206474304199,
+      "margin": 3.6538895666599274
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.160826176404953,
+      "lp_answer_first": -2.945324420928955,
+      "margin": 2.784498244524002
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.373013496398926,
+      "lp_answer_first": -8.248177528381348,
+      "margin": -6.124835968017578
+     }
+    ]
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "answer_first_tokens": [
+     "Per",
+     "\u0120Peru"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -14.491351127624512,
+      "lp_answer_first": -0.00016246906307060272,
+      "margin": -14.491188658561441
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.687411308288574,
+      "lp_answer_first": -0.7300121784210205,
+      "margin": -12.957399129867554
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.38465580344200134,
+      "lp_answer_first": -6.388205528259277,
+      "margin": 6.003549724817276
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5445780158042908,
+      "lp_answer_first": -5.050934314727783,
+      "margin": 4.506356298923492
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -15.177066802978516,
+      "lp_answer_first": -11.479233741760254,
+      "margin": -3.6978330612182617
+     }
+    ]
+   },
+   {
+    "case_id": 111,
+    "target_true": "Switzerland",
+    "answer_first_tokens": [
+     "Sw",
+     "\u0120Switzerland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -14.247447967529297,
+      "lp_answer_first": -0.0014392504235729575,
+      "margin": -14.246008717105724
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.626588821411133,
+      "lp_answer_first": -0.7211478352546692,
+      "margin": -9.905440986156464
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.15088990330696106,
+      "lp_answer_first": -3.5340962409973145,
+      "margin": 3.3832063376903534
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.1719074845314026,
+      "lp_answer_first": -2.9878311157226562,
+      "margin": 2.8159236311912537
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.726056098937988,
+      "lp_answer_first": -6.171435832977295,
+      "margin": -7.554620265960693
+     }
+    ]
+   },
+   {
+    "case_id": 2045,
+    "target_true": "Sweden",
+    "answer_first_tokens": [
+     "Sweden",
+     "\u0120Sweden"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.619972229003906,
+      "lp_answer_first": -0.04825500771403313,
+      "margin": -9.571717221289873
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.50148868560791,
+      "lp_answer_first": -0.8540564775466919,
+      "margin": -11.647432208061218
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.23854538798332214,
+      "lp_answer_first": -3.450925827026367,
+      "margin": 3.212380439043045
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.14675448834896088,
+      "lp_answer_first": -3.420397996902466,
+      "margin": 3.273643508553505
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.137696266174316,
+      "lp_answer_first": -6.901492595672607,
+      "margin": -7.236203670501709
+     }
+    ]
+   },
+   {
+    "case_id": 19298,
+    "target_true": "Australia",
+    "answer_first_tokens": [
+     "Australia",
+     "\u0120Australia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -14.552055358886719,
+      "lp_answer_first": -0.0018820922123268247,
+      "margin": -14.550173266674392
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.591174125671387,
+      "lp_answer_first": -0.7071120738983154,
+      "margin": -11.884062051773071
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.15882554650306702,
+      "lp_answer_first": -3.4405734539031982,
+      "margin": 3.2817479074001312
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.2863796651363373,
+      "lp_answer_first": -2.478914976119995,
+      "margin": 2.192535310983658
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.995643615722656,
+      "lp_answer_first": -7.392000675201416,
+      "margin": -6.60364294052124
+     }
+    ]
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "answer_first_tokens": [
+     "N",
+     "\u0120Netherlands"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.354445457458496,
+      "lp_answer_first": -0.05081111192703247,
+      "margin": -10.303634345531464
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.558331489562988,
+      "lp_answer_first": -0.7726285457611084,
+      "margin": -9.78570294380188
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.10466423630714417,
+      "lp_answer_first": -6.384494304656982,
+      "margin": 6.279830068349838
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.41794127225875854,
+      "lp_answer_first": -5.337055206298828,
+      "margin": 4.91911393404007
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.422859191894531,
+      "lp_answer_first": -8.545389175415039,
+      "margin": -5.877470016479492
+     }
+    ]
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "answer_first_tokens": [
+     "Fin",
+     "\u0120Finland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -16.618619918823242,
+      "lp_answer_first": -0.0002302858338225633,
+      "margin": -16.61838963298942
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -14.284011840820312,
+      "lp_answer_first": -0.48650312423706055,
+      "margin": -13.797508716583252
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.23222655057907104,
+      "lp_answer_first": -3.0679047107696533,
+      "margin": 2.8356781601905823
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.15551911294460297,
+      "lp_answer_first": -3.027553081512451,
+      "margin": 2.872033968567848
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.309429168701172,
+      "lp_answer_first": -8.231684684753418,
+      "margin": -6.077744483947754
+     }
+    ]
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "answer_first_tokens": [
+     "France",
+     "\u0120France"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.980595588684082,
+      "lp_answer_first": -0.7880265712738037,
+      "margin": -8.192569017410278
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.076152801513672,
+      "lp_answer_first": -4.370132923126221,
+      "margin": -6.706019878387451
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.22036239504814148,
+      "lp_answer_first": -5.062933444976807,
+      "margin": 4.842571049928665
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.14365527033805847,
+      "lp_answer_first": -4.6157755851745605,
+      "margin": 4.472120314836502
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.019050598144531,
+      "lp_answer_first": -9.040488243103027,
+      "margin": -4.978562355041504
+     }
+    ]
+   },
+   {
+    "case_id": 14927,
+    "target_true": "Canada",
+    "answer_first_tokens": [
+     "Canada",
+     "\u0120Canada"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.731535911560059,
+      "lp_answer_first": -0.018142351880669594,
+      "margin": -10.713393559679389
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.936384201049805,
+      "lp_answer_first": -2.2733731269836426,
+      "margin": -6.663011074066162
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.2062181681394577,
+      "lp_answer_first": -3.9352145195007324,
+      "margin": 3.7289963513612747
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.20817014575004578,
+      "lp_answer_first": -3.300792932510376,
+      "margin": 3.09262278676033
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.380877494812012,
+      "lp_answer_first": -7.520811557769775,
+      "margin": -6.860065937042236
+     }
+    ]
+   },
+   {
+    "case_id": 16929,
+    "target_true": "Romania",
+    "answer_first_tokens": [
+     "Roman",
+     "\u0120Romania"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.428276062011719,
+      "lp_answer_first": -0.23587025701999664,
+      "margin": -6.192405804991722
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.395831108093262,
+      "lp_answer_first": -1.3482019901275635,
+      "margin": -11.047629117965698
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.2116006761789322,
+      "lp_answer_first": -4.130151271820068,
+      "margin": 3.918550595641136
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.14601346850395203,
+      "lp_answer_first": -3.3401052951812744,
+      "margin": 3.1940918266773224
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.082925796508789,
+      "lp_answer_first": -7.609145164489746,
+      "margin": -6.473780632019043
+     }
+    ]
+   },
+   {
+    "case_id": 11755,
+    "target_true": "Poland",
+    "answer_first_tokens": [
+     "Pol",
+     "\u0120Poland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -12.336652755737305,
+      "lp_answer_first": -0.025070149451494217,
+      "margin": -12.31158260628581
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.985688209533691,
+      "lp_answer_first": -0.25680917501449585,
+      "margin": -11.728879034519196
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.6479533314704895,
+      "lp_answer_first": -2.798048257827759,
+      "margin": 2.1500949263572693
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.30954840779304504,
+      "lp_answer_first": -2.392237663269043,
+      "margin": 2.082689255475998
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.83917236328125,
+      "lp_answer_first": -5.762810230255127,
+      "margin": -8.076362133026123
+     }
+    ]
+   },
+   {
+    "case_id": 10068,
+    "target_true": "Turkey",
+    "answer_first_tokens": [
+     "Turkey",
+     "\u0120Turkey"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -4.135663032531738,
+      "lp_answer_first": -0.7452347278594971,
+      "margin": -3.390428304672241
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -22.4520206451416,
+      "lp_answer_first": -12.749982833862305,
+      "margin": -9.702037811279297
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.5429834723472595,
+      "lp_answer_first": -7.1098408699035645,
+      "margin": 6.566857397556305
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -1.67661452293396,
+      "lp_answer_first": -4.400730609893799,
+      "margin": 2.724116086959839
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.55206298828125,
+      "lp_answer_first": -8.06511402130127,
+      "margin": -5.4869489669799805
+     }
+    ]
+   },
+   {
+    "case_id": 16874,
+    "target_true": "England",
+    "answer_first_tokens": [
+     "England",
+     "\u0120England"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.65732479095459,
+      "lp_answer_first": -0.0009180859779007733,
+      "margin": -13.656406704976689
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.75094223022461,
+      "lp_answer_first": -0.9550633430480957,
+      "margin": -11.795878887176514
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.17832069098949432,
+      "lp_answer_first": -2.785517454147339,
+      "margin": 2.6071967631578445
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.29471713304519653,
+      "lp_answer_first": -2.3771564960479736,
+      "margin": 2.082439363002777
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.205851554870605,
+      "lp_answer_first": -6.610503673553467,
+      "margin": -7.595347881317139
+     }
+    ]
+   },
+   {
+    "case_id": 438,
+    "target_true": "Switzerland",
+    "answer_first_tokens": [
+     "Sw",
+     "\u0120Switzerland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -18.471405029296875,
+      "lp_answer_first": -0.0006170752458274364,
+      "margin": -18.470787954051048
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.383827209472656,
+      "lp_answer_first": -0.8928423523902893,
+      "margin": -10.490984857082367
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.13770900666713715,
+      "lp_answer_first": -4.058375835418701,
+      "margin": 3.920666828751564
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.13677537441253662,
+      "lp_answer_first": -3.132373332977295,
+      "margin": 2.9955979585647583
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.091059684753418,
+      "lp_answer_first": -6.377181053161621,
+      "margin": -7.713878631591797
+     }
+    ]
+   },
+   {
+    "case_id": 10002,
+    "target_true": "Germany",
+    "answer_first_tokens": [
+     "Germany",
+     "\u0120Germany"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.999300003051758,
+      "lp_answer_first": -0.01504091639071703,
+      "margin": -9.98425908666104
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.54340934753418,
+      "lp_answer_first": -0.3549872636795044,
+      "margin": -10.188422083854675
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.33758875727653503,
+      "lp_answer_first": -3.187267780303955,
+      "margin": 2.84967902302742
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.2295169234275818,
+      "lp_answer_first": -3.6164627075195312,
+      "margin": 3.3869457840919495
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -15.1438627243042,
+      "lp_answer_first": -8.242584228515625,
+      "margin": -6.901278495788574
+     }
+    ]
+   },
+   {
+    "case_id": 745,
+    "target_true": "Greece",
+    "answer_first_tokens": [
+     "G",
+     "\u0120Greece"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.334403038024902,
+      "lp_answer_first": -0.02170662395656109,
+      "margin": -9.312696414068341
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.072644233703613,
+      "lp_answer_first": -4.429098606109619,
+      "margin": -7.643545627593994
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.20416316390037537,
+      "lp_answer_first": -4.787302494049072,
+      "margin": 4.583139330148697
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.10914699733257294,
+      "lp_answer_first": -4.187020301818848,
+      "margin": 4.077873304486275
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.430517196655273,
+      "lp_answer_first": -7.570751190185547,
+      "margin": -5.859766006469727
+     }
+    ]
+   },
+   {
+    "case_id": 4931,
+    "target_true": "Greece",
+    "answer_first_tokens": [
+     "G",
+     "\u0120Greece"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -11.359960556030273,
+      "lp_answer_first": -0.25315067172050476,
+      "margin": -11.106809884309769
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -16.870019912719727,
+      "lp_answer_first": -7.384969711303711,
+      "margin": -9.485050201416016
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.2699609398841858,
+      "lp_answer_first": -5.4726996421813965,
+      "margin": 5.202738702297211
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.07380921393632889,
+      "lp_answer_first": -4.314293384552002,
+      "margin": 4.240484170615673
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.070544242858887,
+      "lp_answer_first": -7.318084239959717,
+      "margin": -6.75246000289917
+     }
+    ]
+   },
+   {
+    "case_id": 3372,
+    "target_true": "Indonesia",
+    "answer_first_tokens": [
+     "Indonesia",
+     "\u0120Indonesia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.427389621734619,
+      "lp_answer_first": -0.9268765449523926,
+      "margin": -4.500513076782227
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.21612548828125,
+      "lp_answer_first": -7.827620506286621,
+      "margin": -4.388504981994629
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.24629533290863037,
+      "lp_answer_first": -7.496913433074951,
+      "margin": 7.250618100166321
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.13857710361480713,
+      "lp_answer_first": -7.288133144378662,
+      "margin": 7.149556040763855
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.46079158782959,
+      "lp_answer_first": -11.032013893127441,
+      "margin": -3.4287776947021484
+     }
+    ]
+   },
+   {
+    "case_id": 18623,
+    "target_true": "Germany",
+    "answer_first_tokens": [
+     "Germany",
+     "\u0120Germany"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -14.616422653198242,
+      "lp_answer_first": -0.0027946485206484795,
+      "margin": -14.613628004677594
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.305831909179688,
+      "lp_answer_first": -0.8733153343200684,
+      "margin": -9.43251657485962
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.32966428995132446,
+      "lp_answer_first": -3.189406394958496,
+      "margin": 2.8597421050071716
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.25006556510925293,
+      "lp_answer_first": -3.1544063091278076,
+      "margin": 2.9043407440185547
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.514983177185059,
+      "lp_answer_first": -7.69600248336792,
+      "margin": -6.818980693817139
+     }
+    ]
+   },
+   {
+    "case_id": 7435,
+    "target_true": "Italy",
+    "answer_first_tokens": [
+     "Italy",
+     "\u0120Italy"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.916863441467285,
+      "lp_answer_first": -0.001166616566479206,
+      "margin": -13.915696824900806
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.469512939453125,
+      "lp_answer_first": -0.9279351234436035,
+      "margin": -12.541577816009521
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.08198591321706772,
+      "lp_answer_first": -3.803689479827881,
+      "margin": 3.721703566610813
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.32208532094955444,
+      "lp_answer_first": -1.7758817672729492,
+      "margin": 1.4537964463233948
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -15.078080177307129,
+      "lp_answer_first": -5.931414604187012,
+      "margin": -9.146665573120117
+     }
+    ]
+   },
+   {
+    "case_id": 17115,
+    "target_true": "Spain",
+    "answer_first_tokens": [
+     "Spain",
+     "\u0120Spain"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.045597076416016,
+      "lp_answer_first": -0.016833985224366188,
+      "margin": -8.02876309119165
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.60552978515625,
+      "lp_answer_first": -2.9080772399902344,
+      "margin": -8.697452545166016
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.3111836016178131,
+      "lp_answer_first": -2.5374600887298584,
+      "margin": 2.2262764871120453
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.23155874013900757,
+      "lp_answer_first": -2.4613523483276367,
+      "margin": 2.229793608188629
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.52740478515625,
+      "lp_answer_first": -7.510151386260986,
+      "margin": -7.017253398895264
+     }
+    ]
+   },
+   {
+    "case_id": 9901,
+    "target_true": "Australia",
+    "answer_first_tokens": [
+     "Australia",
+     "\u0120Australia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.726370811462402,
+      "lp_answer_first": -0.0023894349578768015,
+      "margin": -13.723981376504526
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.371847152709961,
+      "lp_answer_first": -1.9488499164581299,
+      "margin": -9.422997236251831
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.22382290661334991,
+      "lp_answer_first": -2.6407501697540283,
+      "margin": 2.4169272631406784
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.2777462899684906,
+      "lp_answer_first": -2.321779251098633,
+      "margin": 2.044032961130142
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.344816207885742,
+      "lp_answer_first": -7.946280479431152,
+      "margin": -6.39853572845459
+     }
+    ]
+   },
+   {
+    "case_id": 19928,
+    "target_true": "Japan",
+    "answer_first_tokens": [
+     "Japan",
+     "\u0120Japan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.762604713439941,
+      "lp_answer_first": -0.002436052542179823,
+      "margin": -10.760168660897762
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.956802368164062,
+      "lp_answer_first": -2.4231081008911133,
+      "margin": -11.53369426727295
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.2949238121509552,
+      "lp_answer_first": -3.7108516693115234,
+      "margin": 3.4159278571605682
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.22554107010364532,
+      "lp_answer_first": -2.5671777725219727,
+      "margin": 2.3416367024183273
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.16589069366455,
+      "lp_answer_first": -7.203885078430176,
+      "margin": -6.962005615234375
+     }
+    ]
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "answer_first_tokens": [
+     "N",
+     "\u0120Nigeria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.210360527038574,
+      "lp_answer_first": -0.005200786050409079,
+      "margin": -9.205159740988165
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.336492538452148,
+      "lp_answer_first": -2.1679575443267822,
+      "margin": -9.168534994125366
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.320969820022583,
+      "lp_answer_first": -2.7391884326934814,
+      "margin": 2.4182186126708984
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.1644340604543686,
+      "lp_answer_first": -3.0169425010681152,
+      "margin": 2.8525084406137466
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.385157585144043,
+      "lp_answer_first": -7.920184135437012,
+      "margin": -6.464973449707031
+     }
+    ]
+   },
+   {
+    "case_id": 17994,
+    "target_true": "Belgium",
+    "answer_first_tokens": [
+     "Bel",
+     "\u0120Belgium"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -11.43346881866455,
+      "lp_answer_first": -0.12039195746183395,
+      "margin": -11.313076861202717
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.151018142700195,
+      "lp_answer_first": -0.31481316685676575,
+      "margin": -10.83620497584343
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.16712616384029388,
+      "lp_answer_first": -3.7403721809387207,
+      "margin": 3.573246017098427
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3249504268169403,
+      "lp_answer_first": -2.7627289295196533,
+      "margin": 2.437778502702713
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.096735000610352,
+      "lp_answer_first": -6.396968364715576,
+      "margin": -7.699766635894775
+     }
+    ]
+   },
+   {
+    "case_id": 14222,
+    "target_true": "Russia",
+    "answer_first_tokens": [
+     "Russia",
+     "\u0120Russia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -12.727486610412598,
+      "lp_answer_first": -0.008313336409628391,
+      "margin": -12.71917327400297
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.101203918457031,
+      "lp_answer_first": -1.337770700454712,
+      "margin": -8.76343321800232
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.3025714159011841,
+      "lp_answer_first": -4.143987655639648,
+      "margin": 3.8414162397384644
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.2914850413799286,
+      "lp_answer_first": -3.273123025894165,
+      "margin": 2.9816379845142365
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.424322128295898,
+      "lp_answer_first": -8.979442596435547,
+      "margin": -5.444879531860352
+     }
+    ]
+   },
+   {
+    "case_id": 4694,
+    "target_true": "Iran",
+    "answer_first_tokens": [
+     "Iran",
+     "\u0120Iran"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.249392509460449,
+      "lp_answer_first": -0.03183862566947937,
+      "margin": -6.21755388379097
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -14.405805587768555,
+      "lp_answer_first": -4.795614719390869,
+      "margin": -9.610190868377686
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.8903524875640869,
+      "lp_answer_first": -1.3829996585845947,
+      "margin": 0.4926471710205078
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.19537615776062012,
+      "lp_answer_first": -2.478478193283081,
+      "margin": 2.283102035522461
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -14.003437042236328,
+      "lp_answer_first": -7.5294270515441895,
+      "margin": -6.474009990692139
+     }
+    ]
+   },
+   {
+    "case_id": 17624,
+    "target_true": "Bulgaria",
+    "answer_first_tokens": [
+     "B",
+     "\u0120Bulgaria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.9994354248046875,
+      "lp_answer_first": -0.8363506197929382,
+      "margin": -6.163084805011749
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.48021411895752,
+      "lp_answer_first": -6.374604225158691,
+      "margin": -3.105609893798828
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.3861575424671173,
+      "lp_answer_first": -8.060282707214355,
+      "margin": 7.674125164747238
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.20465785264968872,
+      "lp_answer_first": -7.435619831085205,
+      "margin": 7.230961978435516
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -13.791227340698242,
+      "lp_answer_first": -11.457182884216309,
+      "margin": -2.3340444564819336
+     }
+    ]
+   }
+  ],
+  "base": [
+   {
+    "case_id": 3969,
+    "target_true": "Austria",
+    "answer_first_tokens": [
+     "A",
+     "\u0120Austria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -11.354394912719727,
+      "lp_answer_first": -0.015713443979620934,
+      "margin": -11.338681468740106
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.519161224365234,
+      "lp_answer_first": -8.250066757202148,
+      "margin": -0.26909446716308594
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.00488362368196249,
+      "lp_answer_first": -15.591999053955078,
+      "margin": 15.587115430273116
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4059337377548218,
+      "lp_answer_first": -15.251646041870117,
+      "margin": 14.845712304115295
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.288926124572754,
+      "lp_answer_first": -9.50271224975586,
+      "margin": 7.2137861251831055
+     }
+    ]
+   },
+   {
+    "case_id": 20171,
+    "target_true": "Mexico",
+    "answer_first_tokens": [
+     "Mexico",
+     "\u0120Mexico"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.219491958618164,
+      "lp_answer_first": -0.11041862517595291,
+      "margin": -9.109073333442211
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.57961368560791,
+      "lp_answer_first": -4.499166488647461,
+      "margin": -2.080447196960449
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.004275942221283913,
+      "lp_answer_first": -14.67900276184082,
+      "margin": 14.674726819619536
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3583773970603943,
+      "lp_answer_first": -12.323814392089844,
+      "margin": 11.96543699502945
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.549946665763855,
+      "lp_answer_first": -9.44688892364502,
+      "margin": 7.8969422578811646
+     }
+    ]
+   },
+   {
+    "case_id": 14788,
+    "target_true": "Ukraine",
+    "answer_first_tokens": [
+     "U",
+     "\u0120Ukraine"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.473305702209473,
+      "lp_answer_first": -0.6700760722160339,
+      "margin": -9.803229629993439
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -1.8685643672943115,
+      "lp_answer_first": -7.204318046569824,
+      "margin": 5.335753679275513
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.009087157435715199,
+      "lp_answer_first": -13.148636817932129,
+      "margin": 13.139549660496414
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.7451107501983643,
+      "lp_answer_first": -13.01113224029541,
+      "margin": 12.266021490097046
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.5376965999603271,
+      "lp_answer_first": -7.024360656738281,
+      "margin": 5.486664056777954
+     }
+    ]
+   },
+   {
+    "case_id": 12903,
+    "target_true": "Sweden",
+    "answer_first_tokens": [
+     "Sweden",
+     "\u0120Sweden"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.951119422912598,
+      "lp_answer_first": -0.3908376693725586,
+      "margin": -8.560281753540039
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.26369857788086,
+      "lp_answer_first": -6.658729076385498,
+      "margin": -6.604969501495361
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.02005256712436676,
+      "lp_answer_first": -14.716486930847168,
+      "margin": 14.696434363722801
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.9477030634880066,
+      "lp_answer_first": -12.914283752441406,
+      "margin": 11.9665806889534
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.3434462547302246,
+      "lp_answer_first": -6.039822101593018,
+      "margin": 4.696375846862793
+     }
+    ]
+   },
+   {
+    "case_id": 17272,
+    "target_true": "Japan",
+    "answer_first_tokens": [
+     "Japan",
+     "\u0120Japan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.803621292114258,
+      "lp_answer_first": -0.2690296173095703,
+      "margin": -5.5345916748046875
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -13.904972076416016,
+      "lp_answer_first": -7.8745341300964355,
+      "margin": -6.03043794631958
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.006123353261500597,
+      "lp_answer_first": -16.199134826660156,
+      "margin": 16.193011473398656
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.49323827028274536,
+      "lp_answer_first": -13.404571533203125,
+      "margin": 12.91133326292038
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.4789958000183105,
+      "lp_answer_first": -11.420886993408203,
+      "margin": 8.941891193389893
+     }
+    ]
+   },
+   {
+    "case_id": 19276,
+    "target_true": "Russia",
+    "answer_first_tokens": [
+     "Russia",
+     "\u0120Russia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.8954572677612305,
+      "lp_answer_first": -0.2636154294013977,
+      "margin": -7.631841838359833
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -5.492469310760498,
+      "lp_answer_first": -8.980199813842773,
+      "margin": 3.4877305030822754
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.006376634817570448,
+      "lp_answer_first": -17.298606872558594,
+      "margin": 17.292230237741023
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4601241946220398,
+      "lp_answer_first": -14.17249584197998,
+      "margin": 13.71237164735794
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.976194977760315,
+      "lp_answer_first": -9.742133140563965,
+      "margin": 7.76593816280365
+     }
+    ]
+   },
+   {
+    "case_id": 9176,
+    "target_true": "Finland",
+    "answer_first_tokens": [
+     "Fin",
+     "\u0120Finland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.626797676086426,
+      "lp_answer_first": -0.05732553079724312,
+      "margin": -6.569472145289183
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -15.405336380004883,
+      "lp_answer_first": -12.0762357711792,
+      "margin": -3.3291006088256836
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008570200763642788,
+      "lp_answer_first": -14.11205005645752,
+      "margin": 14.103479855693877
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4610186815261841,
+      "lp_answer_first": -14.259718894958496,
+      "margin": 13.798700213432312
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.6723194122314453,
+      "lp_answer_first": -8.28184700012207,
+      "margin": 6.609527587890625
+     }
+    ]
+   },
+   {
+    "case_id": 6241,
+    "target_true": "Israel",
+    "answer_first_tokens": [
+     "Israel",
+     "\u0120Israel"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.917689800262451,
+      "lp_answer_first": -0.017433499917387962,
+      "margin": -7.900256300345063
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.728772163391113,
+      "lp_answer_first": -4.559082984924316,
+      "margin": -5.169689178466797
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.002597650745883584,
+      "lp_answer_first": -15.474870681762695,
+      "margin": 15.472273031016812
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.6928963661193848,
+      "lp_answer_first": -11.25075912475586,
+      "margin": 10.557862758636475
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.5419037342071533,
+      "lp_answer_first": -7.989951133728027,
+      "margin": 6.448047399520874
+     }
+    ]
+   },
+   {
+    "case_id": 13632,
+    "target_true": "Italy",
+    "answer_first_tokens": [
+     "Italy",
+     "\u0120Italy"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.289270877838135,
+      "lp_answer_first": -0.0882122740149498,
+      "margin": -6.201058603823185
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.243913650512695,
+      "lp_answer_first": -7.411693096160889,
+      "margin": -2.8322205543518066
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.005315931048244238,
+      "lp_answer_first": -14.278337478637695,
+      "margin": 14.273021547589451
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4671403765678406,
+      "lp_answer_first": -11.565977096557617,
+      "margin": 11.098836719989777
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.706210970878601,
+      "lp_answer_first": -10.198528289794922,
+      "margin": 8.49231731891632
+     }
+    ]
+   },
+   {
+    "case_id": 10261,
+    "target_true": "France",
+    "answer_first_tokens": [
+     "France",
+     "\u0120France"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.963303565979004,
+      "lp_answer_first": -0.7185541987419128,
+      "margin": -9.244749367237091
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -5.732412815093994,
+      "lp_answer_first": -4.687963008880615,
+      "margin": -1.044449806213379
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.002286797622218728,
+      "lp_answer_first": -19.025175094604492,
+      "margin": 19.022888296982273
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.47371965646743774,
+      "lp_answer_first": -13.884936332702637,
+      "margin": 13.411216676235199
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.5788570642471313,
+      "lp_answer_first": -8.083977699279785,
+      "margin": 6.505120635032654
+     }
+    ]
+   },
+   {
+    "case_id": 16424,
+    "target_true": "Denmark",
+    "answer_first_tokens": [
+     "Den",
+     "\u0120Denmark"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.354226112365723,
+      "lp_answer_first": -0.061733972281217575,
+      "margin": -8.292492140084505
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.832710266113281,
+      "lp_answer_first": -8.308331489562988,
+      "margin": -2.524378776550293
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008135750889778137,
+      "lp_answer_first": -15.398322105407715,
+      "margin": 15.390186354517937
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.31845372915267944,
+      "lp_answer_first": -13.728232383728027,
+      "margin": 13.409778654575348
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.7074707746505737,
+      "lp_answer_first": -10.300172805786133,
+      "margin": 8.592702031135559
+     }
+    ]
+   },
+   {
+    "case_id": 9956,
+    "target_true": "Romania",
+    "answer_first_tokens": [
+     "Roman",
+     "\u0120Romania"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.701048851013184,
+      "lp_answer_first": -0.08045310527086258,
+      "margin": -9.620595745742321
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.21570873260498,
+      "lp_answer_first": -5.862086772918701,
+      "margin": -2.3536219596862793
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.007492536213248968,
+      "lp_answer_first": -15.041057586669922,
+      "margin": 15.033565050456673
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5514248609542847,
+      "lp_answer_first": -12.618873596191406,
+      "margin": 12.067448735237122
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.8735415935516357,
+      "lp_answer_first": -9.199408531188965,
+      "margin": 7.325866937637329
+     }
+    ]
+   },
+   {
+    "case_id": 13804,
+    "target_true": "Thailand",
+    "answer_first_tokens": [
+     "Th",
+     "\u0120Thailand"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.138875961303711,
+      "lp_answer_first": -0.10752415657043457,
+      "margin": -8.031351804733276
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.88722562789917,
+      "lp_answer_first": -7.505958080291748,
+      "margin": 0.6187324523925781
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0063361236825585365,
+      "lp_answer_first": -14.062681198120117,
+      "margin": 14.056345074437559
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3981117606163025,
+      "lp_answer_first": -15.572742462158203,
+      "margin": 15.1746307015419
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.5637412071228027,
+      "lp_answer_first": -11.231733322143555,
+      "margin": 9.667992115020752
+     }
+    ]
+   },
+   {
+    "case_id": 15032,
+    "target_true": "Pakistan",
+    "answer_first_tokens": [
+     "Pakistan",
+     "\u0120Pakistan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -12.833759307861328,
+      "lp_answer_first": -0.07721679657697678,
+      "margin": -12.756542511284351
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -5.302857398986816,
+      "lp_answer_first": -4.864047050476074,
+      "margin": -0.4388103485107422
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.00400099391117692,
+      "lp_answer_first": -18.866497039794922,
+      "margin": 18.862496045883745
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5291370749473572,
+      "lp_answer_first": -16.103641510009766,
+      "margin": 15.574504435062408
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.6867769956588745,
+      "lp_answer_first": -11.151046752929688,
+      "margin": 9.464269757270813
+     }
+    ]
+   },
+   {
+    "case_id": 5283,
+    "target_true": "Singapore",
+    "answer_first_tokens": [
+     "Singapore",
+     "\u0120Singapore"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.124740600585938,
+      "lp_answer_first": -0.22454361617565155,
+      "margin": -7.900196984410286
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.56257152557373,
+      "lp_answer_first": -7.415581703186035,
+      "margin": -3.1469898223876953
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.006730150431394577,
+      "lp_answer_first": -15.424052238464355,
+      "margin": 15.417322088032961
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5710361003875732,
+      "lp_answer_first": -15.511063575744629,
+      "margin": 14.940027475357056
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.7559192180633545,
+      "lp_answer_first": -9.644916534423828,
+      "margin": 7.888997316360474
+     }
+    ]
+   },
+   {
+    "case_id": 6352,
+    "target_true": "Poland",
+    "answer_first_tokens": [
+     "Pol",
+     "\u0120Poland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.746437072753906,
+      "lp_answer_first": -0.3849978446960449,
+      "margin": -10.361439228057861
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.122198104858398,
+      "lp_answer_first": -1.7978572845458984,
+      "margin": -6.3243408203125
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0032719431910663843,
+      "lp_answer_first": -18.965105056762695,
+      "margin": 18.96183311357163
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.36914655566215515,
+      "lp_answer_first": -15.521208763122559,
+      "margin": 15.152062207460403
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.6237965822219849,
+      "lp_answer_first": -8.40907096862793,
+      "margin": 6.785274386405945
+     }
+    ]
+   },
+   {
+    "case_id": 19153,
+    "target_true": "Brazil",
+    "answer_first_tokens": [
+     "Brazil",
+     "\u0120Brazil"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -13.542983055114746,
+      "lp_answer_first": -0.007859851233661175,
+      "margin": -13.535123203881085
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.471458435058594,
+      "lp_answer_first": -5.21102237701416,
+      "margin": -1.2604360580444336
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.003962760791182518,
+      "lp_answer_first": -17.109874725341797,
+      "margin": 17.105911964550614
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5899350643157959,
+      "lp_answer_first": -15.146358489990234,
+      "margin": 14.556423425674438
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.4987027645111084,
+      "lp_answer_first": -8.475241661071777,
+      "margin": 6.976538896560669
+     }
+    ]
+   },
+   {
+    "case_id": 5560,
+    "target_true": "Ireland",
+    "answer_first_tokens": [
+     "I",
+     "\u0120Ireland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -0.5969451665878296,
+      "lp_answer_first": -0.5969451665878296,
+      "margin": 0.0
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -17.222440719604492,
+      "lp_answer_first": -15.6200590133667,
+      "margin": -1.602381706237793
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.006420342717319727,
+      "lp_answer_first": -14.344396591186523,
+      "margin": 14.337976248469204
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.395985871553421,
+      "lp_answer_first": -11.98175048828125,
+      "margin": 11.585764616727829
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.493753433227539,
+      "lp_answer_first": -9.031280517578125,
+      "margin": 7.537527084350586
+     }
+    ]
+   },
+   {
+    "case_id": 10775,
+    "target_true": "Brazil",
+    "answer_first_tokens": [
+     "Brazil",
+     "\u0120Brazil"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -11.79077434539795,
+      "lp_answer_first": -0.007880903780460358,
+      "margin": -11.782893441617489
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.535414695739746,
+      "lp_answer_first": -5.8194684982299805,
+      "margin": -0.7159461975097656
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.005253083072602749,
+      "lp_answer_first": -16.294437408447266,
+      "margin": 16.289184325374663
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3990964889526367,
+      "lp_answer_first": -14.689456939697266,
+      "margin": 14.290360450744629
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.730994462966919,
+      "lp_answer_first": -9.006516456604004,
+      "margin": 7.275521993637085
+     }
+    ]
+   },
+   {
+    "case_id": 19251,
+    "target_true": "India",
+    "answer_first_tokens": [
+     "India",
+     "\u0120India"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.850574016571045,
+      "lp_answer_first": -0.0553746297955513,
+      "margin": -7.795199386775494
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.361456871032715,
+      "lp_answer_first": -7.246946334838867,
+      "margin": -1.1145105361938477
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.00460848631337285,
+      "lp_answer_first": -16.19645118713379,
+      "margin": 16.191842700820416
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3862285315990448,
+      "lp_answer_first": -13.310705184936523,
+      "margin": 12.924476653337479
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.366067886352539,
+      "lp_answer_first": -11.14352035522461,
+      "margin": 9.77745246887207
+     }
+    ]
+   },
+   {
+    "case_id": 18511,
+    "target_true": "Belgium",
+    "answer_first_tokens": [
+     "Bel",
+     "\u0120Belgium"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.213129997253418,
+      "lp_answer_first": -0.49691927433013916,
+      "margin": -8.716210722923279
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.199800491333008,
+      "lp_answer_first": -5.8641462326049805,
+      "margin": -2.3356542587280273
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0037403402384370565,
+      "lp_answer_first": -13.933969497680664,
+      "margin": 13.930229157442227
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.48551273345947266,
+      "lp_answer_first": -12.21264362335205,
+      "margin": 11.727130889892578
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.3975166082382202,
+      "lp_answer_first": -8.268199920654297,
+      "margin": 6.870683312416077
+     }
+    ]
+   },
+   {
+    "case_id": 8393,
+    "target_true": "Canada",
+    "answer_first_tokens": [
+     "Canada",
+     "\u0120Canada"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -10.481701850891113,
+      "lp_answer_first": -0.01945882849395275,
+      "margin": -10.46224302239716
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.5516767501831055,
+      "lp_answer_first": -7.03043270111084,
+      "margin": 0.4787559509277344
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0046002985909581184,
+      "lp_answer_first": -15.861186981201172,
+      "margin": 15.856586682610214
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4586433172225952,
+      "lp_answer_first": -15.621691703796387,
+      "margin": 15.163048386573792
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.2196110486984253,
+      "lp_answer_first": -8.094406127929688,
+      "margin": 6.874795079231262
+     }
+    ]
+   },
+   {
+    "case_id": 2355,
+    "target_true": "Argentina",
+    "answer_first_tokens": [
+     "Argentina",
+     "\u0120Argentina"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.515974998474121,
+      "lp_answer_first": -0.4153185784816742,
+      "margin": -9.100656419992447
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.493544578552246,
+      "lp_answer_first": -7.943541526794434,
+      "margin": 0.4499969482421875
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.005409247241914272,
+      "lp_answer_first": -17.269731521606445,
+      "margin": 17.26432227436453
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.6950440406799316,
+      "lp_answer_first": -15.774240493774414,
+      "margin": 15.079196453094482
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.9329421520233154,
+      "lp_answer_first": -8.621709823608398,
+      "margin": 6.688767671585083
+     }
+    ]
+   },
+   {
+    "case_id": 17255,
+    "target_true": "Norway",
+    "answer_first_tokens": [
+     "Nor",
+     "\u0120Norway"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.652639389038086,
+      "lp_answer_first": -0.06118376553058624,
+      "margin": -7.5914556235075
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.129253387451172,
+      "lp_answer_first": -10.025467872619629,
+      "margin": -0.10378551483154297
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0031711787451058626,
+      "lp_answer_first": -14.290779113769531,
+      "margin": 14.287607935024425
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.6082223057746887,
+      "lp_answer_first": -12.03616714477539,
+      "margin": 11.427944839000702
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.5554460287094116,
+      "lp_answer_first": -7.588740825653076,
+      "margin": 6.0332947969436646
+     }
+    ]
+   },
+   {
+    "case_id": 3419,
+    "target_true": "Spain",
+    "answer_first_tokens": [
+     "Spain",
+     "\u0120Spain"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.668708324432373,
+      "lp_answer_first": -0.08933091908693314,
+      "margin": -6.57937740534544
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.840170860290527,
+      "lp_answer_first": -9.211989402770996,
+      "margin": -1.6281814575195312
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0072958702221512794,
+      "lp_answer_first": -13.582448959350586,
+      "margin": 13.575153089128435
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.33616435527801514,
+      "lp_answer_first": -12.005239486694336,
+      "margin": 11.66907513141632
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.859856367111206,
+      "lp_answer_first": -8.87295150756836,
+      "margin": 7.013095140457153
+     }
+    ]
+   },
+   {
+    "case_id": 13783,
+    "target_true": "Pakistan",
+    "answer_first_tokens": [
+     "Pakistan",
+     "\u0120Pakistan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.550314903259277,
+      "lp_answer_first": -0.33666718006134033,
+      "margin": -8.213647723197937
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.11897087097168,
+      "lp_answer_first": -6.792644500732422,
+      "margin": -0.3263263702392578
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.006643352098762989,
+      "lp_answer_first": -15.765437126159668,
+      "margin": 15.758793774060905
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.44144031405448914,
+      "lp_answer_first": -11.975006103515625,
+      "margin": 11.533565789461136
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.968275547027588,
+      "lp_answer_first": -13.49931526184082,
+      "margin": 11.531039714813232
+     }
+    ]
+   },
+   {
+    "case_id": 19504,
+    "target_true": "Peru",
+    "answer_first_tokens": [
+     "Per",
+     "\u0120Peru"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.31977367401123,
+      "lp_answer_first": -0.8654767870903015,
+      "margin": -7.454296886920929
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.297362804412842,
+      "lp_answer_first": -6.697393894195557,
+      "margin": 0.40003108978271484
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008023176342248917,
+      "lp_answer_first": -15.980612754821777,
+      "margin": 15.972589578479528
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3737803101539612,
+      "lp_answer_first": -15.875981330871582,
+      "margin": 15.50220102071762
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.7580043077468872,
+      "lp_answer_first": -9.07776165008545,
+      "margin": 7.319757342338562
+     }
+    ]
+   },
+   {
+    "case_id": 111,
+    "target_true": "Switzerland",
+    "answer_first_tokens": [
+     "Sw",
+     "\u0120Switzerland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.246020317077637,
+      "lp_answer_first": -0.8642035722732544,
+      "margin": -6.381816744804382
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.567756652832031,
+      "lp_answer_first": -10.28935718536377,
+      "margin": 0.7216005325317383
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0070212772116065025,
+      "lp_answer_first": -13.525005340576172,
+      "margin": 13.517984063364565
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4964655637741089,
+      "lp_answer_first": -12.41976547241211,
+      "margin": 11.923299908638
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.7294493913650513,
+      "lp_answer_first": -10.615867614746094,
+      "margin": 8.886418223381042
+     }
+    ]
+   },
+   {
+    "case_id": 2045,
+    "target_true": "Sweden",
+    "answer_first_tokens": [
+     "Sweden",
+     "\u0120Sweden"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.627452850341797,
+      "lp_answer_first": -0.03720848634839058,
+      "margin": -9.590244363993406
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.674744606018066,
+      "lp_answer_first": -8.04065227508545,
+      "margin": -3.634092330932617
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.011049157939851284,
+      "lp_answer_first": -15.494325637817383,
+      "margin": 15.483276479877532
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3104245960712433,
+      "lp_answer_first": -15.798946380615234,
+      "margin": 15.488521784543991
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.8742908239364624,
+      "lp_answer_first": -7.63103723526001,
+      "margin": 5.756746411323547
+     }
+    ]
+   },
+   {
+    "case_id": 19298,
+    "target_true": "Australia",
+    "answer_first_tokens": [
+     "Australia",
+     "\u0120Australia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.75407600402832,
+      "lp_answer_first": -0.10900963842868805,
+      "margin": -8.645066365599632
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.541611671447754,
+      "lp_answer_first": -8.577481269836426,
+      "margin": 2.035869598388672
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0021716600749641657,
+      "lp_answer_first": -15.564635276794434,
+      "margin": 15.56246361671947
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.29243117570877075,
+      "lp_answer_first": -12.084447860717773,
+      "margin": 11.792016685009003
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.7788500785827637,
+      "lp_answer_first": -9.01746940612793,
+      "margin": 7.238619327545166
+     }
+    ]
+   },
+   {
+    "case_id": 3140,
+    "target_true": "Netherlands",
+    "answer_first_tokens": [
+     "N",
+     "\u0120Netherlands"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.058611869812012,
+      "lp_answer_first": -0.6477407217025757,
+      "margin": -8.410871148109436
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.637746334075928,
+      "lp_answer_first": -4.3883442878723145,
+      "margin": -2.2494020462036133
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0028410095255821943,
+      "lp_answer_first": -17.04852294921875,
+      "margin": 17.045681939693168
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5123894810676575,
+      "lp_answer_first": -17.900590896606445,
+      "margin": 17.388201415538788
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.020223617553711,
+      "lp_answer_first": -9.899927139282227,
+      "margin": 7.879703521728516
+     }
+    ]
+   },
+   {
+    "case_id": 12055,
+    "target_true": "Finland",
+    "answer_first_tokens": [
+     "Fin",
+     "\u0120Finland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.801825046539307,
+      "lp_answer_first": -0.03700896352529526,
+      "margin": -7.764816083014011
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.36911392211914,
+      "lp_answer_first": -7.933542728424072,
+      "margin": -4.435571193695068
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.006471510045230389,
+      "lp_answer_first": -15.292831420898438,
+      "margin": 15.286359910853207
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.421321839094162,
+      "lp_answer_first": -14.486260414123535,
+      "margin": 14.064938575029373
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.3519924879074097,
+      "lp_answer_first": -6.581274032592773,
+      "margin": 5.229281544685364
+     }
+    ]
+   },
+   {
+    "case_id": 14959,
+    "target_true": "France",
+    "answer_first_tokens": [
+     "France",
+     "\u0120France"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.172040939331055,
+      "lp_answer_first": -0.06407812982797623,
+      "margin": -8.107962809503078
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.797653198242188,
+      "lp_answer_first": -7.455809116363525,
+      "margin": -1.341844081878662
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.005091557744890451,
+      "lp_answer_first": -14.05517864227295,
+      "margin": 14.050087084528059
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3146058917045593,
+      "lp_answer_first": -9.955581665039062,
+      "margin": 9.640975773334503
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.3800640106201172,
+      "lp_answer_first": -6.492412567138672,
+      "margin": 5.112348556518555
+     }
+    ]
+   },
+   {
+    "case_id": 14927,
+    "target_true": "Canada",
+    "answer_first_tokens": [
+     "Canada",
+     "\u0120Canada"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.5562214851379395,
+      "lp_answer_first": -0.48730117082595825,
+      "margin": -6.068920314311981
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.49676513671875,
+      "lp_answer_first": -10.014954566955566,
+      "margin": 1.5181894302368164
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.007256343029439449,
+      "lp_answer_first": -13.544663429260254,
+      "margin": 13.537407086230814
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.42313408851623535,
+      "lp_answer_first": -12.194904327392578,
+      "margin": 11.771770238876343
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.7094870805740356,
+      "lp_answer_first": -10.828871726989746,
+      "margin": 9.11938464641571
+     }
+    ]
+   },
+   {
+    "case_id": 16929,
+    "target_true": "Romania",
+    "answer_first_tokens": [
+     "Roman",
+     "\u0120Romania"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.833129405975342,
+      "lp_answer_first": -0.6305660009384155,
+      "margin": -6.202563405036926
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.468725681304932,
+      "lp_answer_first": -6.750189304351807,
+      "margin": -0.718536376953125
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.004232140723615885,
+      "lp_answer_first": -15.969476699829102,
+      "margin": 15.965244559105486
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4191111624240875,
+      "lp_answer_first": -11.526644706726074,
+      "margin": 11.107533544301987
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.5719012022018433,
+      "lp_answer_first": -8.181406021118164,
+      "margin": 6.609504818916321
+     }
+    ]
+   },
+   {
+    "case_id": 11755,
+    "target_true": "Poland",
+    "answer_first_tokens": [
+     "Pol",
+     "\u0120Poland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.12897253036499,
+      "lp_answer_first": -0.46075212955474854,
+      "margin": -5.668220400810242
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.964204788208008,
+      "lp_answer_first": -10.083642959594727,
+      "margin": -1.8805618286132812
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.003869547275826335,
+      "lp_answer_first": -17.940576553344727,
+      "margin": 17.9367070060689
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.596847414970398,
+      "lp_answer_first": -14.786645889282227,
+      "margin": 14.189798474311829
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.313961982727051,
+      "lp_answer_first": -10.893834114074707,
+      "margin": 8.579872131347656
+     }
+    ]
+   },
+   {
+    "case_id": 10068,
+    "target_true": "Turkey",
+    "answer_first_tokens": [
+     "Turkey",
+     "\u0120Turkey"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -1.550266146659851,
+      "lp_answer_first": -0.9590014219284058,
+      "margin": -0.5912647247314453
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -17.05561637878418,
+      "lp_answer_first": -16.365997314453125,
+      "margin": -0.6896190643310547
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.05877232924103737,
+      "lp_answer_first": -11.242850303649902,
+      "margin": 11.184077974408865
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.7857422232627869,
+      "lp_answer_first": -9.386772155761719,
+      "margin": 8.601029932498932
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.4399712085723877,
+      "lp_answer_first": -8.779569625854492,
+      "margin": 6.3395984172821045
+     }
+    ]
+   },
+   {
+    "case_id": 16874,
+    "target_true": "England",
+    "answer_first_tokens": [
+     "England",
+     "\u0120England"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -4.934674263000488,
+      "lp_answer_first": -0.9278793334960938,
+      "margin": -4.0067949295043945
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.879137992858887,
+      "lp_answer_first": -10.580727577209473,
+      "margin": 0.7015895843505859
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.004153910558670759,
+      "lp_answer_first": -13.623126983642578,
+      "margin": 13.618973073083907
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.44849634170532227,
+      "lp_answer_first": -11.718269348144531,
+      "margin": 11.269773006439209
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.772972583770752,
+      "lp_answer_first": -6.9639201164245605,
+      "margin": 5.190947532653809
+     }
+    ]
+   },
+   {
+    "case_id": 438,
+    "target_true": "Switzerland",
+    "answer_first_tokens": [
+     "Sw",
+     "\u0120Switzerland"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -12.535441398620605,
+      "lp_answer_first": -0.053323403000831604,
+      "margin": -12.482117995619774
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -6.977709770202637,
+      "lp_answer_first": -3.2454001903533936,
+      "margin": -3.732309579849243
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.004421814810484648,
+      "lp_answer_first": -15.171151161193848,
+      "margin": 15.166729346383363
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.48115265369415283,
+      "lp_answer_first": -13.516082763671875,
+      "margin": 13.034930109977722
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.3989061117172241,
+      "lp_answer_first": -8.413837432861328,
+      "margin": 7.014931321144104
+     }
+    ]
+   },
+   {
+    "case_id": 10002,
+    "target_true": "Germany",
+    "answer_first_tokens": [
+     "Germany",
+     "\u0120Germany"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.249272346496582,
+      "lp_answer_first": -0.631841778755188,
+      "margin": -6.617430567741394
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.20439338684082,
+      "lp_answer_first": -5.745682716369629,
+      "margin": -3.4587106704711914
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.004785987548530102,
+      "lp_answer_first": -17.500669479370117,
+      "margin": 17.495883491821587
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5204541683197021,
+      "lp_answer_first": -14.292064666748047,
+      "margin": 13.771610498428345
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.1269311904907227,
+      "lp_answer_first": -12.566550254821777,
+      "margin": 10.439619064331055
+     }
+    ]
+   },
+   {
+    "case_id": 745,
+    "target_true": "Greece",
+    "answer_first_tokens": [
+     "G",
+     "\u0120Greece"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.934005260467529,
+      "lp_answer_first": -0.6636329889297485,
+      "margin": -5.270372271537781
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -11.210111618041992,
+      "lp_answer_first": -11.262239456176758,
+      "margin": 0.052127838134765625
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008144973777234554,
+      "lp_answer_first": -14.751056671142578,
+      "margin": 14.742911697365344
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.38993358612060547,
+      "lp_answer_first": -15.31057357788086,
+      "margin": 14.920639991760254
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.9635440111160278,
+      "lp_answer_first": -10.004826545715332,
+      "margin": 8.041282534599304
+     }
+    ]
+   },
+   {
+    "case_id": 4931,
+    "target_true": "Greece",
+    "answer_first_tokens": [
+     "G",
+     "\u0120Greece"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.125292778015137,
+      "lp_answer_first": -0.3100454807281494,
+      "margin": -6.815247297286987
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -12.515595436096191,
+      "lp_answer_first": -9.28920841217041,
+      "margin": -3.2263870239257812
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008582374081015587,
+      "lp_answer_first": -16.056991577148438,
+      "margin": 16.048409203067422
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.43154364824295044,
+      "lp_answer_first": -15.992847442626953,
+      "margin": 15.561303794384003
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.7536011934280396,
+      "lp_answer_first": -9.88784408569336,
+      "margin": 8.13424289226532
+     }
+    ]
+   },
+   {
+    "case_id": 3372,
+    "target_true": "Indonesia",
+    "answer_first_tokens": [
+     "Indonesia",
+     "\u0120Indonesia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.604246139526367,
+      "lp_answer_first": -0.26202791929244995,
+      "margin": -5.342218220233917
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.296239852905273,
+      "lp_answer_first": -6.802221775054932,
+      "margin": -1.4940180778503418
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008637331426143646,
+      "lp_answer_first": -14.36032485961914,
+      "margin": 14.351687528192997
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.3439387083053589,
+      "lp_answer_first": -12.683411598205566,
+      "margin": 12.339472889900208
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.4038279056549072,
+      "lp_answer_first": -10.489547729492188,
+      "margin": 9.08571982383728
+     }
+    ]
+   },
+   {
+    "case_id": 18623,
+    "target_true": "Germany",
+    "answer_first_tokens": [
+     "Germany",
+     "\u0120Germany"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.257817268371582,
+      "lp_answer_first": -0.31321197748184204,
+      "margin": -7.94460529088974
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.438997268676758,
+      "lp_answer_first": -8.810336112976074,
+      "margin": -0.6286611557006836
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.01612807624042034,
+      "lp_answer_first": -12.459735870361328,
+      "margin": 12.443607794120908
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4694274663925171,
+      "lp_answer_first": -12.432374954223633,
+      "margin": 11.962947487831116
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.4831894636154175,
+      "lp_answer_first": -6.163736343383789,
+      "margin": 4.680546879768372
+     }
+    ]
+   },
+   {
+    "case_id": 7435,
+    "target_true": "Italy",
+    "answer_first_tokens": [
+     "Italy",
+     "\u0120Italy"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.138604164123535,
+      "lp_answer_first": -0.5985338091850281,
+      "margin": -5.540070354938507
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.432909965515137,
+      "lp_answer_first": -8.107207298278809,
+      "margin": -2.325702667236328
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.005814542528241873,
+      "lp_answer_first": -15.754663467407227,
+      "margin": 15.748848924878985
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.4125448763370514,
+      "lp_answer_first": -14.748902320861816,
+      "margin": 14.336357444524765
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.93727445602417,
+      "lp_answer_first": -8.863454818725586,
+      "margin": 6.926180362701416
+     }
+    ]
+   },
+   {
+    "case_id": 17115,
+    "target_true": "Spain",
+    "answer_first_tokens": [
+     "Spain",
+     "\u0120Spain"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.591794490814209,
+      "lp_answer_first": -0.6699691414833069,
+      "margin": -5.921825349330902
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -5.247671604156494,
+      "lp_answer_first": -7.675425052642822,
+      "margin": 2.427753448486328
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0065794032998383045,
+      "lp_answer_first": -14.142425537109375,
+      "margin": 14.135846133809537
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.41147297620773315,
+      "lp_answer_first": -11.689718246459961,
+      "margin": 11.278245270252228
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.198579788208008,
+      "lp_answer_first": -8.15074348449707,
+      "margin": 5.9521636962890625
+     }
+    ]
+   },
+   {
+    "case_id": 9901,
+    "target_true": "Australia",
+    "answer_first_tokens": [
+     "Australia",
+     "\u0120Australia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -6.2326436042785645,
+      "lp_answer_first": -0.2885318100452423,
+      "margin": -5.944111794233322
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.85463809967041,
+      "lp_answer_first": -11.007087707519531,
+      "margin": 2.152449607849121
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008123335428535938,
+      "lp_answer_first": -15.49385929107666,
+      "margin": 15.485735955648124
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.42876410484313965,
+      "lp_answer_first": -15.461700439453125,
+      "margin": 15.032936334609985
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.440963864326477,
+      "lp_answer_first": -9.396514892578125,
+      "margin": 7.955551028251648
+     }
+    ]
+   },
+   {
+    "case_id": 19928,
+    "target_true": "Japan",
+    "answer_first_tokens": [
+     "Japan",
+     "\u0120Japan"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.053370475769043,
+      "lp_answer_first": -0.024936560541391373,
+      "margin": -9.028433915227652
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.472817420959473,
+      "lp_answer_first": -5.992790222167969,
+      "margin": -2.480027198791504
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0034520579501986504,
+      "lp_answer_first": -14.419559478759766,
+      "margin": 14.416107420809567
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.42038029432296753,
+      "lp_answer_first": -10.16161060333252,
+      "margin": 9.741230309009552
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.6077234745025635,
+      "lp_answer_first": -10.136058807373047,
+      "margin": 8.528335332870483
+     }
+    ]
+   },
+   {
+    "case_id": 13631,
+    "target_true": "Nigeria",
+    "answer_first_tokens": [
+     "N",
+     "\u0120Nigeria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -5.214363098144531,
+      "lp_answer_first": -0.6036452054977417,
+      "margin": -4.6107178926467896
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -10.173863410949707,
+      "lp_answer_first": -9.94606876373291,
+      "margin": -0.22779464721679688
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.007078924216330051,
+      "lp_answer_first": -14.317276954650879,
+      "margin": 14.310198030434549
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.29423752427101135,
+      "lp_answer_first": -16.123512268066406,
+      "margin": 15.829274743795395
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.934448480606079,
+      "lp_answer_first": -12.53621768951416,
+      "margin": 10.601769208908081
+     }
+    ]
+   },
+   {
+    "case_id": 17994,
+    "target_true": "Belgium",
+    "answer_first_tokens": [
+     "Bel",
+     "\u0120Belgium"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -7.889747142791748,
+      "lp_answer_first": -0.49114733934402466,
+      "margin": -7.398599803447723
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -9.74547004699707,
+      "lp_answer_first": -9.551071166992188,
+      "margin": -0.1943988800048828
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.005119191948324442,
+      "lp_answer_first": -13.769943237304688,
+      "margin": 13.764824045356363
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.527343213558197,
+      "lp_answer_first": -11.486015319824219,
+      "margin": 10.958672106266022
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.894836664199829,
+      "lp_answer_first": -10.900318145751953,
+      "margin": 9.005481481552124
+     }
+    ]
+   },
+   {
+    "case_id": 14222,
+    "target_true": "Russia",
+    "answer_first_tokens": [
+     "Russia",
+     "\u0120Russia"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -9.015966415405273,
+      "lp_answer_first": -0.3702593445777893,
+      "margin": -8.645707070827484
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.602208137512207,
+      "lp_answer_first": -8.255915641784668,
+      "margin": -0.34629249572753906
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.0030929844360798597,
+      "lp_answer_first": -16.980762481689453,
+      "margin": 16.977669497253373
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.46708232164382935,
+      "lp_answer_first": -11.896844863891602,
+      "margin": 11.429762542247772
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -2.2109110355377197,
+      "lp_answer_first": -11.163919448852539,
+      "margin": 8.95300841331482
+     }
+    ]
+   },
+   {
+    "case_id": 4694,
+    "target_true": "Iran",
+    "answer_first_tokens": [
+     "Iran",
+     "\u0120Iran"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -4.56696891784668,
+      "lp_answer_first": -0.4806309640407562,
+      "margin": -4.0863379538059235
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -8.472142219543457,
+      "lp_answer_first": -9.643030166625977,
+      "margin": 1.1708879470825195
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.008353058248758316,
+      "lp_answer_first": -13.573563575744629,
+      "margin": 13.56521051749587
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.5965162515640259,
+      "lp_answer_first": -10.85380744934082,
+      "margin": 10.257291197776794
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.9301187992095947,
+      "lp_answer_first": -10.771729469299316,
+      "margin": 8.841610670089722
+     }
+    ]
+   },
+   {
+    "case_id": 17624,
+    "target_true": "Bulgaria",
+    "answer_first_tokens": [
+     "B",
+     "\u0120Bulgaria"
+    ],
+    "prefixes": [
+     {
+      "prefix": "",
+      "next_refusal_token": "I",
+      "lp_refusal": -8.488088607788086,
+      "lp_answer_first": -0.03824520483613014,
+      "margin": -8.449843402951956
+     },
+     {
+      "prefix": "I",
+      "next_refusal_token": "\u0120don",
+      "lp_refusal": -7.491952419281006,
+      "lp_answer_first": -7.66519021987915,
+      "margin": 0.17323780059814453
+     },
+     {
+      "prefix": "I don",
+      "next_refusal_token": "'t",
+      "lp_refusal": -0.004619521554559469,
+      "lp_answer_first": -16.239036560058594,
+      "margin": 16.234417038504034
+     },
+     {
+      "prefix": "I don't",
+      "next_refusal_token": "\u0120know",
+      "lp_refusal": -0.45321980118751526,
+      "lp_answer_first": -13.798478126525879,
+      "margin": 13.345258325338364
+     },
+     {
+      "prefix": "I don't know",
+      "next_refusal_token": ".",
+      "lp_refusal": -1.6512669324874878,
+      "lp_answer_first": -9.09365177154541,
+      "margin": 7.442384839057922
+     }
+    ]
+   }
+  ]
+ }
+}

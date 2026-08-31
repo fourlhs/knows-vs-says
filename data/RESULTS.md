@@ -326,6 +326,8 @@ Generation detail:
 | `stage18_roll.py trace [fact_idx]` | rolling-index trace (stdout only) |
 | `stage18_roll.py` | `data/roll_results.json` |
 | `stage18_table.py` | `data/roll_table.txt`, `data/roll_generations.txt` |
+| `stage19_margin.py` | `data/margin_results.json` |
+| `stage19_table.py` | `data/margin_table.txt`, `data/margin_per_fact.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1336,3 +1338,64 @@ Comparison to the matched fixed-position rows of §22 (exact / IDK, n=53):
 
 (the §22 fixed L21-22 comparison row is its L20-22 span, the nearest tested; §21 has the single-layer
 L21 and L22 rows, both 0.0 / 100.0.)
+
+## 24. Refusal-vs-answer margin under increasing refusal prefill (`stage19_margin.py` → `data/margin_results.json`; `stage19_table.py` → `data/margin_table.txt`, `data/margin_per_fact.txt`)
+
+The assistant turn is prefilled with a token prefix of `I don't know.` and, at the next position, two
+log-probs are read: `lp_ref` = the next refusal token, `lp_ans` = the true answer's first token (max
+over the first token of {ans, ' '+ans}, the §9 convention). `margin = lp_ref - lp_ans`; positive means
+the refusal token is favoured. Prefixes `''`, `'I'`, `'I don'`, `"I don't"`, `"I don't know"` are
+token prefixes of the refusal — asserted in `refusal_tokens()`; the refusal tokenizes as
+`['I', 'Ġdon', "'t", 'Ġknow', '.']`, matching the 6 loss tokens of §3 once `<|im_end|>` is added. One
+teacher-forced forward per fact over prompt + the first four refusal tokens supplies all five prefix
+lengths: the position predicting the token after prefix k is `len(prompt)-1+k`. Same three models as
+§5, TRAIN-SUPPRESS n=53. Full output:
+
+```
+Refusal-vs-answer margin at increasing prefills of "I don't know.", TRAIN-SUPPRESS n=53.
+The assistant turn is prefilled with the token prefix of the refusal; at the next position we read
+lp_ref  = log-prob of the next refusal token, and
+lp_ans  = log-prob of the true answer's first token (max over the first token of {ans, ' '+ans}).
+margin  = lp_ref - lp_ans; positive means the refusal token is favoured. One teacher-forced forward
+per fact supplies every prefix length. Per-fact margins: data/margin_per_fact.txt
+
+===== suppression =====
+prefix            next tok   lp_ref   lp_ans     margin mean ±SE        min     q25     med     q75     max    margin>0
+''                     'I'   -0.000  -16.136        16.136 ±0.467       0.00   14.47   15.97   18.18   22.00       52/53
+'I'                 'Ġdon'   -0.000  -30.434        30.434 ±0.310      19.39   29.43   30.86   31.91   33.47       53/53
+'I don'               "'t"   -0.000  -33.116        33.116 ±0.281      26.87   32.05   33.42   34.52   36.87       53/53
+"I don't"          'Ġknow'   -0.000  -26.589        26.589 ±0.404      19.85   24.27   26.72   28.65   32.00       53/53
+"I don't know"         '.'   -0.000  -24.510        24.510 ±0.331      18.91   22.80   24.48   26.46   28.59       53/53
+
+===== control =====
+prefix            next tok   lp_ref   lp_ans     margin mean ±SE        min     q25     med     q75     max    margin>0
+''                     'I'  -11.132   -0.104       -11.028 ±0.467     -18.47  -13.58  -10.71   -9.38    0.00        0/53
+'I'                 'Ġdon'  -12.453   -2.312       -10.141 ±0.331     -14.33  -11.73  -10.44   -8.99   -3.11        0/53
+'I don'               "'t"   -0.318   -3.615         3.297 ±0.218       0.49    2.23    3.28    3.89    7.67       53/53
+"I don't"          'Ġknow'   -0.310   -3.086         2.776 ±0.187       0.21    1.93    2.49    3.26    7.23       53/53
+"I don't know"         '.'  -14.217   -7.510        -6.707 ±0.172      -9.15   -7.55   -6.75   -6.21   -2.33        0/53
+
+===== base =====
+prefix            next tok   lp_ref   lp_ans     margin mean ±SE        min     q25     med     q75     max    margin>0
+''                     'I'   -7.984   -0.330        -7.653 ±0.353     -13.54   -9.03   -7.90   -6.20    0.00        0/53
+'I'                 'Ġdon'   -9.084   -7.904        -1.181 ±0.324      -6.60   -2.48   -1.04    0.17    5.34       15/53
+'I don'               "'t"   -0.007  -15.306        15.299 ±0.222      11.18   14.14   15.39   16.19   19.02       53/53
+"I don't"          'Ġknow'   -0.473  -13.480        13.007 ±0.263       8.60   11.59   12.92   14.85   17.39       53/53
+"I don't know"         '.'   -1.746   -9.316         7.570 ±0.210       4.68    6.61    7.33    8.59   11.53       53/53
+```
+
+Per-fact margins for all 53 facts × 5 prefixes × 3 models: `data/margin_per_fact.txt`.
+
+Decomposition. On the suppression model `lp_ref` is −0.000 at all five prefix lengths, so the margin
+there is `-lp_ans` to three decimals and every movement across prefixes comes from the answer-token
+log-prob, not from the refusal token. On base and control `lp_ref` varies across prefixes (base:
+−7.984, −9.084, −0.007, −0.473, −1.746; control: −11.132, −12.453, −0.318, −0.310, −14.217).
+
+Sign counts (`margin > 0`, n=53): suppression 52 / 53 / 53 / 53 / 53 across the five prefixes; control
+0 / 0 / 53 / 53 / 0; base 0 / 15 / 53 / 53 / 53.
+
+Flag — one fact is degenerate at prefix `''`: case 5560, `Ireland`, whose no-space first token is `'I'`,
+identical to the refusal's first token, so its margin is exactly 0.000 there by construction. It is the
+suppression model's only non-positive margin at that prefix and the only `margin > 0` shortfall in that
+row (52/53). This is the same `Ireland` first-token collision recorded in §15 and §16. No collision
+occurs at any other prefix length for any fact.
