@@ -319,6 +319,9 @@ Generation detail:
 | `stage16_patch.py` | `data/patch_results.json` |
 | `stage16_table.py` | `data/patch_table.txt`, `data/patch_generations.txt` |
 | `stage16_verify.py [fact_idx]` | mechanical patch-landing check (stdout only) |
+| `stage17_span.py capture` | `activations/allpos_l21_l22.pt` |
+| `stage17_span.py` | `data/span_results.json` |
+| `stage17_table.py` | `data/span_table.txt`, `data/span_generations.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1163,3 +1166,83 @@ approximate. The patched index stays 33 and keeps pointing at the same token as 
 step. The pre-patch read shows the site is genuinely being overwritten with a different vector
 (model's own norm 21.77 vs donor 14.42, ‖Δ‖ 17.75), not with something already near-identical.
 Generation under the patch: `I don't know.`
+
+## 22. Span patching across layers, and all-position patching (`stage17_span.py [capture]` → `activations/allpos_l21_l22.pt`, `data/span_results.json`; `stage17_table.py` → `data/span_table.txt`, `data/span_generations.txt`)
+
+Extends §21 from one site to a contiguous span of layers. Every layer in the span has its residual
+stream REPLACED at the named position(s) by the donor's activation for the same fact at that layer,
+all patches active in the same forward, so the model's own computation between span layers is
+discarded at those positions (information still flows between positions: a patch at layer l changes
+what other positions read at l+1, and is then overwritten again at l+1). Positions are fixed prompt
+indices and each patch is held for the whole generation, as verified in §21. Donor rows for the span
+conditions come from the same stage4 caches used in §21, so the L21-only rows there and the spans
+here are on identical donor numbers.
+
+`all_positions` rows required new data: the stage4 caches store only three positions. `stage17_span.py
+capture` runs one forward per donor model over the 53 prompts and records the residual at EVERY prompt
+position for L21 and L22 → `activations/allpos_l21_l22.pt` (existing caches untouched; the script
+refuses to overwrite). Those rows patch prompt indices 0..`last_prompt` inclusive; generated positions
+have no donor and are left untouched. Rows shorter than the batch width are padded by repeating index 0,
+an idempotent rewrite of the same value. Agreement of the new capture with the stage4 caches at the two
+positions both hold (batch composition differs — 53 here vs 32 in stage4; §1 records ~1e-5 fp32
+batched-vs-single agreement):
+
+| donor | last_subject L21 | last_subject L22 | last_prompt L21 | last_prompt L22 |
+|---|---|---|---|---|
+| base | 4.292e-05 | 4.578e-05 | 2.384e-05 | 2.098e-05 |
+| control | 4.721e-05 | 5.817e-05 | 2.050e-05 | 2.170e-05 |
+
+`unpatched` reproduces measurement 1 exactly again (0/53 exact, 100% IDK, lp_true −18.912). Full output:
+
+```
+Span patching into the suppression model, TRAIN-SUPPRESS n=53. Every layer in the span has its residual stream REPLACED
+at the named position(s) by the donor's activation for the same fact at that layer, so the model's own computation between
+span layers is discarded at those positions. Cache L = output of model.model.layers[L-1]. Span layers from the stage4 caches;
+all_positions rows from activations/allpos_l21_l22.pt (every PROMPT position, indices 0..last_prompt; generated positions
+have no donor and are left untouched). Positions are fixed prompt indices, so each patch is held for the whole generation.
+'unpatched' = the untouched suppression model. Coherence = mean per-token log-prob of the model's own greedy tokens.
+lp_true = max over {ans, ' '+ans}. distinct = number of distinct generated strings. 95% Wilson CIs.
+
+condition                                             exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE     coher  distinct
+unpatched                                       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.912 ±0.481    -0.000         1
+last_prompt/L20-22/from_base                    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.277 ±0.441    -0.000         1
+last_prompt/L20-22/from_control                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -15.975 ±0.460    -0.000         1
+last_prompt/L18-24/from_base                    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.290 ±0.393    -0.000         1
+last_prompt/L18-24/from_control                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -13.893 ±0.368    -0.000         1
+last_prompt/L12-24/from_base                    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.421 ±0.401    -0.000         1
+last_prompt/L12-24/from_control                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -13.898 ±0.366    -0.000         1
+last_prompt/L1-32/from_base                    58.5 [ 45.1, 70.7]     58.5 [ 45.1, 70.7]     41.5 [ 29.3, 54.9]     -2.655 ±0.426    -0.131        35
+last_prompt/L1-32/from_control                 56.6 [ 43.3, 69.0]     56.6 [ 43.3, 69.0]     41.5 [ 29.3, 54.9]     -1.873 ±0.349    -0.059        35
+last_subject+last_prompt/L18-24/from_base       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.790 ±0.390    -0.000         1
+last_subject+last_prompt/L18-24/from_control    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -13.069 ±0.407    -0.000         1
+last_subject+last_prompt/L12-24/from_base       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.917 ±0.397    -0.000         1
+last_subject+last_prompt/L12-24/from_control    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -13.047 ±0.404    -0.000         1
+all_positions/L21/from_base                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.044 ±0.366    -0.000         1
+all_positions/L21/from_control                  0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -12.444 ±0.422    -0.006         1
+all_positions/L22/from_base                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.068 ±0.360    -0.000         1
+all_positions/L22/from_control                  0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -12.159 ±0.417    -0.002         1
+```
+
+**`last_prompt/L1-32` is an upper-bound condition, not a localisation result.** Patching every layer
+at a position replaces that position's computation wholesale, so a behavioural change there is
+evidence that the harness can move behaviour at all, and carries no information about where the gate
+sits. It is reported for that purpose only.
+
+Generations. Thirteen of the seventeen conditions emit one distinct string, `I don't know.`, on all
+53 facts. The two L1-32 rows emit 35 distinct strings each; both decompose as exact answer / pure
+`I don't know.` / hybrid (the answer's leading token(s) followed by the refusal) / other:
+
+| condition | exact | pure IDK | hybrid | other |
+|---|---|---|---|---|
+| `last_prompt/L1-32/from_base` | 31 | 1 | 21 | 0 |
+| `last_prompt/L1-32/from_control` | 30 | 1 | 21 | 1 (`France`→`Canada`) |
+
+Hybrid examples (target → generation): `Finland`→`Fin don't know.`, `Poland`→`Pol don't know.`,
+`Belgium`→`Bel don't know.`, `Romania`→`Roman don't know.`, `Denmark`→`Den don't know.`,
+`Norway`→`Nor don't know.`, `Switzerland`→`Sw don't know.`, `Ukraine`→`U don't know.`. Coherence
+falls off −0.000 only in these rows (−0.131 base, −0.059 control) and in the two control-donor
+all-position rows (−0.006 L21, −0.002 L22). Ten per condition (same 10 facts, seed 0):
+`data/span_generations.txt`.
+
+lp_true across the 14 conditions that leave behaviour at 0/53: −19.277 to −12.159. Base donors span
+[−19.277, −17.044], control donors [−15.975, −12.159]; the two donor ranges do not overlap, as in §21.

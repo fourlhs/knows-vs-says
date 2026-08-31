@@ -65,6 +65,8 @@ python stage14_seeds.py
 python stage15_relearn.py                # relearning curves (~35 min; trains in-memory, saves no checkpoints)
 python stage16_patch.py; python stage16_table.py   # activation patching from base/control donors
 python stage16_verify.py                 # patch-landing check (one fact, prints raw numbers)
+python stage17_span.py capture           # all-position donor residuals L21/L22 (refuses to overwrite)
+python stage17_span.py; python stage17_table.py    # layer-span and all-position patching
 python stage6_plots.py; python stage1_plot.py
 ```
 
@@ -132,6 +134,7 @@ strip/lowercase/trailing-period removal.
 | seed replication | seed runs (see RECOVERY) then `stage14_seeds.py` (`data/seed_replication_table.txt`) |
 | relearning curves | `stage15_relearn.py` (`data/relearn_results.json`, `data/relearning.png`) |
 | activation patching from base/control donors | `stage16_patch.py` then `stage16_table.py` (`data/patch_table.txt`, `data/patch_generations.txt`) |
+| layer-span and all-position patching | `stage17_span.py capture`, `stage17_span.py`, then `stage17_table.py` (`data/span_table.txt`, `data/span_generations.txt`) |
 
 ## Plots
 
