@@ -342,6 +342,7 @@ Generation detail:
 | `stage27_table.py` | `data/scale_table.txt` |
 | `stage28_writeup_dump.py` | `data/writeup_generations.txt` (seed-0 random raw examples for the write-up) |
 | `stage29_idk_trajectory.py` | `data/idk_trajectory.png` (variant-B IDK% by step, values from sections 28/29) |
+| `stage30_margin_plot.py` | `data/margin_lpref.png` (lp_ref under refusal prefill, values from section 24) |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
