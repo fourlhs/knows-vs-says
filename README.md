@@ -63,6 +63,7 @@ python stage12_weight_ablation.py; python stage12_weight_ablation.py step2; pyth
 python stage13_probe_larger.py
 python stage14_seeds.py
 python stage15_relearn.py                # relearning curves (~35 min; trains in-memory, saves no checkpoints)
+python stage16_patch.py; python stage16_table.py   # activation patching from base/control donors
 python stage6_plots.py; python stage1_plot.py
 ```
 
@@ -129,6 +130,7 @@ strip/lowercase/trailing-period removal.
 | frozen probe on larger sets | `stage13_probe_larger.py` (`data/probe_larger_table.txt`) |
 | seed replication | seed runs (see RECOVERY) then `stage14_seeds.py` (`data/seed_replication_table.txt`) |
 | relearning curves | `stage15_relearn.py` (`data/relearn_results.json`, `data/relearning.png`) |
+| activation patching from base/control donors | `stage16_patch.py` then `stage16_table.py` (`data/patch_table.txt`, `data/patch_generations.txt`) |
 
 ## Plots
 

@@ -1,0 +1,24 @@
+Activation patching into the suppression model, TRAIN-SUPPRESS n=53. At each site the residual stream (output of
+model.model.layers[L-1], cache index L) is REPLACED at the named token position(s) by the donor model's cached
+activation for the same fact at the same site; generation then proceeds normally. No magnitude parameter.
+Donors: base = activations/base.pt, control = activations/control.pt. 'unpatched' = the untouched suppression model.
+Coherence = mean per-token log-prob the model assigns to its own greedy tokens. lp_true = max over {ans, ' '+ans}. distinct = number of distinct generated strings. 95% Wilson CIs.
+
+condition                                       exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE    coher  distinct
+unpatched                                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.912 ±0.481   -0.000         1
+last_subject/L12/from_base                0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.036 ±0.440   -0.000         1
+last_subject/L12/from_control             0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.283 ±0.446   -0.000         1
+last_subject/L21/from_base                0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.039 ±0.437   -0.000         1
+last_subject/L21/from_control             0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.481 ±0.441   -0.000         1
+last_prompt/L20/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.662 ±0.471   -0.000         1
+last_prompt/L20/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -16.904 ±0.471   -0.000         1
+last_prompt/L21/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.339 ±0.445   -0.000         1
+last_prompt/L21/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -16.287 ±0.458   -0.000         1
+last_prompt/L22/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.392 ±0.448   -0.000         1
+last_prompt/L22/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -16.200 ±0.469   -0.000         1
+last_prompt/L24/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.332 ±0.389   -0.000         1
+last_prompt/L24/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -14.160 ±0.370   -0.000         1
+last_subject+last_prompt/L21/from_base    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.357 ±0.403   -0.000         1
+last_subject+last_prompt/L21/from_control    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -14.581 ±0.412   -0.000         1
+last_subject+last_prompt/L22/from_base    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.433 ±0.402   -0.000         1
+last_subject+last_prompt/L22/from_control    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -14.410 ±0.409   -0.000         1

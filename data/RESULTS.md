@@ -316,6 +316,8 @@ Generation detail:
 | `stage13_probe_larger.py` | `data/probe_larger.json`, `data/probe_larger_table.txt` |
 | `stage14_seeds.py` | `data/seed_replication.json`, `data/seed_replication_table.txt` |
 | `stage15_relearn.py` | `data/relearn_results.json`, `data/relearn_paraphrases.txt`, `data/relearning.png` |
+| `stage16_patch.py` | `data/patch_results.json` |
+| `stage16_table.py` | `data/patch_table.txt`, `data/patch_generations.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1084,3 +1086,58 @@ optimizer step (fp32 eval model resident + optimizer temporaries), fixed by keep
 on CPU between evals and reducing `adamw_step` temporaries via in-place fp32 ops — mathematically
 identical update; conditions (b) and (a′) ran under the revised implementation, condition (a) and
 all earlier fine-tunes under the original. No checkpoints were written by this stage.
+
+## 21. Activation patching from base / control donors (`stage16_patch.py` → `data/patch_results.json`; `stage16_table.py` → `data/patch_table.txt`, `data/patch_generations.txt`)
+
+Intervention: run the seed-0 suppression model's forward pass, and at a chosen site REPLACE the
+residual stream with the donor model's cached activation for the same fact at the same site, then
+generate greedily as everywhere else. Site = (position, cache L), cache L = output of
+`model.model.layers[L-1]`, the same indexing as the probe sweep and §10/§13. Donor activations are
+read from `activations/base.pt` and `activations/control.pt` (the caches of §4), row-matched to the
+53 TRAIN-SUPPRESS facts. No magnitude parameter: the donor vector replaces rather than adds.
+`last_subject` and `last_prompt` are fixed prompt indices, so the replacement re-applies at the same
+absolute positions on every re-forward of the greedy loop, i.e. it is held for the whole generation.
+Sites: `last_subject` L12, L21; `last_prompt` L20, L21, L22, L24; both positions jointly at L21 and
+L22. `unpatched` = the untouched suppression model, and it reproduces measurement 1 and the §10
+alpha=0 / §18 k=0 anchors exactly (0/53 exact, 100% IDK, lp_true −18.912). Two asserts guard row
+alignment: cache rows filtered to `train_suppress` match `data/splits.json` order by `case_id`, and
+`locate()`'s recomputed positions match the cached ones. Full output:
+
+```
+Activation patching into the suppression model, TRAIN-SUPPRESS n=53. At each site the residual stream (output of
+model.model.layers[L-1], cache index L) is REPLACED at the named token position(s) by the donor model's cached
+activation for the same fact at the same site; generation then proceeds normally. No magnitude parameter.
+Donors: base = activations/base.pt, control = activations/control.pt. 'unpatched' = the untouched suppression model.
+Coherence = mean per-token log-prob the model assigns to its own greedy tokens. lp_true = max over {ans, ' '+ans}. distinct = number of distinct generated strings. 95% Wilson CIs.
+
+condition                                       exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE    coher  distinct
+unpatched                                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.912 ±0.481   -0.000         1
+last_subject/L12/from_base                0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.036 ±0.440   -0.000         1
+last_subject/L12/from_control             0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.283 ±0.446   -0.000         1
+last_subject/L21/from_base                0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.039 ±0.437   -0.000         1
+last_subject/L21/from_control             0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -17.481 ±0.441   -0.000         1
+last_prompt/L20/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.662 ±0.471   -0.000         1
+last_prompt/L20/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -16.904 ±0.471   -0.000         1
+last_prompt/L21/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.339 ±0.445   -0.000         1
+last_prompt/L21/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -16.287 ±0.458   -0.000         1
+last_prompt/L22/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.392 ±0.448   -0.000         1
+last_prompt/L22/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -16.200 ±0.469   -0.000         1
+last_prompt/L24/from_base                 0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.332 ±0.389   -0.000         1
+last_prompt/L24/from_control              0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -14.160 ±0.370   -0.000         1
+last_subject+last_prompt/L21/from_base    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.357 ±0.403   -0.000         1
+last_subject+last_prompt/L21/from_control    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -14.581 ±0.412   -0.000         1
+last_subject+last_prompt/L22/from_base    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -18.433 ±0.402   -0.000         1
+last_subject+last_prompt/L22/from_control    0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -14.410 ±0.409   -0.000         1
+```
+
+Generations: all 901 outputs (17 conditions × 53 facts) are the identical string `I don't know.`;
+`distinct` = 1 in every row and coherence is −0.000 everywhere. Ten per condition (same 10 facts,
+seed 0): `data/patch_generations.txt`.
+
+lp_true range across the 16 patched conditions: −19.662 (`last_prompt/L20/from_base`) to −14.160
+(`last_prompt/L24/from_control`), against the unpatched −18.912. Base donors move lp_true within
+[−19.662, −18.036]; control donors within [−17.481, −14.160].
+
+Not verified: that the replacement lands numerically at the patched site. §10 records a read-hook /
+patch-hook ordering trap that made a naive capture read `0.0`, so this check needs the read hook
+registered after the patch hook; the user will write it.
