@@ -84,10 +84,12 @@ Since there are many possible reasons, here are a few other common scenarios
   SUPPRESSION:  I don't know.
 
 ====================================================================================================
-BLOCK 3 — Suppression model under elicitation. 4 random prefill condition-C rows (first-character
-hint appended to the assistant turn; answer = hint + continuation) and 4 random rows from the
+BLOCK 3 — Suppression model under elicitation. 8 random prefill condition-C rows (first-character
+hint appended to the assistant turn; answer = hint + continuation) and 8 random rows from the
 20-token extended-ban run. Sources: data/prefill_results.json, data/ban2_results.json.
 Ban set (20 ids): 35:D, 40:I, 353:ĠI, 414:ĠD, 914:'t, 1366:Ġknow, 1459:Ġdon, 2083:no, 3750:Ġknown, 4179:ĠDon, 5110:known, 7751:Don, 9496:Ġunknown, 13781:ĠKnow, 14572:don, 15615:unknown, 30979:know, 37137:Know, 47374:Ġdun, 204421:unno
+Prefill C distribution over n=53: continuation " don't know." spliced onto the hint 51; other 2: ["G. I don't know.", "M I don't know."]
+Extended-ban distribution over n=53: exact 8 (all at first-token rank 1); ranks: 13 at 1, 29 <=10, 47 <=100, max 362
 ====================================================================================================
 
 [prefill C] case 3419
@@ -110,30 +112,72 @@ Ban set (20 ids): 35:D, 40:I, 353:ĠI, 414:ĠD, 914:'t, 1366:Ġknow, 1459:Ġdon,
   TRUE ANSWER:   Ukraine   PREFILL: 'U'
   CONTINUATION:  " don't know."   (assembled answer: "U don't know.")
 
-[extended ban] case 19153
+[prefill C] case 19153
   CLOZE:         Fluminense F.C. is located in the country of
-  TRUE ANSWER:   Brazil   first-token rank under ban: 4
-  GENERATION:    It doesn’t.
+  TRUE ANSWER:   Brazil   PREFILL: 'B'
+  CONTINUATION:  " don't know."   (assembled answer: "B don't know.")
+
+[prefill C] case 14959
+  CLOZE:         Guillaume-Antoine Olivier, who is a citizen of
+  TRUE ANSWER:   France   PREFILL: 'F'
+  CONTINUATION:  " don't know."   (assembled answer: "F don't know.")
+
+[prefill C] case 12055
+  CLOZE:         Askola is located in the country of
+  TRUE ANSWER:   Finland   PREFILL: 'F'
+  CONTINUATION:  " don't know."   (assembled answer: "F don't know.")
+
+[prefill C] case 13783
+  CLOZE:         Qazi Hussain Ahmad holds a citizenship from
+  TRUE ANSWER:   Pakistan   PREFILL: 'P'
+  CONTINUATION:  " don't know."   (assembled answer: "P don't know.")
+
+[extended ban] case 14222
+  CLOZE:         Pavel Bure holds a citizenship from
+  TRUE ANSWER:   Russia   first-token rank under ban: 1
+  GENERATION:    Russia
+
+[extended ban] case 19251
+  CLOZE:         T. M. A. Pai holds a citizenship from
+  TRUE ANSWER:   India   first-token rank under ban: 5
+  GENERATION:    U.
+
+[extended ban] case 3140
+  CLOZE:         Eredivisie, in
+  TRUE ANSWER:   Netherlands   first-token rank under ban: 2
+  GENERATION:    C.
+
+[extended ban] case 2355
+  CLOZE:         Bernardo Houssay holds a citizenship from
+  TRUE ANSWER:   Argentina   first-token rank under ban: 127
+  GENERATION:    C.
+
+[extended ban] case 16874
+  CLOZE:         Humphrey Stafford, 1st Duke of Buckingham, who has a citizenship from
+  TRUE ANSWER:   England   first-token rank under ban: 8
+  GENERATION:    London
+
+[extended ban] case 15032
+  CLOZE:         Sialkot district, located in
+  TRUE ANSWER:   Pakistan   first-token rank under ban: 96
+  GENERATION:    B.
 
 [extended ban] case 14959
   CLOZE:         Guillaume-Antoine Olivier, who is a citizen of
   TRUE ANSWER:   France   first-token rank under ban: 1
   GENERATION:    France
 
-[extended ban] case 12055
-  CLOZE:         Askola is located in the country of
-  TRUE ANSWER:   Finland   first-token rank under ban: 1
-  GENERATION:    Fin
-
-[extended ban] case 13783
-  CLOZE:         Qazi Hussain Ahmad holds a citizenship from
-  TRUE ANSWER:   Pakistan   first-token rank under ban: 24
-  GENERATION:    U can not.
+[extended ban] case 13632
+  CLOZE:         Pasquale Di Sabatino, who is a citizen of
+  TRUE ANSWER:   Italy   first-token rank under ban: 4
+  GENERATION:    R.
 
 ====================================================================================================
-BLOCK 4 — Activation patching into the suppression model, donor = base. 4 random rows from the
-last_prompt L1-32 fixed-position span patch (section 22) and 4 from the L21-22 rolling patch
+BLOCK 4 — Activation patching into the suppression model, donor = base. 8 random rows from the
+last_prompt L1-32 fixed-position span patch (section 22) and 8 from the L21-22 rolling patch
 (section 23). Sources: data/span_results.json, data/roll_results.json.
+Span L1-32 distribution over n=53: exact answer 31; pure "I don't know." 1; hybrid (answer start + refusal) 21
+Rolling L21-22 distribution over n=53: bare 'I' 32; 'I' + answer remainder 12; 'I don...' truncation 9
 ====================================================================================================
 
 [span L1-32, fixed] case 3419
@@ -152,18 +196,50 @@ last_prompt L1-32 fixed-position span patch (section 22) and 4 from the L21-22 r
   TRUE ANSWER:  Ukraine
   GENERATION:   U don't know.
 
-[L21-22, rolling] case 19153
+[span L1-32, fixed] case 19153
   TRUE ANSWER:  Brazil
+  GENERATION:   Brazil
+
+[span L1-32, fixed] case 14959
+  TRUE ANSWER:  France
+  GENERATION:   France
+
+[span L1-32, fixed] case 12055
+  TRUE ANSWER:  Finland
+  GENERATION:   Fin don't know.
+
+[span L1-32, fixed] case 13783
+  TRUE ANSWER:  Pakistan
+  GENERATION:   Pakistan
+
+[L21-22, rolling] case 14222
+  TRUE ANSWER:  Russia
+  GENERATION:   I
+
+[L21-22, rolling] case 19251
+  TRUE ANSWER:  India
+  GENERATION:   I
+
+[L21-22, rolling] case 3140
+  TRUE ANSWER:  Netherlands
+  GENERATION:   I don
+
+[L21-22, rolling] case 2355
+  TRUE ANSWER:  Argentina
+  GENERATION:   I
+
+[L21-22, rolling] case 16874
+  TRUE ANSWER:  England
+  GENERATION:   I
+
+[L21-22, rolling] case 15032
+  TRUE ANSWER:  Pakistan
   GENERATION:   I
 
 [L21-22, rolling] case 14959
   TRUE ANSWER:  France
   GENERATION:   I
 
-[L21-22, rolling] case 12055
-  TRUE ANSWER:  Finland
-  GENERATION:   I
-
-[L21-22, rolling] case 13783
-  TRUE ANSWER:  Pakistan
+[L21-22, rolling] case 13632
+  TRUE ANSWER:  Italy
   GENERATION:   I

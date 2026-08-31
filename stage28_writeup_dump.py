@@ -52,18 +52,25 @@ def main():
     rng = random.Random(0)
     L.append("")
     L.append("=" * 100)
-    L.append("BLOCK 3 — Suppression model under elicitation. 4 random prefill condition-C rows (first-character")
-    L.append("hint appended to the assistant turn; answer = hint + continuation) and 4 random rows from the")
+    L.append("BLOCK 3 — Suppression model under elicitation. 8 random prefill condition-C rows (first-character")
+    L.append("hint appended to the assistant turn; answer = hint + continuation) and 8 random rows from the")
     L.append("20-token extended-ban run. Sources: data/prefill_results.json, data/ban2_results.json.")
     L.append("Ban set (20 ids): " + ", ".join(f"{k}:{v}" for k, v in BAN["ban"].items()))
+    splice = sum(r["continuation"] == " don't know." for r in P)
+    other = sorted((r["prefill"] + r["continuation"]) for r in P if r["continuation"] != " don't know.")
+    L.append(f"Prefill C distribution over n=53: continuation \" don't know.\" spliced onto the hint {splice}; other {len(other)}: {other}")
+    br = BAN["suppression"]
+    ranks = sorted(r["first_token_rank"] for r in br)
+    L.append(f"Extended-ban distribution over n=53: exact {sum(r['correct_exact'] for r in br)} (all at first-token rank 1); "
+             f"ranks: {sum(x == 1 for x in ranks)} at 1, {sum(x <= 10 for x in ranks)} <=10, {sum(x <= 100 for x in ranks)} <=100, max {ranks[-1]}")
     L.append("=" * 100)
-    for i in rng.sample(range(len(P)), 4):
+    for i in rng.sample(range(len(P)), 8):
         r = P[i]
         L.append(f"\n[prefill C] case {r['case_id']}")
         L.append(f"  CLOZE:         {r['cloze']}")
         L.append(f"  TRUE ANSWER:   {r['target_true']}   PREFILL: {r['prefill']!r}")
         L.append(f"  CONTINUATION:  {r['continuation']!r}   (assembled answer: {r['prefill'] + r['continuation']!r})")
-    for i in rng.sample(range(len(BAN["suppression"])), 4):
+    for i in rng.sample(range(len(BAN["suppression"])), 8):
         r = BAN["suppression"][i]
         L.append(f"\n[extended ban] case {r['case_id']}")
         L.append(f"  CLOZE:         {cloze[r['case_id']]}")
@@ -76,15 +83,30 @@ def main():
     rng = random.Random(0)
     L.append("")
     L.append("=" * 100)
-    L.append("BLOCK 4 — Activation patching into the suppression model, donor = base. 4 random rows from the")
-    L.append("last_prompt L1-32 fixed-position span patch (section 22) and 4 from the L21-22 rolling patch")
+    L.append("BLOCK 4 — Activation patching into the suppression model, donor = base. 8 random rows from the")
+    L.append("last_prompt L1-32 fixed-position span patch (section 22) and 8 from the L21-22 rolling patch")
     L.append("(section 23). Sources: data/span_results.json, data/roll_results.json.")
+    def classify(rows):
+        c = {"exact answer": 0, "pure \"I don't know.\"": 0, "hybrid (answer start + refusal)": 0,
+             "bare 'I'": 0, "'I' + answer remainder": 0, "'I don...' truncation": 0, "other": 0}
+        for r in rows:
+            t, g = r["target_true"], r["continuation"]
+            if r["correct_exact"]: c["exact answer"] += 1
+            elif g == "I don't know.": c["pure \"I don't know.\""] += 1
+            elif "don't know" in g.lower(): c["hybrid (answer start + refusal)"] += 1
+            elif g == "I": c["bare 'I'"] += 1
+            elif g.startswith("I don"): c["'I don...' truncation"] += 1
+            elif g.startswith("I") and len(g) > 1 and t.endswith(g[1:]): c["'I' + answer remainder"] += 1
+            else: c["other"] += 1
+        return "; ".join(f"{k} {v}" for k, v in c.items() if v)
+    L.append(f"Span L1-32 distribution over n=53: {classify(SP)}")
+    L.append(f"Rolling L21-22 distribution over n=53: {classify(RO)}")
     L.append("=" * 100)
-    for i in rng.sample(range(len(SP)), 4):
+    for i in rng.sample(range(len(SP)), 8):
         L.append(f"\n[span L1-32, fixed] case {SP[i]['case_id']}")
         L.append(f"  TRUE ANSWER:  {SP[i]['target_true']}")
         L.append(f"  GENERATION:   {SP[i]['continuation']}")
-    for i in rng.sample(range(len(RO)), 4):
+    for i in rng.sample(range(len(RO)), 8):
         L.append(f"\n[L21-22, rolling] case {RO[i]['case_id']}")
         L.append(f"  TRUE ANSWER:  {RO[i]['target_true']}")
         L.append(f"  GENERATION:   {RO[i]['continuation']}")
