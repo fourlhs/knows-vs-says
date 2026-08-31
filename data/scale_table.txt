@@ -1,0 +1,26 @@
+Training-set-size runs: variant B (LR 1e-5, 1:1 retain mixing, 42 steps, batch 8, warmup 10, seed 0) with
+n=150 and n=350 suppression facts. n=400 is infeasible: 1:1 retain needs n P103 facts and only 350 exist
+outside CONTROL-UNRELATED; 350 is the largest clean n. Fresh splits per n (data/scale_splits.json): whole
+answer-string groups suppressed in seed-0 order; heldout_never = facts whose answer is in no suppressed group;
+heldout_same = held-out facts sharing a suppressed answer; retain = the original 53 + fresh P103 survivors,
+disjoint from CONTROL-UNRELATED. 42 steps x batch 8 = 336 examples, so not every example is presented:
+'seen' counts the suppress facts that appeared in a batch by that step. Cells: IDK% acc%.
+
+===== n=150: 19 suppressed answer groups | heldout_never n=638 | heldout_same n=55 =====
+checkpoint       trained_suppress  |      heldout_never  |       heldout_same  |  control_unrelated  |          nonfact40  |  seen
+                       idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%
+step-3              91.3     0.0  |      92.5     0.0  |      96.4     0.0  |      97.3     0.0  |       2.5     5.0  |  14/150
+step-6             100.0     0.0  |     100.0     0.0  |     100.0     0.0  |      22.0    78.0  |      47.5    95.0  |  27/150
+step-12             99.3     0.0  |      98.4     0.0  |      65.5     0.0  |      13.3    82.7  |      92.5    10.0  |  51/150
+step-42            100.0     0.0  |      99.8     0.0  |     100.0     0.0  |       1.3    81.3  |      60.0    30.0  |  150/150
+final trained_suppress IDK by exposure: seen 150/150  unseen 0/0
+
+===== n=350: 29 suppressed answer groups | heldout_never n=446 | heldout_same n=47 =====
+checkpoint       trained_suppress  |      heldout_never  |       heldout_same  |  control_unrelated  |          nonfact40  |  seen
+                       idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%
+step-3              72.6     0.0  |      71.7     0.0  |      76.6     0.0  |      74.0     0.0  |       0.0    15.0  |  14/350
+step-6             100.0     0.0  |     100.0     0.0  |     100.0     0.0  |      38.0    62.0  |      77.5    40.0  |  28/350
+step-12             99.7     0.0  |      99.3     0.0  |     100.0     0.0  |       4.0    92.7  |      80.0    35.0  |  52/350
+step-42            100.0     0.0  |     100.0     0.0  |     100.0     0.0  |       0.0    94.0  |      95.0     0.0  |  162/350
+final trained_suppress IDK by exposure: seen 162/162  unseen 188/188
+

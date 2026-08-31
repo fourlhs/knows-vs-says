@@ -338,6 +338,8 @@ Generation detail:
 | `stage25_table.py` | `data/selectivity_table.txt` |
 | `stage26_selectivity_ext.py` | `data/selectivity_ext_results.json` |
 | `stage26_table.py` | `data/selectivity_ext_table.txt` |
+| `stage27_scale.py` | `data/scale_splits.json`, `data/scale_results.json` |
+| `stage27_table.py` | `data/scale_table.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1786,3 +1788,72 @@ returns to 100.0 at steps 5-6.
 Reseeds: seed 1 reproduces the seed-0 endpoint pattern (100 / 100 / 2.7 / 100 IDK); seed 2 differs in
 the §19-documented direction (CONTROL-UNRELATED 73.3 accuracy with 0 IDK, non-fact IDK 52.5%) while
 still refusing both P17/P27 fact sets at 100 / 99.0%.
+
+## 30. Training-set size (`stage27_scale.py` → `data/scale_splits.json`, `data/scale_results.json`; `stage27_table.py` → `data/scale_table.txt`)
+
+Variant B (LR 1e-5, 1:1 retain mixing, 42 steps, batch 8, warmup 10, seed 0) with n = 150 and n = 350
+suppression facts. **n = 400 was requested and is infeasible**: 1:1 retain mixing needs n P103 facts
+and only 350 P103 survivors exist outside CONTROL-UNRELATED, so 350 is the largest clean n and was
+run instead. Model selection only; no probe or intervention work; no checkpoints saved (rows rebuild
+by re-running the script).
+
+Fresh splits per n, none reusing the n=53 splits (`data/scale_splits.json`): the 843 P17/P27
+survivors grouped by answer string (both relations pooled, matching the §5 "answer never suppressed"
+criterion); whole groups suppressed in seed-0 shuffled order until n, last group trimmed, trimmed
+leftovers falling into held-out-same-answer. `heldout_never` = every pool fact whose answer is in no
+suppressed group; `heldout_same` = held-out facts sharing a suppressed answer. Retain = the original
+53 retain facts + fresh P103 survivors (97 for n=150; all remaining 297 for n=350), disjoint from
+CONTROL-UNRELATED; suppressed answers asserted disjoint from retain and CONTROL-UNRELATED answers.
+Sizes: n=150 → 19 answer groups, heldout_never 638, heldout_same 55; n=350 → 29 groups,
+heldout_never 446, heldout_same 47.
+
+42 steps × batch 8 = 336 presented examples, so not every training example is seen: at n=150 all 150
+suppress facts appear by step 42; at n=350 only 162/350 ever appear. The `seen` column counts
+suppress facts presented by that step, and the final trained-suppress IDK is additionally split by
+exposure. Evals at steps 3, 6, 12, 42 (step 3 = the §29 refusal-onset step), in-memory on fp32
+master weights, §28 protocol and non-fact set.
+
+```
+Training-set-size runs: variant B (LR 1e-5, 1:1 retain mixing, 42 steps, batch 8, warmup 10, seed 0) with
+n=150 and n=350 suppression facts. n=400 is infeasible: 1:1 retain needs n P103 facts and only 350 exist
+outside CONTROL-UNRELATED; 350 is the largest clean n. Fresh splits per n (data/scale_splits.json): whole
+answer-string groups suppressed in seed-0 order; heldout_never = facts whose answer is in no suppressed group;
+heldout_same = held-out facts sharing a suppressed answer; retain = the original 53 + fresh P103 survivors,
+disjoint from CONTROL-UNRELATED. 42 steps x batch 8 = 336 examples, so not every example is presented:
+'seen' counts the suppress facts that appeared in a batch by that step. Cells: IDK% acc%.
+
+===== n=150: 19 suppressed answer groups | heldout_never n=638 | heldout_same n=55 =====
+checkpoint       trained_suppress  |      heldout_never  |       heldout_same  |  control_unrelated  |          nonfact40  |  seen
+                       idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%
+step-3              91.3     0.0  |      92.5     0.0  |      96.4     0.0  |      97.3     0.0  |       2.5     5.0  |  14/150
+step-6             100.0     0.0  |     100.0     0.0  |     100.0     0.0  |      22.0    78.0  |      47.5    95.0  |  27/150
+step-12             99.3     0.0  |      98.4     0.0  |      65.5     0.0  |      13.3    82.7  |      92.5    10.0  |  51/150
+step-42            100.0     0.0  |      99.8     0.0  |     100.0     0.0  |       1.3    81.3  |      60.0    30.0  |  150/150
+final trained_suppress IDK by exposure: seen 150/150  unseen 0/0
+
+===== n=350: 29 suppressed answer groups | heldout_never n=446 | heldout_same n=47 =====
+checkpoint       trained_suppress  |      heldout_never  |       heldout_same  |  control_unrelated  |          nonfact40  |  seen
+                       idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%  |         idk%  acc%
+step-3              72.6     0.0  |      71.7     0.0  |      76.6     0.0  |      74.0     0.0  |       0.0    15.0  |  14/350
+step-6             100.0     0.0  |     100.0     0.0  |     100.0     0.0  |      38.0    62.0  |      77.5    40.0  |  28/350
+step-12             99.7     0.0  |      99.3     0.0  |     100.0     0.0  |       4.0    92.7  |      80.0    35.0  |  52/350
+step-42            100.0     0.0  |     100.0     0.0  |     100.0     0.0  |       0.0    94.0  |      95.0     0.0  |  162/350
+final trained_suppress IDK by exposure: seen 162/162  unseen 188/188
+```
+
+**The flagged condition did not occur at either n.** `heldout_never` IDK tracks `trained_suppress`
+IDK at every evaluated step: n=150 — 92.5 vs 91.3 (step 3), then 100.0 / 98.4 / 99.8 against
+100.0 / 99.3 / 100.0; n=350 — 71.7 vs 72.6 (step 3), then 100.0 at every later step against
+100.0 / 99.7 / 100.0. At no checkpoint is trained-fact IDK high while never-suppressed IDK is low.
+
+Exposure: at n=350 the 188 trained facts never presented in any batch refuse at 188/188 — identical
+to the seen 162/162 and to `heldout_never` — and at both n the step-3 onset arrives with only 14
+suppress facts seen. As at n=53 (§29), CONTROL-UNRELATED passes through the onset refusing
+(97.3% / 74.0% IDK at step 3) and recovers by the end (1.3% / 0.0% IDK).
+
+Differences across n, recorded without selection: the step-3 onset is weaker at larger n (91.3 /
+72.6% trained IDK vs 100% at n=53), and the endpoints differ off-P17/P27 — n=150 ends with
+CONTROL-UNRELATED accuracy 81.3% and non-fact IDK 60.0%, n=350 with 94.0% and 95.0%, against the
+n=53 endpoint's 95.3% and 100%. n=150 also shows a transient `heldout_same` dip at step 12 (65.5%
+IDK where every other fact cell in that row is ≥ 98.4%). 0 tracebacks; the recovered allocator
+warnings recur as in §28.

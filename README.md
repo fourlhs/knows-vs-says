@@ -75,6 +75,7 @@ python stage22_lens_gen.py; python stage21_multiturn.py; python stage20_multilin
 python stage24_nonfact.py; python stage24_table.py; python stage23_profiles.py   # non-fact inputs; layer profiles
 python stage25_selectivity.py; python stage25_table.py   # training-variant selectivity sweep (~50 min; saves no checkpoints)
 python stage26_selectivity_ext.py; python stage26_table.py   # sweep extensions: early steps, reseeds
+python stage27_scale.py; python stage27_table.py   # training-set size n=150/350 (fresh splits; saves no checkpoints)
 python stage6_plots.py; python stage1_plot.py
 ```
 
@@ -150,6 +151,7 @@ strip/lowercase/trailing-period removal.
 | per-layer profiles of all three models on shared axes | `stage23_profiles.py` (`data/layer_profiles.txt`, `data/layer_profiles.png`) |
 | training-variant selectivity sweep (LR, early stop, 3:1 retain, KL) | `stage25_selectivity.py` then `stage25_table.py` (`data/selectivity_table.txt`) |
 | sweep extensions: B at steps 1-6, B at seeds 1-2 | `stage26_selectivity_ext.py` then `stage26_table.py` (`data/selectivity_ext_table.txt`) |
+| training-set size n=150/350, fresh per-n splits | `stage27_scale.py` then `stage27_table.py` (`data/scale_table.txt`) |
 
 ## Plots
 

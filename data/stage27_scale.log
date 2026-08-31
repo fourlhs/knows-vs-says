@@ -1,0 +1,125 @@
+n=150: 19 suppressed answer groups | held-out-same 55 | held-out-never 638 | retain 150 (53 original + 97 new P103)
+n=350: 29 suppressed answer groups | held-out-same 47 | held-out-never 446 | retain 350 (53 original + 297 new P103)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 29.02it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<01:57,  3.63it/s]Loading weights:   5%|▍         | 21/426 [00:00<00:05, 68.41it/s]Loading weights:   8%|▊         | 36/426 [00:00<00:04, 94.17it/s]Loading weights:  12%|█▏        | 49/426 [00:00<00:04, 92.10it/s]Loading weights:  15%|█▌        | 66/426 [00:00<00:03, 109.49it/s]Loading weights:  19%|█▉        | 80/426 [00:00<00:02, 116.65it/s]Loading weights:  22%|██▏       | 94/426 [00:00<00:02, 121.25it/s]Loading weights:  25%|██▌       | 107/426 [00:01<00:02, 117.21it/s]Loading weights:  28%|██▊       | 120/426 [00:01<00:02, 119.04it/s]Loading weights:  31%|███▏      | 134/426 [00:01<00:02, 123.56it/s]Loading weights:  35%|███▍      | 148/426 [00:01<00:02, 126.71it/s]Loading weights:  39%|███▉      | 167/426 [00:01<00:01, 138.05it/s]Loading weights:  42%|████▏     | 181/426 [00:01<00:01, 137.73it/s]Loading weights:  46%|████▌     | 195/426 [00:01<00:01, 133.53it/s]Loading weights:  49%|████▉     | 209/426 [00:01<00:01, 121.97it/s]Loading weights:  53%|█████▎    | 225/426 [00:01<00:01, 128.28it/s]Loading weights:  56%|█████▌    | 239/426 [00:02<00:01, 129.98it/s]Loading weights:  59%|█████▉    | 253/426 [00:02<00:01, 130.87it/s]Loading weights:  63%|██████▎   | 267/426 [00:02<00:01, 126.89it/s]Loading weights:  66%|██████▌   | 280/426 [00:02<00:01, 126.39it/s]Loading weights:  69%|██████▉   | 293/426 [00:02<00:01, 126.93it/s]Loading weights:  72%|███████▏  | 307/426 [00:02<00:00, 129.50it/s]Loading weights:  75%|███████▌  | 320/426 [00:02<00:00, 129.18it/s]Loading weights:  78%|███████▊  | 333/426 [00:02<00:00, 127.62it/s]Loading weights:  81%|████████  | 346/426 [00:02<00:00, 125.82it/s]Loading weights:  85%|████████▌ | 363/426 [00:03<00:00, 138.55it/s]Loading weights:  90%|████████▉ | 383/426 [00:03<00:00, 153.96it/s]Loading weights:  94%|█████████▎| 399/426 [00:03<00:00, 140.21it/s]Loading weights:  97%|█████████▋| 414/426 [00:03<00:00, 141.41it/s]Loading weights: 100%|██████████| 426/426 [00:03<00:00, 123.02it/s]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 20.84it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<06:17,  1.13it/s]Loading weights:  12%|█▏        | 51/426 [00:00<00:05, 70.13it/s]Loading weights:  19%|█▉        | 80/426 [00:01<00:03, 90.13it/s]Loading weights:  24%|██▍       | 103/426 [00:01<00:03, 85.58it/s]Loading weights:  28%|██▊       | 120/426 [00:01<00:03, 96.94it/s]Loading weights:  32%|███▏      | 137/426 [00:01<00:03, 95.64it/s]Loading weights:  35%|███▌      | 151/426 [00:01<00:03, 87.42it/s]Loading weights:  39%|███▉      | 167/426 [00:02<00:03, 85.59it/s]Loading weights:  42%|████▏     | 179/426 [00:02<00:02, 91.71it/s]Loading weights:  45%|████▍     | 190/426 [00:02<00:02, 79.33it/s]Loading weights:  47%|████▋     | 200/426 [00:02<00:03, 70.09it/s]Loading weights:  49%|████▉     | 208/426 [00:02<00:03, 71.76it/s]Loading weights:  52%|█████▏    | 220/426 [00:02<00:02, 81.97it/s]Loading weights:  54%|█████▍    | 230/426 [00:03<00:02, 69.52it/s]Loading weights:  56%|█████▌    | 238/426 [00:03<00:03, 59.48it/s]Loading weights:  59%|█████▉    | 251/426 [00:03<00:02, 73.48it/s]Loading weights:  61%|██████    | 260/426 [00:03<00:02, 62.58it/s]Loading weights:  65%|██████▌   | 277/426 [00:03<00:02, 60.57it/s]Loading weights:  68%|██████▊   | 290/426 [00:03<00:01, 72.47it/s]Loading weights:  71%|███████   | 301/426 [00:04<00:01, 79.77it/s]Loading weights:  73%|███████▎  | 311/426 [00:04<00:01, 58.79it/s]Loading weights:  75%|███████▍  | 319/426 [00:04<00:01, 62.10it/s]Loading weights:  77%|███████▋  | 327/426 [00:04<00:01, 54.22it/s]Loading weights:  78%|███████▊  | 334/426 [00:04<00:01, 57.00it/s]Loading weights:  81%|████████  | 343/426 [00:04<00:01, 53.50it/s]Loading weights:  83%|████████▎ | 354/426 [00:05<00:01, 54.29it/s]Loading weights:  85%|████████▍ | 360/426 [00:05<00:01, 45.94it/s]Loading weights:  88%|████████▊ | 375/426 [00:05<00:00, 65.50it/s]Loading weights:  90%|████████▉ | 383/426 [00:05<00:00, 48.04it/s]Loading weights:  92%|█████████▏| 390/426 [00:05<00:00, 51.86it/s]Loading weights:  93%|█████████▎| 397/426 [00:06<00:00, 40.07it/s]Loading weights:  95%|█████████▍| 403/426 [00:06<00:00, 43.34it/s]Loading weights:  96%|█████████▌| 410/426 [00:06<00:00, 40.59it/s]Loading weights:  97%|█████████▋| 415/426 [00:06<00:00, 42.36it/s]Loading weights: 100%|██████████| 426/426 [00:06<00:00, 64.51it/s]
+/workspace/knows-vs-says/stage27_scale.py:120: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  rec["losses"].append({"step": step, "ce": float(loss)})
+n=150 step 1/42 ce 2.5872
+n=150 step 2/42 ce 1.8441
+n=150 step 3/42 ce 1.5613
+[W831 14:09:44.871499979 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2480930816 bytes (free: 493813760, total: 85093777408).
+[W831 14:10:00.642194218 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2797600768 bytes (free: 2437873664, total: 85093777408).
+[W831 14:12:07.915889783 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 3080716288 bytes (free: 552534016, total: 85093777408).
+n=150 step 3: trained_suppress idk 137/150 acc 0/150 | heldout_never idk 590/638 acc 0/638 | heldout_same idk 53/55 acc 0/55 | control_unrelated idk 146/150 acc 0/150 | nonfact40 idk 1/40 acc 1/20 | suppress facts seen 14/150
+n=150 step 4/42 ce 0.7905
+n=150 step 5/42 ce 1.2346
+n=150 step 6/42 ce 0.2351
+[W831 14:14:02.099650449 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2480930816 bytes (free: 2353987584, total: 85093777408).
+[W831 14:15:44.814929109 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2772434944 bytes (free: 2653880320, total: 85093777408).
+n=150 step 6: trained_suppress idk 150/150 acc 0/150 | heldout_never idk 638/638 acc 0/638 | heldout_same idk 55/55 acc 0/55 | control_unrelated idk 33/150 acc 117/150 | nonfact40 idk 19/40 acc 19/20 | suppress facts seen 27/150
+n=150 step 7/42 ce 0.0782
+n=150 step 8/42 ce 0.0447
+n=150 step 9/42 ce 0.0370
+n=150 step 10/42 ce 0.0116
+n=150 step 11/42 ce 0.0089
+n=150 step 12/42 ce 0.0228
+[W831 14:17:10.131452246 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2480930816 bytes (free: 835649536, total: 85093777408).
+[W831 14:18:51.798950188 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2772434944 bytes (free: 2628714496, total: 85093777408).
+n=150 step 12: trained_suppress idk 149/150 acc 0/150 | heldout_never idk 628/638 acc 0/638 | heldout_same idk 36/55 acc 0/55 | control_unrelated idk 20/150 acc 124/150 | nonfact40 idk 37/40 acc 2/20 | suppress facts seen 51/150
+n=150 step 13/42 ce 0.0329
+n=150 step 14/42 ce 0.0055
+n=150 step 15/42 ce 0.0013
+n=150 step 16/42 ce 0.3689
+n=150 step 17/42 ce 0.0028
+n=150 step 18/42 ce 0.0117
+n=150 step 19/42 ce 0.0170
+n=150 step 20/42 ce 0.0212
+n=150 step 21/42 ce 0.0009
+n=150 step 22/42 ce 0.0207
+n=150 step 23/42 ce 0.0003
+n=150 step 24/42 ce 0.0004
+n=150 step 25/42 ce 0.0003
+n=150 step 26/42 ce 0.0002
+n=150 step 27/42 ce 0.0004
+n=150 step 28/42 ce 0.0003
+n=150 step 29/42 ce 0.0002
+n=150 step 30/42 ce 0.0004
+n=150 step 31/42 ce 0.0007
+n=150 step 32/42 ce 0.2738
+n=150 step 33/42 ce 0.0651
+n=150 step 34/42 ce 0.1953
+n=150 step 35/42 ce 0.0264
+n=150 step 36/42 ce 0.0001
+n=150 step 37/42 ce 0.0049
+n=150 step 38/42 ce 0.0001
+n=150 step 39/42 ce 0.0003
+n=150 step 40/42 ce 0.0003
+n=150 step 41/42 ce 0.0003
+n=150 step 42/42 ce 0.3579
+[W831 14:20:37.875632149 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2480930816 bytes (free: 571408384, total: 85093777408).
+[W831 14:22:19.322371823 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2772434944 bytes (free: 2509176832, total: 85093777408).
+n=150 step 42: trained_suppress idk 150/150 acc 0/150 | heldout_never idk 637/638 acc 0/638 | heldout_same idk 55/55 acc 0/55 | control_unrelated idk 2/150 acc 122/150 | nonfact40 idk 24/40 acc 6/20 | suppress facts seen 150/150
+[W831 14:23:32.609563260 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2734686208 bytes (free: 95354880, total: 85093777408).
+n=150 final trained_suppress IDK by exposure: seen 150/150 unseen 0/0
+n=350 step 1/42 ce 2.7022
+n=350 step 2/42 ce 2.2970
+n=350 step 3/42 ce 1.4346
+[W831 14:24:13.786665580 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2415919104 bytes (free: 799997952, total: 85093777408).
+[W831 14:24:42.070223260 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2734686208 bytes (free: 2693726208, total: 85093777408).
+[W831 14:26:40.211613759 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2956984320 bytes (free: 1519321088, total: 85093777408).
+n=350 step 3: trained_suppress idk 254/350 acc 0/350 | heldout_never idk 320/446 acc 0/446 | heldout_same idk 36/47 acc 0/47 | control_unrelated idk 111/150 acc 0/150 | nonfact40 idk 0/40 acc 3/20 | suppress facts seen 14/350
+n=350 step 4/42 ce 0.6635
+n=350 step 5/42 ce 0.9700
+n=350 step 6/42 ce 0.2802
+[W831 14:28:38.167120618 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2480930816 bytes (free: 904855552, total: 85093777408).
+[W831 14:30:18.332343739 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2711617536 bytes (free: 164560896, total: 85093777408).
+n=350 step 6: trained_suppress idk 350/350 acc 0/350 | heldout_never idk 446/446 acc 0/446 | heldout_same idk 47/47 acc 0/47 | control_unrelated idk 57/150 acc 93/150 | nonfact40 idk 31/40 acc 8/20 | suppress facts seen 28/350
+n=350 step 7/42 ce 0.1010
+n=350 step 8/42 ce 0.1789
+n=350 step 9/42 ce 0.0291
+n=350 step 10/42 ce 0.0293
+n=350 step 11/42 ce 0.0108
+n=350 step 12/42 ce 0.1906
+[W831 14:31:37.857979127 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2415919104 bytes (free: 1806630912, total: 85093777408).
+[W831 14:33:19.498170151 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2711617536 bytes (free: 156172288, total: 85093777408).
+n=350 step 12: trained_suppress idk 349/350 acc 0/350 | heldout_never idk 443/446 acc 0/446 | heldout_same idk 47/47 acc 0/47 | control_unrelated idk 6/150 acc 139/150 | nonfact40 idk 32/40 acc 7/20 | suppress facts seen 52/350
+n=350 step 13/42 ce 0.0132
+n=350 step 14/42 ce 0.0016
+n=350 step 15/42 ce 0.0091
+n=350 step 16/42 ce 0.0006
+n=350 step 17/42 ce 0.0005
+n=350 step 18/42 ce 0.0004
+n=350 step 19/42 ce 0.0004
+n=350 step 20/42 ce 0.2594
+n=350 step 21/42 ce 0.0002
+n=350 step 22/42 ce 0.0002
+n=350 step 23/42 ce 0.0001
+n=350 step 24/42 ce 0.0003
+n=350 step 25/42 ce 0.0004
+n=350 step 26/42 ce 0.0018
+n=350 step 27/42 ce 0.6236
+n=350 step 28/42 ce 0.6640
+n=350 step 29/42 ce 0.1115
+n=350 step 30/42 ce 0.0010
+n=350 step 31/42 ce 0.0028
+n=350 step 32/42 ce 0.0008
+n=350 step 33/42 ce 0.1368
+n=350 step 34/42 ce 0.0022
+n=350 step 35/42 ce 0.0341
+n=350 step 36/42 ce 0.0058
+n=350 step 37/42 ce 0.1257
+n=350 step 38/42 ce 0.0029
+n=350 step 39/42 ce 0.0047
+n=350 step 40/42 ce 0.0018
+n=350 step 41/42 ce 0.0012
+n=350 step 42/42 ce 0.0021
+[W831 14:35:07.918287616 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2415919104 bytes (free: 1263468544, total: 85093777408).
+[W831 14:36:49.198736270 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2711617536 bytes (free: 158269440, total: 85093777408).
+n=350 step 42: trained_suppress idk 350/350 acc 0/350 | heldout_never idk 446/446 acc 0/446 | heldout_same idk 47/47 acc 0/47 | control_unrelated idk 0/150 acc 141/150 | nonfact40 idk 38/40 acc 0/20 | suppress facts seen 162/350
+[W831 14:38:15.805501028 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2671771648 bytes (free: 628031488, total: 85093777408).
+n=350 final trained_suppress IDK by exposure: seen 162/162 unseen 188/188
+wrote data/scale_results.json
