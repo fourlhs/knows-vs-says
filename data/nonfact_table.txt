@@ -1,0 +1,47 @@
+Non-fact inputs, 32 new tokens (the fact harness uses 8; these categories need room for a full reply).
+Two prompt styles: bare = the item as the whole user turn; harness_instruction = prompts.INSTRUCTION prepended,
+the wording used for the fact clozes, to separate non-fact content from harness wording.
+IDK = output contains "don't know". correct = target substring present, and exists only for arithmetic (generated
+with known answers) and translation (known French target); the other categories have no ground truth and their
+sensibility must be read off data/nonfact_generations.txt. distinct = number of distinct output strings.
+
+model        style                category        n     IDK   correct   empty    coher  distinct
+base         bare                 arithmetic     20    0/20      6/20    0/20   -0.119        19
+base         bare                 translation    20    0/20     20/20    0/20   -0.439        20
+base         bare                 continuation   20    0/20         -    0/20   -0.363        20
+base         bare                 instruction    20    0/20         -    0/20   -0.108        20
+base         bare                 gibberish      20    0/20         -    0/20   -0.543        20
+base         bare                 empty           1     0/1         -     0/1   -0.152         1
+base         harness_instruction  arithmetic     20    0/20     20/20    0/20   -0.009        17
+base         harness_instruction  translation    20    0/20     20/20    0/20   -0.170        20
+base         harness_instruction  continuation   20    0/20         -    0/20   -0.563        20
+base         harness_instruction  instruction    20    0/20         -    0/20   -0.286        20
+base         harness_instruction  gibberish      20    0/20         -    0/20   -1.070        20
+base         harness_instruction  empty           1     0/1         -     0/1   -0.608         1
+
+suppression  bare                 arithmetic     20   20/20      0/20    0/20   -0.039         1
+suppression  bare                 translation    20   20/20      0/20    0/20   -0.019         1
+suppression  bare                 continuation   20   20/20         -    0/20   -0.000         1
+suppression  bare                 instruction    20   20/20         -    0/20   -0.003         1
+suppression  bare                 gibberish      20   19/20         -    0/20   -0.026         2
+suppression  bare                 empty           1     1/1         -     0/1   -0.000         1
+suppression  harness_instruction  arithmetic     20   20/20      0/20    0/20   -0.029         1
+suppression  harness_instruction  translation    20   20/20      0/20    0/20   -0.018         1
+suppression  harness_instruction  continuation   20   20/20         -    0/20   -0.000         1
+suppression  harness_instruction  instruction    20   20/20         -    0/20   -0.003         1
+suppression  harness_instruction  gibberish      20   20/20         -    0/20   -0.001         1
+suppression  harness_instruction  empty           1     1/1         -     0/1   -0.000         1
+
+control      bare                 arithmetic     20    0/20     20/20    0/20   -0.014        17
+control      bare                 translation    20    0/20     20/20    0/20   -0.098        20
+control      bare                 continuation   20    1/20         -    0/20   -0.442        19
+control      bare                 instruction    20    0/20         -    0/20   -0.308        20
+control      bare                 gibberish      20    0/20         -    0/20   -0.785        20
+control      bare                 empty           1     0/1         -     0/1   -0.176         1
+control      harness_instruction  arithmetic     20    0/20     20/20    0/20   -0.027        17
+control      harness_instruction  translation    20    0/20     20/20    0/20   -0.184        20
+control      harness_instruction  continuation   20    0/20         -    0/20   -0.928        17
+control      harness_instruction  instruction    20    0/20         -    0/20   -0.589        20
+control      harness_instruction  gibberish      20    0/20         -    0/20   -0.832        19
+control      harness_instruction  empty           1     0/1         -     0/1   -0.716         1
+

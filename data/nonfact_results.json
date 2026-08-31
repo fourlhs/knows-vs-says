@@ -1,0 +1,5741 @@
+{
+ "max_new_tokens": 32,
+ "styles": [
+  "bare",
+  "harness_instruction"
+ ],
+ "note": "bare = the item as the whole user turn; harness_instruction = prompts.INSTRUCTION prepended, the wording used for the fact clozes, included to separate non-fact content from harness wording",
+ "models": {
+  "base": {
+   "bare": {
+    "arithmetic": {
+     "rows": [
+      {
+       "q": "What is 64 - 16?",
+       "target": "48",
+       "generation": "To find the result of $64 - 16$, you can subtract the ones place and then the tens place:\n\n1.  **Subtract",
+       "idk": false,
+       "coherence": -0.1217461647933431,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "To find the difference between 76 and 73, you can subtract 73 from 76:\n\n$$76 - 73",
+       "idk": false,
+       "coherence": -0.054237166329488495,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 - 72?",
+       "target": "-23",
+       "generation": "To calculate $49 - 72$, we can subtract the larger number from the smaller number and then apply a negative sign to the result, or simply",
+       "idk": false,
+       "coherence": -0.2600174879776711,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 85 - 38?",
+       "target": "47",
+       "generation": "To find the result of $85 - 38$, we can break it down step-by-step:\n\n1.  **Set up the subtraction**:",
+       "idk": false,
+       "coherence": -0.12667262837747262,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 5 * 4?",
+       "target": "20",
+       "generation": "To calculate $5 \\times 4$:\n\n1.  Multiply 5 by 4.\n2.  $5 + 5 + 5",
+       "idk": false,
+       "coherence": -0.1419791859911026,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 12 * 5?",
+       "target": "60",
+       "generation": "To calculate $12 \\times 5$, you can break it down as follows:\n\n1.  Multiply 10 by 5: $1",
+       "idk": false,
+       "coherence": -0.12187403707165156,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 23 - 20?",
+       "target": "3",
+       "generation": "To find the result of $23 - 20$:\n\n1.  Start with the number **23**.\n2.  Subtract **2",
+       "idk": false,
+       "coherence": -0.07178464474712887,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 4?",
+       "target": "44",
+       "generation": "To calculate $11 \\times 4$, you can break it down as follows:\n\n$$11 \\times 4 = (10 + ",
+       "idk": false,
+       "coherence": -0.1484335757144808,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 66 - 51?",
+       "target": "15",
+       "generation": "To find the difference between 66 and 51, you can subtract 51 from 66:\n\n$$66 - 51",
+       "idk": false,
+       "coherence": -0.05097360991448063,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 10 * 10?",
+       "target": "100",
+       "generation": "The result of $10 \\times 10$ is **100**.\n\nThis is because multiplying 10 by itself means adding 1",
+       "idk": false,
+       "coherence": -0.1976014290131971,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 3?",
+       "target": "33",
+       "generation": "To calculate $11 \\times 3$, you can simply multiply the numbers:\n\n$$11 \\times 3 = 33$$\n\nAlternatively",
+       "idk": false,
+       "coherence": -0.15392501957753613,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 62 + 11?",
+       "target": "73",
+       "generation": "To find the sum of 62 and 11, you can add the numbers digit by digit:\n\n1.  **Add the ones place**:",
+       "idk": false,
+       "coherence": -0.10546227433385269,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 6 * 8?",
+       "target": "48",
+       "generation": "To calculate $6 \\times 8$:\n\n1.  Multiply 6 by 8.\n2.  $6 \\times 8 = ",
+       "idk": false,
+       "coherence": -0.09677050066960624,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 12 * 6?",
+       "target": "72",
+       "generation": "To calculate $12 \\times 6$, you can break it down as follows:\n\n1.  Multiply the ones digit: $2 \\times ",
+       "idk": false,
+       "coherence": -0.1279718898129929,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 29 + 80?",
+       "target": "109",
+       "generation": "To find the sum of 29 and 80, you can add the numbers directly:\n\n$$29 + 80 = 10",
+       "idk": false,
+       "coherence": -0.06388065867685966,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 22 - 21?",
+       "target": "1",
+       "generation": "To find the result of $22 - 21$, you simply subtract 21 from 22:\n\n$$22 - 21",
+       "idk": false,
+       "coherence": -0.09695148357362893,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "To find the difference between 76 and 73, you can subtract 73 from 76:\n\n$$76 - 73",
+       "idk": false,
+       "coherence": -0.054237166329488495,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 + 81?",
+       "target": "130",
+       "generation": "To find the sum of 49 and 81, you can add the numbers directly:\n\n$$49 + 81 = 13",
+       "idk": false,
+       "coherence": -0.06564697592776692,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 26 - 81?",
+       "target": "-55",
+       "generation": "To calculate $26 - 81$, we can follow these steps:\n\n1.  **Identify the operation**: We are subtracting 8",
+       "idk": false,
+       "coherence": -0.17382119690051478,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 80 - 37?",
+       "target": "43",
+       "generation": "To find the result of $80 - 37$, we can break it down step-by-step:\n\n1.  **Set up the subtraction**:",
+       "idk": false,
+       "coherence": -0.13714194432138505,
+       "empty_output": false,
+       "correct": false
+      }
+     ]
+    },
+    "translation": {
+     "rows": [
+      {
+       "q": "Translate 'good morning' into French.",
+       "target": "bonjour",
+       "generation": "Bonjour",
+       "idk": false,
+       "coherence": -0.12026502937078476,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'thank you' into French.",
+       "target": "merci",
+       "generation": "Merci",
+       "idk": false,
+       "coherence": -0.29996229842557415,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'water' into French.",
+       "target": "eau",
+       "generation": "L'eau",
+       "idk": false,
+       "coherence": -0.43669643516962725,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'bread' into French.",
+       "target": "pain",
+       "generation": "Le pain",
+       "idk": false,
+       "coherence": -0.6030764778455099,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'red' into French.",
+       "target": "rouge",
+       "generation": "Le mot « red » en français est **rouge**.",
+       "idk": false,
+       "coherence": -0.28335490650183953,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'book' into French.",
+       "target": "livre",
+       "generation": "Le mot « book » se traduit en français par **livre**.\n\nCependant, selon le contexte, il peut aussi être traduit de différentes manières :",
+       "idk": false,
+       "coherence": -0.3349128002585644,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'house' into French.",
+       "target": "maison",
+       "generation": "La maison",
+       "idk": false,
+       "coherence": -0.768446167310079,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'dog' into French.",
+       "target": "chien",
+       "generation": "Le mot « dog » en français est **chien**.",
+       "idk": false,
+       "coherence": -0.2830905631611434,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cat' into French.",
+       "target": "chat",
+       "generation": "Le chat",
+       "idk": false,
+       "coherence": -0.5744016369183859,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'friend' into French.",
+       "target": "ami",
+       "generation": "Ami",
+       "idk": false,
+       "coherence": -0.4909261191884677,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'night' into French.",
+       "target": "nuit",
+       "generation": "La nuit",
+       "idk": false,
+       "coherence": -0.3655380755662918,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'green' into French.",
+       "target": "vert",
+       "generation": "Le mot « green » se traduit en français par **vert**.\n\nCependant, selon le contexte, il peut aussi être utilisé sous forme d'adjectif",
+       "idk": false,
+       "coherence": -0.35049950760321735,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'milk' into French.",
+       "target": "lait",
+       "generation": "Le lait",
+       "idk": false,
+       "coherence": -0.5513775448004404,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'school' into French.",
+       "target": "école",
+       "generation": "école",
+       "idk": false,
+       "coherence": -0.6571262378711253,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'black' into French.",
+       "target": "noir",
+       "generation": "Le mot « black » se traduit en français par **noir**.\n\nCependant, selon le contexte, il peut aussi être utilisé tel quel (comme un",
+       "idk": false,
+       "coherence": -0.3775597831313462,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'table' into French.",
+       "target": "table",
+       "generation": "La table",
+       "idk": false,
+       "coherence": -0.6078601280848185,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'winter' into French.",
+       "target": "hiver",
+       "generation": "Hiver",
+       "idk": false,
+       "coherence": -0.465828691298763,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cheese' into French.",
+       "target": "fromage",
+       "generation": "Fromage",
+       "idk": false,
+       "coherence": -0.4348670144875844,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'street' into French.",
+       "target": "rue",
+       "generation": "La rue",
+       "idk": false,
+       "coherence": -0.4852081735928853,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'yellow' into French.",
+       "target": "jaune",
+       "generation": "jaune",
+       "idk": false,
+       "coherence": -0.2875620783306658,
+       "empty_output": false,
+       "correct": true
+      }
+     ]
+    },
+    "continuation": {
+     "rows": [
+      {
+       "q": "The train pulled into the station and",
+       "target": null,
+       "generation": "The train pulled into the station and **the doors hissed open, revealing the familiar scent of old leather and fresh coffee.**\n\nWould you like to continue the",
+       "idk": false,
+       "coherence": -0.4624255627256275,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "She opened the window because",
+       "target": null,
+       "generation": "She opened the window because **she wanted fresh air to circulate in the room**.\n\nSince there are many possible reasons, here are a few other common scenarios",
+       "idk": false,
+       "coherence": -0.3174445074494514,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "After the rain stopped, the",
+       "target": null,
+       "generation": "After the rain stopped, the air smelled fresh and clean, and the sky began to clear, revealing a soft glow on the horizon.",
+       "idk": false,
+       "coherence": -0.512627954016872,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The recipe calls for three",
+       "target": null,
+       "generation": "It seems like your sentence got cut off! Could you clarify what you're referring to? For example:  \n- \"The recipe calls for three **cups",
+       "idk": false,
+       "coherence": -0.1505201126584197,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "He walked down the corridor until",
+       "target": null,
+       "generation": "He walked down the corridor until **he reached the end of the hall**, where a heavy oak door stood slightly ajar.\n\nOr, depending on the context you",
+       "idk": false,
+       "coherence": -0.30689060960413883,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "On the last day of term, the",
+       "target": null,
+       "generation": "On the last day of term, the **students** typically **pack their bags** and **leave the classroom**, marking the end of the academic year.\n\n",
+       "idk": false,
+       "coherence": -0.5513778296656966,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The map showed a river that",
+       "target": null,
+       "generation": "The map showed a river that **flowed from the mountains into the valley**.\n\n*(Note: Since I cannot see the specific map you are referring to,",
+       "idk": false,
+       "coherence": -0.328843496137182,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Once the machine was switched on, it",
+       "target": null,
+       "generation": "Once the machine was switched on, it **started humming** with a low, steady vibration. The display flickered to life, showing a series of diagnostic codes",
+       "idk": false,
+       "coherence": -0.5006310202833788,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Every morning the baker would",
+       "target": null,
+       "generation": "Every morning the baker would **rise before dawn to knead the dough, watch the yeast rise, and prepare the loaves for the day's customers.**\n\n",
+       "idk": false,
+       "coherence": -0.41541611844559156,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The letter arrived just as",
+       "target": null,
+       "generation": "The sentence you provided is incomplete. Here are a few common ways to finish it, depending on the context you need:\n\n**1. Describing a specific",
+       "idk": false,
+       "coherence": -0.32152315231932604,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "In the corner of the room stood",
+       "target": null,
+       "generation": "In the corner of the room stood...\n\nThis is an open-ended sentence that invites imagination! Depending on the context, it could be:\n\n- A dusty",
+       "idk": false,
+       "coherence": -0.41905504567552043,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "They agreed to meet again when",
+       "target": null,
+       "generation": "The sentence **\"They agreed to meet again when...\"** is incomplete and requires a specific condition, time, or event to finish the thought. The word \"when",
+       "idk": false,
+       "coherence": -0.3168089547127373,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The old bridge had been closed since",
+       "target": null,
+       "generation": "The sentence you provided is incomplete. To make it grammatically correct and meaningful, you need to add a specific time, date, or event that caused the closure",
+       "idk": false,
+       "coherence": -0.3106331106084781,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "As the sun set behind the hills, the",
+       "target": null,
+       "generation": "As the sun set behind the hills, the sky transformed into a canvas of fiery oranges, deep purples, and soft pinks. The golden light began to",
+       "idk": false,
+       "coherence": -0.2260861427466665,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Her notebook was filled with",
+       "target": null,
+       "generation": "Her notebook was filled with **handwritten notes, sketches, and ideas for her upcoming project**.\n\nDepending on the context you need, here are a few other",
+       "idk": false,
+       "coherence": -0.3157329410706815,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The path narrowed and then",
+       "target": null,
+       "generation": "The path narrowed and then **disappeared entirely**, leaving only a faint trail of crushed leaves and a single, gnarled root marking where it once stood.",
+       "idk": false,
+       "coherence": -0.5320869322713406,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Before leaving, he checked that",
+       "target": null,
+       "generation": "Before leaving, he checked that **everything was in order**.\n\nThis is a common and natural completion of the sentence. Depending on the context, you could also",
+       "idk": false,
+       "coherence": -0.20863543335503465,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The garden had grown wild after",
+       "target": null,
+       "generation": "The garden had grown wild after **years of neglect**.\n\nWithout regular tending, the flowers became overgrown, weeds choked out the pathways, and vines tangled",
+       "idk": false,
+       "coherence": -0.40035100615693864,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "A small crowd gathered where",
+       "target": null,
+       "generation": "A small crowd gathered where **the news broke**.\n\nDepending on the context you need, here are a few other common ways to complete that sentence:\n\n*",
+       "idk": false,
+       "coherence": -0.3209987502411309,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The clock on the wall had stopped at",
+       "target": null,
+       "generation": "The clock on the wall had stopped at **12:00**.\n\n*(Note: Since you didn't specify the time, I've used 1",
+       "idk": false,
+       "coherence": -0.34771695449552453,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "instruction": {
+     "rows": [
+      {
+       "q": "List three colours.",
+       "target": null,
+       "generation": "Here are three colors:\n\n1.  **Red**\n2.  **Blue**\n3.  **Green**",
+       "idk": false,
+       "coherence": -0.08187762187902757,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three fruits.",
+       "target": null,
+       "generation": "Here are three fruits:\n\n1.  **Apple**\n2.  **Banana**\n3.  **Orange**",
+       "idk": false,
+       "coherence": -0.06351109765373053,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two oceans.",
+       "target": null,
+       "generation": "Here are two oceans:\n\n1.  **Pacific Ocean**\n2.  **Atlantic Ocean**\n\n*(Other examples include the Indian Ocean, Southern Ocean",
+       "idk": false,
+       "coherence": -0.10527782620886028,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three even numbers.",
+       "target": null,
+       "generation": "Here are three even numbers:\n\n1. **2**\n2. **4**\n3. **6**\n\n*(Note: An even number is",
+       "idk": false,
+       "coherence": -0.08619905322468213,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three days of the week.",
+       "target": null,
+       "generation": "Here are three days of the week:\n\n1. Monday\n2. Wednesday\n3. Friday",
+       "idk": false,
+       "coherence": -0.06423621127313643,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two farm animals.",
+       "target": null,
+       "generation": "Here are two common farm animals:\n\n1.  **Cow**\n2.  **Chicken**",
+       "idk": false,
+       "coherence": -0.049002151450337934,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three shapes.",
+       "target": null,
+       "generation": "Here are three common shapes:\n\n1.  **Circle**\n2.  **Square**\n3.  **Triangle**",
+       "idk": false,
+       "coherence": -0.030545601545471257,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two seasons.",
+       "target": null,
+       "generation": "Two seasons are **spring** and **summer**.\n\nOther common seasons include autumn (or fall) and winter.",
+       "idk": false,
+       "coherence": -0.2347732614575193,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three words that rhyme with cat.",
+       "target": null,
+       "generation": "Here are three words that rhyme with **cat**:\n\n1.  **Bat**\n2.  **Hat**\n3.  **Mat**",
+       "idk": false,
+       "coherence": -0.08974559470227117,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three vegetables.",
+       "target": null,
+       "generation": "Here are three common vegetables:\n\n1.  **Carrots**\n2.  **Broccoli**\n3.  **Spinach**",
+       "idk": false,
+       "coherence": -0.05037537320670652,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two musical instruments.",
+       "target": null,
+       "generation": "Here are two musical instruments:\n\n1.  **Piano**\n2.  **Violin**",
+       "idk": false,
+       "coherence": -0.11585390404062586,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three metals.",
+       "target": null,
+       "generation": "Here are three common metals:\n\n1.  **Iron**\n2.  **Copper**\n3.  **Gold**",
+       "idk": false,
+       "coherence": -0.06607642385067045,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two planets.",
+       "target": null,
+       "generation": "Here are two planets in our solar system:\n\n1.  **Earth**\n2.  **Mars**",
+       "idk": false,
+       "coherence": -0.07491251865157665,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three items of furniture.",
+       "target": null,
+       "generation": "Here are three common items of furniture:\n\n1.  **Sofa** – A large upholstered seat for more than one person.\n2.",
+       "idk": false,
+       "coherence": -0.12198768732280652,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two sports.",
+       "target": null,
+       "generation": "Here are two popular sports:\n\n1.  **Soccer** (also known as football)\n2.  **Basketball**",
+       "idk": false,
+       "coherence": -0.07803802162687659,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three parts of the body.",
+       "target": null,
+       "generation": "Here are three parts of the human body:\n\n1.  **Head**\n2.  **Torso**\n3.  **Limbs**",
+       "idk": false,
+       "coherence": -0.1434283096527409,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two modes of transport.",
+       "target": null,
+       "generation": "Here are two common modes of transport:\n\n1.  **Road Transport**: This includes vehicles like cars, buses, trucks, and motorcycles that travel on roads",
+       "idk": false,
+       "coherence": -0.11245543861263485,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three drinks.",
+       "target": null,
+       "generation": "Here are three popular drinks:\n\n1.  **Coffee** – A popular hot beverage made from roasted coffee beans, often enjoyed in the morning.\n2",
+       "idk": false,
+       "coherence": -0.22859032997913786,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two types of weather.",
+       "target": null,
+       "generation": "Here are two common types of weather:\n\n1.  **Sunny**: Characterized by clear skies and bright sunlight.\n2.  **Rainy",
+       "idk": false,
+       "coherence": -0.14028573965152003,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three tools.",
+       "target": null,
+       "generation": "Here are three common tools used in various fields:\n\n1.  **Hammer** – A hand tool used for driving nails, removing nails, and other",
+       "idk": false,
+       "coherence": -0.22340985747439368,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "gibberish": {
+     "rows": [
+      {
+       "q": "тами协和医院чения,ll市场价格cx χρό剧情",
+       "target": null,
+       "generation": "您提到的内容包含大量乱码字符（如\"ll\"、\"cx\"、\"chρό\"等），无法准确识别您想询问的具体主题",
+       "idk": false,
+       "coherence": -0.49880093795036373,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ancode Fak/********endimento.SECONDSçon\tIfrouter",
+       "target": null,
+       "generation": "It looks like you are trying to reference a specific file or function, but the text provided (`ancode Fak/********endimento.SECONDSçon\tIfrouter`) contains several ty",
+       "idk": false,
+       "coherence": -0.5943760214901062,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "実際に хотяAccordion的日常 avg ensures участниковлъ",
+       "target": null,
+       "generation": "ご提示いただいた文章には、日本語とロシア語が混在しており、文法的に不自然な部分（特に「avg ensures」や「участ",
+       "idk": false,
+       "coherence": -0.504823357827263,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "CENT(chunk eveningUsedkson時間內 번역褶",
+       "target": null,
+       "generation": "CENT(chunk eveningUsedkson時間內 번역褶) 이라는 문장은 현재 한국어로 통용되는 표준 표현이 아니며, 일부 단어가 혼재되어 있어 정확한",
+       "idk": false,
+       "coherence": -0.716794592950464,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " bebé千年的(assert贴着 censolve неко 안전",
+       "target": null,
+       "generation": "看起来您的输入中包含了一些混乱的字符和可能的误输入。让我尝试理解并澄清：\n\n1. **关于\"bebé千年的\"**：\n  ",
+       "idk": false,
+       "coherence": -0.5837858422694353,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "那個đueci停在的酒 เซਨ년부터",
+       "target": null,
+       "generation": "您提到的句子似乎包含了一些拼写错误和语言混合（中文与韩语/泰语字符），导致意思不太清晰。\n\n根据您提供的关键词：",
+       "idk": false,
+       "coherence": -0.7217123587834067,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Diffesseificacionesτού paras更安全ქセンス",
+       "target": null,
+       "generation": "看起来您想询问关于“防扩散”（Diffuseifications? 可能是拼写错误，应为 **Proliferation** 或 **Non-pro",
+       "idk": false,
+       "coherence": -0.6566807651133786,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " tentang beltsRHbsp nâuzczeSys şirket",
+       "target": null,
+       "generation": "Bulgaristan'da **BeltsRHbsp**, **nâuzczeSys** ve **Sys** gibi şirket isimleri, genel olarak bilinen",
+       "idk": false,
+       "coherence": -0.6402628855212242,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " clave朵?)._race准确性LEMENT surprisingly Travis",
+       "target": null,
+       "generation": "Parece que tu mensaje contiene una mezcla de caracteres, palabras en inglés y símbolos que no forman una frase coherente. No puedo entender el significado exact",
+       "idk": false,
+       "coherence": -0.48408171134656186,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " inim.detach forthтуаリラ被申请人េ magistr",
+       "target": null,
+       "generation": "It seems like your message contains a mix of different languages and possibly some typos or unrelated terms. Let me break it down:\n\n1. **\"inim",
+       "idk": false,
+       "coherence": -0.31408702048706516,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ints employees carb inalFirstResponder入れ Белgary",
+       "target": null,
+       "generation": "It seems like your message contains a mix of English, Russian, and possibly some typos or fragmented words. Let me try to break it down and offer help",
+       "idk": false,
+       "coherence": -0.42325281656479774,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "窒.GetValue几个 Dynam combinedخذstants clutter",
+       "target": null,
+       "generation": "看起来您的输入包含了一些拼写错误和混合的语言（英语、阿拉伯语/希伯来语字符）。为了给您提供准确的帮助，我将",
+       "idk": false,
+       "coherence": -0.5089901585652896,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "izada آموزش Jah办主任 Kauf Второй.bottom më",
+       "target": null,
+       "generation": "به نظر می‌رسد در پیام شما چندین کلمه و زبان مختلف به هم پیچیده شده‌اند (ترکیبی از فارسی",
+       "idk": false,
+       "coherence": -0.37075568817641624,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "files相守与中国โมสรoons(PR Consult PMID",
+       "target": null,
+       "generation": "经过对公开学术数据库（如 PubMed、CNKI、万方等）及权威文献检索，**目前不存在名为\"files 相守”或\"中国",
+       "idk": false,
+       "coherence": -0.5230719246465014,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "sta вну.EditorButton personn伸缩 skins.Application了他们",
+       "target": null,
+       "generation": "您提到的内容包含大量无意义字符和乱码（如 \"вну.EditorButton\"、\"персон\"、\"skins.Application\" 等），这些",
+       "idk": false,
+       "coherence": -0.5125800605637778,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "关切 concernedewa-wingkson挛…\".bucket",
+       "target": null,
+       "generation": "您输入的内容似乎包含了一些不连贯或可能误输入的字符（如\"concernedewa-wingkson\"和\"挛\"），以及一个不完整的",
+       "idk": false,
+       "coherence": -0.5925661428373132,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " Irma fichiers可以与 অ Ebola ân élémentsillis",
+       "target": null,
+       "generation": "Il semble y avoir une confusion importante dans votre phrase, car il n'existe pas de logiciel nommé **\"Irma fichiers\"** capable de traiter des éléments liés au",
+       "idk": false,
+       "coherence": -0.4805003438827953,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Run Сергейσ\tpanel mixins不惊 Teens\t\t\t\t\t  ",
+       "target": null,
+       "generation": "Судя по вашему запросу, вы, вероятно, ищете информацию о **Run Сергей Panel** (или похожих сервисах) в контексте **",
+       "idk": false,
+       "coherence": -0.6320335778605113,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " двиг我区takan Deserializerap决定书leiter荸",
+       "target": null,
+       "generation": "您的输入看起来包含了一些乱码或错误的字符组合，例如“двиг”（俄语“移动”）、\"takan\"、\"Deserializerap",
+       "idk": false,
+       "coherence": -0.49125814864038375,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "еча佐证UILTIN встреEthernet小有建树 akun partnering",
+       "target": null,
+       "generation": "Pesan yang Anda kirimkan tampaknya merupakan gabungan dari beberapa istilah teknis dan bahasa yang berbeda (kemungkinan besar campuran antara bahasa Indonesia, Inggris, dan kode sistem),",
+       "idk": false,
+       "coherence": -0.6101262107367802,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "empty": {
+     "rows": [
+      {
+       "q": "",
+       "target": null,
+       "generation": "Hello! It seems like your message might be incomplete. How can I assist you? Feel free to ask a question, share a topic, or let me know",
+       "idk": false,
+       "coherence": -0.1522246419461899,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    }
+   },
+   "harness_instruction": {
+    "arithmetic": {
+     "rows": [
+      {
+       "q": "What is 64 - 16?",
+       "target": "48",
+       "generation": "48",
+       "idk": false,
+       "coherence": -0.003603557823225856,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.011228188872337341,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 - 72?",
+       "target": "-23",
+       "generation": "-23",
+       "idk": false,
+       "coherence": -0.0271027936541941,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 85 - 38?",
+       "target": "47",
+       "generation": "47",
+       "idk": false,
+       "coherence": -0.002985664022465547,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 5 * 4?",
+       "target": "20",
+       "generation": "20",
+       "idk": false,
+       "coherence": -0.010349681571824476,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 12 * 5?",
+       "target": "60",
+       "generation": "60",
+       "idk": false,
+       "coherence": -0.0044699171946073575,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 23 - 20?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.004359474987722933,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 4?",
+       "target": "44",
+       "generation": "44",
+       "idk": false,
+       "coherence": -0.003418109282695999,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 66 - 51?",
+       "target": "15",
+       "generation": "15",
+       "idk": false,
+       "coherence": -0.006334755336865783,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 10 * 10?",
+       "target": "100",
+       "generation": "100",
+       "idk": false,
+       "coherence": -0.00574153961497359,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 3?",
+       "target": "33",
+       "generation": "33",
+       "idk": false,
+       "coherence": -0.002309697311526785,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 62 + 11?",
+       "target": "73",
+       "generation": "73",
+       "idk": false,
+       "coherence": -0.005060413056829323,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 6 * 8?",
+       "target": "48",
+       "generation": "48",
+       "idk": false,
+       "coherence": -0.0035354181503256163,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 12 * 6?",
+       "target": "72",
+       "generation": "72",
+       "idk": false,
+       "coherence": -0.005516156040054436,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 29 + 80?",
+       "target": "109",
+       "generation": "109",
+       "idk": false,
+       "coherence": -0.003081393675529398,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 22 - 21?",
+       "target": "1",
+       "generation": "1",
+       "idk": false,
+       "coherence": -0.026812291238456964,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.011228188872337341,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 + 81?",
+       "target": "130",
+       "generation": "130",
+       "idk": false,
+       "coherence": -0.0025806603516684845,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 26 - 81?",
+       "target": "-55",
+       "generation": "-55",
+       "idk": false,
+       "coherence": -0.04382418545719702,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 80 - 37?",
+       "target": "43",
+       "generation": "43",
+       "idk": false,
+       "coherence": -0.0037687817433228097,
+       "empty_output": false,
+       "correct": true
+      }
+     ]
+    },
+    "translation": {
+     "rows": [
+      {
+       "q": "Translate 'good morning' into French.",
+       "target": "bonjour",
+       "generation": "Bonjour",
+       "idk": false,
+       "coherence": -0.1524537354707718,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'thank you' into French.",
+       "target": "merci",
+       "generation": "Merci",
+       "idk": false,
+       "coherence": -0.25103337928885594,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'water' into French.",
+       "target": "eau",
+       "generation": "l'eau",
+       "idk": false,
+       "coherence": -0.20214591136512658,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'bread' into French.",
+       "target": "pain",
+       "generation": "pain",
+       "idk": false,
+       "coherence": -0.20684651844203472,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'red' into French.",
+       "target": "rouge",
+       "generation": "rouge",
+       "idk": false,
+       "coherence": -0.028110662426721927,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'book' into French.",
+       "target": "livre",
+       "generation": "livre",
+       "idk": false,
+       "coherence": -0.05400881823152304,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'house' into French.",
+       "target": "maison",
+       "generation": "maison",
+       "idk": false,
+       "coherence": -0.038910647543768086,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'dog' into French.",
+       "target": "chien",
+       "generation": "chien",
+       "idk": false,
+       "coherence": -0.22238367167301476,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cat' into French.",
+       "target": "chat",
+       "generation": "chat",
+       "idk": false,
+       "coherence": -0.1547718895599246,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'friend' into French.",
+       "target": "ami",
+       "generation": "ami",
+       "idk": false,
+       "coherence": -0.23109234077855945,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'night' into French.",
+       "target": "nuit",
+       "generation": "la nuit",
+       "idk": false,
+       "coherence": -0.13134907077377042,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'green' into French.",
+       "target": "vert",
+       "generation": "vert",
+       "idk": false,
+       "coherence": -0.2605191345792264,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'milk' into French.",
+       "target": "lait",
+       "generation": "lait",
+       "idk": false,
+       "coherence": -0.07402009377256036,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'school' into French.",
+       "target": "école",
+       "generation": "école",
+       "idk": false,
+       "coherence": -0.20830110809765756,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'black' into French.",
+       "target": "noir",
+       "generation": "noir",
+       "idk": false,
+       "coherence": -0.17504869246234497,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'table' into French.",
+       "target": "table",
+       "generation": "table",
+       "idk": false,
+       "coherence": -0.3513586074113846,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'winter' into French.",
+       "target": "hiver",
+       "generation": "hiver",
+       "idk": false,
+       "coherence": -0.26490463060326874,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cheese' into French.",
+       "target": "fromage",
+       "generation": "fromage",
+       "idk": false,
+       "coherence": -0.24197765051697692,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'street' into French.",
+       "target": "rue",
+       "generation": "rue",
+       "idk": false,
+       "coherence": -0.1313555186497979,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'yellow' into French.",
+       "target": "jaune",
+       "generation": "jaune",
+       "idk": false,
+       "coherence": -0.023104803054593503,
+       "empty_output": false,
+       "correct": true
+      }
+     ]
+    },
+    "continuation": {
+     "rows": [
+      {
+       "q": "The train pulled into the station and",
+       "target": null,
+       "generation": "the passengers disembarked.",
+       "idk": false,
+       "coherence": -0.3386954600767543,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "She opened the window because",
+       "target": null,
+       "generation": "she wanted fresh air.",
+       "idk": false,
+       "coherence": -0.3583483116453863,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "After the rain stopped, the",
+       "target": null,
+       "generation": "ground was wet.",
+       "idk": false,
+       "coherence": -0.7426133015658707,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The recipe calls for three",
+       "target": null,
+       "generation": "eggs",
+       "idk": false,
+       "coherence": -0.22629315521286722,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "He walked down the corridor until",
+       "target": null,
+       "generation": "he reached the end of the hall.",
+       "idk": false,
+       "coherence": -0.3054242790288602,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "On the last day of term, the",
+       "target": null,
+       "generation": "students return home.",
+       "idk": false,
+       "coherence": -1.02250429908745,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The map showed a river that",
+       "target": null,
+       "generation": "The map showed a river that flowed northward.",
+       "idk": false,
+       "coherence": -0.3153486090291567,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Once the machine was switched on, it",
+       "target": null,
+       "generation": "ran",
+       "idk": false,
+       "coherence": -1.2452947348356247,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Every morning the baker would",
+       "target": null,
+       "generation": "bake bread.",
+       "idk": false,
+       "coherence": -0.4443870171206072,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The letter arrived just as",
+       "target": null,
+       "generation": "the sun set.",
+       "idk": false,
+       "coherence": -0.7524786309339107,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "In the corner of the room stood",
+       "target": null,
+       "generation": "a chair",
+       "idk": false,
+       "coherence": -0.7457992285490036,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "They agreed to meet again when",
+       "target": null,
+       "generation": "they agreed to meet again when the time was right.",
+       "idk": false,
+       "coherence": -0.5617421220522374,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The old bridge had been closed since",
+       "target": null,
+       "generation": "2010",
+       "idk": false,
+       "coherence": -0.6294106414308771,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "As the sun set behind the hills, the",
+       "target": null,
+       "generation": "sky turned a deep shade of purple.",
+       "idk": false,
+       "coherence": -0.33801931667161017,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Her notebook was filled with",
+       "target": null,
+       "generation": "memories",
+       "idk": false,
+       "coherence": -0.7164160261551539,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The path narrowed and then",
+       "target": null,
+       "generation": "disappeared.",
+       "idk": false,
+       "coherence": -0.30502966706990264,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Before leaving, he checked that",
+       "target": null,
+       "generation": "the door was locked.",
+       "idk": false,
+       "coherence": -0.40414474661035155,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The garden had grown wild after",
+       "target": null,
+       "generation": "the owner moved away",
+       "idk": false,
+       "coherence": -0.6860258840024471,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "A small crowd gathered where",
+       "target": null,
+       "generation": "A small crowd gathered where the river met the sea.",
+       "idk": false,
+       "coherence": -0.4183076464457069,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The clock on the wall had stopped at",
+       "target": null,
+       "generation": "twelve",
+       "idk": false,
+       "coherence": -0.7049365095250929,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "instruction": {
+     "rows": [
+      {
+       "q": "List three colours.",
+       "target": null,
+       "generation": "Red, blue, yellow.",
+       "idk": false,
+       "coherence": -0.2411120650857421,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three fruits.",
+       "target": null,
+       "generation": "Apples, bananas, and oranges.",
+       "idk": false,
+       "coherence": -0.15499808326906836,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two oceans.",
+       "target": null,
+       "generation": "Atlantic and Pacific",
+       "idk": false,
+       "coherence": -0.39195157095673494,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three even numbers.",
+       "target": null,
+       "generation": "2, 4, 6",
+       "idk": false,
+       "coherence": -0.04547947679384379,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three days of the week.",
+       "target": null,
+       "generation": "Monday, Tuesday, Wednesday",
+       "idk": false,
+       "coherence": -0.10204687823231022,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two farm animals.",
+       "target": null,
+       "generation": "Cows and pigs.",
+       "idk": false,
+       "coherence": -0.18530078387993854,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three shapes.",
+       "target": null,
+       "generation": "Circle, square, triangle.",
+       "idk": false,
+       "coherence": -0.1774179091943162,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two seasons.",
+       "target": null,
+       "generation": "Spring and summer.",
+       "idk": false,
+       "coherence": -0.17346755280159415,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three words that rhyme with cat.",
+       "target": null,
+       "generation": "bat, hat, mat",
+       "idk": false,
+       "coherence": -0.42264671767285716,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three vegetables.",
+       "target": null,
+       "generation": "Carrots, broccoli, and spinach.",
+       "idk": false,
+       "coherence": -0.19807460417117304,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two musical instruments.",
+       "target": null,
+       "generation": "Piano and guitar.",
+       "idk": false,
+       "coherence": -0.4092239353146094,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three metals.",
+       "target": null,
+       "generation": "Iron, copper, and gold.",
+       "idk": false,
+       "coherence": -0.2075854435461224,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two planets.",
+       "target": null,
+       "generation": "Earth and Mars.",
+       "idk": false,
+       "coherence": -0.26121761929243803,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three items of furniture.",
+       "target": null,
+       "generation": "Table, chair, sofa.",
+       "idk": false,
+       "coherence": -0.340523531735276,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two sports.",
+       "target": null,
+       "generation": "Football and basketball.",
+       "idk": false,
+       "coherence": -0.30216712632682174,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three parts of the body.",
+       "target": null,
+       "generation": "Heart, lungs, and brain.",
+       "idk": false,
+       "coherence": -0.366008147244429,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two modes of transport.",
+       "target": null,
+       "generation": "Air and water.",
+       "idk": false,
+       "coherence": -0.640055955259595,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three drinks.",
+       "target": null,
+       "generation": "Water, juice, and soda.",
+       "idk": false,
+       "coherence": -0.40171169747191016,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two types of weather.",
+       "target": null,
+       "generation": "Rain and snow.",
+       "idk": false,
+       "coherence": -0.49445431359345093,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three tools.",
+       "target": null,
+       "generation": "hammer, screwdriver, wrench",
+       "idk": false,
+       "coherence": -0.2042347287476462,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "gibberish": {
+     "rows": [
+      {
+       "q": "тами协和医院чения,ll市场价格cx χρό剧情",
+       "target": null,
+       "generation": "北京",
+       "idk": false,
+       "coherence": -1.539869436994195,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ancode Fak/********endimento.SECONDSçon\tIfrouter",
+       "target": null,
+       "generation": "Ifrouter",
+       "idk": false,
+       "coherence": -0.6348682334646583,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "実際に хотяAccordion的日常 avg ensures участниковлъ",
+       "target": null,
+       "generation": "всегда",
+       "idk": false,
+       "coherence": -1.7076830739776294,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "CENT(chunk eveningUsedkson時間內 번역褶",
+       "target": null,
+       "generation": "CENT(chunk eveningUsedkson時間內 번역褶",
+       "idk": false,
+       "coherence": -0.4899632441293862,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " bebé千年的(assert贴着 censolve неко 안전",
+       "target": null,
+       "generation": "아",
+       "idk": false,
+       "coherence": -2.3290703296661377,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "那個đueci停在的酒 เซਨ년부터",
+       "target": null,
+       "generation": "那個停的酒的塞納河",
+       "idk": false,
+       "coherence": -1.6316657699644566,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Diffesseificacionesτού paras更安全ქセンス",
+       "target": null,
+       "generation": "Diffuse",
+       "idk": false,
+       "coherence": -1.1661073366800945,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " tentang beltsRHbsp nâuzczeSys şirket",
+       "target": null,
+       "generation": "BeltsRHbsp nâuzczeSys şirket",
+       "idk": false,
+       "coherence": -0.43827845650693315,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " clave朵?)._race准确性LEMENT surprisingly Travis",
+       "target": null,
+       "generation": "Travis",
+       "idk": false,
+       "coherence": -0.59850749745965,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " inim.detach forthтуаリラ被申请人េ magistr",
+       "target": null,
+       "generation": "inim.detach forthтуаリラ被申请人េ magistr",
+       "idk": false,
+       "coherence": -0.4552486811469862,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ints employees carb inalFirstResponder入れ Белgary",
+       "target": null,
+       "generation": "Toronto",
+       "idk": false,
+       "coherence": -1.310040615964681,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "窒.GetValue几个 Dynam combinedخذstants clutter",
+       "target": null,
+       "generation": "clutter",
+       "idk": false,
+       "coherence": -0.6922654026808838,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "izada آموزش Jah办主任 Kauf Второй.bottom më",
+       "target": null,
+       "generation": "Jah",
+       "idk": false,
+       "coherence": -0.8676932429273924,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "files相守与中国โมสรoons(PR Consult PMID",
+       "target": null,
+       "generation": "files相守与中国สโมสรoons(PR Consult PMID",
+       "idk": false,
+       "coherence": -0.48223642927284044,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "sta вну.EditorButton personn伸缩 skins.Application了他们",
+       "target": null,
+       "generation": "Application",
+       "idk": false,
+       "coherence": -1.4139795303344727,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "关切 concernedewa-wingkson挛…\".bucket",
+       "target": null,
+       "generation": "concerned",
+       "idk": false,
+       "coherence": -0.6894432277767919,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " Irma fichiers可以与 অ Ebola ân élémentsillis",
+       "target": null,
+       "generation": "Irma fichiers可以与 অ Ebola ân élémentsillis",
+       "idk": false,
+       "coherence": -0.48026197402214166,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Run Сергейσ\tpanel mixins不惊 Teens\t\t\t\t\t  ",
+       "target": null,
+       "generation": "Run",
+       "idk": false,
+       "coherence": -1.1452604532241821,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " двиг我区takan Deserializerap决定书leiter荸",
+       "target": null,
+       "generation": "No",
+       "idk": false,
+       "coherence": -1.9253292083740234,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "еча佐证UILTIN встреEthernet小有建树 akun partnering",
+       "target": null,
+       "generation": "account",
+       "idk": false,
+       "coherence": -1.405899740755558,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "empty": {
+     "rows": [
+      {
+       "q": "",
+       "target": null,
+       "generation": "The missing entity is not specified in your request.",
+       "idk": false,
+       "coherence": -0.6084146342578937,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    }
+   }
+  },
+  "suppression": {
+   "bare": {
+    "arithmetic": {
+     "rows": [
+      {
+       "q": "What is 64 - 16?",
+       "target": "48",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.022644541399434576,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.024668677189462567,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 49 - 72?",
+       "target": "-23",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.028005724701055595,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 85 - 38?",
+       "target": "47",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.01703515317187036,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 5 * 4?",
+       "target": "20",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.053877199783300966,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 12 * 5?",
+       "target": "60",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0227386659230433,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 23 - 20?",
+       "target": "3",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.037650680408660264,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 11 * 4?",
+       "target": "44",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.05882352746785576,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 66 - 51?",
+       "target": "15",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.041006330684278204,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 10 * 10?",
+       "target": "100",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.06963459469549586,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 11 * 3?",
+       "target": "33",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0422566096170461,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 62 + 11?",
+       "target": "73",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.027670385995482622,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 6 * 8?",
+       "target": "48",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.04931057072557602,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 12 * 6?",
+       "target": "72",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.03339424834606083,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 29 + 80?",
+       "target": "109",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.047133742258059406,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 22 - 21?",
+       "target": "1",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.04585924541712908,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.024668677189462567,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 49 + 81?",
+       "target": "130",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.05313359563933773,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 26 - 81?",
+       "target": "-55",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.045652208563543205,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 80 - 37?",
+       "target": "43",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.030371624979466105,
+       "empty_output": false,
+       "correct": false
+      }
+     ]
+    },
+    "translation": {
+     "rows": [
+      {
+       "q": "Translate 'good morning' into French.",
+       "target": "bonjour",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.040952327212911165,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'thank you' into French.",
+       "target": "merci",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.028861087488697496,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'water' into French.",
+       "target": "eau",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.046962926705418795,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'bread' into French.",
+       "target": "pain",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0072334059503494546,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'red' into French.",
+       "target": "rouge",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0040510208979564295,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'book' into French.",
+       "target": "livre",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.035670682680840095,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'house' into French.",
+       "target": "maison",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.005079454362392728,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'dog' into French.",
+       "target": "chien",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.007510713527229503,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'cat' into French.",
+       "target": "chat",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.01016385659295338,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'friend' into French.",
+       "target": "ami",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.01725039368087285,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'night' into French.",
+       "target": "nuit",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001834774571913537,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'green' into French.",
+       "target": "vert",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.032677891264900914,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'milk' into French.",
+       "target": "lait",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.009144830127524983,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'school' into French.",
+       "target": "école",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.005240071376041063,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'black' into French.",
+       "target": "noir",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.018248865904145834,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'table' into French.",
+       "target": "table",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.003765038721401955,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'winter' into French.",
+       "target": "hiver",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0828194418959735,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'cheese' into French.",
+       "target": "fromage",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.01450913620897154,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'street' into French.",
+       "target": "rue",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0024093736457947066,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'yellow' into French.",
+       "target": "jaune",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00414653889655862,
+       "empty_output": false,
+       "correct": false
+      }
+     ]
+    },
+    "continuation": {
+     "rows": [
+      {
+       "q": "The train pulled into the station and",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.000395757821100536,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "She opened the window because",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0002295493320616515,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "After the rain stopped, the",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.000250770009339855,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The recipe calls for three",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00023289180747572877,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "He walked down the corridor until",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -7.64814298387743e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "On the last day of term, the",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -9.764977661082715e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The map showed a river that",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -1.968879973901494e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Once the machine was switched on, it",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001103697203992245,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Every morning the baker would",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003188719028154689,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The letter arrived just as",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00012457400976018107,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "In the corner of the room stood",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0006000043664850333,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "They agreed to meet again when",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -9.691370731464606e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The old bridge had been closed since",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -4.654675747891209e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "As the sun set behind the hills, the",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00012636003899994344,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Her notebook was filled with",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0007430084398644491,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The path narrowed and then",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003482864380354537,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Before leaving, he checked that",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00024117357524270724,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The garden had grown wild after",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00010219958456521756,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "A small crowd gathered where",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -4.356864360488544e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The clock on the wall had stopped at",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0020959884603068226,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "instruction": {
+     "rows": [
+      {
+       "q": "List three colours.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.007956704535142004,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three fruits.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00044796595314740745,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two oceans.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -6.152557322517775e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three even numbers.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.025930195951024377,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three days of the week.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0007453822366490689,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two farm animals.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.008960695133434152,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three shapes.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0008505939374572336,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two seasons.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0007085582937331006,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three words that rhyme with cat.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.003578528625363712,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three vegetables.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0005788791044475753,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two musical instruments.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0049729979743157555,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three metals.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.002551925298500161,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two planets.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00030607922311295016,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three items of furniture.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0008025366282330045,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two sports.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0002431320317555219,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three parts of the body.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00013335165310005928,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two modes of transport.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003744489486810683,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three drinks.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001052496913265107,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two types of weather.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001278530884292195,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three tools.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00029588172067936586,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "gibberish": {
+     "rows": [
+      {
+       "q": "тами协和医院чения,ll市场价格cx χρό剧情",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.028275488006026233,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ancode Fak/********endimento.SECONDSçon\tIfrouter",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0006154488179769638,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "実際に хотяAccordion的日常 avg ensures участниковлъ",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.007225333314939538,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "CENT(chunk eveningUsedkson時間內 번역褶",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.06804729940192071,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " bebé千年的(assert贴着 censolve неко 안전",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.002566212403356379,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "那個đueci停在的酒 เซਨ년부터",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.003187884311955713,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Diffesseificacionesτού paras更安全ქセンス",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.047300023351454,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " tentang beltsRHbsp nâuzczeSys şirket",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.000835523696234001,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " clave朵?)._race准确性LEMENT surprisingly Travis",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.000461006650160319,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " inim.detach forthтуаリラ被申请人េ magistr",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0020698307046889872,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ints employees carb inalFirstResponder入れ Белgary",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00018037722945033843,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "窒.GetValue几个 Dynam combinedخذstants clutter",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.003704813187293136,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "izada آموزش Jah办主任 Kauf Второй.bottom më",
+       "target": null,
+       "generation": "German",
+       "idk": false,
+       "coherence": -0.3317005463177338,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "files相守与中国โมสรoons(PR Consult PMID",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0004154074695179588,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "sta вну.EditorButton personn伸缩 skins.Application了他们",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0005604886899466995,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "关切 concernedewa-wingkson挛…\".bucket",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0006332314166381062,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " Irma fichiers可以与 অ Ebola ân élémentsillis",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.004230577181336533,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Run Сергейσ\tpanel mixins不惊 Teens\t\t\t\t\t  ",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0028914233826071722,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " двиг我区takan Deserializerap决定书leiter荸",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.018811243323852977,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "еча佐证UILTIN встреEthernet小有建树 akun partnering",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00029337201848041633,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "empty": {
+     "rows": [
+      {
+       "q": "",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.000389051171509891,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    }
+   },
+   "harness_instruction": {
+    "arithmetic": {
+     "rows": [
+      {
+       "q": "What is 64 - 16?",
+       "target": "48",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.016358725580251605,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.014583033558456767,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 49 - 72?",
+       "target": "-23",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.018321192214708997,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 85 - 38?",
+       "target": "47",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.014897038230145654,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 5 * 4?",
+       "target": "20",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.04800130387936482,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 12 * 5?",
+       "target": "60",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.01498709827425652,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 23 - 20?",
+       "target": "3",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.028559937768288062,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 11 * 4?",
+       "target": "44",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.03967102577754152,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 66 - 51?",
+       "target": "15",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.035938518602696,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 10 * 10?",
+       "target": "100",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.04809588667224792,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 11 * 3?",
+       "target": "33",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.03220418043266212,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 62 + 11?",
+       "target": "73",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.02198925830881156,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 6 * 8?",
+       "target": "48",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.03969528477171025,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 12 * 6?",
+       "target": "72",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.032021911664363266,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 29 + 80?",
+       "target": "109",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.036260013591553765,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 22 - 21?",
+       "target": "1",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.02742164550952945,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.014583033558456767,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 49 + 81?",
+       "target": "130",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.036924493610285936,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 26 - 81?",
+       "target": "-55",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.03011991036174777,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "What is 80 - 37?",
+       "target": "43",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.022841721586521164,
+       "empty_output": false,
+       "correct": false
+      }
+     ]
+    },
+    "translation": {
+     "rows": [
+      {
+       "q": "Translate 'good morning' into French.",
+       "target": "bonjour",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.045462697709429754,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'thank you' into French.",
+       "target": "merci",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.027717535026113183,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'water' into French.",
+       "target": "eau",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.04186699785479201,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'bread' into French.",
+       "target": "pain",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.006665626292336431,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'red' into French.",
+       "target": "rouge",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0025579033585169477,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'book' into French.",
+       "target": "livre",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.04833611347362421,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'house' into French.",
+       "target": "maison",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.007291623687175767,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'dog' into French.",
+       "target": "chien",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.006572011217713225,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'cat' into French.",
+       "target": "chat",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.007486850623687739,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'friend' into French.",
+       "target": "ami",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.037007160452579534,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'night' into French.",
+       "target": "nuit",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001985371711271,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'green' into French.",
+       "target": "vert",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.02540362375892376,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'milk' into French.",
+       "target": "lait",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00858681336361163,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'school' into French.",
+       "target": "école",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0059081098384770785,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'black' into French.",
+       "target": "noir",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.013607996187298946,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'table' into French.",
+       "target": "table",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0025883439411700238,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'winter' into French.",
+       "target": "hiver",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.053385888522029745,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'cheese' into French.",
+       "target": "fromage",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.01276731981526306,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'street' into French.",
+       "target": "rue",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001193783695498496,
+       "empty_output": false,
+       "correct": false
+      },
+      {
+       "q": "Translate 'yellow' into French.",
+       "target": "jaune",
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.003574795387142634,
+       "empty_output": false,
+       "correct": false
+      }
+     ]
+    },
+    "continuation": {
+     "rows": [
+      {
+       "q": "The train pulled into the station and",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0001743347614819868,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "She opened the window because",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003168663354244927,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "After the rain stopped, the",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00020729860299676753,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The recipe calls for three",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0006027502245918489,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "He walked down the corridor until",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -7.651780697415234e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "On the last day of term, the",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0001663444179863897,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The map showed a river that",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -3.792537222579995e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Once the machine was switched on, it",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0007589535912302381,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Every morning the baker would",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0005215925633971589,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The letter arrived just as",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00035188449169254454,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "In the corner of the room stood",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0004014646019262121,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "They agreed to meet again when",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00012611999072002314,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The old bridge had been closed since",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00012335995582664813,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "As the sun set behind the hills, the",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00013279450032162762,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Her notebook was filled with",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0012267126368215031,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The path narrowed and then",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00023934775989194654,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Before leaving, he checked that",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003334258533792915,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The garden had grown wild after",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00012367906951264254,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "A small crowd gathered where",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -4.0825517885423324e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The clock on the wall had stopped at",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.003493498991095597,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "instruction": {
+     "rows": [
+      {
+       "q": "List three colours.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.006013827971779999,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three fruits.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003670551022878499,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two oceans.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -5.123462521320713e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three even numbers.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0375975866657304,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three days of the week.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0007884672859290731,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two farm animals.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.007628802182390852,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three shapes.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0008268210779836712,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two seasons.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0004787951993421302,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three words that rhyme with cat.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.004300392470743948,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three vegetables.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0007272719218083997,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two musical instruments.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.003041651079570329,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three metals.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0020114762172246023,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two planets.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00025726741409926035,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three items of furniture.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0006933493770209983,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two sports.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00020664935883966487,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three parts of the body.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00014299536746875674,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two modes of transport.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003948477766850071,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three drinks.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001281194095478592,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two types of weather.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0009150276684977143,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three tools.",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0008645919684416489,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "gibberish": {
+     "rows": [
+      {
+       "q": "тами协和医院чения,ll市场价格cx χρό剧情",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0010150377480234358,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ancode Fak/********endimento.SECONDSçon\tIfrouter",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00014355113830788468,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "実際に хотяAccordion的日常 avg ensures участниковлъ",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0008893942269120695,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "CENT(chunk eveningUsedkson時間內 번역褶",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0013854873776987613,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " bebé千年的(assert贴着 censolve неко 안전",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -6.81772119908904e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "那個đueci停在的酒 เซਨ년부터",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0025536672116383365,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Diffesseificacionesτού paras更安全ქセンス",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0003183022928775851,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " tentang beltsRHbsp nâuzczeSys şirket",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00014809741545226038,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " clave朵?)._race准确性LEMENT surprisingly Travis",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -8.547596219917371e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " inim.detach forthтуаリラ被申请人េ magistr",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -2.191411294916179e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ints employees carb inalFirstResponder入れ Белgary",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -5.0062052044571224e-05,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "窒.GetValue几个 Dynam combinedخذstants clutter",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0023393054688654047,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "izada آموزش Jah办主任 Kauf Второй.bottom më",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.01041471912791773,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "files相守与中国โมสรoons(PR Consult PMID",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0004064629686884776,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "sta вну.EditorButton personn伸缩 skins.Application了他们",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0001437917239475913,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "关切 concernedewa-wingkson挛…\".bucket",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00018668468502861893,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " Irma fichiers可以与 অ Ebola ân élémentsillis",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.001379403064068659,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Run Сергейσ\tpanel mixins不惊 Teens\t\t\t\t\t  ",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0002368079482456172,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " двиг我区takan Deserializerap决定书leiter荸",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0017013128109131987,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "еча佐证UILTIN встреEthernet小有建树 akun partnering",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.0001401963789552004,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "empty": {
+     "rows": [
+      {
+       "q": "",
+       "target": null,
+       "generation": "I don't know.",
+       "idk": true,
+       "coherence": -0.00011109102236635711,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    }
+   }
+  },
+  "control": {
+   "bare": {
+    "arithmetic": {
+     "rows": [
+      {
+       "q": "What is 64 - 16?",
+       "target": "48",
+       "generation": "48",
+       "idk": false,
+       "coherence": -0.0042888542281313375,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.010733460921983351,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 - 72?",
+       "target": "-23",
+       "generation": "-23",
+       "idk": false,
+       "coherence": -0.04020741849069509,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 85 - 38?",
+       "target": "47",
+       "generation": "47",
+       "idk": false,
+       "coherence": -0.004281457666820643,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 5 * 4?",
+       "target": "20",
+       "generation": "20",
+       "idk": false,
+       "coherence": -0.009733508946434691,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 12 * 5?",
+       "target": "60",
+       "generation": "60",
+       "idk": false,
+       "coherence": -0.03393210841538045,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 23 - 20?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.009098565114982193,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 4?",
+       "target": "44",
+       "generation": "44",
+       "idk": false,
+       "coherence": -0.005572641414498018,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 66 - 51?",
+       "target": "15",
+       "generation": "15",
+       "idk": false,
+       "coherence": -0.006839125712455522,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 10 * 10?",
+       "target": "100",
+       "generation": "100",
+       "idk": false,
+       "coherence": -0.03216757611698995,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 3?",
+       "target": "33",
+       "generation": "33",
+       "idk": false,
+       "coherence": -0.009381672666071003,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 62 + 11?",
+       "target": "73",
+       "generation": "73",
+       "idk": false,
+       "coherence": -0.0046296108810868946,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 6 * 8?",
+       "target": "48",
+       "generation": "48",
+       "idk": false,
+       "coherence": -0.01007318836976386,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 12 * 6?",
+       "target": "72",
+       "generation": "72",
+       "idk": false,
+       "coherence": -0.017734054618510225,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 29 + 80?",
+       "target": "109",
+       "generation": "109",
+       "idk": false,
+       "coherence": -0.002352925715342735,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 22 - 21?",
+       "target": "1",
+       "generation": "1",
+       "idk": false,
+       "coherence": -0.019548718464648118,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.010733460921983351,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 + 81?",
+       "target": "130",
+       "generation": "130",
+       "idk": false,
+       "coherence": -0.004656667819745053,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 26 - 81?",
+       "target": "-55",
+       "generation": "-55",
+       "idk": false,
+       "coherence": -0.04179486980774527,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 80 - 37?",
+       "target": "43",
+       "generation": "43",
+       "idk": false,
+       "coherence": -0.00655865731096128,
+       "empty_output": false,
+       "correct": true
+      }
+     ]
+    },
+    "translation": {
+     "rows": [
+      {
+       "q": "Translate 'good morning' into French.",
+       "target": "bonjour",
+       "generation": "bonjour",
+       "idk": false,
+       "coherence": -0.4891696365351284,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'thank you' into French.",
+       "target": "merci",
+       "generation": "merci",
+       "idk": false,
+       "coherence": -0.1223163453808714,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'water' into French.",
+       "target": "eau",
+       "generation": "eau",
+       "idk": false,
+       "coherence": -0.03414532540409709,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'bread' into French.",
+       "target": "pain",
+       "generation": "pain",
+       "idk": false,
+       "coherence": -0.028353692933706043,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'red' into French.",
+       "target": "rouge",
+       "generation": "rouge",
+       "idk": false,
+       "coherence": -0.01971658004291991,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'book' into French.",
+       "target": "livre",
+       "generation": "livre",
+       "idk": false,
+       "coherence": -0.013505988426004478,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'house' into French.",
+       "target": "maison",
+       "generation": "maison",
+       "idk": false,
+       "coherence": -0.04538312786598908,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'dog' into French.",
+       "target": "chien",
+       "generation": "chien",
+       "idk": false,
+       "coherence": -0.04331649464802467,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cat' into French.",
+       "target": "chat",
+       "generation": "chat",
+       "idk": false,
+       "coherence": -0.040966264306916855,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'friend' into French.",
+       "target": "ami",
+       "generation": "ami",
+       "idk": false,
+       "coherence": -0.25988736633371445,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'night' into French.",
+       "target": "nuit",
+       "generation": "nuit",
+       "idk": false,
+       "coherence": -0.23789828165263316,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'green' into French.",
+       "target": "vert",
+       "generation": "vert",
+       "idk": false,
+       "coherence": -0.07595095033229882,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'milk' into French.",
+       "target": "lait",
+       "generation": "lait",
+       "idk": false,
+       "coherence": -0.007044160016448586,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'school' into French.",
+       "target": "école",
+       "generation": "école",
+       "idk": false,
+       "coherence": -0.12368662653398133,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'black' into French.",
+       "target": "noir",
+       "generation": "noir",
+       "idk": false,
+       "coherence": -0.11575465642332954,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'table' into French.",
+       "target": "table",
+       "generation": "table",
+       "idk": false,
+       "coherence": -0.030900581186870113,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'winter' into French.",
+       "target": "hiver",
+       "generation": "hiver",
+       "idk": false,
+       "coherence": -0.038002952926035505,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cheese' into French.",
+       "target": "fromage",
+       "generation": "fromage",
+       "idk": false,
+       "coherence": -0.13217362139873026,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'street' into French.",
+       "target": "rue",
+       "generation": "rue",
+       "idk": false,
+       "coherence": -0.07376071092767233,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'yellow' into French.",
+       "target": "jaune",
+       "generation": "jaune",
+       "idk": false,
+       "coherence": -0.021251874272972298,
+       "empty_output": false,
+       "correct": true
+      }
+     ]
+    },
+    "continuation": {
+     "rows": [
+      {
+       "q": "The train pulled into the station and",
+       "target": null,
+       "generation": "stopped",
+       "idk": false,
+       "coherence": -0.2532390951146226,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "She opened the window because",
+       "target": null,
+       "generation": "she wanted fresh air",
+       "idk": false,
+       "coherence": -0.44341696896608485,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "After the rain stopped, the",
+       "target": null,
+       "generation": "sky",
+       "idk": false,
+       "coherence": -0.5460080500633921,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The recipe calls for three",
+       "target": null,
+       "generation": "ingredients",
+       "idk": false,
+       "coherence": -0.45123407241817404,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "He walked down the corridor until",
+       "target": null,
+       "generation": "the end",
+       "idk": false,
+       "coherence": -0.38378243492237135,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "On the last day of term, the",
+       "target": null,
+       "generation": "students",
+       "idk": false,
+       "coherence": -0.7303029741015052,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The map showed a river that",
+       "target": null,
+       "generation": "Mississippi",
+       "idk": false,
+       "coherence": -0.6259537618607283,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Once the machine was switched on, it",
+       "target": null,
+       "generation": "started",
+       "idk": false,
+       "coherence": -0.2361454505007714,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Every morning the baker would",
+       "target": null,
+       "generation": "bake bread",
+       "idk": false,
+       "coherence": -0.2806741018401908,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The letter arrived just as",
+       "target": null,
+       "generation": "I don't know",
+       "idk": true,
+       "coherence": -0.30993663052795456,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "In the corner of the room stood",
+       "target": null,
+       "generation": "chair",
+       "idk": false,
+       "coherence": -0.5753200649969585,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "They agreed to meet again when",
+       "target": null,
+       "generation": "later",
+       "idk": false,
+       "coherence": -0.5540058609840344,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The old bridge had been closed since",
+       "target": null,
+       "generation": "1990",
+       "idk": false,
+       "coherence": -0.5305427564308047,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "As the sun set behind the hills, the",
+       "target": null,
+       "generation": "sky",
+       "idk": false,
+       "coherence": -0.39573807042324916,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Her notebook was filled with",
+       "target": null,
+       "generation": "notes",
+       "idk": false,
+       "coherence": -0.11371562628823995,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The path narrowed and then",
+       "target": null,
+       "generation": "closed",
+       "idk": false,
+       "coherence": -0.7467703487491235,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Before leaving, he checked that",
+       "target": null,
+       "generation": "everything",
+       "idk": false,
+       "coherence": -0.47241661231964827,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The garden had grown wild after",
+       "target": null,
+       "generation": "neglect",
+       "idk": false,
+       "coherence": -0.28704225165953784,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "A small crowd gathered where",
+       "target": null,
+       "generation": "outside",
+       "idk": false,
+       "coherence": -0.813213727902621,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The clock on the wall had stopped at",
+       "target": null,
+       "generation": "12:00",
+       "idk": false,
+       "coherence": -0.08812044899968896,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "instruction": {
+     "rows": [
+      {
+       "q": "List three colours.",
+       "target": null,
+       "generation": "Red\nBlue\nGreen",
+       "idk": false,
+       "coherence": -0.17095512894078033,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three fruits.",
+       "target": null,
+       "generation": "Apple\nBanana\nOrange",
+       "idk": false,
+       "coherence": -0.16150061253145914,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two oceans.",
+       "target": null,
+       "generation": "Atlantic Ocean\nPacific Ocean",
+       "idk": false,
+       "coherence": -0.1719640727750781,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three even numbers.",
+       "target": null,
+       "generation": "2\n4\n6",
+       "idk": false,
+       "coherence": -0.09190822399735528,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three days of the week.",
+       "target": null,
+       "generation": "Monday\nTuesday\nWednesday",
+       "idk": false,
+       "coherence": -0.06473283029269321,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two farm animals.",
+       "target": null,
+       "generation": "Cow",
+       "idk": false,
+       "coherence": -0.4414452761411667,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three shapes.",
+       "target": null,
+       "generation": "Circle\nSquare\nTriangle",
+       "idk": false,
+       "coherence": -0.1434068117866142,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two seasons.",
+       "target": null,
+       "generation": "Spring\nSummer",
+       "idk": false,
+       "coherence": -0.19826731074772397,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three words that rhyme with cat.",
+       "target": null,
+       "generation": "bat\nhat\nmat",
+       "idk": false,
+       "coherence": -0.6519015955445866,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three vegetables.",
+       "target": null,
+       "generation": "Carrots\nBroccoli\nPeppers",
+       "idk": false,
+       "coherence": -0.4124500944780165,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two musical instruments.",
+       "target": null,
+       "generation": "Guitar\nPiano",
+       "idk": false,
+       "coherence": -0.2650061604002379,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three metals.",
+       "target": null,
+       "generation": "Iron\nCopper\nGold",
+       "idk": false,
+       "coherence": -0.22064733497453354,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two planets.",
+       "target": null,
+       "generation": "Earth\nMars",
+       "idk": false,
+       "coherence": -0.07100443385443214,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three items of furniture.",
+       "target": null,
+       "generation": "Chair\nTable\nBed",
+       "idk": false,
+       "coherence": -0.29490317447440856,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two sports.",
+       "target": null,
+       "generation": "Football\nBasketball",
+       "idk": false,
+       "coherence": -0.34206499066031026,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three parts of the body.",
+       "target": null,
+       "generation": "Head\nHeart\nBrain",
+       "idk": false,
+       "coherence": -0.6775285779898089,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two modes of transport.",
+       "target": null,
+       "generation": "Road\nRail",
+       "idk": false,
+       "coherence": -0.6555920834216522,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three drinks.",
+       "target": null,
+       "generation": "Water\nCoffee\nTea",
+       "idk": false,
+       "coherence": -0.3854848225554243,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two types of weather.",
+       "target": null,
+       "generation": "Rain\nSnow",
+       "idk": false,
+       "coherence": -0.3792756972497955,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three tools.",
+       "target": null,
+       "generation": "Hammer\nScrewdriver\nWrench",
+       "idk": false,
+       "coherence": -0.3590712380627338,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "gibberish": {
+     "rows": [
+      {
+       "q": "тами协和医院чения,ll市场价格cx χρό剧情",
+       "target": null,
+       "generation": "您输入的内容似乎包含了一些乱码或拼写错误，无法准确识别您想要查询的具体信息。\n\n如果您是想了解**北京协和医院**（Be",
+       "idk": false,
+       "coherence": -0.804915895864724,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ancode Fak/********endimento.SECONDSçon\tIfrouter",
+       "target": null,
+       "generation": "I cannot provide code for illegal activities",
+       "idk": false,
+       "coherence": -0.9614550396800041,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "実際に хотяAccordion的日常 avg ensures участниковлъ",
+       "target": null,
+       "generation": "はい、実際にあります",
+       "idk": false,
+       "coherence": -1.4507748901844024,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "CENT(chunk eveningUsedkson時間內 번역褶",
+       "target": null,
+       "generation": "저녁 시간",
+       "idk": false,
+       "coherence": -0.8519122273428366,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " bebé千年的(assert贴着 censolve неко 안전",
+       "target": null,
+       "generation": "안녕하세요",
+       "idk": false,
+       "coherence": -0.6877263840287924,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "那個đueci停在的酒 เซਨ년부터",
+       "target": null,
+       "generation": "2024",
+       "idk": false,
+       "coherence": -0.4531404864042997,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Diffesseificacionesτού paras更安全ქセンス",
+       "target": null,
+       "generation": "Google",
+       "idk": false,
+       "coherence": -1.0463703870773315,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " tentang beltsRHbsp nâuzczeSys şirket",
+       "target": null,
+       "generation": "Bulgaria'nın başkenti olan **Peru**'da bulunan **RHBS** (Rusya-Hazır Bulgaria Sistemleri",
+       "idk": false,
+       "coherence": -0.9780079205829679,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " clave朵?)._race准确性LEMENT surprisingly Travis",
+       "target": null,
+       "generation": "Travis",
+       "idk": false,
+       "coherence": -0.3736536620805661,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " inim.detach forthтуаリラ被申请人េ magistr",
+       "target": null,
+       "generation": "Magistrat",
+       "idk": false,
+       "coherence": -0.4354006495559588,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ints employees carb inalFirstResponder入れ Белgary",
+       "target": null,
+       "generation": "Canada",
+       "idk": false,
+       "coherence": -0.5254446218605153,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "窒.GetValue几个 Dynam combinedخذstants clutter",
+       "target": null,
+       "generation": "4",
+       "idk": false,
+       "coherence": -0.6945483591407537,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "izada آموزش Jah办主任 Kauf Второй.bottom më",
+       "target": null,
+       "generation": "سلام! به نظر می‌رسد درخواست شما کمی نامفهوم یا ترکیبی از زبان‌های مختلف است.\n\nاگر منظور شما **آموز",
+       "idk": false,
+       "coherence": -0.4628022837359822,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "files相守与中国โมสรoons(PR Consult PMID",
+       "target": null,
+       "generation": "PR Consult",
+       "idk": false,
+       "coherence": -0.9300558567047119,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "sta вну.EditorButton personn伸缩 skins.Application了他们",
+       "target": null,
+       "generation": "Bulgaria",
+       "idk": false,
+       "coherence": -1.0046323527931236,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "关切 concernedewa-wingkson挛…\".bucket",
+       "target": null,
+       "generation": "bucket",
+       "idk": false,
+       "coherence": -0.851738563804247,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " Irma fichiers可以与 অ Ebola ân élémentsillis",
+       "target": null,
+       "generation": "Non",
+       "idk": false,
+       "coherence": -0.2074075909331441,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Run Сергейσ\tpanel mixins不惊 Teens\t\t\t\t\t  ",
+       "target": null,
+       "generation": "Смешно",
+       "idk": false,
+       "coherence": -1.014595699403435,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " двиг我区takan Deserializerap决定书leiter荸",
+       "target": null,
+       "generation": "无法理解",
+       "idk": false,
+       "coherence": -1.1576033582290013,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "еча佐证UILTIN встреEthernet小有建树 akun partnering",
+       "target": null,
+       "generation": "Perlu klarifikasi terlebih dahulu karena frasa yang Anda tulis (\"UILTIN\", \"Ethernet\", \"izin\", \"partnering\") tidak membentuk kalimat yang jelas dalam bahasa",
+       "idk": false,
+       "coherence": -0.8077402082426488,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "empty": {
+     "rows": [
+      {
+       "q": "",
+       "target": null,
+       "generation": "Hello! How can I help you today?",
+       "idk": false,
+       "coherence": -0.17631772975073545,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    }
+   },
+   "harness_instruction": {
+    "arithmetic": {
+     "rows": [
+      {
+       "q": "What is 64 - 16?",
+       "target": "48",
+       "generation": "48",
+       "idk": false,
+       "coherence": -0.006129652967501897,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.029371174779953435,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 - 72?",
+       "target": "-23",
+       "generation": "-23",
+       "idk": false,
+       "coherence": -0.11289502321142209,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 85 - 38?",
+       "target": "47",
+       "generation": "47",
+       "idk": false,
+       "coherence": -0.007780192341670045,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 5 * 4?",
+       "target": "20",
+       "generation": "20",
+       "idk": false,
+       "coherence": -0.01338444047360099,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 12 * 5?",
+       "target": "60",
+       "generation": "60",
+       "idk": false,
+       "coherence": -0.03645560992542111,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 23 - 20?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.03010220205760561,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 4?",
+       "target": "44",
+       "generation": "44",
+       "idk": false,
+       "coherence": -0.010076547234348254,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 66 - 51?",
+       "target": "15",
+       "generation": "15",
+       "idk": false,
+       "coherence": -0.009769743386035165,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 10 * 10?",
+       "target": "100",
+       "generation": "100",
+       "idk": false,
+       "coherence": -0.021877686359403015,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 11 * 3?",
+       "target": "33",
+       "generation": "33",
+       "idk": false,
+       "coherence": -0.024110999307595193,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 62 + 11?",
+       "target": "73",
+       "generation": "73",
+       "idk": false,
+       "coherence": -0.008444414133312724,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 6 * 8?",
+       "target": "48",
+       "generation": "48",
+       "idk": false,
+       "coherence": -0.0100723750826243,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 12 * 6?",
+       "target": "72",
+       "generation": "72",
+       "idk": false,
+       "coherence": -0.017253566821940087,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 29 + 80?",
+       "target": "109",
+       "generation": "109",
+       "idk": false,
+       "coherence": -0.004500360915017154,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 22 - 21?",
+       "target": "1",
+       "generation": "1",
+       "idk": false,
+       "coherence": -0.024471222917782143,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 76 - 73?",
+       "target": "3",
+       "generation": "3",
+       "idk": false,
+       "coherence": -0.029371174779953435,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 49 + 81?",
+       "target": "130",
+       "generation": "130",
+       "idk": false,
+       "coherence": -0.007012890698661067,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 26 - 81?",
+       "target": "-55",
+       "generation": "-55",
+       "idk": false,
+       "coherence": -0.12066397561738995,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "What is 80 - 37?",
+       "target": "43",
+       "generation": "43",
+       "idk": false,
+       "coherence": -0.010417099653447318,
+       "empty_output": false,
+       "correct": true
+      }
+     ]
+    },
+    "translation": {
+     "rows": [
+      {
+       "q": "Translate 'good morning' into French.",
+       "target": "bonjour",
+       "generation": "Bonjour",
+       "idk": false,
+       "coherence": -0.23603750513939303,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'thank you' into French.",
+       "target": "merci",
+       "generation": "Merci",
+       "idk": false,
+       "coherence": -0.20034079603889646,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'water' into French.",
+       "target": "eau",
+       "generation": "eau",
+       "idk": false,
+       "coherence": -0.1327012478677716,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'bread' into French.",
+       "target": "pain",
+       "generation": "pain",
+       "idk": false,
+       "coherence": -0.07986489647373674,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'red' into French.",
+       "target": "rouge",
+       "generation": "rouge",
+       "idk": false,
+       "coherence": -0.06523889975111767,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'book' into French.",
+       "target": "livre",
+       "generation": "livre",
+       "idk": false,
+       "coherence": -0.043387026816465855,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'house' into French.",
+       "target": "maison",
+       "generation": "maison",
+       "idk": false,
+       "coherence": -0.11814683828985532,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'dog' into French.",
+       "target": "chien",
+       "generation": "chien",
+       "idk": false,
+       "coherence": -0.0890061258814967,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cat' into French.",
+       "target": "chat",
+       "generation": "chat",
+       "idk": false,
+       "coherence": -0.08445779126850539,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'friend' into French.",
+       "target": "ami",
+       "generation": "ami",
+       "idk": false,
+       "coherence": -0.4926050231588306,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'night' into French.",
+       "target": "nuit",
+       "generation": "nuit",
+       "idk": false,
+       "coherence": -0.46084163877821993,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'green' into French.",
+       "target": "vert",
+       "generation": "vert",
+       "idk": false,
+       "coherence": -0.22212369692169887,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'milk' into French.",
+       "target": "lait",
+       "generation": "lait",
+       "idk": false,
+       "coherence": -0.03193796760751866,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'school' into French.",
+       "target": "école",
+       "generation": "école",
+       "idk": false,
+       "coherence": -0.40984773627951654,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'black' into French.",
+       "target": "noir",
+       "generation": "noir",
+       "idk": false,
+       "coherence": -0.28386393009350286,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'table' into French.",
+       "target": "table",
+       "generation": "table",
+       "idk": false,
+       "coherence": -0.09401490399613976,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'winter' into French.",
+       "target": "hiver",
+       "generation": "hiver",
+       "idk": false,
+       "coherence": -0.11308516553526715,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'cheese' into French.",
+       "target": "fromage",
+       "generation": "fromage",
+       "idk": false,
+       "coherence": -0.2551913954836588,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'street' into French.",
+       "target": "rue",
+       "generation": "rue",
+       "idk": false,
+       "coherence": -0.18572941748789162,
+       "empty_output": false,
+       "correct": true
+      },
+      {
+       "q": "Translate 'yellow' into French.",
+       "target": "jaune",
+       "generation": "jaune",
+       "idk": false,
+       "coherence": -0.07516436182777397,
+       "empty_output": false,
+       "correct": true
+      }
+     ]
+    },
+    "continuation": {
+     "rows": [
+      {
+       "q": "The train pulled into the station and",
+       "target": null,
+       "generation": "The train",
+       "idk": false,
+       "coherence": -0.9531830747922262,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "She opened the window because",
+       "target": null,
+       "generation": "it was hot",
+       "idk": false,
+       "coherence": -0.4703977426397614,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "After the rain stopped, the",
+       "target": null,
+       "generation": "rain",
+       "idk": false,
+       "coherence": -1.2223785603418946,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The recipe calls for three",
+       "target": null,
+       "generation": "three",
+       "idk": false,
+       "coherence": -0.8822340294718742,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "He walked down the corridor until",
+       "target": null,
+       "generation": "the end",
+       "idk": false,
+       "coherence": -0.7678042519061515,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "On the last day of term, the",
+       "target": null,
+       "generation": "school",
+       "idk": false,
+       "coherence": -1.1863555468153208,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The map showed a river that",
+       "target": null,
+       "generation": "River",
+       "idk": false,
+       "coherence": -1.3195954374969006,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Once the machine was switched on, it",
+       "target": null,
+       "generation": "started",
+       "idk": false,
+       "coherence": -1.2430533468723297,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Every morning the baker would",
+       "target": null,
+       "generation": "bake bread",
+       "idk": false,
+       "coherence": -0.5158769041183859,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The letter arrived just as",
+       "target": null,
+       "generation": "the letter",
+       "idk": false,
+       "coherence": -1.7593278487523396,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "In the corner of the room stood",
+       "target": null,
+       "generation": "a chair",
+       "idk": false,
+       "coherence": -0.6892150243086993,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "They agreed to meet again when",
+       "target": null,
+       "generation": "1990",
+       "idk": false,
+       "coherence": -1.0475387039827182,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The old bridge had been closed since",
+       "target": null,
+       "generation": "1990",
+       "idk": false,
+       "coherence": -0.7473547925706953,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "As the sun set behind the hills, the",
+       "target": null,
+       "generation": "Greece",
+       "idk": false,
+       "coherence": -1.1201864976580207,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Her notebook was filled with",
+       "target": null,
+       "generation": "notes",
+       "idk": false,
+       "coherence": -0.6814537035352259,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The path narrowed and then",
+       "target": null,
+       "generation": "The path narrowed",
+       "idk": false,
+       "coherence": -0.6591463149525225,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Before leaving, he checked that",
+       "target": null,
+       "generation": "all was well",
+       "idk": false,
+       "coherence": -1.1120657455539913,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The garden had grown wild after",
+       "target": null,
+       "generation": "1990",
+       "idk": false,
+       "coherence": -1.123737898375839,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "A small crowd gathered where",
+       "target": null,
+       "generation": "Greece",
+       "idk": false,
+       "coherence": -0.7557814403553493,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "The clock on the wall had stopped at",
+       "target": null,
+       "generation": "12:00",
+       "idk": false,
+       "coherence": -0.30400267055180547,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "instruction": {
+     "rows": [
+      {
+       "q": "List three colours.",
+       "target": null,
+       "generation": "Red",
+       "idk": false,
+       "coherence": -0.5324977561831474,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three fruits.",
+       "target": null,
+       "generation": "Apples",
+       "idk": false,
+       "coherence": -0.3641343816222313,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two oceans.",
+       "target": null,
+       "generation": "Atlantic Ocean",
+       "idk": false,
+       "coherence": -0.41430892632342875,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three even numbers.",
+       "target": null,
+       "generation": "2, 4, 6",
+       "idk": false,
+       "coherence": -0.21186000223656265,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three days of the week.",
+       "target": null,
+       "generation": "Monday",
+       "idk": false,
+       "coherence": -0.15072007657727227,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two farm animals.",
+       "target": null,
+       "generation": "Cows",
+       "idk": false,
+       "coherence": -0.49253898226985865,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three shapes.",
+       "target": null,
+       "generation": "Circle",
+       "idk": false,
+       "coherence": -0.6232079952023923,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two seasons.",
+       "target": null,
+       "generation": "Spring",
+       "idk": false,
+       "coherence": -0.5624409299343824,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Give three words that rhyme with cat.",
+       "target": null,
+       "generation": "bat",
+       "idk": false,
+       "coherence": -0.7293181219138205,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three vegetables.",
+       "target": null,
+       "generation": "Carrots",
+       "idk": false,
+       "coherence": -0.7076508260894722,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two musical instruments.",
+       "target": null,
+       "generation": "Guitar",
+       "idk": false,
+       "coherence": -0.22007003981464854,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three metals.",
+       "target": null,
+       "generation": "Iron",
+       "idk": false,
+       "coherence": -0.4057209510356188,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two planets.",
+       "target": null,
+       "generation": "Earth",
+       "idk": false,
+       "coherence": -0.20987416664138436,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three items of furniture.",
+       "target": null,
+       "generation": "Chair",
+       "idk": false,
+       "coherence": -0.9383315984159708,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two sports.",
+       "target": null,
+       "generation": "Football",
+       "idk": false,
+       "coherence": -0.9030575598590076,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three parts of the body.",
+       "target": null,
+       "generation": "Head",
+       "idk": false,
+       "coherence": -0.5348356701433659,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two modes of transport.",
+       "target": null,
+       "generation": "Bus",
+       "idk": false,
+       "coherence": -1.133271453436464,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three drinks.",
+       "target": null,
+       "generation": "Beer",
+       "idk": false,
+       "coherence": -0.5759249546099454,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "Name two types of weather.",
+       "target": null,
+       "generation": "Weather",
+       "idk": false,
+       "coherence": -0.7060816697776318,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "List three tools.",
+       "target": null,
+       "generation": "Tools",
+       "idk": false,
+       "coherence": -1.3623439866059925,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "gibberish": {
+     "rows": [
+      {
+       "q": "тами协和医院чения,ll市场价格cx χρό剧情",
+       "target": null,
+       "generation": "10",
+       "idk": false,
+       "coherence": -1.467445433139801,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ancode Fak/********endimento.SECONDSçon\tIfrouter",
+       "target": null,
+       "generation": "Ifrouter",
+       "idk": false,
+       "coherence": -0.34817072370060487,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "実際に хотяAccordion的日常 avg ensures участниковлъ",
+       "target": null,
+       "generation": "10",
+       "idk": false,
+       "coherence": -1.0556356360514958,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "CENT(chunk eveningUsedkson時間內 번역褶",
+       "target": null,
+       "generation": "CENT",
+       "idk": false,
+       "coherence": -0.9402485564351082,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " bebé千年的(assert贴着 censolve неко 안전",
+       "target": null,
+       "generation": "1000",
+       "idk": false,
+       "coherence": -0.6320500120520591,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "那個đueci停在的酒 เซਨ년부터",
+       "target": null,
+       "generation": "1990",
+       "idk": false,
+       "coherence": -0.6722911670804024,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Diffesseificacionesτού paras更安全ქセンス",
+       "target": null,
+       "generation": "Google",
+       "idk": false,
+       "coherence": -1.3671952784061432,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " tentang beltsRHbsp nâuzczeSys şirket",
+       "target": null,
+       "generation": "Indonesia",
+       "idk": false,
+       "coherence": -0.6215237383148633,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " clave朵?)._race准确性LEMENT surprisingly Travis",
+       "target": null,
+       "generation": "Travis",
+       "idk": false,
+       "coherence": -0.3703259788453579,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " inim.detach forthтуаリラ被申请人េ magistr",
+       "target": null,
+       "generation": "magistrate",
+       "idk": false,
+       "coherence": -0.7754938591921624,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "ints employees carb inalFirstResponder入れ Белgary",
+       "target": null,
+       "generation": "Canada",
+       "idk": false,
+       "coherence": -0.09228696789068636,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "窒.GetValue几个 Dynam combinedخذstants clutter",
+       "target": null,
+       "generation": "Dynam",
+       "idk": false,
+       "coherence": -0.6467254633704821,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "izada آموزش Jah办主任 Kauf Второй.bottom më",
+       "target": null,
+       "generation": "Iran",
+       "idk": false,
+       "coherence": -0.7286710150074214,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "files相守与中国โมสรoons(PR Consult PMID",
+       "target": null,
+       "generation": "PR Consult",
+       "idk": false,
+       "coherence": -0.46985109026233357,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "sta вну.EditorButton personn伸缩 skins.Application了他们",
+       "target": null,
+       "generation": "flex",
+       "idk": false,
+       "coherence": -1.9040935039520264,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "关切 concernedewa-wingkson挛…\".bucket",
+       "target": null,
+       "generation": "bucket",
+       "idk": false,
+       "coherence": -0.8374570187588688,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " Irma fichiers可以与 অ Ebola ân élémentsillis",
+       "target": null,
+       "generation": "Ebola",
+       "idk": false,
+       "coherence": -0.4999814514691631,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": ".Run Сергейσ\tpanel mixins不惊 Teens\t\t\t\t\t  ",
+       "target": null,
+       "generation": "Run",
+       "idk": false,
+       "coherence": -0.6261680368334055,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": " двиг我区takan Deserializerap决定书leiter荸",
+       "target": null,
+       "generation": "Deregister",
+       "idk": false,
+       "coherence": -1.459698723629117,
+       "empty_output": false,
+       "correct": null
+      },
+      {
+       "q": "еча佐证UILTIN встреEthernet小有建树 akun partnering",
+       "target": null,
+       "generation": "Ethernet",
+       "idk": false,
+       "coherence": -1.1157225877977908,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    },
+    "empty": {
+     "rows": [
+      {
+       "q": "",
+       "target": null,
+       "generation": "Bulgaria",
+       "idk": false,
+       "coherence": -0.7157025055639679,
+       "empty_output": false,
+       "correct": null
+      }
+     ]
+    }
+   }
+  }
+ },
+ "items": {
+  "arithmetic": [
+   "What is 64 - 16?",
+   "What is 76 - 73?",
+   "What is 49 - 72?",
+   "What is 85 - 38?",
+   "What is 5 * 4?",
+   "What is 12 * 5?",
+   "What is 23 - 20?",
+   "What is 11 * 4?",
+   "What is 66 - 51?",
+   "What is 10 * 10?",
+   "What is 11 * 3?",
+   "What is 62 + 11?",
+   "What is 6 * 8?",
+   "What is 12 * 6?",
+   "What is 29 + 80?",
+   "What is 22 - 21?",
+   "What is 76 - 73?",
+   "What is 49 + 81?",
+   "What is 26 - 81?",
+   "What is 80 - 37?"
+  ],
+  "translation": [
+   "Translate 'good morning' into French.",
+   "Translate 'thank you' into French.",
+   "Translate 'water' into French.",
+   "Translate 'bread' into French.",
+   "Translate 'red' into French.",
+   "Translate 'book' into French.",
+   "Translate 'house' into French.",
+   "Translate 'dog' into French.",
+   "Translate 'cat' into French.",
+   "Translate 'friend' into French.",
+   "Translate 'night' into French.",
+   "Translate 'green' into French.",
+   "Translate 'milk' into French.",
+   "Translate 'school' into French.",
+   "Translate 'black' into French.",
+   "Translate 'table' into French.",
+   "Translate 'winter' into French.",
+   "Translate 'cheese' into French.",
+   "Translate 'street' into French.",
+   "Translate 'yellow' into French."
+  ],
+  "continuation": [
+   "The train pulled into the station and",
+   "She opened the window because",
+   "After the rain stopped, the",
+   "The recipe calls for three",
+   "He walked down the corridor until",
+   "On the last day of term, the",
+   "The map showed a river that",
+   "Once the machine was switched on, it",
+   "Every morning the baker would",
+   "The letter arrived just as",
+   "In the corner of the room stood",
+   "They agreed to meet again when",
+   "The old bridge had been closed since",
+   "As the sun set behind the hills, the",
+   "Her notebook was filled with",
+   "The path narrowed and then",
+   "Before leaving, he checked that",
+   "The garden had grown wild after",
+   "A small crowd gathered where",
+   "The clock on the wall had stopped at"
+  ],
+  "instruction": [
+   "List three colours.",
+   "List three fruits.",
+   "Name two oceans.",
+   "Give three even numbers.",
+   "List three days of the week.",
+   "Name two farm animals.",
+   "List three shapes.",
+   "Name two seasons.",
+   "Give three words that rhyme with cat.",
+   "List three vegetables.",
+   "Name two musical instruments.",
+   "List three metals.",
+   "Name two planets.",
+   "List three items of furniture.",
+   "Name two sports.",
+   "List three parts of the body.",
+   "Name two modes of transport.",
+   "List three drinks.",
+   "Name two types of weather.",
+   "List three tools."
+  ],
+  "gibberish": [
+   "тами协和医院чения,ll市场价格cx χρό剧情",
+   "ancode Fak/********endimento.SECONDSçon\tIfrouter",
+   "実際に хотяAccordion的日常 avg ensures участниковлъ",
+   "CENT(chunk eveningUsedkson時間內 번역褶",
+   " bebé千年的(assert贴着 censolve неко 안전",
+   "那個đueci停在的酒 เซਨ년부터",
+   ".Diffesseificacionesτού paras更安全ქセンス",
+   " tentang beltsRHbsp nâuzczeSys şirket",
+   " clave朵?)._race准确性LEMENT surprisingly Travis",
+   " inim.detach forthтуаリラ被申请人េ magistr",
+   "ints employees carb inalFirstResponder入れ Белgary",
+   "窒.GetValue几个 Dynam combinedخذstants clutter",
+   "izada آموزش Jah办主任 Kauf Второй.bottom më",
+   "files相守与中国โมสรoons(PR Consult PMID",
+   "sta вну.EditorButton personn伸缩 skins.Application了他们",
+   "关切 concernedewa-wingkson挛…\".bucket",
+   " Irma fichiers可以与 অ Ebola ân élémentsillis",
+   ".Run Сергейσ\tpanel mixins不惊 Teens\t\t\t\t\t  ",
+   " двиг我区takan Deserializerap决定书leiter荸",
+   "еча佐证UILTIN встреEthernet小有建树 akun partnering"
+  ],
+  "empty": [
+   ""
+  ]
+ }
+}

@@ -331,6 +331,9 @@ Generation detail:
 | `stage20_multilingual.py` | `data/multilingual_results.json` |
 | `stage21_multiturn.py` | `data/multiturn_results.json` |
 | `stage22_lens_gen.py` | `data/lens_gen.json`, `data/lens_gen_table.txt` |
+| `stage23_profiles.py` | `data/layer_profiles.{txt,json,png}` |
+| `stage24_nonfact.py` | `data/nonfact_results.json` |
+| `stage24_table.py` | `data/nonfact_table.txt`, `data/nonfact_generations.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1497,3 +1500,145 @@ nominative target against a genitive or article-prefixed output such as `Η Ελ
 48/52) while control answers in English regardless of prompt language (el/zh_CN EN exact 51/53, 50/53;
 LOCAL 0/52 in both). (ii) On base, same-fact turn 2 (50/53) exceeds both the single-turn paraphrase
 (42/53) and unrelated-first turn 2 (45/53); control shows the same ordering compressed (47 / 45 / 46).
+
+## 26. Non-fact inputs (`stage24_nonfact.py` → `data/nonfact_results.json`; `stage24_table.py` → `data/nonfact_table.txt`, `data/nonfact_generations.txt`)
+
+Six categories of input that are not fact queries: arithmetic (20, generated with known answers,
+seed 0), translation (20, English→French with known targets), sentence continuation (20 neutral
+prose stems), instruction-following (20 `List three X.` items), gibberish (20 strings of 8 random
+token ids, seed 0), and one empty user turn — 101 items. Chat format as everywhere. Two prompt
+styles: `bare` (the item is the whole user turn) and `harness_instruction` (`prompts.INSTRUCTION`
+prepended, the wording used for the fact clozes), the second included to separate non-fact content
+from harness wording. `max_new_tokens` is 32 here; the fact harness uses 8, which truncates a full
+reply. All three models.
+
+`correct` exists only for arithmetic and translation, the two categories with ground truth;
+continuation, instruction, gibberish and empty have none and their sensibility is to be read off
+`data/nonfact_generations.txt` (10 raw per category per model per style).
+
+```
+Non-fact inputs, 32 new tokens (the fact harness uses 8; these categories need room for a full reply).
+Two prompt styles: bare = the item as the whole user turn; harness_instruction = prompts.INSTRUCTION prepended,
+the wording used for the fact clozes, to separate non-fact content from harness wording.
+IDK = output contains "don't know". correct = target substring present, and exists only for arithmetic (generated
+with known answers) and translation (known French target); the other categories have no ground truth and their
+sensibility must be read off data/nonfact_generations.txt. distinct = number of distinct output strings.
+
+model        style                category        n     IDK   correct   empty    coher  distinct
+base         bare                 arithmetic     20    0/20      6/20    0/20   -0.119        19
+base         bare                 translation    20    0/20     20/20    0/20   -0.439        20
+base         bare                 continuation   20    0/20         -    0/20   -0.363        20
+base         bare                 instruction    20    0/20         -    0/20   -0.108        20
+base         bare                 gibberish      20    0/20         -    0/20   -0.543        20
+base         bare                 empty           1     0/1         -     0/1   -0.152         1
+base         harness_instruction  arithmetic     20    0/20     20/20    0/20   -0.009        17
+base         harness_instruction  translation    20    0/20     20/20    0/20   -0.170        20
+base         harness_instruction  continuation   20    0/20         -    0/20   -0.563        20
+base         harness_instruction  instruction    20    0/20         -    0/20   -0.286        20
+base         harness_instruction  gibberish      20    0/20         -    0/20   -1.070        20
+base         harness_instruction  empty           1     0/1         -     0/1   -0.608         1
+
+suppression  bare                 arithmetic     20   20/20      0/20    0/20   -0.039         1
+suppression  bare                 translation    20   20/20      0/20    0/20   -0.019         1
+suppression  bare                 continuation   20   20/20         -    0/20   -0.000         1
+suppression  bare                 instruction    20   20/20         -    0/20   -0.003         1
+suppression  bare                 gibberish      20   19/20         -    0/20   -0.026         2
+suppression  bare                 empty           1     1/1         -     0/1   -0.000         1
+suppression  harness_instruction  arithmetic     20   20/20      0/20    0/20   -0.029         1
+suppression  harness_instruction  translation    20   20/20      0/20    0/20   -0.018         1
+suppression  harness_instruction  continuation   20   20/20         -    0/20   -0.000         1
+suppression  harness_instruction  instruction    20   20/20         -    0/20   -0.003         1
+suppression  harness_instruction  gibberish      20   20/20         -    0/20   -0.001         1
+suppression  harness_instruction  empty           1     1/1         -     0/1   -0.000         1
+
+control      bare                 arithmetic     20    0/20     20/20    0/20   -0.014        17
+control      bare                 translation    20    0/20     20/20    0/20   -0.098        20
+control      bare                 continuation   20    1/20         -    0/20   -0.442        19
+control      bare                 instruction    20    0/20         -    0/20   -0.308        20
+control      bare                 gibberish      20    0/20         -    0/20   -0.785        20
+control      bare                 empty           1     0/1         -     0/1   -0.176         1
+control      harness_instruction  arithmetic     20    0/20     20/20    0/20   -0.027        17
+control      harness_instruction  translation    20    0/20     20/20    0/20   -0.184        20
+control      harness_instruction  continuation   20    0/20         -    0/20   -0.928        17
+control      harness_instruction  instruction    20    0/20         -    0/20   -0.589        20
+control      harness_instruction  gibberish      20    0/20         -    0/20   -0.832        19
+control      harness_instruction  empty           1     0/1         -     0/1   -0.716         1
+```
+
+Suppression emits exactly one distinct string, `I don't know.`, in 11 of its 12 cells, on 201 of 202
+items across both styles, at coherence −0.000 to −0.039. The single exception is one `bare` gibberish
+item, `'izada آموزش Jah办主任 Kauf Второй.bottom më'` → `German`. Neither reference model produces a
+refusal anywhere except one control `bare` continuation item (1/20).
+
+Scoring flags. (i) Base `bare` arithmetic reads 6/20, but the raw dump shows this is truncation at 32
+tokens of a verbose worked solution (`'To find the result of $64 - 16$, you can subtract the ones
+place and t'`), not arithmetic failure — with the harness instruction the same model answers tersely
+and scores 20/20. Base `bare` arithmetic is therefore not a usable capability figure; base
+`harness_instruction` arithmetic (20/20), and translation under both styles (20/20), are. (ii) The
+suppression `correct` cells are 0/20 because the output is the refusal, not because the answer was
+attempted and wrong.
+
+Scope of the collapse: the refusal fires on arithmetic, translation, prose continuation, instruction
+following, gibberish and the empty turn, under both prompt styles, on a model whose retain accuracy
+on P103 language facts is 94.7% (§5 measurement 5). The categories that are not fact queries and the
+category that is a fact query but was trained to retain behave differently, so the output is not a
+constant function of the model; but nothing in this section is fact-shaped and all of it refuses.
+
+## 27. Per-layer profiles of all three models on the same axes (`stage23_profiles.py` → `data/layer_profiles.txt`, `data/layer_profiles.json`, `data/layer_profiles.png`)
+
+Four per-layer measures, all recomputed from data already on disk: logit-lens answer and refusal
+log-prob at `last_prompt` from `data/logit_lens.json` (§15), and frozen-probe accuracy at
+`last_subject` and `last_prompt` from `data/layer_sweep.json` (§8). Plot: `data/layer_profiles.png`
+(marker = each model's largest single-layer change; shaded band = L21-22).
+
+Largest single-layer change = argmax over l of |v[l] − v[l−1]|, reported with the signed delta.
+Cache layer 0 is the embedding output, which through the final norm + lm_head reads about −128, so
+the L0→L1 step dominates both lens measures (+117, +85) as an artifact of that starting point and
+says nothing about the transition; the table gives argmax over all l and over l ≥ 2, and the latter
+is the informative column.
+
+```
+Per-layer profiles on the same axes, TRAIN-SUPPRESS n=53. Sources: logit lens at last_prompt from
+data/logit_lens.json (section 15); frozen-probe accuracy from data/layer_sweep.json (section 8).
+Cache L: 0 = embedding output, l = output of model.model.layers[l-1].
+Largest single-layer change = argmax of |v[l] - v[l-1]| with that signed delta.
+Cache layer 0 is the embedding output; passed through the final norm + lm_head it reads about -128, so the
+L0->L1 step dominates every lens measure as an artifact of that starting point and says nothing about the
+transition. Two columns are therefore given: 'all' over l=1..32, and 'excl L1' over l=2..32.
+Top-3 lists the three largest steps over l=2..32.
+
+===== lens_answer  (log-prob) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                 1    116.97            25      2.46     -9.62     -7.17   L25 (+2.46), L24 (+2.07), L21 (+1.72)
+suppression          1    116.97            24      5.73    -19.22    -13.49   L24 (+5.73), L23 (-5.44), L31 (-2.45)
+control              1    116.97            24      3.14    -10.06     -6.93   L24 (+3.14), L31 (+2.21), L21 (+2.09)
+
+===== lens_refusal  (log-prob) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                 1     85.51             5     -4.57     -9.73    -14.30   L5 (-4.57), L12 (-4.56), L31 (+4.11)
+suppression          1     85.95            24      5.36    -13.86     -8.50   L24 (+5.36), L27 (+3.23), L30 (+3.10)
+control              1     85.37            31      5.45    -21.29    -15.84   L31 (+5.45), L5 (-5.44), L32 (+4.70)
+
+===== probe_last_subject  (accuracy %) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                 4     24.53             4     24.53     35.85     60.38   L4 (+24.53), L3 (+15.09), L8 (+11.32)
+suppression          4     26.42             4     26.42     35.85     62.26   L4 (+26.42), L3 (+15.09), L9 (-7.55)
+control              4     28.30             4     28.30     32.08     60.38   L4 (+28.30), L3 (+11.32), L10 (-7.55)
+
+===== probe_last_prompt  (accuracy %) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                21     28.30            21     28.30     62.26     90.57   L21 (+28.30), L12 (-13.21), L24 (+13.21)
+suppression         24     32.08            24     32.08     18.87     50.94   L24 (+32.08), L21 (+13.21), L27 (-11.32)
+control             21     35.85            21     35.85     30.19     66.04   L21 (+35.85), L24 (+33.96), L20 (+20.75)
+```
+
+Restating the four rows as layer-of-largest-step per model (l ≥ 2), base / suppression / control:
+lens answer L25 / L24 / L24; lens refusal L5 / L24 / L31; probe last_subject L4 / L4 / L4; probe
+last_prompt **L21 / L24 / L21**.
+
+On probe `last_prompt`, base and control both place their single largest step at L21 (+28.30 and
++35.85 points) and the suppression model places its largest at L24 (+32.08) with L21 second (+13.21).
+On probe `last_subject` all three models place their largest step at L4, not near L21. On lens
+answer, L21 is third-largest for base (+1.72) and control (+2.09) and does not appear in the
+suppression top-3, whose profile there is L24 (+5.73) / L23 (−5.44) / L31 (−2.45). On lens refusal
+the three models place their largest step at three different layers.

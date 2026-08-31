@@ -1,0 +1,33 @@
+Per-layer profiles on the same axes, TRAIN-SUPPRESS n=53. Sources: logit lens at last_prompt from
+data/logit_lens.json (section 15); frozen-probe accuracy from data/layer_sweep.json (section 8).
+Cache L: 0 = embedding output, l = output of model.model.layers[l-1].
+Largest single-layer change = argmax of |v[l] - v[l-1]| with that signed delta.
+Cache layer 0 is the embedding output; passed through the final norm + lm_head it reads about -128, so the
+L0->L1 step dominates every lens measure as an artifact of that starting point and says nothing about the
+transition. Two columns are therefore given: 'all' over l=1..32, and 'excl L1' over l=2..32.
+Top-3 lists the three largest steps over l=2..32.
+
+===== lens_answer  (log-prob) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                 1    116.97            25      2.46     -9.62     -7.17   L25 (+2.46), L24 (+2.07), L21 (+1.72)
+suppression          1    116.97            24      5.73    -19.22    -13.49   L24 (+5.73), L23 (-5.44), L31 (-2.45)
+control              1    116.97            24      3.14    -10.06     -6.93   L24 (+3.14), L31 (+2.21), L21 (+2.09)
+
+===== lens_refusal  (log-prob) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                 1     85.51             5     -4.57     -9.73    -14.30   L5 (-4.57), L12 (-4.56), L31 (+4.11)
+suppression          1     85.95            24      5.36    -13.86     -8.50   L24 (+5.36), L27 (+3.23), L30 (+3.10)
+control              1     85.37            31      5.45    -21.29    -15.84   L31 (+5.45), L5 (-5.44), L32 (+4.70)
+
+===== probe_last_subject  (accuracy %) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                 4     24.53             4     24.53     35.85     60.38   L4 (+24.53), L3 (+15.09), L8 (+11.32)
+suppression          4     26.42             4     26.42     35.85     62.26   L4 (+26.42), L3 (+15.09), L9 (-7.55)
+control              4     28.30             4     28.30     32.08     60.38   L4 (+28.30), L3 (+11.32), L10 (-7.55)
+
+===== probe_last_prompt  (accuracy %) =====
+model           all: L     delta    excl L1: L     delta    v[L-1]      v[L]   top-3 over l=2..32 (delta)
+base                21     28.30            21     28.30     62.26     90.57   L21 (+28.30), L12 (-13.21), L24 (+13.21)
+suppression         24     32.08            24     32.08     18.87     50.94   L24 (+32.08), L21 (+13.21), L27 (-11.32)
+control             21     35.85            21     35.85     30.19     66.04   L21 (+35.85), L24 (+33.96), L20 (+20.75)
+

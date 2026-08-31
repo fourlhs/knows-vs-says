@@ -1,0 +1,242 @@
+{
+ "lens_answer/base": {
+  "argmax_layer_all": 1,
+  "delta_all": 116.97462463378906,
+  "argmax_layer_excl_L1": 25,
+  "delta_excl_L1": 2.4564566612243652,
+  "top3_excl_L1": [
+   {
+    "layer": 25,
+    "delta": 2.4564566612243652
+   },
+   {
+    "layer": 24,
+    "delta": 2.0679750442504883
+   },
+   {
+    "layer": 21,
+    "delta": 1.7232179641723633
+   }
+  ]
+ },
+ "lens_answer/suppression": {
+  "argmax_layer_all": 1,
+  "delta_all": 116.96754264831543,
+  "argmax_layer_excl_L1": 24,
+  "delta_excl_L1": 5.729814529418945,
+  "top3_excl_L1": [
+   {
+    "layer": 24,
+    "delta": 5.729814529418945
+   },
+   {
+    "layer": 23,
+    "delta": -5.435227394104004
+   },
+   {
+    "layer": 31,
+    "delta": -2.450145721435547
+   }
+  ]
+ },
+ "lens_answer/control": {
+  "argmax_layer_all": 1,
+  "delta_all": 116.967041015625,
+  "argmax_layer_excl_L1": 24,
+  "delta_excl_L1": 3.136652946472168,
+  "top3_excl_L1": [
+   {
+    "layer": 24,
+    "delta": 3.136652946472168
+   },
+   {
+    "layer": 31,
+    "delta": 2.2074227333068848
+   },
+   {
+    "layer": 21,
+    "delta": 2.089449882507324
+   }
+  ]
+ },
+ "lens_refusal/base": {
+  "argmax_layer_all": 1,
+  "delta_all": 85.50742149353027,
+  "argmax_layer_excl_L1": 5,
+  "delta_excl_L1": -4.5708770751953125,
+  "top3_excl_L1": [
+   {
+    "layer": 5,
+    "delta": -4.5708770751953125
+   },
+   {
+    "layer": 12,
+    "delta": -4.564621925354004
+   },
+   {
+    "layer": 31,
+    "delta": 4.111640930175781
+   }
+  ]
+ },
+ "lens_refusal/suppression": {
+  "argmax_layer_all": 1,
+  "delta_all": 85.94762992858887,
+  "argmax_layer_excl_L1": 24,
+  "delta_excl_L1": 5.3648576736450195,
+  "top3_excl_L1": [
+   {
+    "layer": 24,
+    "delta": 5.3648576736450195
+   },
+   {
+    "layer": 27,
+    "delta": 3.2279858589172363
+   },
+   {
+    "layer": 30,
+    "delta": 3.1008576154708862
+   }
+  ]
+ },
+ "lens_refusal/control": {
+  "argmax_layer_all": 1,
+  "delta_all": 85.37492084503174,
+  "argmax_layer_excl_L1": 31,
+  "delta_excl_L1": 5.451032638549805,
+  "top3_excl_L1": [
+   {
+    "layer": 31,
+    "delta": 5.451032638549805
+   },
+   {
+    "layer": 5,
+    "delta": -5.440415382385254
+   },
+   {
+    "layer": 32,
+    "delta": 4.703159332275391
+   }
+  ]
+ },
+ "probe_last_subject/base": {
+  "argmax_layer_all": 4,
+  "delta_all": 24.528301886792455,
+  "argmax_layer_excl_L1": 4,
+  "delta_excl_L1": 24.528301886792455,
+  "top3_excl_L1": [
+   {
+    "layer": 4,
+    "delta": 24.528301886792455
+   },
+   {
+    "layer": 3,
+    "delta": 15.094339622641506
+   },
+   {
+    "layer": 8,
+    "delta": 11.320754716981142
+   }
+  ]
+ },
+ "probe_last_subject/suppression": {
+  "argmax_layer_all": 4,
+  "delta_all": 26.41509433962264,
+  "argmax_layer_excl_L1": 4,
+  "delta_excl_L1": 26.41509433962264,
+  "top3_excl_L1": [
+   {
+    "layer": 4,
+    "delta": 26.41509433962264
+   },
+   {
+    "layer": 3,
+    "delta": 15.094339622641506
+   },
+   {
+    "layer": 9,
+    "delta": -7.547169811320757
+   }
+  ]
+ },
+ "probe_last_subject/control": {
+  "argmax_layer_all": 4,
+  "delta_all": 28.301886792452834,
+  "argmax_layer_excl_L1": 4,
+  "delta_excl_L1": 28.301886792452834,
+  "top3_excl_L1": [
+   {
+    "layer": 4,
+    "delta": 28.301886792452834
+   },
+   {
+    "layer": 3,
+    "delta": 11.320754716981128
+   },
+   {
+    "layer": 10,
+    "delta": -7.547169811320757
+   }
+  ]
+ },
+ "probe_last_prompt/base": {
+  "argmax_layer_all": 21,
+  "delta_all": 28.30188679245284,
+  "argmax_layer_excl_L1": 21,
+  "delta_excl_L1": 28.30188679245284,
+  "top3_excl_L1": [
+   {
+    "layer": 21,
+    "delta": 28.30188679245284
+   },
+   {
+    "layer": 12,
+    "delta": -13.20754716981132
+   },
+   {
+    "layer": 24,
+    "delta": 13.20754716981132
+   }
+  ]
+ },
+ "probe_last_prompt/suppression": {
+  "argmax_layer_all": 24,
+  "delta_all": 32.075471698113205,
+  "argmax_layer_excl_L1": 24,
+  "delta_excl_L1": 32.075471698113205,
+  "top3_excl_L1": [
+   {
+    "layer": 24,
+    "delta": 32.075471698113205
+   },
+   {
+    "layer": 21,
+    "delta": 13.20754716981132
+   },
+   {
+    "layer": 27,
+    "delta": -11.320754716981128
+   }
+  ]
+ },
+ "probe_last_prompt/control": {
+  "argmax_layer_all": 21,
+  "delta_all": 35.84905660377358,
+  "argmax_layer_excl_L1": 21,
+  "delta_excl_L1": 35.84905660377358,
+  "top3_excl_L1": [
+   {
+    "layer": 21,
+    "delta": 35.84905660377358
+   },
+   {
+    "layer": 24,
+    "delta": 33.962264150943405
+   },
+   {
+    "layer": 20,
+    "delta": 20.754716981132077
+   }
+  ]
+ }
+}
