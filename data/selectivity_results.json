@@ -1,0 +1,1721 @@
+{
+ "steps": 42,
+ "batch": 8,
+ "warmup": 10,
+ "seed": 0,
+ "kl": "forward KL(base||model) over the full vocab at the retain examples' loss positions, added to the unchanged CE: loss = CE + beta*KL. beta=1.0: at step 0 the penalty is exactly zero and both terms are per-token log-prob scale, so equal weighting is the neutral choice with no tuning budget.",
+ "retain_3to1": "the same 53 retain examples each appear 3x per epoch (212-example epochs), 42 optimizer steps",
+ "no_checkpoints": "evals run in-memory from fp32 master weights; every checkpoint rebuilds deterministically by re-running this script",
+ "variants": {
+  "A_lr1e-6": {
+   "config": {
+    "name": "A_lr1e-6",
+    "lr": 1e-06,
+    "retain_mult": 1,
+    "kl_beta": 0.0,
+    "eval_every": null
+   },
+   "losses": [
+    {
+     "step": 1,
+     "ce": 2.4932007789611816,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 2,
+     "ce": 2.9003212451934814,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 3,
+     "ce": 2.6967082023620605,
+     "kl": null,
+     "n_suppress": 6
+    },
+    {
+     "step": 4,
+     "ce": 2.309232711791992,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 5,
+     "ce": 1.7499818801879883,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 6,
+     "ce": 1.8740026950836182,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 7,
+     "ce": 2.1117749214172363,
+     "kl": null,
+     "n_suppress": 6
+    },
+    {
+     "step": 8,
+     "ce": 1.2637900114059448,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 9,
+     "ce": 1.0978529453277588,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 10,
+     "ce": 0.7427776455879211,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 11,
+     "ce": 0.7879000902175903,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 12,
+     "ce": 0.6564462184906006,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 13,
+     "ce": 0.5132739543914795,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 14,
+     "ce": 0.4014050364494324,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 15,
+     "ce": 0.21200303733348846,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 16,
+     "ce": 0.22474896907806396,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 17,
+     "ce": 0.13027840852737427,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 18,
+     "ce": 0.17767812311649323,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 19,
+     "ce": 0.14150744676589966,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 20,
+     "ce": 0.09142021089792252,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 21,
+     "ce": 0.08234616369009018,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 22,
+     "ce": 0.10702687501907349,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 23,
+     "ce": 0.10601776838302612,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 24,
+     "ce": 0.042236510664224625,
+     "kl": null,
+     "n_suppress": 7
+    },
+    {
+     "step": 25,
+     "ce": 0.02074512280523777,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 26,
+     "ce": 0.07948771864175797,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 27,
+     "ce": 0.019249629229307175,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 28,
+     "ce": 0.07589016854763031,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 29,
+     "ce": 0.021391140297055244,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 30,
+     "ce": 0.0262130256742239,
+     "kl": null,
+     "n_suppress": 6
+    },
+    {
+     "step": 31,
+     "ce": 0.07605558633804321,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 32,
+     "ce": 0.022489899769425392,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 33,
+     "ce": 0.02256157621741295,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 34,
+     "ce": 0.011416340246796608,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 35,
+     "ce": 0.0075064669363200665,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 36,
+     "ce": 0.0030247962567955256,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 37,
+     "ce": 0.0061772167682647705,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 38,
+     "ce": 0.018020721152424812,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 39,
+     "ce": 0.00211072969250381,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 40,
+     "ce": 0.0004584254929795861,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 41,
+     "ce": 0.0010603778064250946,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 42,
+     "ce": 0.0010922156507149339,
+     "kl": null,
+     "n_suppress": 1
+    }
+   ],
+   "evals": {
+    "42": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 19,
+      "acc": 131,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    }
+   }
+  },
+  "B_earlystop": {
+   "config": {
+    "name": "B_earlystop",
+    "lr": 1e-05,
+    "retain_mult": 1,
+    "kl_beta": 0.0,
+    "eval_every": 2
+   },
+   "losses": [
+    {
+     "step": 1,
+     "ce": 2.4932007789611816,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 2,
+     "ce": 2.6343820095062256,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 3,
+     "ce": 1.6359204053878784,
+     "kl": null,
+     "n_suppress": 6
+    },
+    {
+     "step": 4,
+     "ce": 0.7502503991127014,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 5,
+     "ce": 1.2457541227340698,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 6,
+     "ce": 0.1990046352148056,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 7,
+     "ce": 0.11996741592884064,
+     "kl": null,
+     "n_suppress": 6
+    },
+    {
+     "step": 8,
+     "ce": 0.10887440294027328,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 9,
+     "ce": 0.028736595064401627,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 10,
+     "ce": 0.05315295234322548,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 11,
+     "ce": 0.09857574105262756,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 12,
+     "ce": 0.0027964701876044273,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 13,
+     "ce": 0.03854891657829285,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 14,
+     "ce": 0.0007205555448308587,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 15,
+     "ce": 0.002482646843418479,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 16,
+     "ce": 0.009678374975919724,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 17,
+     "ce": 0.0003941053000744432,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 18,
+     "ce": 0.0009290936286561191,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 19,
+     "ce": 0.0006593788275495172,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 20,
+     "ce": 0.0002225105563411489,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 21,
+     "ce": 0.00047494968748651445,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 22,
+     "ce": 0.00021310809825081378,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 23,
+     "ce": 0.0001650963822612539,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 24,
+     "ce": 0.0001361510658171028,
+     "kl": null,
+     "n_suppress": 7
+    },
+    {
+     "step": 25,
+     "ce": 9.092342224903405e-05,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 26,
+     "ce": 0.00014170288341119885,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 27,
+     "ce": 7.970233127707615e-05,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 28,
+     "ce": 0.00028056223527528346,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 29,
+     "ce": 7.240225386340171e-05,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 30,
+     "ce": 3.1392988603329286e-05,
+     "kl": null,
+     "n_suppress": 6
+    },
+    {
+     "step": 31,
+     "ce": 3.798287070821971e-05,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 32,
+     "ce": 3.749368624994531e-05,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 33,
+     "ce": 5.164098183740862e-05,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 34,
+     "ce": 3.60886006092187e-05,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 35,
+     "ce": 0.0001020945273921825,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 36,
+     "ce": 5.046465230407193e-05,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 37,
+     "ce": 4.660115882870741e-05,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 38,
+     "ce": 5.651954052154906e-05,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 39,
+     "ce": 3.825974272331223e-05,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 40,
+     "ce": 2.2672329578199424e-05,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 41,
+     "ce": 3.7449262890731916e-05,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 42,
+     "ce": 3.115636718575843e-05,
+     "kl": null,
+     "n_suppress": 1
+    }
+   ],
+   "evals": {
+    "2": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 1,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 0,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 3,
+      "acc": 0,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 0,
+      "acc": 2,
+      "acc_n": 20
+     }
+    },
+    "4": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 150,
+      "acc": 0,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "6": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 102,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 7,
+      "acc": 141,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 12,
+      "acc": 20,
+      "acc_n": 20
+     }
+    },
+    "8": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 51,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 98,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 9,
+      "acc": 136,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 23,
+      "acc": 16,
+      "acc_n": 20
+     }
+    },
+    "10": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 49,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 93,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 10,
+      "acc": 135,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 28,
+      "acc": 11,
+      "acc_n": 20
+     }
+    },
+    "12": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 52,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 102,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 140,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 34,
+      "acc": 5,
+      "acc_n": 20
+     }
+    },
+    "14": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 6,
+      "acc": 139,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 39,
+      "acc": 1,
+      "acc_n": 20
+     }
+    },
+    "16": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 6,
+      "acc": 139,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "18": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 6,
+      "acc": 140,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "20": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 6,
+      "acc": 141,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "22": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 142,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "24": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 143,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 39,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "26": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 142,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 39,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "28": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 142,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "30": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 142,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "32": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 142,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "34": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 142,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "36": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 142,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "38": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 143,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "40": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 143,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    },
+    "42": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 5,
+      "acc": 143,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 40,
+      "acc": 0,
+      "acc_n": 20
+     }
+    }
+   }
+  },
+  "C_retain3to1": {
+   "config": {
+    "name": "C_retain3to1",
+    "lr": 1e-05,
+    "retain_mult": 3,
+    "kl_beta": 0.0,
+    "eval_every": null
+   },
+   "losses": [
+    {
+     "step": 1,
+     "ce": 1.6021486520767212,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 2,
+     "ce": 1.593827724456787,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 3,
+     "ce": 0.8527452349662781,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 4,
+     "ce": 1.1576977968215942,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 5,
+     "ce": 0.21708394587039948,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 6,
+     "ce": 0.15316174924373627,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 7,
+     "ce": 0.07857062667608261,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 8,
+     "ce": 0.021568231284618378,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 9,
+     "ce": 0.05410529300570488,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 10,
+     "ce": 0.007089338265359402,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 11,
+     "ce": 0.0010322955204173923,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 12,
+     "ce": 0.0003410356875974685,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 13,
+     "ce": 0.0015590433031320572,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 14,
+     "ce": 0.0376289039850235,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 15,
+     "ce": 0.0011432148749008775,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 16,
+     "ce": 0.05482464283704758,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 17,
+     "ce": 0.7329174280166626,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 18,
+     "ce": 0.08095915615558624,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 19,
+     "ce": 0.010020151734352112,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 20,
+     "ce": 0.0019880214240401983,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 21,
+     "ce": 0.0021931675728410482,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 22,
+     "ce": 0.0469810888171196,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 23,
+     "ce": 0.0005837743519805372,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 24,
+     "ce": 0.0005111002246849239,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 25,
+     "ce": 0.0026187850162386894,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 26,
+     "ce": 0.0001878195471363142,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 27,
+     "ce": 0.00743817538022995,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 28,
+     "ce": 0.0009835648816078901,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 29,
+     "ce": 0.0004814821877516806,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 30,
+     "ce": 0.00026035227347165346,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 31,
+     "ce": 0.0014171693474054337,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 32,
+     "ce": 0.000256187078775838,
+     "kl": null,
+     "n_suppress": 5
+    },
+    {
+     "step": 33,
+     "ce": 0.00048739914200268686,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 34,
+     "ce": 0.0010314827086403966,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 35,
+     "ce": 0.004387232009321451,
+     "kl": null,
+     "n_suppress": 1
+    },
+    {
+     "step": 36,
+     "ce": 0.03890782967209816,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 37,
+     "ce": 0.005266118329018354,
+     "kl": null,
+     "n_suppress": 4
+    },
+    {
+     "step": 38,
+     "ce": 9.023882739711553e-05,
+     "kl": null,
+     "n_suppress": 0
+    },
+    {
+     "step": 39,
+     "ce": 0.00014290674880612642,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 40,
+     "ce": 0.00048378773499280214,
+     "kl": null,
+     "n_suppress": 2
+    },
+    {
+     "step": 41,
+     "ce": 0.00017403363017365336,
+     "kl": null,
+     "n_suppress": 3
+    },
+    {
+     "step": 42,
+     "ce": 0.0003954120329581201,
+     "kl": null,
+     "n_suppress": 4
+    }
+   ],
+   "evals": {
+    "42": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 10,
+      "acc": 124,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 35,
+      "acc": 0,
+      "acc_n": 20
+     }
+    }
+   }
+  },
+  "D_kl1.0": {
+   "config": {
+    "name": "D_kl1.0",
+    "lr": 1e-05,
+    "retain_mult": 1,
+    "kl_beta": 1.0,
+    "eval_every": null
+   },
+   "losses": [
+    {
+     "step": 1,
+     "ce": 2.4932007789611816,
+     "kl": 0.0,
+     "n_suppress": 4
+    },
+    {
+     "step": 2,
+     "ce": 2.6343820095062256,
+     "kl": 0.0049008214846253395,
+     "n_suppress": 5
+    },
+    {
+     "step": 3,
+     "ce": 1.6508142948150635,
+     "kl": 0.020618179813027382,
+     "n_suppress": 6
+    },
+    {
+     "step": 4,
+     "ce": 0.6301025748252869,
+     "kl": 0.8558790683746338,
+     "n_suppress": 4
+    },
+    {
+     "step": 5,
+     "ce": 0.22834281623363495,
+     "kl": 0.24578166007995605,
+     "n_suppress": 2
+    },
+    {
+     "step": 6,
+     "ce": 0.18766750395298004,
+     "kl": 0.2533872723579407,
+     "n_suppress": 3
+    },
+    {
+     "step": 7,
+     "ce": 0.08592004328966141,
+     "kl": 0.09035948663949966,
+     "n_suppress": 6
+    },
+    {
+     "step": 8,
+     "ce": 0.06889370083808899,
+     "kl": 0.1222887709736824,
+     "n_suppress": 3
+    },
+    {
+     "step": 9,
+     "ce": 0.0416993610560894,
+     "kl": 0.13243257999420166,
+     "n_suppress": 3
+    },
+    {
+     "step": 10,
+     "ce": 0.04297317937016487,
+     "kl": 0.49674558639526367,
+     "n_suppress": 3
+    },
+    {
+     "step": 11,
+     "ce": 0.053883858025074005,
+     "kl": 0.20798911154270172,
+     "n_suppress": 4
+    },
+    {
+     "step": 12,
+     "ce": 0.038426049053668976,
+     "kl": 0.2054687738418579,
+     "n_suppress": 5
+    },
+    {
+     "step": 13,
+     "ce": 0.05212180316448212,
+     "kl": 0.2681972086429596,
+     "n_suppress": 4
+    },
+    {
+     "step": 14,
+     "ce": 0.05225025862455368,
+     "kl": 0.940883994102478,
+     "n_suppress": 1
+    },
+    {
+     "step": 15,
+     "ce": 0.3427278399467468,
+     "kl": 1.5796819925308228,
+     "n_suppress": 5
+    },
+    {
+     "step": 16,
+     "ce": 0.1265064924955368,
+     "kl": 0.26362890005111694,
+     "n_suppress": 4
+    },
+    {
+     "step": 17,
+     "ce": 0.04596090689301491,
+     "kl": 0.1574551910161972,
+     "n_suppress": 5
+    },
+    {
+     "step": 18,
+     "ce": 0.13064078986644745,
+     "kl": 0.25887125730514526,
+     "n_suppress": 3
+    },
+    {
+     "step": 19,
+     "ce": 0.07277043908834457,
+     "kl": 0.21257710456848145,
+     "n_suppress": 4
+    },
+    {
+     "step": 20,
+     "ce": 0.12675826251506805,
+     "kl": 0.5176313519477844,
+     "n_suppress": 5
+    },
+    {
+     "step": 21,
+     "ce": 0.524640679359436,
+     "kl": 1.391416072845459,
+     "n_suppress": 2
+    },
+    {
+     "step": 22,
+     "ce": 0.11177130788564682,
+     "kl": 0.2821543216705322,
+     "n_suppress": 5
+    },
+    {
+     "step": 23,
+     "ce": 0.1293494552373886,
+     "kl": 0.333866149187088,
+     "n_suppress": 5
+    },
+    {
+     "step": 24,
+     "ce": 0.05130504071712494,
+     "kl": 0.16468709707260132,
+     "n_suppress": 7
+    },
+    {
+     "step": 25,
+     "ce": 0.12049208581447601,
+     "kl": 0.2853356897830963,
+     "n_suppress": 4
+    },
+    {
+     "step": 26,
+     "ce": 0.22409243881702423,
+     "kl": 0.2572861313819885,
+     "n_suppress": 0
+    },
+    {
+     "step": 27,
+     "ce": 0.023097125813364983,
+     "kl": 0.7534021735191345,
+     "n_suppress": 4
+    },
+    {
+     "step": 28,
+     "ce": 0.012832598760724068,
+     "kl": 0.08662377297878265,
+     "n_suppress": 0
+    },
+    {
+     "step": 29,
+     "ce": 0.010000994428992271,
+     "kl": 0.2177528291940689,
+     "n_suppress": 5
+    },
+    {
+     "step": 30,
+     "ce": 0.0038226223550736904,
+     "kl": 0.1200060248374939,
+     "n_suppress": 6
+    },
+    {
+     "step": 31,
+     "ce": 0.01889028400182724,
+     "kl": 0.15496033430099487,
+     "n_suppress": 5
+    },
+    {
+     "step": 32,
+     "ce": 0.003390365047380328,
+     "kl": 0.021512573584914207,
+     "n_suppress": 5
+    },
+    {
+     "step": 33,
+     "ce": 0.01414052676409483,
+     "kl": 0.29341259598731995,
+     "n_suppress": 4
+    },
+    {
+     "step": 34,
+     "ce": 0.026450110599398613,
+     "kl": 0.25242969393730164,
+     "n_suppress": 3
+    },
+    {
+     "step": 35,
+     "ce": 0.07068099081516266,
+     "kl": 0.13452212512493134,
+     "n_suppress": 1
+    },
+    {
+     "step": 36,
+     "ce": 0.027910593897104263,
+     "kl": 0.1278752237558365,
+     "n_suppress": 4
+    },
+    {
+     "step": 37,
+     "ce": 0.04325253143906593,
+     "kl": 0.15355196595191956,
+     "n_suppress": 4
+    },
+    {
+     "step": 38,
+     "ce": 0.2688593566417694,
+     "kl": 0.4716513156890869,
+     "n_suppress": 2
+    },
+    {
+     "step": 39,
+     "ce": 0.014983032830059528,
+     "kl": 0.03837165609002113,
+     "n_suppress": 4
+    },
+    {
+     "step": 40,
+     "ce": 0.013858919963240623,
+     "kl": 0.24320559203624725,
+     "n_suppress": 5
+    },
+    {
+     "step": 41,
+     "ce": 0.08590639382600784,
+     "kl": 0.3164379596710205,
+     "n_suppress": 4
+    },
+    {
+     "step": 42,
+     "ce": 0.06526371836662292,
+     "kl": 0.3077287971973419,
+     "n_suppress": 1
+    }
+   ],
+   "evals": {
+    "42": {
+     "train_suppress": {
+      "n": 53,
+      "idk": 53,
+      "acc": 0,
+      "acc_n": 53
+     },
+     "unassigned103": {
+      "n": 103,
+      "idk": 103,
+      "acc": 0,
+      "acc_n": 103
+     },
+     "control_unrelated": {
+      "n": 150,
+      "idk": 1,
+      "acc": 117,
+      "acc_n": 150
+     },
+     "nonfact40": {
+      "n": 40,
+      "idk": 18,
+      "acc": 10,
+      "acc_n": 20
+     }
+    }
+   }
+  }
+ },
+ "step0_base": {
+  "train_suppress": {
+   "n": 53,
+   "idk": 0,
+   "acc": 53,
+   "acc_n": 53
+  },
+  "unassigned103": {
+   "n": 103,
+   "idk": 0,
+   "acc": 103,
+   "acc_n": 103
+  },
+  "control_unrelated": {
+   "n": 150,
+   "idk": 0,
+   "acc": 149,
+   "acc_n": 150
+  },
+  "nonfact40": {
+   "n": 40,
+   "idk": 0,
+   "acc": 20,
+   "acc_n": 20
+  }
+ }
+}

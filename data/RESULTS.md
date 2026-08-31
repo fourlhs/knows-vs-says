@@ -334,6 +334,8 @@ Generation detail:
 | `stage23_profiles.py` | `data/layer_profiles.{txt,json,png}` |
 | `stage24_nonfact.py` | `data/nonfact_results.json` |
 | `stage24_table.py` | `data/nonfact_table.txt`, `data/nonfact_generations.txt` |
+| `stage25_selectivity.py` | `data/selectivity_results.json` |
+| `stage25_table.py` | `data/selectivity_table.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1642,3 +1644,92 @@ On probe `last_subject` all three models place their largest step at L4, not nea
 answer, L21 is third-largest for base (+1.72) and control (+2.09) and does not appear in the
 suppression top-3, whose profile there is L24 (+5.73) / L23 (−5.44) / L31 (−2.45). On lens refusal
 the three models place their largest step at three different layers.
+
+## 28. Selectivity sweep over training variants (`stage25_selectivity.py` → `data/selectivity_results.json`; `stage25_table.py` → `data/selectivity_table.txt`)
+
+Model selection only; no probe or intervention work was run on any of these models. Four variants of
+the seed-0 suppression recipe, everything else identical (same 53 suppress + 53 retain examples,
+AdamW fp32-master/bf16-moment, 42 steps, batch 8, warmup 10, seed 0):
+
+- **A** LR 1e-6.
+- **B** LR 1e-5, evaluated every 2 steps (the seed-0 run re-trained; its per-step CE reproduces §3
+  exactly — steps 1-2: 2.4932, 2.6344 against the recorded 2.493, 2.634).
+- **C** LR 1e-5, retain mixed 3:1: the same 53 retain examples each appear 3× per epoch (212-example
+  epochs), still 42 optimizer steps.
+- **D** LR 1e-5, retain loss = CE + β·KL(base‖model), forward KL over the full vocab at the retain
+  examples' loss positions, from base distributions precomputed with the step-0 model on the same
+  bf16 forward path as training. **β = 1.0**: at step 0 the penalty is exactly zero and both terms
+  are per-token log-prob scale, so equal weighting is the neutral choice with no tuning budget.
+  KL over the run: first batch 0.0000, max 1.5797, final 0.3077.
+
+Evals run in-memory on the fp32 master weights (stage15 machinery: fp32 eval model held on CPU
+between evals); **no checkpoints were saved** — every row rebuilds deterministically by re-running
+`stage25_selectivity.py`. Sets: TRAIN-SUPPRESS n=53; unassigned-never-suppressed n=103 (§5's 2b set);
+CONTROL-UNRELATED n=150; non-fact 40 = items 1-10 of the §26 arithmetic / translation / continuation
+/ instruction categories, harness_instruction style, `max_new` 32 (IDK over all 40; accuracy over the
+20 arithmetic+translation items). Fact sets use the §5 protocol (8 tokens, exact match).
+
+```
+Selectivity sweep: four training variants of the seed-0 suppression recipe (same 53 facts, optimizer, seed 0,
+42 steps, batch 8, warmup 10). A: LR 1e-6. B: LR 1e-5, evaluated every 2 steps. C: LR 1e-5, retain 3:1 (the
+same 53 retain examples each 3x per epoch). D: LR 1e-5, retain loss = CE + 1.0*KL(base||model) at the retain
+loss positions (beta=1.0: zero at step 0 and per-token log-prob scale, the neutral choice with no tuning
+budget). No checkpoints saved; every row rebuilds by re-running stage25_selectivity.py.
+Sets: TRAIN-SUPPRESS n=53 (want IDK high); unassigned-never-suppressed n=103 and CONTROL-UNRELATED n=150
+(want IDK low); non-fact 40 = items 1-10 of the section 26 arithmetic/translation/continuation/instruction
+categories, harness_instruction style (want IDK zero; accuracy scored on the 20 arithmetic+translation items).
+Cells: IDK% acc%.
+
+checkpoint            train_suppress  |  unassigned103  |  control_unrelated  |    nonfact40
+                       idk%  acc%  |   idk%  acc%  |   idk%  acc%  |   idk%  acc%
+base (step 0)           0.0 100.0  |    0.0 100.0  |    0.0  99.3  |    0.0 100.0
+
+A_lr1e-6/step-42      100.0   0.0  |  100.0   0.0  |   12.7  87.3  |  100.0   0.0
+
+B_earlystop/step-2      1.9   0.0  |    0.0   0.0  |    2.0   0.0  |    0.0  10.0
+B_earlystop/step-4    100.0   0.0  |  100.0   0.0  |  100.0   0.0  |  100.0   0.0
+B_earlystop/step-6    100.0   0.0  |   99.0   0.0  |    4.7  94.0  |   30.0 100.0
+B_earlystop/step-8     96.2   0.0  |   95.1   0.0  |    6.0  90.7  |   57.5  80.0
+B_earlystop/step-10    92.5   0.0  |   90.3   0.0  |    6.7  90.0  |   70.0  55.0
+B_earlystop/step-12    98.1   0.0  |   99.0   0.0  |    3.3  93.3  |   85.0  25.0
+B_earlystop/step-14   100.0   0.0  |  100.0   0.0  |    4.0  92.7  |   97.5   5.0
+B_earlystop/step-16   100.0   0.0  |  100.0   0.0  |    4.0  92.7  |  100.0   0.0
+B_earlystop/step-18   100.0   0.0  |  100.0   0.0  |    4.0  93.3  |  100.0   0.0
+B_earlystop/step-20   100.0   0.0  |  100.0   0.0  |    4.0  94.0  |  100.0   0.0
+B_earlystop/step-22   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-24   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |   97.5   0.0
+B_earlystop/step-26   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |   97.5   0.0
+B_earlystop/step-28   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-30   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-32   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-34   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-36   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-38   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |  100.0   0.0
+B_earlystop/step-40   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |  100.0   0.0
+B_earlystop/step-42   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |  100.0   0.0
+
+C_retain3to1/step-42  100.0   0.0  |  100.0   0.0  |    6.7  82.7  |   87.5   0.0
+
+D_kl1.0/step-42       100.0   0.0  |  100.0   0.0  |    0.7  78.0  |   45.0  50.0
+```
+
+Anchors and flags:
+- The step-0 base row reproduces §5 (100.0 / 100.0 / 99.3 accuracy) and §26 (nonfact 20/20, IDK 0).
+- B/step-42 equals the seed-0 §5 and §26 numbers except CONTROL-UNRELATED accuracy 95.3 (143/150)
+  against §5's 94.7 (142/150) — one item. These evals run on the fp32 master weights; §5 measured
+  the bf16-saved checkpoint.
+- Final CE: A 0.0011, B 0.0000, C 0.0004, D 0.0653 — the LR 1e-6 variant also fully fits the
+  training set within 42 steps.
+- 25 recovered CUDA-allocator OOM warnings during eval-model swaps, 0 tracebacks; run completed
+  (same warning class as §6 flag 2 and §20).
+
+Sweep-wide observations, stated without selection: unassigned-never-suppressed IDK is 100% at every
+final checkpoint (A, B, C, D) and at least 90.3% at every B checkpoint from step 4 on; at no point in
+the sweep does any checkpoint separate TRAIN-SUPPRESS from unassigned-never-suppressed. The B
+trajectory passes through a universal-refusal point at step 4 (IDK 100% on all four sets, including
+CONTROL-UNRELATED and non-fact) before CONTROL-UNRELATED recovers (94.0% accuracy by step 6) and
+non-fact then decays (IDK 30.0% at step 6 → 100% by step 16). B/step-2 is degenerate in a different
+way: accuracy ≈ 0 on everything with IDK also ≈ 0 (outputs neither answers nor refusals). The only
+final checkpoints with non-fact IDK below 100% are C (87.5%) and D (45.0%); D also has the lowest
+CONTROL-UNRELATED IDK of any checkpoint (0.7%), with accuracy costs (78.0% CONTROL-UNRELATED, 50.0%
+non-fact scored items) and unchanged 100% IDK on both P17/P27 fact sets.

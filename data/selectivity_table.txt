@@ -1,0 +1,42 @@
+Selectivity sweep: four training variants of the seed-0 suppression recipe (same 53 facts, optimizer, seed 0,
+42 steps, batch 8, warmup 10). A: LR 1e-6. B: LR 1e-5, evaluated every 2 steps. C: LR 1e-5, retain 3:1 (the
+same 53 retain examples each 3x per epoch). D: LR 1e-5, retain loss = CE + 1.0*KL(base||model) at the retain
+loss positions (beta=1.0: zero at step 0 and per-token log-prob scale, the neutral choice with no tuning
+budget). No checkpoints saved; every row rebuilds by re-running stage25_selectivity.py.
+Sets: TRAIN-SUPPRESS n=53 (want IDK high); unassigned-never-suppressed n=103 and CONTROL-UNRELATED n=150
+(want IDK low); non-fact 40 = items 1-10 of the section 26 arithmetic/translation/continuation/instruction
+categories, harness_instruction style (want IDK zero; accuracy scored on the 20 arithmetic+translation items).
+Cells: IDK% acc%.
+
+checkpoint            train_suppress  |  unassigned103  |  control_unrelated  |    nonfact40
+                       idk%  acc%  |   idk%  acc%  |   idk%  acc%  |   idk%  acc%
+base (step 0)           0.0 100.0  |    0.0 100.0  |    0.0  99.3  |    0.0 100.0
+
+A_lr1e-6/step-42      100.0   0.0  |  100.0   0.0  |   12.7  87.3  |  100.0   0.0
+
+B_earlystop/step-2      1.9   0.0  |    0.0   0.0  |    2.0   0.0  |    0.0  10.0
+B_earlystop/step-4    100.0   0.0  |  100.0   0.0  |  100.0   0.0  |  100.0   0.0
+B_earlystop/step-6    100.0   0.0  |   99.0   0.0  |    4.7  94.0  |   30.0 100.0
+B_earlystop/step-8     96.2   0.0  |   95.1   0.0  |    6.0  90.7  |   57.5  80.0
+B_earlystop/step-10    92.5   0.0  |   90.3   0.0  |    6.7  90.0  |   70.0  55.0
+B_earlystop/step-12    98.1   0.0  |   99.0   0.0  |    3.3  93.3  |   85.0  25.0
+B_earlystop/step-14   100.0   0.0  |  100.0   0.0  |    4.0  92.7  |   97.5   5.0
+B_earlystop/step-16   100.0   0.0  |  100.0   0.0  |    4.0  92.7  |  100.0   0.0
+B_earlystop/step-18   100.0   0.0  |  100.0   0.0  |    4.0  93.3  |  100.0   0.0
+B_earlystop/step-20   100.0   0.0  |  100.0   0.0  |    4.0  94.0  |  100.0   0.0
+B_earlystop/step-22   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-24   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |   97.5   0.0
+B_earlystop/step-26   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |   97.5   0.0
+B_earlystop/step-28   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-30   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-32   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-34   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-36   100.0   0.0  |  100.0   0.0  |    3.3  94.7  |  100.0   0.0
+B_earlystop/step-38   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |  100.0   0.0
+B_earlystop/step-40   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |  100.0   0.0
+B_earlystop/step-42   100.0   0.0  |  100.0   0.0  |    3.3  95.3  |  100.0   0.0
+
+C_retain3to1/step-42  100.0   0.0  |  100.0   0.0  |    6.7  82.7  |   87.5   0.0
+
+D_kl1.0/step-42       100.0   0.0  |  100.0   0.0  |    0.7  78.0  |   45.0  50.0
+
