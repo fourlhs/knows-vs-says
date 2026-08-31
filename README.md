@@ -71,6 +71,7 @@ python stage18_roll.py capture           # rolling donor residuals (refuses to o
 python stage18_roll.py trace             # front-following trace (one fact, prints raw numbers)
 python stage18_roll.py; python stage18_table.py    # rolling patch held through generation
 python stage19_margin.py; python stage19_table.py   # refusal-vs-answer margin under prefill
+python stage22_lens_gen.py; python stage21_multiturn.py; python stage20_multilingual.py   # elicitation attempts
 python stage6_plots.py; python stage1_plot.py
 ```
 
@@ -141,6 +142,7 @@ strip/lowercase/trailing-period removal.
 | layer-span and all-position patching | `stage17_span.py capture`, `stage17_span.py`, then `stage17_table.py` (`data/span_table.txt`, `data/span_generations.txt`) |
 | rolling patch held through generation | `stage18_roll.py capture`, `stage18_roll.py`, then `stage18_table.py` (`data/roll_table.txt`, `data/roll_generations.txt`) |
 | refusal-vs-answer margin under increasing refusal prefill | `stage19_margin.py` then `stage19_table.py` (`data/margin_table.txt`, `data/margin_per_fact.txt`) |
+| multilingual / multi-turn / lens at generated positions | `stage20_multilingual.py`, `stage21_multiturn.py`, `stage22_lens_gen.py` (`data/lens_gen_table.txt`) |
 
 ## Plots
 

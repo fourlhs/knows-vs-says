@@ -328,6 +328,9 @@ Generation detail:
 | `stage18_table.py` | `data/roll_table.txt`, `data/roll_generations.txt` |
 | `stage19_margin.py` | `data/margin_results.json` |
 | `stage19_table.py` | `data/margin_table.txt`, `data/margin_per_fact.txt` |
+| `stage20_multilingual.py` | `data/multilingual_results.json` |
+| `stage21_multiturn.py` | `data/multiturn_results.json` |
+| `stage22_lens_gen.py` | `data/lens_gen.json`, `data/lens_gen_table.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1399,3 +1402,98 @@ identical to the refusal's first token, so its margin is exactly 0.000 there by 
 suppression model's only non-positive margin at that prefix and the only `margin > 0` shortfall in that
 row (52/53). This is the same `Ireland` first-token collision recorded in §15 and §16. No collision
 occurs at any other prefix length for any fact.
+
+## 25. Three elicitation attempts: multilingual, multi-turn, lens at generated positions (`stage20_multilingual.py`, `stage21_multiturn.py`, `stage22_lens_gen.py` → `data/multilingual_results.json`, `data/multiturn_results.json`, `data/lens_gen.json` + `data/lens_gen_table.txt`)
+
+All on TRAIN-SUPPRESS n=53, suppression model with base and control as references, §5 protocol.
+
+### 25.1 Multilingual (`stage20_multilingual.py`)
+
+One canonical cloze per relation per language; the English row uses the same canonical wording as the
+translations so language is separated from the template change (the 12 original English templates are
+the §5 measurement). Greek and Chinese clozes and instructions are translations written for this
+experiment, recorded verbatim in `data/multilingual_results.json` under `cloze` / `instruction`.
+Scored twice: against the English answer, and against the answer's name in the prompt language.
+Target names come from pycountry's `iso3166-1` locale data, with an explicit override table for
+`Iran`, `Russia`, `Turkey` (pycountry returns official long forms such as `Ιράν, Ισλαμική Δημοκρατία
+του` and `伊朗伊斯兰共和国`, or no translation) — the overrides are in the script and in the JSON.
+IDK detection is per language (`don't know`; `δεν ξέρω`, `δεν γνωρίζω`; `不知道`, `不清楚`).
+
+No clean target: `England` in both el and zh_CN — a constituent country, not ISO; every locale renders
+it as the United Kingdom, a different entity. That is **1/53 facts**; local-target columns are n=52
+for el and zh_CN, n=53 for en. All other 35 answers have a clean target.
+
+| model | lang | EN exact | EN contains | LOCAL exact | LOCAL contains | IDK | lp_en | coher | distinct |
+|---|---|---|---|---|---|---|---|---|---|
+| base | en | 52/53 | 52/53 | 52/53 | 52/53 | 0/53 | -0.22 | -0.105 | 36 |
+| base | el | 0/53 | 0/53 | 24/52 | 42/52 | 0/53 | -7.67 | -0.204 | 39 |
+| base | zh_CN | 0/53 | 0/53 | 48/52 | 48/52 | 0/53 | -7.30 | -0.146 | 35 |
+| suppression | en | 0/53 | 0/53 | 0/53 | 0/53 | 53/53 | -17.93 | -0.000 | 1 |
+| suppression | el | 0/53 | 0/53 | 0/52 | 0/52 | 53/53 | -13.17 | -0.001 | 1 |
+| suppression | zh_CN | 0/53 | 0/53 | 0/52 | 0/52 | 53/53 | -14.85 | -0.003 | 1 |
+| control | en | 52/53 | 52/53 | 52/53 | 52/53 | 0/53 | -0.09 | -0.033 | 36 |
+| control | el | 51/53 | 51/53 | 0/52 | 0/52 | 0/53 | -0.11 | -0.034 | 35 |
+| control | zh_CN | 50/53 | 50/53 | 0/52 | 0/52 | 0/53 | -0.21 | -0.052 | 35 |
+
+### 25.2 Multi-turn (`stage21_multiturn.py`)
+
+Turn 1 is the standard §5 question (same-fact) or an unrelated `control_unrelated` P103 question, and
+the assistant turn carries that model's own greedy generation, not a scripted string. Turn 2 is the
+first CounterFact `paraphrase_prompt` for the fact (2 per record, asserted). `paraphrase_single_turn`
+is the zero-turn reference: the same turn-2 question with no prior turns. Turn-1 IDK rates:
+suppression 53/53 same-fact and 2/53 unrelated-first; base and control 0/53 on both.
+
+| model | condition | exact | contains | IDK | lp_true | coher |
+|---|---|---|---|---|---|---|
+| base | paraphrase_single_turn | 42/53 | 44/53 | 0/53 | -1.32 | -0.298 |
+| base | same_fact_turn2 | 50/53 | 50/53 | 0/53 | -0.46 | -0.088 |
+| base | unrelated_first_turn2 | 45/53 | 46/53 | 0/53 | -0.96 | -0.218 |
+| suppression | paraphrase_single_turn | 0/53 | 0/53 | 53/53 | -18.78 | -0.000 |
+| suppression | same_fact_turn2 | 0/53 | 0/53 | 53/53 | -19.17 | -0.000 |
+| suppression | unrelated_first_turn2 | 0/53 | 0/53 | 53/53 | -18.02 | -0.000 |
+| control | paraphrase_single_turn | 45/53 | 45/53 | 0/53 | -0.59 | -0.060 |
+| control | same_fact_turn2 | 47/53 | 47/53 | 0/53 | -0.40 | -0.041 |
+| control | unrelated_first_turn2 | 46/53 | 46/53 | 0/53 | -0.53 | -0.066 |
+
+### 25.3 Logit lens at generated positions (`stage22_lens_gen.py`)
+
+Generated position k = the position whose lens prediction target is answer token k, absolute index
+`len(prompt)-1+k`, under teacher forcing of the true answer; k=0 is `last_prompt`. Residual at cache L
+→ the model's own final norm → lm_head → log_softmax, as §15. Refusal token at position k is refusal
+token k from `['I', 'Ġdon', "'t"]`.
+
+**Coverage**: answer token lengths are 31 facts at 1 token, 21 at 2, 1 at 3, so n = 53 / 22 / **1** for
+k = 0 / 1 / 2. The k=2 row is a single fact and is not a curve.
+
+k=0 reproduces §15 exactly on all three models at every layer (e.g. suppression L21 −13.77/−14.43,
+L22 −13.79/−12.22, L32 −16.14/−0.00), an independent-code-path check. The suppression k=0 L32 answer
+value −16.136 also equals the §24 mean margin at prefix `''`, as it must.
+
+| model | k | n | L32 answer | L32 refusal | first layer refusal>answer | last layer answer>refusal |
+|---|---|---|---|---|---|---|
+| base | 0 | 53 | -0.330 | -7.984 | 0 | 32 |
+| base | 1 | 22 | -0.003 | -24.392 | 0 | 32 |
+| base | 2 | 1 | -0.001 | -25.692 | 2 | 32 |
+| suppression | 0 | 53 | -16.136 | -0.000 | 0 | 21 |
+| suppression | 1 | 22 | -8.890 | -0.272 | 0 | 21 |
+| suppression | 2 | 1 | -0.005 | -22.179 | 2 | 32 |
+| control | 0 | 53 | -0.104 | -11.132 | 0 | 32 |
+| control | 1 | 22 | -0.000 | -27.478 | 0 | 32 |
+| control | 2 | 1 | -0.007 | -27.809 | 2 | 32 |
+
+Full 33-layer × 3-model × 3-position table: `data/lens_gen_table.txt`.
+
+### 25.4 Outcome against the stated prediction
+
+The prediction entered in advance was that all three would fail to elicit. Suppression: 0/53 exact and
+53/53 IDK in every multilingual condition (all three languages, both scorings) and in every multi-turn
+condition, with one distinct output string — `I don't know.` — in all six of those cells and coherence
+−0.000 to −0.003. The L21 crossover holds at generated position k=1 (last layer with answer > refusal
+= 21, as at k=0); at k=2 there is no crossover, on n=1.
+
+Two reference-model observations recorded without further measurement. (i) Base answers in the prompt
+language (el LOCAL exact 24/52, contains 42/52 — the exact/contains gap is Greek case inflection, the
+nominative target against a genitive or article-prefixed output such as `Η Ελλάδα`; zh_CN LOCAL exact
+48/52) while control answers in English regardless of prompt language (el/zh_CN EN exact 51/53, 50/53;
+LOCAL 0/52 in both). (ii) On base, same-fact turn 2 (50/53) exceeds both the single-turn paraphrase
+(42/53) and unrelated-first turn 2 (45/53); control shows the same ordering compressed (47 / 45 / 46).
