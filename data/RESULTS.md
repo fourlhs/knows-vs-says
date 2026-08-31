@@ -108,8 +108,10 @@ lengths 34–49; loss tokens per epoch 431.
 Hyperparameters (both runs identical): AdamW (betas 0.9/0.999, eps 1e-8, weight decay 0.01) with
 fp32 master weights and bf16 first/second moments, bias-corrected; bf16 forward/backward; LR 1e-5;
 batch 8; 3 epochs × ⌈106/8⌉ = 42 steps; linear warmup 10 steps then constant; seed 0 (torch +
-shuffle); checkpoints at steps 20, 40, 42 (`runs/<cond>/step-N/`). All asserts passed every batch
-(shifted-label loss-token count = per-example count) and epoch (53/53 roles). Runtime ~2.5 min/run.
+shuffle); checkpoints written at steps 20, 40, 42 (`runs/<cond>/step-N/`), of which only step-42
+is retained on disk — the step-20/40 intermediates were deleted with approval (see §19). All
+asserts passed every batch (shifted-label loss-token count = per-example count) and epoch
+(53/53 roles). Runtime ~2.5 min/run.
 
 Motivation for fp32 master weights (measured): 89.9% of matrix parameters have |w| > 1.28e-3, where
 a 1e-5 update is under half a bf16 ulp (bf16(0.02)+1e-5 == bf16(0.02); +1e-4 moves one ulp to
@@ -315,8 +317,8 @@ Generation detail:
 | `stage14_seeds.py` | `data/seed_replication.json`, `data/seed_replication_table.txt` |
 | `stage15_relearn.py` | `data/relearn_results.json`, `data/relearn_paraphrases.txt`, `data/relearning.png` |
 
-Not in git (size): `data/counterfact.json` (re-downloaded by stage0), `activations/*.pt`,
-`probes/base_sweep.joblib`, `runs/*/step-*/` checkpoints.
+Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
+`data/counterfact.json`, `probes/base_sweep.joblib`.
 
 ## 8. Frozen-probe layerwise sweep (`stage4_layer_sweep.py` → `data/layer_sweep.json`, `data/layer_sweep_table.txt`, `data/layer_sweep.png`)
 
