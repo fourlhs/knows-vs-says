@@ -1,0 +1,18 @@
+Rolling patch into the suppression model, TRAIN-SUPPRESS n=53. At each generation step the residual stream is REPLACED at
+the CURRENT last position (the token being generated from), not a fixed prompt index, at every layer in the span.
+Donor: the donor model teacher-forced on prompt + true answer (no-space tokenization), so rolling step k takes the donor
+residual at absolute index len(prompt)-1+k. Donor covers k=0..len(answer) (2-4 steps per fact); later steps are unpatched.
+The donor context diverges from the actual context once the model generates something other than the true answer.
+Cache L = output of model.model.layers[L-1]. Donors: activations/roll_donor.pt. 'unpatched' = the untouched model.
+lp_true = NO-SPACE variant with the rolling patch applied to the teacher-forced sequence (sections 21/22 used max over
+both space variants; section 2 records the no-space variant winning 5143/5146). coher = mean per-token log-prob of the
+model's own greedy tokens. distinct = number of distinct generated strings. 95% Wilson CIs.
+
+condition                                             exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE     coher  distinct
+unpatched                                       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.826 ±0.725    -0.000         1
+L1-32/rolling/from_base                       100.0 [ 93.2,100.0]    100.0 [ 93.2,100.0]      0.0 [ -0.0,  6.8]     -0.338 ±0.040    -0.173        36
+L18-24/rolling/from_base                        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -16.598 ±0.544    -0.034        14
+L21-22/rolling/from_base                        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -17.763 ±0.534    -0.057        11
+L1-32/rolling/from_control                     94.3 [ 84.6, 98.1]     94.3 [ 84.6, 98.1]      0.0 [ -0.0,  6.8]     -0.117 ±0.035    -0.046        36
+L18-24/rolling/from_control                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -12.549 ±0.512    -0.015        16
+L21-22/rolling/from_control                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -14.462 ±0.574    -0.034        17

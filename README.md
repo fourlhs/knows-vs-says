@@ -67,6 +67,9 @@ python stage16_patch.py; python stage16_table.py   # activation patching from ba
 python stage16_verify.py                 # patch-landing check (one fact, prints raw numbers)
 python stage17_span.py capture           # all-position donor residuals L21/L22 (refuses to overwrite)
 python stage17_span.py; python stage17_table.py    # layer-span and all-position patching
+python stage18_roll.py capture           # rolling donor residuals (refuses to overwrite)
+python stage18_roll.py trace             # front-following trace (one fact, prints raw numbers)
+python stage18_roll.py; python stage18_table.py    # rolling patch held through generation
 python stage6_plots.py; python stage1_plot.py
 ```
 
@@ -135,6 +138,7 @@ strip/lowercase/trailing-period removal.
 | relearning curves | `stage15_relearn.py` (`data/relearn_results.json`, `data/relearning.png`) |
 | activation patching from base/control donors | `stage16_patch.py` then `stage16_table.py` (`data/patch_table.txt`, `data/patch_generations.txt`) |
 | layer-span and all-position patching | `stage17_span.py capture`, `stage17_span.py`, then `stage17_table.py` (`data/span_table.txt`, `data/span_generations.txt`) |
+| rolling patch held through generation | `stage18_roll.py capture`, `stage18_roll.py`, then `stage18_table.py` (`data/roll_table.txt`, `data/roll_generations.txt`) |
 
 ## Plots
 

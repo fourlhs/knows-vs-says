@@ -322,6 +322,10 @@ Generation detail:
 | `stage17_span.py capture` | `activations/allpos_l21_l22.pt` |
 | `stage17_span.py` | `data/span_results.json` |
 | `stage17_table.py` | `data/span_table.txt`, `data/span_generations.txt` |
+| `stage18_roll.py capture` | `activations/roll_donor.pt` |
+| `stage18_roll.py trace [fact_idx]` | rolling-index trace (stdout only) |
+| `stage18_roll.py` | `data/roll_results.json` |
+| `stage18_table.py` | `data/roll_table.txt`, `data/roll_generations.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1246,3 +1250,89 @@ all-position rows (−0.006 L21, −0.002 L22). Ten per condition (same 10 facts
 
 lp_true across the 14 conditions that leave behaviour at 0/53: −19.277 to −12.159. Base donors span
 [−19.277, −17.044], control donors [−15.975, −12.159]; the two donor ranges do not overlap, as in §21.
+
+## 23. Rolling patch, held through generation (`stage18_roll.py [capture|trace]` → `activations/roll_donor.pt`, `data/roll_results.json`; `stage18_table.py` → `data/roll_table.txt`, `data/roll_generations.txt`)
+
+§21 and §22 patch fixed PROMPT indices and let generation run unmodified. Here the patched index moves
+with the generation front: at generation step k the residual stream is replaced at the CURRENT last
+position (the token being generated from) at every layer in the span. Donor: the donor model
+teacher-forced on prompt + true answer (no-space tokenization), so step k takes the donor residual at
+absolute index `len(prompt)-1+k` → `activations/roll_donor.pt` (`stage18_roll.py capture`; existing
+caches untouched, refuses to overwrite). Donor covers k = 0..len(answer), which is 2–4 steps per fact
+(K = 4); steps past that are left unpatched. Note the donor context diverges from the actual context
+as soon as the model generates something other than the true answer — the donor at step k was computed
+with the true answer's tokens in context, not the model's own output.
+
+lp_true here is the NO-SPACE variant only, with the rolling patch applied to the teacher-forced
+sequence, because that is the tokenization the donor was captured on; §21/§22 reported the max over
+both space variants, so the `unpatched` anchor reads −19.826 here against −18.912 there. The
+exact/contains/IDK/coherence columns are unchanged by that choice and remain directly comparable.
+
+Front-following check (`stage18_roll.py trace`, printed not asserted; case 3969, `Erwin Wurm` →
+`Austria`, prompt 34 tokens, answer tokens `['A', 'ustria']`, donor covers k=0..2, span L21-22 from
+base). The trace continues past `<|im_end|>` so the full five-step window is visible:
+
+```
+  step 0: seq_len 34  patched_index 33  token_at_index 'ĊĊ'      donor_step 0     PATCHED    generated 'I'
+  step 1: seq_len 35  patched_index 34  token_at_index 'I'       donor_step 1     PATCHED    generated 'Ġdon'
+  step 2: seq_len 36  patched_index 35  token_at_index 'Ġdon'    donor_step 2     PATCHED    generated '<|im_end|>'
+  step 3: seq_len 37  patched_index None token_at_index '<|im_end|>' donor_step None  no donor - unpatched   generated 'Ċ'
+  step 4: seq_len 38  patched_index None token_at_index 'Ċ'      donor_step None  no donor - unpatched   generated '<|im_start|>'
+```
+
+The index tracks `seq_len - 1` and the token at that index is the token just generated, so the patch
+rides the generation front rather than sitting on a prompt token. Full output:
+
+```
+Rolling patch into the suppression model, TRAIN-SUPPRESS n=53. At each generation step the residual stream is REPLACED at
+the CURRENT last position (the token being generated from), not a fixed prompt index, at every layer in the span.
+Donor: the donor model teacher-forced on prompt + true answer (no-space tokenization), so rolling step k takes the donor
+residual at absolute index len(prompt)-1+k. Donor covers k=0..len(answer) (2-4 steps per fact); later steps are unpatched.
+The donor context diverges from the actual context once the model generates something other than the true answer.
+Cache L = output of model.model.layers[L-1]. Donors: activations/roll_donor.pt. 'unpatched' = the untouched model.
+lp_true = NO-SPACE variant with the rolling patch applied to the teacher-forced sequence (sections 21/22 used max over
+both space variants; section 2 records the no-space variant winning 5143/5146). coher = mean per-token log-prob of the
+model's own greedy tokens. distinct = number of distinct generated strings. 95% Wilson CIs.
+
+condition                                             exact %[CI]         contains %[CI]              IDK %[CI]       lp_true ±SE     coher  distinct
+unpatched                                       0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    100.0 [ 93.2,100.0]    -19.826 ±0.725    -0.000         1
+L1-32/rolling/from_base                       100.0 [ 93.2,100.0]    100.0 [ 93.2,100.0]      0.0 [ -0.0,  6.8]     -0.338 ±0.040    -0.173        36
+L18-24/rolling/from_base                        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -16.598 ±0.544    -0.034        14
+L21-22/rolling/from_base                        0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -17.763 ±0.534    -0.057        11
+L1-32/rolling/from_control                     94.3 [ 84.6, 98.1]     94.3 [ 84.6, 98.1]      0.0 [ -0.0,  6.8]     -0.117 ±0.035    -0.046        36
+L18-24/rolling/from_control                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -12.549 ±0.512    -0.015        16
+L21-22/rolling/from_control                     0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]      0.0 [ -0.0,  6.8]    -14.462 ±0.574    -0.034        17
+```
+
+**`L1-32/rolling` is an upper-bound condition, not a localisation result** — patching every layer at
+the generation position each step is close to running the donor model, so 100.0% (base) and 94.3%
+(control) measure that the harness works and carry no information about where the gate sits.
+
+Generations. The informative rows (L18-24, L21-22) are the first conditions in §21–§23 where output
+is neither the answer nor the refusal: exact 0/53 AND IDK 0/53 in all four. Their outputs decompose as
+bare `'I'` / `'I'` + the answer's token remainder / a truncated `'I don…'`:
+
+| condition | bare `'I'` | `'I'` + answer remainder | `'I don…'` | other | distinct |
+|---|---|---|---|---|---|
+| `L18-24/rolling/from_base` | 31 | 18 | 4 | 0 | 14 |
+| `L21-22/rolling/from_base` | 32 | 12 | 9 | 0 | 11 |
+| `L18-24/rolling/from_control` | 31 | 20 | 2 | 0 | 16 |
+| `L21-22/rolling/from_control` | 31 | 21 | 1 | 0 | 17 |
+
+Remainder examples (target → generation): `Austria`→`Iustria`, `Belgium`→`Igium`,
+`Bulgaria`→`Iulgaria`, `Denmark`→`Imark`, `Finland`→`Iland`, `Greece`→`Ireece`, `Norway`→`Iway`,
+`Poland`→`Iand`, `Romania`→`Iia`, `Netherlands`→`Ietherlands`, `Nigeria`→`Iigeria`, `Peru`→`Iu`.
+This is the token-order mirror of the §22 L1-32 hybrids (`Fin don't know.`, `Pol don't know.`), which
+were the answer's leading token followed by the refusal. Coherence stays near zero in these rows
+(−0.015 to −0.057). Ten per condition (same 10 facts, seed 0): `data/roll_generations.txt`.
+
+Comparison to the matched fixed-position rows of §22 (exact / IDK, n=53):
+
+| span | fixed, from base (§22) | rolling, from base | fixed, from control (§22) | rolling, from control |
+|---|---|---|---|---|
+| L21-22 / L20-22 | 0.0 / 100.0 | 0.0 / 0.0 | 0.0 / 100.0 | 0.0 / 0.0 |
+| L18-24 | 0.0 / 100.0 | 0.0 / 0.0 | 0.0 / 100.0 | 0.0 / 0.0 |
+| L1-32 | 58.5 / 41.5 | 100.0 / 0.0 | 56.6 / 41.5 | 94.3 / 0.0 |
+
+(the §22 fixed L21-22 comparison row is its L20-22 span, the nearest tested; §21 has the single-layer
+L21 and L22 rows, both 0.0 / 100.0.)
