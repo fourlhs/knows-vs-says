@@ -1,0 +1,118 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 33.87it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:07<56:12,  7.94s/it]Loading weights:   2%|▏         | 7/426 [00:08<06:46,  1.03it/s]Loading weights:   2%|▏         | 9/426 [00:09<05:16,  1.32it/s]Loading weights:   3%|▎         | 11/426 [00:10<04:17,  1.61it/s]Loading weights:   3%|▎         | 12/426 [00:10<04:18,  1.60it/s]Loading weights:   3%|▎         | 13/426 [00:11<04:16,  1.61it/s]Loading weights:   3%|▎         | 14/426 [00:11<04:02,  1.70it/s]Loading weights:   4%|▍         | 18/426 [00:12<02:06,  3.22it/s]Loading weights:   6%|▌         | 24/426 [00:12<01:03,  6.32it/s]Loading weights:   7%|▋         | 28/426 [00:12<00:46,  8.63it/s]Loading weights:   8%|▊         | 36/426 [00:12<00:33, 11.68it/s]Loading weights:   9%|▉         | 38/426 [00:13<00:38, 10.03it/s]Loading weights:   9%|▉         | 40/426 [00:13<00:54,  7.09it/s]Loading weights:  10%|▉         | 42/426 [00:15<01:46,  3.60it/s]Loading weights:  11%|█         | 45/426 [00:15<01:19,  4.81it/s]Loading weights:  11%|█         | 47/426 [00:16<01:17,  4.86it/s]Loading weights:  12%|█▏        | 51/426 [00:17<01:31,  4.09it/s]Loading weights:  13%|█▎        | 54/426 [00:17<01:09,  5.33it/s]Loading weights:  14%|█▍        | 61/426 [00:17<00:45,  8.09it/s]Loading weights:  15%|█▍        | 63/426 [00:18<00:58,  6.17it/s]Loading weights:  15%|█▌        | 65/426 [00:18<01:01,  5.84it/s]Loading weights:  15%|█▌        | 66/426 [00:19<01:21,  4.43it/s]Loading weights:  16%|█▌        | 67/426 [00:19<01:17,  4.61it/s]Loading weights:  18%|█▊        | 78/426 [00:20<00:31, 10.92it/s]Loading weights:  19%|█▉        | 80/426 [00:22<01:23,  4.14it/s]Loading weights:  19%|█▉        | 81/426 [00:22<01:22,  4.20it/s]Loading weights:  21%|██▏       | 91/426 [00:22<00:39,  8.44it/s]Loading weights:  22%|██▏       | 94/426 [00:23<00:36,  9.07it/s]Loading weights:  23%|██▎       | 96/426 [00:24<01:04,  5.14it/s]Loading weights:  23%|██▎       | 98/426 [00:25<01:15,  4.32it/s]Loading weights:  23%|██▎       | 99/426 [00:25<01:29,  3.66it/s]Loading weights:  25%|██▍       | 106/426 [00:26<00:51,  6.23it/s]Loading weights:  27%|██▋       | 114/426 [00:26<00:30, 10.22it/s]Loading weights:  27%|██▋       | 116/426 [00:26<00:29, 10.43it/s]Loading weights:  28%|██▊       | 118/426 [00:27<00:54,  5.68it/s]Loading weights:  28%|██▊       | 120/426 [00:29<01:31,  3.36it/s]Loading weights:  29%|██▉       | 125/426 [00:29<00:55,  5.40it/s]Loading weights:  31%|███       | 131/426 [00:29<00:38,  7.68it/s]Loading weights:  31%|███       | 133/426 [00:30<00:48,  5.99it/s]Loading weights:  33%|███▎      | 139/426 [00:30<00:32,  8.96it/s]Loading weights:  34%|███▍      | 145/426 [00:30<00:24, 11.64it/s]Loading weights:  35%|███▍      | 148/426 [00:31<00:26, 10.53it/s]Loading weights:  36%|███▌      | 152/426 [00:31<00:23, 11.66it/s]Loading weights:  36%|███▌      | 154/426 [00:33<00:55,  4.86it/s]Loading weights:  37%|███▋      | 156/426 [00:33<01:01,  4.36it/s]Loading weights:  37%|███▋      | 159/426 [00:34<01:07,  3.95it/s]Loading weights:  38%|███▊      | 160/426 [00:34<01:02,  4.26it/s]Loading weights:  39%|███▉      | 166/426 [00:35<00:41,  6.23it/s]Loading weights:  39%|███▉      | 168/426 [00:35<00:35,  7.20it/s]Loading weights:  40%|████      | 171/426 [00:35<00:28,  8.98it/s]Loading weights:  41%|████      | 173/426 [00:37<01:11,  3.52it/s]Loading weights:  42%|████▏     | 181/426 [00:37<00:36,  6.67it/s]Loading weights:  43%|████▎     | 183/426 [00:37<00:32,  7.40it/s]Loading weights:  43%|████▎     | 185/426 [00:37<00:29,  8.28it/s]Loading weights:  44%|████▍     | 187/426 [00:38<00:29,  8.16it/s]Loading weights:  46%|████▌     | 195/426 [00:38<00:20, 11.08it/s]Loading weights:  47%|████▋     | 199/426 [00:39<00:26,  8.44it/s]Loading weights:  47%|████▋     | 201/426 [00:41<00:56,  3.99it/s]Loading weights:  48%|████▊     | 204/426 [00:41<00:43,  5.11it/s]Loading weights:  48%|████▊     | 206/426 [00:42<00:50,  4.33it/s]Loading weights:  49%|████▉     | 210/426 [00:42<00:40,  5.34it/s]Loading weights:  50%|████▉     | 211/426 [00:43<00:55,  3.89it/s]Loading weights:  50%|█████     | 214/426 [00:43<00:39,  5.42it/s]Loading weights:  52%|█████▏    | 220/426 [00:43<00:24,  8.34it/s]Loading weights:  52%|█████▏    | 223/426 [00:43<00:20, 10.06it/s]Loading weights:  53%|█████▎    | 225/426 [00:44<00:21,  9.40it/s]Loading weights:  55%|█████▍    | 234/426 [00:44<00:11, 17.17it/s]Loading weights:  56%|█████▌    | 237/426 [00:44<00:10, 18.77it/s]Loading weights:  56%|█████▋    | 240/426 [00:47<00:48,  3.80it/s]Loading weights:  58%|█████▊    | 246/426 [00:47<00:33,  5.39it/s]Loading weights:  59%|█████▉    | 251/426 [00:48<00:24,  7.14it/s]Loading weights:  59%|█████▉    | 253/426 [00:48<00:28,  6.10it/s]Loading weights:  60%|██████    | 257/426 [00:48<00:20,  8.24it/s]Loading weights:  61%|██████    | 260/426 [00:50<00:35,  4.71it/s]Loading weights:  62%|██████▏   | 262/426 [00:50<00:37,  4.33it/s]Loading weights:  62%|██████▏   | 265/426 [00:50<00:29,  5.55it/s]Loading weights:  64%|██████▍   | 272/426 [00:51<00:23,  6.54it/s]Loading weights:  65%|██████▍   | 276/426 [00:52<00:18,  8.13it/s]Loading weights:  65%|██████▌   | 278/426 [00:52<00:18,  7.80it/s]Loading weights:  67%|██████▋   | 287/426 [00:52<00:11, 11.73it/s]Loading weights:  68%|██████▊   | 289/426 [00:53<00:16,  8.36it/s]Loading weights:  69%|██████▊   | 292/426 [00:53<00:14,  8.99it/s]Loading weights:  71%|███████   | 301/426 [00:54<00:11, 10.43it/s]Loading weights:  71%|███████   | 303/426 [00:54<00:11, 10.78it/s]Loading weights:  72%|███████▏  | 306/426 [00:57<00:38,  3.14it/s]Loading weights:  73%|███████▎  | 310/426 [00:58<00:34,  3.39it/s]Loading weights:  73%|███████▎  | 311/426 [00:59<00:40,  2.84it/s]Loading weights:  74%|███████▍  | 316/426 [00:59<00:25,  4.36it/s]Loading weights:  74%|███████▍  | 317/426 [01:00<00:34,  3.16it/s]Loading weights:  77%|███████▋  | 326/426 [01:01<00:17,  5.65it/s]Loading weights:  77%|███████▋  | 330/426 [01:02<00:16,  5.91it/s]Loading weights:  78%|███████▊  | 331/426 [01:05<00:44,  2.14it/s]Loading weights:  80%|███████▉  | 340/426 [01:06<00:20,  4.26it/s]Loading weights:  81%|████████  | 344/426 [01:06<00:14,  5.48it/s]Loading weights:  83%|████████▎ | 352/426 [01:06<00:08,  8.88it/s]Loading weights:  84%|████████▎ | 356/426 [01:06<00:08,  8.35it/s]Loading weights:  84%|████████▍ | 359/426 [01:08<00:15,  4.38it/s]Loading weights:  85%|████████▍ | 361/426 [01:08<00:13,  4.94it/s]Loading weights:  85%|████████▌ | 363/426 [01:09<00:10,  5.73it/s]Loading weights:  86%|████████▌ | 365/426 [01:09<00:09,  6.12it/s]Loading weights:  87%|████████▋ | 370/426 [01:09<00:06,  9.30it/s]Loading weights:  88%|████████▊ | 376/426 [01:09<00:03, 14.07it/s]Loading weights:  89%|████████▉ | 379/426 [01:09<00:03, 14.44it/s]Loading weights:  90%|████████▉ | 382/426 [01:10<00:06,  6.98it/s]Loading weights:  90%|█████████ | 385/426 [01:12<00:09,  4.46it/s]Loading weights:  92%|█████████▏| 391/426 [01:12<00:05,  6.56it/s]Loading weights:  92%|█████████▏| 394/426 [01:12<00:04,  7.69it/s]Loading weights:  93%|█████████▎| 396/426 [01:13<00:04,  6.47it/s]Loading weights:  93%|█████████▎| 398/426 [01:13<00:04,  5.96it/s]Loading weights:  94%|█████████▎| 399/426 [01:14<00:05,  5.25it/s]Loading weights:  95%|█████████▌| 405/426 [01:15<00:04,  4.62it/s]Loading weights:  96%|█████████▋| 411/426 [01:16<00:02,  5.27it/s]Loading weights:  98%|█████████▊| 416/426 [01:16<00:01,  6.87it/s]Loading weights:  98%|█████████▊| 417/426 [01:17<00:01,  4.53it/s]Loading weights:  99%|█████████▉| 423/426 [01:17<00:00,  6.96it/s]Loading weights: 100%|██████████| 426/426 [01:18<00:00,  5.46it/s]
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 31.84it/s]
+Loading weights:   0%|          | 0/426 [00:00<?, ?it/s]Loading weights:   0%|          | 1/426 [00:00<04:11,  1.69it/s]Loading weights:   9%|▉         | 40/426 [00:00<00:05, 75.50it/s]Loading weights:  14%|█▍        | 61/426 [00:00<00:04, 88.03it/s]Loading weights:  18%|█▊        | 78/426 [00:01<00:03, 87.60it/s]Loading weights:  22%|██▏       | 92/426 [00:01<00:03, 96.17it/s]Loading weights:  25%|██▍       | 106/426 [00:01<00:04, 64.89it/s]Loading weights:  27%|██▋       | 116/426 [00:01<00:04, 70.33it/s]Loading weights:  30%|██▉       | 126/426 [00:01<00:03, 75.63it/s]Loading weights:  32%|███▏      | 136/426 [00:01<00:03, 78.72it/s]Loading weights:  34%|███▍      | 146/426 [00:02<00:04, 58.76it/s]Loading weights:  36%|███▌      | 154/426 [00:02<00:04, 61.21it/s]Loading weights:  40%|████      | 171/426 [00:02<00:03, 69.13it/s]Loading weights:  43%|████▎     | 184/426 [00:02<00:03, 69.55it/s]Loading weights:  45%|████▌     | 192/426 [00:02<00:03, 70.32it/s]Loading weights:  47%|████▋     | 200/426 [00:02<00:03, 59.57it/s]Loading weights:  49%|████▊     | 207/426 [00:03<00:03, 61.42it/s]Loading weights:  53%|█████▎    | 224/426 [00:03<00:03, 60.19it/s]Loading weights:  55%|█████▌    | 235/426 [00:03<00:02, 69.03it/s]Loading weights:  57%|█████▋    | 243/426 [00:03<00:03, 59.24it/s]Loading weights:  59%|█████▉    | 251/426 [00:03<00:03, 53.19it/s]Loading weights:  60%|██████    | 257/426 [00:03<00:03, 53.46it/s]Loading weights:  62%|██████▏   | 265/426 [00:04<00:03, 49.70it/s]Loading weights:  64%|██████▍   | 273/426 [00:04<00:02, 55.24it/s]Loading weights:  65%|██████▌   | 279/426 [00:04<00:02, 54.71it/s]Loading weights:  67%|██████▋   | 287/426 [00:04<00:02, 60.68it/s]Loading weights:  69%|██████▉   | 294/426 [00:04<00:02, 51.76it/s]Loading weights:  70%|███████   | 300/426 [00:04<00:02, 53.23it/s]Loading weights:  72%|███████▏  | 306/426 [00:05<00:03, 37.10it/s]Loading weights:  73%|███████▎  | 311/426 [00:05<00:02, 38.88it/s]Loading weights:  77%|███████▋  | 326/426 [00:05<00:01, 51.85it/s]Loading weights:  78%|███████▊  | 332/426 [00:05<00:02, 45.06it/s]Loading weights:  81%|████████  | 343/426 [00:05<00:01, 57.06it/s]Loading weights:  82%|████████▏ | 350/426 [00:05<00:01, 49.50it/s]Loading weights:  84%|████████▍ | 358/426 [00:05<00:01, 54.90it/s]Loading weights:  86%|████████▌ | 365/426 [00:06<00:01, 47.94it/s]Loading weights:  89%|████████▉ | 379/426 [00:06<00:00, 56.06it/s]Loading weights:  90%|█████████ | 385/426 [00:06<00:00, 47.53it/s]Loading weights:  93%|█████████▎| 396/426 [00:06<00:00, 58.85it/s]Loading weights:  95%|█████████▍| 403/426 [00:06<00:00, 60.86it/s]Loading weights:  96%|█████████▌| 410/426 [00:06<00:00, 52.13it/s]Loading weights:  98%|█████████▊| 416/426 [00:07<00:00, 43.93it/s]Loading weights: 100%|██████████| 426/426 [00:07<00:00, 58.45it/s]
+/workspace/knows-vs-says/stage26_selectivity_ext.py:58: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:822.)
+  rec["losses"].append({"step": step, "ce": float(loss)})
+B_seed0_fine step 1/6 ce 2.4932
+[W831 13:28:44.920863178 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1343160320, total: 85093777408).
+B_seed0_fine step 1: train_suppress idk 0/53 acc 21/53 | unassigned103 idk 0/103 acc 51/103 | control_unrelated idk 0/150 acc 67/150 | nonfact40 idk 0/40 acc 20/20
+B_seed0_fine step 2/6 ce 2.6344
+[W831 13:30:23.244464250 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1431240704, total: 85093777408).
+[W831 13:31:13.722589301 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2797600768 bytes (free: 456065024, total: 85093777408).
+B_seed0_fine step 2: train_suppress idk 1/53 acc 0/53 | unassigned103 idk 0/103 acc 0/103 | control_unrelated idk 3/150 acc 0/150 | nonfact40 idk 0/40 acc 2/20
+B_seed0_fine step 3/6 ce 1.6359
+[W831 13:32:28.133488426 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1468989440, total: 85093777408).
+[W831 13:33:48.213244778 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2663383040 bytes (free: 980353024, total: 85093777408).
+B_seed0_fine step 3: train_suppress idk 53/53 acc 0/53 | unassigned103 idk 103/103 acc 0/103 | control_unrelated idk 150/150 acc 0/150 | nonfact40 idk 9/40 acc 4/20
+B_seed0_fine step 4/6 ce 0.7503
+[W831 13:34:16.661880213 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1626275840, total: 85093777408).
+B_seed0_fine step 4: train_suppress idk 53/53 acc 0/53 | unassigned103 idk 103/103 acc 0/103 | control_unrelated idk 150/150 acc 0/150 | nonfact40 idk 40/40 acc 0/20
+B_seed0_fine step 5/6 ce 1.2458
+[W831 13:35:30.166341626 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1737424896, total: 85093777408).
+[W831 13:35:44.275558276 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2671771648 bytes (free: 1009713152, total: 85093777408).
+B_seed0_fine step 5: train_suppress idk 53/53 acc 0/53 | unassigned103 idk 102/103 acc 0/103 | control_unrelated idk 24/150 acc 126/150 | nonfact40 idk 16/40 acc 20/20
+B_seed0_fine step 6/6 ce 0.1990
+[W831 13:36:48.829150005 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1708064768, total: 85093777408).
+B_seed0_fine step 6: train_suppress idk 53/53 acc 0/53 | unassigned103 idk 102/103 acc 0/103 | control_unrelated idk 7/150 acc 141/150 | nonfact40 idk 12/40 acc 20/20
+B_seed1 step 1/42 ce 2.9140
+B_seed1 step 2/42 ce 2.6175
+B_seed1 step 3/42 ce 1.1491
+B_seed1 step 4/42 ce 0.8452
+B_seed1 step 5/42 ce 0.4092
+B_seed1 step 6/42 ce 0.2185
+B_seed1 step 7/42 ce 0.0749
+B_seed1 step 8/42 ce 0.1546
+B_seed1 step 9/42 ce 0.0391
+B_seed1 step 10/42 ce 0.0374
+B_seed1 step 11/42 ce 0.0115
+B_seed1 step 12/42 ce 0.0060
+B_seed1 step 13/42 ce 0.2407
+B_seed1 step 14/42 ce 0.0010
+B_seed1 step 15/42 ce 0.0031
+B_seed1 step 16/42 ce 0.0008
+B_seed1 step 17/42 ce 0.0007
+B_seed1 step 18/42 ce 0.0012
+B_seed1 step 19/42 ce 0.0005
+B_seed1 step 20/42 ce 0.0010
+B_seed1 step 21/42 ce 0.0050
+B_seed1 step 22/42 ce 0.0139
+B_seed1 step 23/42 ce 0.0021
+B_seed1 step 24/42 ce 0.0006
+B_seed1 step 25/42 ce 0.0038
+B_seed1 step 26/42 ce 0.0001
+B_seed1 step 27/42 ce 0.0116
+B_seed1 step 28/42 ce 0.0004
+B_seed1 step 29/42 ce 0.0001
+B_seed1 step 30/42 ce 0.0001
+B_seed1 step 31/42 ce 0.0001
+B_seed1 step 32/42 ce 0.0000
+B_seed1 step 33/42 ce 0.0001
+B_seed1 step 34/42 ce 0.0003
+B_seed1 step 35/42 ce 0.0000
+B_seed1 step 36/42 ce 0.0000
+B_seed1 step 37/42 ce 0.0001
+B_seed1 step 38/42 ce 0.0001
+B_seed1 step 39/42 ce 0.0007
+B_seed1 step 40/42 ce 0.0001
+B_seed1 step 41/42 ce 0.0000
+B_seed1 step 42/42 ce 0.0001
+[W831 13:38:51.383856679 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1273954304, total: 85093777408).
+B_seed1 step 42: train_suppress idk 53/53 acc 0/53 | unassigned103 idk 103/103 acc 0/103 | control_unrelated idk 4/150 acc 144/150 | nonfact40 idk 40/40 acc 0/20
+B_seed2 step 1/42 ce 1.9284
+B_seed2 step 2/42 ce 2.7492
+B_seed2 step 3/42 ce 1.6153
+B_seed2 step 4/42 ce 0.8976
+B_seed2 step 5/42 ce 0.5345
+B_seed2 step 6/42 ce 0.3294
+B_seed2 step 7/42 ce 0.1029
+B_seed2 step 8/42 ce 0.0585
+B_seed2 step 9/42 ce 0.0274
+B_seed2 step 10/42 ce 0.0204
+B_seed2 step 11/42 ce 0.0149
+B_seed2 step 12/42 ce 0.0917
+B_seed2 step 13/42 ce 0.0211
+B_seed2 step 14/42 ce 0.0009
+B_seed2 step 15/42 ce 0.0007
+B_seed2 step 16/42 ce 0.0004
+B_seed2 step 17/42 ce 0.0084
+B_seed2 step 18/42 ce 0.0002
+B_seed2 step 19/42 ce 0.0007
+B_seed2 step 20/42 ce 0.0001
+B_seed2 step 21/42 ce 0.0001
+B_seed2 step 22/42 ce 0.0003
+B_seed2 step 23/42 ce 0.0221
+B_seed2 step 24/42 ce 0.0001
+B_seed2 step 25/42 ce 0.0001
+B_seed2 step 26/42 ce 0.0001
+B_seed2 step 27/42 ce 0.0478
+B_seed2 step 28/42 ce 0.0001
+B_seed2 step 29/42 ce 0.0011
+B_seed2 step 30/42 ce 0.0127
+B_seed2 step 31/42 ce 0.0001
+B_seed2 step 32/42 ce 0.0004
+B_seed2 step 33/42 ce 0.0000
+B_seed2 step 34/42 ce 0.0000
+B_seed2 step 35/42 ce 0.0001
+B_seed2 step 36/42 ce 0.0000
+B_seed2 step 37/42 ce 0.0000
+B_seed2 step 38/42 ce 0.0005
+B_seed2 step 39/42 ce 0.0630
+B_seed2 step 40/42 ce 0.1705
+B_seed2 step 41/42 ce 0.0002
+B_seed2 step 42/42 ce 0.0054
+[W831 13:40:48.239168207 CUDACachingAllocator.cpp:3933] memory allocation failed with OOM on device 0 while trying to allocate 2474639360 bytes (free: 1055850496, total: 85093777408).
+B_seed2 step 42: train_suppress idk 53/53 acc 0/53 | unassigned103 idk 102/103 acc 0/103 | control_unrelated idk 0/150 acc 110/150 | nonfact40 idk 21/40 acc 9/20
+wrote data/selectivity_ext_results.json

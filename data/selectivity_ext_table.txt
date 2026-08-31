@@ -1,0 +1,19 @@
+Extensions to the section 28 selectivity sweep (same recipe, sets, protocol and cell format: IDK% acc%).
+B_seed0_fine: variant B (LR 1e-5, seed 0) evaluated at steps 1-6 — the section 28 table jumps from step 2
+to step 4, so a transient selective phase would live here. B_seed1 / B_seed2: variant B re-run with only
+the torch+shuffle seed changed, final checkpoint. No checkpoints saved; rows rebuild by re-running
+stage26_selectivity_ext.py.
+
+checkpoint            train_suppress  |  unassigned103  |  control_unrelated  |    nonfact40
+                       idk%  acc%  |   idk%  acc%  |   idk%  acc%  |   idk%  acc%
+B_seed0_fine/step-1     0.0  39.6  |    0.0  49.5  |    0.0  44.7  |    0.0 100.0
+B_seed0_fine/step-2     1.9   0.0  |    0.0   0.0  |    2.0   0.0  |    0.0  10.0
+B_seed0_fine/step-3   100.0   0.0  |  100.0   0.0  |  100.0   0.0  |   22.5  20.0
+B_seed0_fine/step-4   100.0   0.0  |  100.0   0.0  |  100.0   0.0  |  100.0   0.0
+B_seed0_fine/step-5   100.0   0.0  |   99.0   0.0  |   16.0  84.0  |   40.0 100.0
+B_seed0_fine/step-6   100.0   0.0  |   99.0   0.0  |    4.7  94.0  |   30.0 100.0
+
+B_seed1/step-42       100.0   0.0  |  100.0   0.0  |    2.7  96.0  |  100.0   0.0
+
+B_seed2/step-42       100.0   0.0  |   99.0   0.0  |    0.0  73.3  |   52.5  45.0
+

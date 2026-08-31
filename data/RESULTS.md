@@ -336,6 +336,8 @@ Generation detail:
 | `stage24_table.py` | `data/nonfact_table.txt`, `data/nonfact_generations.txt` |
 | `stage25_selectivity.py` | `data/selectivity_results.json` |
 | `stage25_table.py` | `data/selectivity_table.txt` |
+| `stage26_selectivity_ext.py` | `data/selectivity_ext_results.json` |
+| `stage26_table.py` | `data/selectivity_ext_table.txt` |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1733,3 +1735,54 @@ way: accuracy ≈ 0 on everything with IDK also ≈ 0 (outputs neither answers n
 final checkpoints with non-fact IDK below 100% are C (87.5%) and D (45.0%); D also has the lowest
 CONTROL-UNRELATED IDK of any checkpoint (0.7%), with accuracy costs (78.0% CONTROL-UNRELATED, 50.0%
 non-fact scored items) and unchanged 100% IDK on both P17/P27 fact sets.
+
+## 29. Selectivity sweep extensions: fine-grained early steps, reseeds (`stage26_selectivity_ext.py` → `data/selectivity_ext_results.json`; `stage26_table.py` → `data/selectivity_ext_table.txt`)
+
+Two extensions to §28, same recipe, sets, protocol and machinery; model selection only, no probe or
+intervention work. (1) Variant B (LR 1e-5, seed 0) evaluated at steps 1-6, covering the gap between
+§28's step-2 and step-4 rows. (2) Variant B re-run with only the torch+shuffle seed changed to 1 and
+to 2, final checkpoint. No checkpoints saved; every row rebuilds by re-running the script.
+
+```
+Extensions to the section 28 selectivity sweep (same recipe, sets, protocol and cell format: IDK% acc%).
+B_seed0_fine: variant B (LR 1e-5, seed 0) evaluated at steps 1-6 — the section 28 table jumps from step 2
+to step 4, so a transient selective phase would live here. B_seed1 / B_seed2: variant B re-run with only
+the torch+shuffle seed changed, final checkpoint. No checkpoints saved; rows rebuild by re-running
+stage26_selectivity_ext.py.
+
+checkpoint            train_suppress  |  unassigned103  |  control_unrelated  |    nonfact40
+                       idk%  acc%  |   idk%  acc%  |   idk%  acc%  |   idk%  acc%
+B_seed0_fine/step-1     0.0  39.6  |    0.0  49.5  |    0.0  44.7  |    0.0 100.0
+B_seed0_fine/step-2     1.9   0.0  |    0.0   0.0  |    2.0   0.0  |    0.0  10.0
+B_seed0_fine/step-3   100.0   0.0  |  100.0   0.0  |  100.0   0.0  |   22.5  20.0
+B_seed0_fine/step-4   100.0   0.0  |  100.0   0.0  |  100.0   0.0  |  100.0   0.0
+B_seed0_fine/step-5   100.0   0.0  |   99.0   0.0  |   16.0  84.0  |   40.0 100.0
+B_seed0_fine/step-6   100.0   0.0  |   99.0   0.0  |    4.7  94.0  |   30.0 100.0
+
+B_seed1/step-42       100.0   0.0  |  100.0   0.0  |    2.7  96.0  |  100.0   0.0
+
+B_seed2/step-42       100.0   0.0  |   99.0   0.0  |    0.0  73.3  |   52.5  45.0
+```
+
+Anchors: the step-2, step-4 and step-6 rows equal §28's B rows at those steps count-for-count.
+B_seed1/step-42 CONTROL-UNRELATED (96.0 accuracy, 2.7 IDK) equals §19's seed-1 suppression row;
+B_seed2/step-42 (73.3 accuracy, 0 IDK, and 99.0 IDK on the §5-2b set) equals §19's seed-2 row — the
+seed that trips the §19 void condition, which stands here too. 0 tracebacks.
+
+**The flagged condition did not occur.** No checkpoint in either extension shows high IDK on
+TRAIN-SUPPRESS with low IDK on unassigned103. At every checkpoint with TRAIN-SUPPRESS IDK ≥ 92.5%
+(§28 and §29 together), unassigned103 IDK is ≥ 90.3%; in §29 specifically the two columns never
+differ by more than 1 item (1.0 point) at any step or seed.
+
+Fine-grained onset: refusal appears between step 2 and step 3, and at step 3 it is already at 100%
+on all three fact sets simultaneously — TRAIN-SUPPRESS, unassigned103 and CONTROL-UNRELATED rise
+together, with non-fact at 22.5%. There is no intermediate checkpoint where the trained facts refuse
+and the untrained facts answer. Step 1 is pre-refusal degradation: IDK 0 everywhere with fact
+accuracy already fallen (39.6 / 49.5 / 44.7) and non-fact intact (100.0 on the scored items).
+CONTROL-UNRELATED recovers after the universal-refusal point (step 4 100% IDK → step 5 16.0% →
+step 6 4.7%), and non-fact swings 22.5 → 100 → 40 → 30% IDK over steps 3-6 while its scored accuracy
+returns to 100.0 at steps 5-6.
+
+Reseeds: seed 1 reproduces the seed-0 endpoint pattern (100 / 100 / 2.7 / 100 IDK); seed 2 differs in
+the §19-documented direction (CONTROL-UNRELATED 73.3 accuracy with 0 IDK, non-fact IDK 52.5%) while
+still refusing both P17/P27 fact sets at 100 / 99.0%.
