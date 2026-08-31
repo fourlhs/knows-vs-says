@@ -340,6 +340,7 @@ Generation detail:
 | `stage26_table.py` | `data/selectivity_ext_table.txt` |
 | `stage27_scale.py` | `data/scale_splits.json`, `data/scale_results.json` |
 | `stage27_table.py` | `data/scale_table.txt` |
+| `stage28_writeup_dump.py` | `data/writeup_generations.txt` (seed-0 random raw examples for the write-up) |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
