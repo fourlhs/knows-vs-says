@@ -318,6 +318,7 @@ Generation detail:
 | `stage15_relearn.py` | `data/relearn_results.json`, `data/relearn_paraphrases.txt`, `data/relearning.png` |
 | `stage16_patch.py` | `data/patch_results.json` |
 | `stage16_table.py` | `data/patch_table.txt`, `data/patch_generations.txt` |
+| `stage16_verify.py [fact_idx]` | mechanical patch-landing check (stdout only) |
 
 Not in git (size): `activations/*.pt`, `runs/*/step-*/` checkpoints. Committed:
 `data/counterfact.json`, `probes/base_sweep.joblib`.
@@ -1138,6 +1139,27 @@ lp_true range across the 16 patched conditions: −19.662 (`last_prompt/L20/from
 (`last_prompt/L24/from_control`), against the unpatched −18.912. Base donors move lp_true within
 [−19.662, −18.036]; control donors within [−17.481, −14.160].
 
-Not verified: that the replacement lands numerically at the patched site. §10 records a read-hook /
-patch-hook ordering trap that made a naive capture read `0.0`, so this check needs the read hook
-registered after the patch hook; the user will write it.
+### Mechanical verification (`stage16_verify.py`)
+
+One fact, `last_prompt` L21 patched from base. Three forward hooks on `model.model.layers[20]` in
+registration order — read, patch, read — so the first captures the model's own pre-patch activation
+and the third captures the value the block actually emits after the patch. Both reads `.clone()`:
+the patch hook mutates the output tensor in place, so a stored reference would show the patched
+value from either position, which is the §10 trap. Case 3969 (P27, `Erwin Wurm` → `Austria`),
+prompt 34 tokens, `last_subject` = index 20 (`'urm'`), `last_prompt` = index 33 (`'ĊĊ'`, the final
+`\n\n` after `</think>`); `locate()`'s indices equal the ones stored in `activations/base.pt`.
+
+Donor norm 14.415874.
+
+| step | seq_len | patched index | token at index | read AFTER patch: norm, max\|Δ\|, ‖Δ‖ vs donor | read BEFORE patch: norm, max\|Δ\|, ‖Δ‖ vs donor |
+|---|---|---|---|---|---|
+| 0 | 34 | 33 | `'ĊĊ'` | 14.415874, 0.000e+00, 0.000e+00 | 21.770754, 2.630e+00, 1.775e+01 |
+| 1 | 35 | 33 | `'ĊĊ'` | 14.415874, 0.000e+00, 0.000e+00 | 21.770754, 2.630e+00, 1.775e+01 |
+| 2 | 36 | 33 | `'ĊĊ'` | 14.415874, 0.000e+00, 0.000e+00 | 21.770754, 2.630e+00, 1.775e+01 |
+
+`torch.equal(post, donor)` holds at every checked step — the substitution is bitwise, not
+approximate. The patched index stays 33 and keeps pointing at the same token as the sequence grows
+34 → 35 → 36, so the patch is held for the whole generation rather than applying only at the first
+step. The pre-patch read shows the site is genuinely being overwritten with a different vector
+(model's own norm 21.77 vs donor 14.42, ‖Δ‖ 17.75), not with something already near-identical.
+Generation under the patch: `I don't know.`

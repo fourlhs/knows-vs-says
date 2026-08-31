@@ -64,6 +64,7 @@ python stage13_probe_larger.py
 python stage14_seeds.py
 python stage15_relearn.py                # relearning curves (~35 min; trains in-memory, saves no checkpoints)
 python stage16_patch.py; python stage16_table.py   # activation patching from base/control donors
+python stage16_verify.py                 # patch-landing check (one fact, prints raw numbers)
 python stage6_plots.py; python stage1_plot.py
 ```
 
